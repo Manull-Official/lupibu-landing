@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupibu — Legal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <style>
+        .legal-page {
+            padding: calc(80px + var(--space-6)) 0 var(--space-16);
+            min-height: 100vh;
+        }
+
+        .legal-content {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .legal-header-row {
+            position: relative;
+            text-align: center;
+            margin-bottom: var(--space-2);
+        }
+
+        .legal-header-row .legal-back {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .legal-content h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin: 0;
+            text-align: center;
+        }
+
+        .legal-version {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--gray-400);
+            margin-bottom: var(--space-8);
+        }
+
+        .legal-content h2 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-3);
+        }
+
+        .legal-content p {
+            font-size: 0.9375rem;
+            line-height: 1.8;
+            color: var(--gray-600);
+            margin-bottom: var(--space-4);
+        }
+
+        .legal-content strong {
+            color: var(--gray-800);
+        }
+
+        .legal-content ul {
+            padding-left: var(--space-6);
+            margin-bottom: var(--space-4);
+            list-style: disc;
+        }
+
+        .legal-content li {
+            font-size: 0.9375rem;
+            line-height: 1.8;
+            color: var(--gray-600);
+            margin-bottom: var(--space-2);
+        }
+
+        .legal-back {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-500);
+            transition: var(--transition-fast);
+            flex-shrink: 0;
+        }
+
+        .legal-back:hover {
+            color: var(--gray-700);
+        }
+
+        .legal-back svg {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo-inline-primary.svg" alt="Lupibu" class="logo-img">
+            </a>
+            <div class="nav-right">
+                <a href="index.html" class="btn btn-primary btn-nav" id="homeBtn">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="legal-page">
+        <div class="container">
+            <div class="legal-content">
+                <div id="legalBody"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    var docs = {
+    privacy_en: `
+        <h1>Privacy Policy</h1>
+        <p class="legal-version">Version 1.0 dated 11.01.2026</p>
+        <h2>1. Introduction</h2>
+        <p>Lupibu ("We", "Us") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+        <p>By using the App, you consent to the data practices described in this policy.</p>
+        <p><strong>Compliance:</strong> This Policy is compliant with the Law of the Republic of Kazakhstan "On Personal Data and their Protection" and considers GDPR principles where applicable.</p>
+        <h2>2. Collection of Information</h2>
+        <p>We collect information that identifies, relates to, describes, references, is capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular consumer or device ("Personal Information").</p>
+        <p><strong>Information You Provide:</strong></p>
+        <ul>
+            <li><strong>User Account Data:</strong> Email, name (for registration/auth via Apple/Google).</li>
+            <li><strong>Child Data:</strong> Name, gender, date of birth, anthropometrics (height, weight), health records (vaccinations, symptoms). <strong>NOTE:</strong> You represent that you are the parent or legal guardian of the child and have the authority to provide this data.</li>
+        </ul>
+        <p><strong>Automatically Collected Information:</strong> device type, IP address, operating system version, usage statistics (via Firebase Analytics).</p>
+        <h2>3. Use of Your Information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+            <li>Provide, maintain, and improve the App.</li>
+            <li>Process your registration and manage your account.</li>
+            <li>Monitor and analyze usage and trends to improve your experience.</li>
+            <li>Send you technical notices, updates, and support messages.</li>
+            <li>Enforce our Terms of Use.</li>
+        </ul>
+        <h2>4. Sharing of Information</h2>
+        <p>We do not sell your personal information. We may share information with:</p>
+        <ul>
+            <li><strong>Service Providers:</strong> Google Cloud Platform / Firebase (for data hosting and analytics). These providers are bound by confidentiality agreements.</li>
+            <li><strong>Legal Requirements:</strong> If required to do so by law or in response to valid requests by public authorities.</li>
+        </ul>
+        <h2>5. Data Retention</h2>
+        <p>We will retain your Personal Information only for as long as is necessary for the purposes set out in this Privacy Policy.</p>
+        <p><strong>Retention Period:</strong> We retain data while your account is active plus a period required by applicable tax/legal obligations (usually up to 3 years after account deletion for dispute resolution), after which it is permanently deleted or anonymized.</p>
+        <h2>6. Children's Privacy</h2>
+        <p>The App allows parents to track their children's data. <strong>We do not knowingly collect personal information directly from children under the age of 13 without verification of parental consent.</strong></p>
+        <p>By registering and adding a child's profile, you, as the parent/guardian, provide explicit consent for the collection and processing of your child's data for the purposes of the App.</p>
+        <h2>7. Data Security</h2>
+        <p>We use administrative, technical, and physical security measures to help protect your personal information (encryption in transit and at rest). However, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure.</p>
+        <h2>8. Your Rights</h2>
+        <p>Depending on your location, you may have the right to:</p>
+        <ul>
+            <li>Access and receive a copy of your Personal Information.</li>
+            <li>Rectify specific Personal Information about you.</li>
+            <li>Request deletion of your Personal Information ("Right to be Forgotten"). This can be done directly in the App settings.</li>
+            <li>Restrict or object to the processing of your Personal Information.</li>
+        </ul>
+        <h2>9. Contact Us</h2>
+        <p>If you have questions or comments about this Privacy Policy, please contact us at: <a href="mailto:privacy@lupibu.app">privacy@lupibu.app</a></p>
+    `,
+    privacy_ru: `
+        <h1>Политика конфиденциальности</h1>
+        <p class="legal-version">Версия 1.0 от 11.01.2026</p>
+        <h2>1. Введение</h2>
+        <p>Lupibu («Мы») уважает вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию при использовании нашего мобильного приложения.</p>
+        <p>Использование Приложения означает ваше согласие с методами обработки данных, описанными в этой политике.</p>
+        <p><strong>Соблюдение законов:</strong> Настоящая Политика соответствует Закону Республики Казахстан «О персональных данных и их защите» и учитывает принципы GDPR, где это применимо.</p>
+        <h2>2. Сбор информации</h2>
+        <p>Мы собираем информацию, которая идентифицирует, относится, описывает или может быть связана с конкретным потребителем или устройством («Персональные данные»).</p>
+        <p><strong>Информация, которую вы предоставляете:</strong></p>
+        <ul>
+            <li><strong>Данные аккаунта:</strong> Email, имя (для регистрации/авторизации через Apple/Google).</li>
+            <li><strong>Данные ребенка:</strong> Имя, пол, дата рождения, антропометрия (рост, вес), медицинские записи (прививки, симптомы). <strong>ПРИМЕЧАНИЕ:</strong> Вы подтверждаете, что являетесь родителем или законным опекуном ребенка и имеете право предоставлять эти данные.</li>
+        </ul>
+        <p><strong>Автоматически собираемая информация:</strong> тип устройства, IP-адрес, версия ОС, статистика использования (через Firebase Analytics).</p>
+        <h2>3. Использование информации</h2>
+        <ul>
+            <li>Предоставления, поддержки и улучшения Приложения.</li>
+            <li>Управления вашей учетной записью.</li>
+            <li>Мониторинга и анализа тенденций использования.</li>
+            <li>Отправки технических уведомлений и обновлений.</li>
+            <li>Обеспечения соблюдения наших Условий использования.</li>
+        </ul>
+        <h2>4. Передача информации</h2>
+        <p>Мы не продаем ваши персональные данные. Мы можем передавать информацию:</p>
+        <ul>
+            <li><strong>Поставщикам услуг:</strong> Google Cloud Platform / Firebase (для хостинга и аналитики). Эти поставщики связаны обязательствами о конфиденциальности.</li>
+            <li><strong>По требованию закона:</strong> Если это требуется по закону или в ответ на действительные запросы государственных органов.</li>
+        </ul>
+        <h2>5. Хранение данных</h2>
+        <p>Мы храним ваши Персональные данные только до тех пор, пока это необходимо для целей, изложенных в настоящей Политике.</p>
+        <p><strong>Срок хранения:</strong> Мы храним данные, пока ваш аккаунт активен, плюс период, необходимый для выполнения юридических обязательств (обычно до 3 лет после удаления аккаунта для разрешения споров), после чего они безвозвратно удаляются или анонимизируются.</p>
+        <h2>6. Конфиденциальность детей</h2>
+        <p>Приложение позволяет родителям отслеживать данные своих детей. <strong>Мы сознательно не собираем персональные данные напрямую от детей младше 13 лет без верифицированного согласия родителей.</strong></p>
+        <p>Регистрируясь и добавляя профиль ребенка, вы, как родитель/опекун, даете явное согласие на сбор и обработку данных вашего ребенка для целей Приложения.</p>
+        <h2>7. Безопасность данных</h2>
+        <p>Мы используем административные, технические и физические меры безопасности для защиты ваших данных (шифрование при передаче и хранении). Однако ни один метод передачи через Интернет не является на 100% безопасным.</p>
+        <h2>8. Ваши права</h2>
+        <ul>
+            <li>Запросить копию ваших данных.</li>
+            <li>Исправить неточные данные.</li>
+            <li>Запросить удаление данных («Право на забвение»). Это можно сделать прямо в настройках Приложения («Удалить аккаунт»).</li>
+            <li>Отозвать согласие на обработку данных.</li>
+        </ul>
+        <h2>9. Контакты</h2>
+        <p>Если у вас есть вопросы по Политике конфиденциальности, свяжитесь с нами: <a href="mailto:privacy@lupibu.app">privacy@lupibu.app</a></p>
+    `,
+    privacy_kk: `
+        <h1>Құпиялылық саясаты</h1>
+        <p class="legal-version">Нұсқа 1.0, 11.01.2026 ж.</p>
+        <h2>1. Кіріспе</h2>
+        <p>Lupibu («Біз») сіздің құпиялылығыңызды құрметтейді. Бұл Құпиялылық саясаты мобильді қосымшаны пайдалану кезінде ақпаратыңызды қалай жинайтынымызды, пайдаланатынымызды және қорғайтынымызды түсіндіреді.</p>
+        <p>Қосымшаны пайдалану осы саясатта сипатталған деректерді өңдеу әдістерімен келісуіңізді білдіреді.</p>
+        <p><strong>Заңға сәйкестік:</strong> Осы Саясат Қазақстан Республикасының «Дербес деректер және оларды қорғау туралы» Заңына сәйкес келеді және қажет болған жағдайда GDPR принциптерін ескереді.</p>
+        <h2>2. Ақпарат жинау</h2>
+        <p>Біз нақты тұтынушымен немесе құрылғымен байланысты («Дербес деректер») ақпаратты жинаймыз.</p>
+        <ul>
+            <li><strong>Аккаунт деректері:</strong> Email, есім (тіркелу/Apple/Google арқылы кіру үшін).</li>
+            <li><strong>Бала деректері:</strong> Есімі, жынысы, туған күні, антропометрия (бойы, салмағы), медициналық жазбалар (екпелер, симптомдар).</li>
+        </ul>
+        <p><strong>Автоматты түрде жиналатын ақпарат:</strong> құрылғы түрі, IP-мекенжай, ОЖ нұсқасы, пайдалану статистикасы (Firebase Analytics арқылы).</p>
+        <h2>3. Ақпаратты пайдалану</h2>
+        <ul>
+            <li>Қосымшаны ұсыну, қолдау және жақсарту.</li>
+            <li>Тіркелгіңізді басқару.</li>
+            <li>Пайдалану үрдістерін бақылау және талдау.</li>
+            <li>Техникалық хабарламалар мен жаңартуларды жіберу.</li>
+            <li>Пайдалану шарттарын орындауды қамтамасыз ету.</li>
+        </ul>
+        <h2>4. Ақпаратпен бөлісу</h2>
+        <p>Біз сіздің дербес деректеріңізді сатпаймыз. Біз ақпаратты тек мынадай жағдайларда бере аламыз:</p>
+        <ul>
+            <li><strong>Қызмет көрсетушілерге:</strong> Google Cloud Platform / Firebase (хостинг және аналитика).</li>
+            <li><strong>Заң талабы бойынша:</strong> Егер бұл заң бойынша немесе мемлекеттік органдардың сұрауларына жауап ретінде талап етілсе.</li>
+        </ul>
+        <h2>5. Деректерді сақтау</h2>
+        <p>Біз сіздің Дербес деректеріңізді осы Саясатта көрсетілген мақсаттар үшін қажет болғанша ғана сақтаймыз.</p>
+        <p><strong>Сақтау мерзімі:</strong> Біз деректерді аккаунтыңыз белсенді болған кезде, сонымен қатар заңдық міндеттемелерді орындау үшін қажетті кезеңде (әдетте 3 жылға дейін) сақтаймыз, содан кейін олар біржола жойылады.</p>
+        <h2>6. Балалардың құпиялылығы</h2>
+        <p>Қосымша ата-аналарға балаларының деректерін бақылауға мүмкіндік береді. <strong>Біз ата-анасының расталған келісімінсіз 13 жасқа толмаған балалардан тікелей дербес деректерді әдейі жинамаймыз.</strong></p>
+        <h2>7. Деректер қауіпсіздігі</h2>
+        <p>Біз деректеріңізді қорғау үшін әкімшілік, техникалық және физикалық қауіпсіздік шараларын қолданамыз (тасымалдау және сақтау кезіндегі шифрлау). Алайда, Интернет арқылы деректерді берудің ешбір әдісі 100% қауіпсіз емес.</p>
+        <h2>8. Сіздің құқықтарыңыз</h2>
+        <ul>
+            <li>Деректеріңіздің көшірмесін сұрау.</li>
+            <li>Дұрыс емес деректерді түзету.</li>
+            <li>Деректерді жоюды сұрау («Ұмытылу құқығы»).</li>
+            <li>Деректерді өңдеуге келісімді қайтарып алу.</li>
+        </ul>
+        <h2>9. Байланыс</h2>
+        <p>Сұрақтар бойынша бізге жазыңыз: <a href="mailto:privacy@lupibu.app">privacy@lupibu.app</a></p>
+    `,
+    terms_en: `
+        <h1>Terms of Use (EULA)</h1>
+        <p class="legal-version">Version 1.0 dated 11.01.2026</p>
+        <h2>1. General Provisions</h2>
+        <p>These Terms of Use ("Agreement") constitute a legally binding agreement between the Developer of the mobile application "Lupibu" ("App", "We") and you ("User").</p>
+        <p>By downloading, installing, or using the App, you agree to be bound by this Agreement. If you do not agree, do not use the App.</p>
+        <p><strong>Governing Law:</strong> This Agreement is governed by the laws of the Republic of Kazakhstan.</p>
+        <h2>2. License Grant</h2>
+        <p>We grant you a revocable, non-exclusive, non-transferable, limited license to use the App solely for your personal, non-commercial purposes strictly in accordance with the terms of this Agreement.</p>
+        <p>You agree not to reverse engineer, decompile, disassemble, or attempt to derive the source code of the App.</p>
+        <h2>3. Medical Disclaimer</h2>
+        <p>The App provides information for general educational and informational purposes only.</p>
+        <p><strong>THE APP IS NOT A MEDICAL DEVICE.</strong> It does not provide medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider.</p>
+        <h2>4. User Accounts</h2>
+        <p>You are responsible for maintaining the confidentiality of your account and password. You agree to accept responsibility for all activities that occur under your account.</p>
+        <h2>5. Intellectual Property</h2>
+        <p>The App and its original content, features, and functionality are and will remain the exclusive property of the Developer and its licensors.</p>
+        <h2>6. Apple App Store Requirements</h2>
+        <p>If you downloaded the App from the Apple App Store, the following terms apply:</p>
+        <ul>
+            <li>This Agreement is between You and Us, not with Apple. We are solely responsible for the App.</li>
+            <li>The license is limited to use on Apple-branded Products that you own or control.</li>
+            <li>We are solely responsible for maintenance and support services.</li>
+            <li>We are responsible for product warranties and product claims.</li>
+            <li>Apple and its subsidiaries are third party beneficiaries of this Agreement.</li>
+        </ul>
+        <h2>7. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, in no event will We be liable for any indirect, incidental, special, consequential or punitive damages, including loss of profits, data, use, goodwill, or other intangible losses.</p>
+        <h2>8. Changes to This Agreement</h2>
+        <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time.</p>
+        <h2>9. Contact Information</h2>
+        <p>For any questions regarding this Agreement, please contact us at: <a href="mailto:support@lupibu.app">support@lupibu.app</a></p>
+    `,
+    terms_ru: `
+        <h1>Пользовательское соглашение (EULA)</h1>
+        <p class="legal-version">Версия 1.0 от 11.01.2026</p>
+        <h2>1. Общие положения</h2>
+        <p>Настоящее Пользовательское соглашение («Соглашение») является юридически обязательным договором между Разработчиком мобильного приложения «Lupibu» («Приложение», «Мы») и вами («Пользователь»).</p>
+        <p>Скачивая, устанавливая или используя Приложение, вы соглашаетесь с условиями настоящего Соглашения. Если вы не согласны, не используйте Приложение.</p>
+        <p><strong>Применимое право:</strong> Настоящее Соглашение регулируется законодательством Республики Казахстан.</p>
+        <h2>2. Лицензия</h2>
+        <p>Мы предоставляем вам отзывную, неисключительную, непередаваемую, ограниченную лицензию на использование Приложения исключительно в личных некоммерческих целях.</p>
+        <p>Вы обязуетесь не декомпилировать, не разбирать и не пытаться извлечь исходный код Приложения.</p>
+        <h2>3. Медицинский отказ</h2>
+        <p><strong>ПРИЛОЖЕНИЕ НЕ ЯВЛЯЕТСЯ МЕДИЦИНСКИМ ИЗДЕЛИЕМ.</strong> Оно не предоставляет медицинских консультаций, диагностики или лечения. Всегда обращайтесь за советом к врачу.</p>
+        <h2>4. Аккаунт пользователя</h2>
+        <p>Вы несете ответственность за сохранение конфиденциальности вашего аккаунта и пароля. Вы соглашаетесь принять на себя ответственность за все действия, происходящие под вашим аккаунтом.</p>
+        <h2>5. Интеллектуальная собственность</h2>
+        <p>Приложение и его оригинальный контент, функции и функциональность являются и останутся исключительной собственностью Разработчика и его лицензиаров.</p>
+        <h2>6. Требования Apple App Store</h2>
+        <ul>
+            <li>Настоящее Соглашение заключено только между Вами и Нами, а не с Apple.</li>
+            <li>Лицензия ограничена использованием на продуктах Apple.</li>
+            <li>Мы несем полную ответственность за обслуживание и поддержку.</li>
+            <li>Apple и дочерние компании Apple являются сторонними бенефициарами настоящего Соглашения.</li>
+        </ul>
+        <h2>7. Ограничение ответственности</h2>
+        <p>В максимальной степени, разрешенной законом, Мы не несем ответственности за любые косвенные, случайные или штрафные убытки, включая упущенную выгоду или потерю данных.</p>
+        <h2>8. Изменения Соглашения</h2>
+        <p>Мы оставляем за собой право по своему усмотрению изменять или заменять настоящие Условия в любое время.</p>
+        <h2>9. Контакты</h2>
+        <p>По вопросам, касающимся настоящего Соглашения, свяжитесь с нами: <a href="mailto:support@lupibu.app">support@lupibu.app</a></p>
+    `,
+    terms_kk: `
+        <h1>Пайдалану шарттары (EULA)</h1>
+        <p class="legal-version">Нұсқа 1.0, 11.01.2026 ж.</p>
+        <h2>1. Жалпы ережелер</h2>
+        <p>Осы Пайдалану шарттары («Келісім») «Lupibu» мобильді қосымшасын Әзірлеуші («Қосымша», «Біз») мен сіз («Пайдаланушы») арасындағы заңды күші бар шарт болып табылады.</p>
+        <p>Қосымшаны жүктеп алу, орнату немесе пайдалану арқылы сіз осы Келісім шарттарымен келісесіз.</p>
+        <p><strong>Қолданылатын құқық:</strong> Осы Келісім Қазақстан Республикасының заңнамасымен реттеледі.</p>
+        <h2>2. Лицензия</h2>
+        <p>Біз сізге Қосымшаны тек жеке коммерциялық емес мақсаттарда пайдалануға шектеулі лицензия береміз.</p>
+        <p>Сіз Қосымшаның бастапқы кодын декомпиляцияламауға және алуға тырыспауға міндеттенесіз.</p>
+        <h2>3. Медициналық бас тарту</h2>
+        <p><strong>ҚОСЫМША МЕДИЦИНАЛЫҚ БҰЙЫМ БОЛЫП ТАБЫЛМАЙДЫ.</strong> Ол медициналық кеңес, диагноз немесе емдеуді ұсынбайды. Кез келген медициналық сұрақтар бойынша дәрігерге жүгініңіз.</p>
+        <h2>4. Пайдаланушы аккаунты</h2>
+        <p>Сіз аккаунтыңыз бен құпия сөзіңіздің құпиялылығын сақтауға жауаптысыз. Сіз өз аккаунтыңызбен жасалған барлық әрекеттер үшін жауапкершілікті қабылдауға келісесіз.</p>
+        <h2>5. Зияткерлік меншік</h2>
+        <p>Қосымша және оның мазмұны Әзірлеушінің айрықша меншігі болып табылады.</p>
+        <h2>6. Apple App Store талаптары</h2>
+        <ul>
+            <li>Осы Келісім тек Сіз бен Біздің арамызда жасалған, Apple-мен емес.</li>
+            <li>Лицензия сіз иелік ететін Apple өнімдерінде пайдаланумен шектеледі.</li>
+            <li>Қызмет көрсету және қолдау бойынша жауапкершілікті Біз мойнымызға аламыз.</li>
+            <li>Apple және оның еншілес компаниялары осы Келісімнің үшінші тарап бенефициарлары.</li>
+        </ul>
+        <h2>7. Жауапкершілікті шектеу</h2>
+        <p>Заңмен рұқсат етілген максималды дәрежеде, Біз Қосымшаны пайдаланудан туындаған кез келген жанама шығындар үшін жауап бермейміз.</p>
+        <h2>8. Келісімнің өзгеруі</h2>
+        <p>Біз кез келген уақытта осы Шарттарды өзгерту құқығын өзімізде қалдырамыз.</p>
+        <h2>9. Байланыс</h2>
+        <p>Сұрақтар бойынша бізге жазыңыз: <a href="mailto:support@lupibu.app">support@lupibu.app</a></p>
+    `,
+    disclaimer_en: `
+        <h1>Medical Disclaimer</h1>
+        <h2>1. Not a Medical Device</h2>
+        <p><strong>THIS APP IS NOT A MEDICAL DEVICE AND IS NOT INTENDED TO REPLACE PROFESSIONAL MEDICAL JUDGMENT.</strong></p>
+        <p>The Lupibu application provides information (vaccination schedules, growth norms, symptom analysis) for <strong>informational and educational purposes only</strong>.</p>
+        <h2>2. No Professional Advice</h2>
+        <p>The content provided by this App is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+        <h2>3. Accuracy of Data</h2>
+        <p>While we reference reputable sources (e.g., WHO, national vaccination calendars), medical protocols vary by region and change over time. We do not warrant that the information constitutes the most up-to-date medical standards.</p>
+        <h2>4. Emergency</h2>
+        <p><strong>IF YOU THINK YOU MAY HAVE A MEDICAL EMERGENCY, CALL YOUR DOCTOR OR EMERGENCY SERVICES IMMEDIATELY.</strong> Do not rely on this App for immediate medical assistance.</p>
+        <h2>5. Limitation of Liability</h2>
+        <p>Reliance on any information provided by the App is solely at your own risk. The Developer is not responsible or liable for any advice, course of treatment, diagnosis or any other information, services or products that you obtain through the use of this App.</p>
+    `,
+    disclaimer_ru: `
+        <h1>Медицинский отказ (Disclaimer)</h1>
+        <h2>1. Не является медицинским изделием</h2>
+        <p><strong>ДАННОЕ ПРИЛОЖЕНИЕ НЕ ЯВЛЯЕТСЯ МЕДИЦИНСКИМ ИЗДЕЛИЕМ И НЕ ПРЕДНАЗНАЧЕНО ДЛЯ ЗАМЕНЫ ПРОФЕССИОНАЛЬНОГО МЕДИЦИНСКОГО СУЖДЕНИЯ.</strong></p>
+        <p>Приложение Lupibu предоставляет информацию (графики вакцинации, нормы роста, анализ симптомов) <strong>исключительно в информационных и образовательных целях</strong>.</p>
+        <h2>2. Отсутствие профессиональных консультаций</h2>
+        <p>Контент, предоставляемый Приложением, не предназначен для замены профессиональной медицинской консультации, диагностики или лечения. Всегда обращайтесь к врачу или другому квалифицированному специалисту.</p>
+        <h2>3. Точность данных</h2>
+        <p>Хотя мы ссылаемся на авторитетные источники (ВОЗ, национальные календари прививок), медицинские протоколы могут отличаться в зависимости от региона и меняться со временем.</p>
+        <h2>4. Экстренные случаи</h2>
+        <p><strong>ЕСЛИ ВЫ СЧИТАЕТЕ, ЧТО У ВАС ИЛИ РЕБЕНКА ВОЗНИКЛА КРИТИЧЕСКАЯ СИТУАЦИЯ, НЕМЕДЛЕННО ВЫЗОВИТЕ ВРАЧА ИЛИ СКОРУЮ ПОМОЩЬ.</strong></p>
+        <h2>5. Ограничение ответственности</h2>
+        <p>Использование любой информации, предоставленной Приложением, осуществляется исключительно на ваш страх и риск. Разработчик не несет ответственности за любые советы, курс лечения, диагноз или любую другую информацию, полученную с помощью этого Приложения.</p>
+    `,
+    disclaimer_kk: `
+        <h1>Медициналық жауапкершіліктен бас тарту (Disclaimer)</h1>
+        <h2>1. Медициналық бұйым емес</h2>
+        <p><strong>БҰЛ ҚОСЫМША МЕДИЦИНАЛЫҚ БҰЙЫМ БОЛЫП ТАБЫЛМАЙДЫ ЖӘНЕ КӘСІБИ МЕДИЦИНАЛЫҚ ПІКІРДІ АЛМАСТЫРУҒА АРНАЛМАҒАН.</strong></p>
+        <p>Lupibu қосымшасы ақпаратты (екпе кестелері, өсу нормалары, симптомдар талдауы) <strong>тек ақпараттық және танымдық мақсаттарда</strong> ұсынады.</p>
+        <h2>2. Кәсіби кеңестің болмауы</h2>
+        <p>Қосымша ұсынатын мазмұн кәсіби медициналық кеңесті, диагностиканы немесе емдеуді алмастыруға арналмаған. Әрқашан дәрігерге жүгініңіз.</p>
+        <h2>3. Деректердің дәлдігі</h2>
+        <p>Біз беделді көздерге (ДДСҰ, ұлттық екпе күнтізбелері) сілтеме жасасақ та, медициналық хаттамалар аймаққа байланысты өзгешеленуі мүмкін.</p>
+        <h2>4. Шұғыл жағдайлар</h2>
+        <p><strong>ЕГЕР СІЗ НЕМЕСЕ БАЛАҢЫЗ ШҰҒЫЛ ЖАҒДАЙДА ДЕП ОЙЛАСАҢЫЗ, ДЕРЕУ ДӘРІГЕРГЕ НЕМЕСЕ ЖЕДЕЛ ЖӘРДЕМГЕ ХАБАРЛАСЫҢЫЗ.</strong></p>
+        <h2>5. Жауапкершілікті шектеу</h2>
+        <p>Қосымша ұсынған кез келген ақпаратты пайдалану тек сіздің тәуекеліңізбен жүзеге асырылады. Әзірлеуші осы Қосымша арқылы алынған кеңестер, диагноз немесе кез келген басқа ақпарат үшін жауап бермейді.</p>
+    `,
+    data_consent_en: `
+        <h1>Data Processing Consent</h1>
+        <h2>1. Consent Grant</h2>
+        <p>I hereby explicitly consent to the collection, processing, and storage of my personal data and the personal data of my child by the Developer of the "Lupibu" application (the "Operator").</p>
+        <h2>2. Legal Basis</h2>
+        <p>This consent is given pursuant to the Law of the Republic of Kazakhstan "On Personal Data and their Protection" and serves as specific, informed, and unambiguous consent.</p>
+        <h2>3. Data Categories</h2>
+        <p>I authorize the processing of:</p>
+        <ul>
+            <li><strong>Parent Data:</strong> Full name, email address.</li>
+            <li><strong>Child Data:</strong> Full name, date of birth, gender, height, weight, head circumference, vaccination history, health symptoms, photographs.</li>
+        </ul>
+        <h2>4. Purpose of Processing</h2>
+        <ul>
+            <li>Creating and maintaining a digital health diary.</li>
+            <li>Providing personalized analytics (growth charts, vaccination reminders).</li>
+            <li>Data backup and synchronization across devices.</li>
+        </ul>
+        <h2>5. Cross-Border Transfer</h2>
+        <p>I explicitly agree to the cross-border transfer of the aforementioned data to servers located outside of my country of residence (specifically, Google Cloud Platform / Firebase servers), acknowledging that these servers provide an adequate level of data protection.</p>
+        <h2>6. Rights and Withdrawal</h2>
+        <p>I understand that I have the right to withdraw this consent at any time. Withdrawal can be effected by deleting my account in the App settings. I understand that withdrawal of consent will result in the deletion of all data and inability to use the App.</p>
+        <h2>7. Electronic Signature</h2>
+        <p>Checking the "I agree" box constitutes my <strong>Simple Electronic Signature</strong> and has the same legal effect as a handwritten signature.</p>
+    `,
+    data_consent_ru: `
+        <h1>Согласие на обработку данных</h1>
+        <h2>1. Предоставление согласия</h2>
+        <p>Настоящим я даю свое безусловное согласие на сбор, обработку и хранение моих персональных данных и персональных данных моего ребенка Разработчиком приложения «Lupibu» («Оператор»).</p>
+        <h2>2. Правовые основания</h2>
+        <p>Данное согласие дается в соответствии с Законом Республики Казахстан «О персональных данных и их защите» и является конкретным, информированным и сознательным.</p>
+        <h2>3. Категории данных</h2>
+        <p>Я разрешаю обработку следующих данных:</p>
+        <ul>
+            <li><strong>Данные родителя:</strong> ФИО, адрес электронной почты.</li>
+            <li><strong>Данные ребенка:</strong> ФИО, дата рождения, пол, рост, вес, окружность головы, история вакцинации, симптомы здоровья, фотографии.</li>
+        </ul>
+        <h2>4. Цель обработки</h2>
+        <ul>
+            <li>Создания и ведения цифрового дневника здоровья.</li>
+            <li>Предоставления персонализированной аналитики (графики роста, напоминания о прививках).</li>
+            <li>Резервного копирования и синхронизации данных между устройствами.</li>
+        </ul>
+        <h2>5. Трансграничная передача</h2>
+        <p>Я выражаю явное согласие на трансграничную передачу указанных данных на серверы, находящиеся за пределами страны моего проживания (Google Cloud Platform / Firebase), признавая, что эти серверы обеспечивают адекватный уровень защиты данных.</p>
+        <h2>6. Права и отзыв</h2>
+        <p>Я понимаю, что имею право отозвать это согласие в любой момент. Отзыв осуществляется путем удаления моего аккаунта в настройках Приложения. Отзыв согласия повлечет за собой удаление всех данных.</p>
+        <h2>7. Электронная подпись</h2>
+        <p>Установка галочки «Я согласен» является моей <strong>Простой электронной подписью</strong> и имеет ту же юридическую силу, что и собственноручная подпись.</p>
+    `,
+    data_consent_kk: `
+        <h1>Деректерді өңдеуге келісім</h1>
+        <h2>1. Келісім беру</h2>
+        <p>Осы арқылы мен «Lupibu» қосымшасын Әзірлеушіге («Оператор») менің дербес деректерімді және баламның дербес деректерін жинауға, өңдеуге және сақтауға сөзсіз келісім беремін.</p>
+        <h2>2. Құқықтық негіздер</h2>
+        <p>Бұл келісім Қазақстан Республикасының «Дербес деректер және оларды қорғау туралы» Заңына сәйкес беріледі және нақты, хабардар етілген және саналы болып табылады.</p>
+        <h2>3. Деректер санаттары</h2>
+        <p>Мен келесі деректерді өңдеуге рұқсат беремін:</p>
+        <ul>
+            <li><strong>Ата-ана деректері:</strong> ТАӘ, электрондық пошта мекенжайы.</li>
+            <li><strong>Бала деректері:</strong> ТАӘ, туған күні, жынысы, бойы, салмағы, бас айналымы, екпе тарихы, денсаулық белгілері, фотосуреттер.</li>
+        </ul>
+        <h2>4. Өңдеу мақсаты</h2>
+        <ul>
+            <li>Сандық денсаулық күнделігін жасау және жүргізу.</li>
+            <li>Жекелендірілген талдауды ұсыну (өсу графиктері, екпелер туралы еске салғыштар).</li>
+            <li>Деректердің резервтік көшірмесін жасау және құрылғылар арасында синхрондау.</li>
+        </ul>
+        <h2>5. Трансшекаралық тасымалдау</h2>
+        <p>Мен деректерді тұратын елімнен тыс орналасқан серверлерге (Google Cloud Platform / Firebase) трансшекаралық тасымалдауға нақты келісім беремін.</p>
+        <h2>6. Құқықтар және қайтарып алу</h2>
+        <p>Мен бұл келісімді кез келген уақытта қайтарып алуға құқығым бар екенін түсінемін. Қайтарып алу аккаунтымды жою арқылы жүзеге асырылады. Келісімді қайтарып алу барлық деректердің жойылуына әкеледі.</p>
+        <h2>7. Электрондық қолтаңба</h2>
+        <p>«Мен келісемін» құсбелгісін қою менің <strong>Қарапайым электрондық қолтаңбам</strong> болып табылады және қолымен қойылған қолтаңбамен бірдей заңды күшке ие.</p>
+    `
+    };
+
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        var doc = params.get('doc') || 'privacy';
+        var lang = params.get('lang') || (localStorage.getItem && localStorage.getItem('lupibu-lang')) || 'en';
+        var validDocs = ['privacy', 'terms', 'disclaimer', 'data_consent'];
+        var validLangs = ['en', 'ru', 'kk'];
+
+        var d = validDocs.indexOf(doc) !== -1 ? doc : 'privacy';
+        var l = validLangs.indexOf(lang) !== -1 ? lang : 'en';
+
+        var key = d + '_' + l;
+        var body = document.getElementById('legalBody');
+
+        if (docs[key]) {
+            body.innerHTML = docs[key];
+        } else {
+            body.innerHTML = '<p style="text-align:center;color:#999">Document not found.</p>';
+        }
+
+        // Translate Home button
+        var homeLabels = { en: 'Home', ru: 'Главная', kk: 'Басты бет' };
+        var homeBtn = document.getElementById('homeBtn');
+        if (homeBtn) homeBtn.textContent = homeLabels[l] || 'Home';
+
+        // Set page title
+        var h1 = body.querySelector('h1');
+        if (h1) {
+            document.title = 'Lupibu — ' + h1.textContent;
+            // Wrap back link + h1 in a row
+            var backLabels = { en: 'Back', ru: 'Назад', kk: 'Артқа' };
+            var row = document.createElement('div');
+            row.className = 'legal-header-row';
+            var backLink = document.createElement('a');
+            backLink.href = 'index.html';
+            backLink.className = 'legal-back';
+            backLink.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>' + (backLabels[l] || 'Back');
+            h1.parentNode.insertBefore(row, h1);
+            row.appendChild(backLink);
+            row.appendChild(h1);
+        }
+    })();
+    </script>
+</body>
+
+</html>

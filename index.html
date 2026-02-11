@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lupibu — your child's growth companion. Track feedings, sleep, growth on WHO charts, milestones, schedules — all in one app. AI voice input in 3 languages.">
+    <meta name="keywords"
+        content="baby tracker, parenting app, child development, growth charts, milestone tracker, feeding tracker, sleep tracker">
+    <meta name="theme-color" content="#F2835A">
+
+    <title>Lupibu — They Grow So Fast. Don't Miss a Thing.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo-inline-primary.svg" alt="Lupibu" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features" data-i18n="nav.features">Features</a></li>
+                <li><a href="#how-it-works" data-i18n="nav.howItWorks">How It Works</a></li>
+                <li><a href="#testimonials" data-i18n="nav.reviews">Reviews</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <button class="lang-toggle" aria-label="Change language">
+                        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <span class="lang-current">EN</span>
+                        <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en">
+                            <span class="lang-option-code">EN</span>
+                            <span class="lang-option-name">English</span>
+                        </button>
+                        <button class="lang-option" data-lang="ru">
+                            <span class="lang-option-code">RU</span>
+                            <span class="lang-option-name">Русский</span>
+                        </button>
+                        <button class="lang-option" data-lang="kk">
+                            <span class="lang-option-code">KZ</span>
+                            <span class="lang-option-name">Қазақша</span>
+                        </button>
+                    </div>
+                </div>
+                <a href="#download" class="btn btn-primary btn-nav" data-i18n="nav.download">Download</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">👶</span>
+                    <span data-i18n="hero.badge">Your child's growth companion</span>
+                </div>
+                <h1 class="hero-title" data-i18n-html="hero.title">
+                    <span class="hero-title-sm">They grow so fast</span><span class="gradient-text">Don't miss a thing</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">
+                    Feedings, sleep, growth, milestones — your baby's world changes every day. Lupibu keeps it all in one place so you can worry less and be present more. And when your hands are full, just say it — AI will log it for you.
+                </p>
+                <div class="hero-cta">
+                    <a href="#download" class="btn btn-primary btn-lg">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                        </svg>
+                        <span class="btn-text-group">
+                            <span class="btn-label" data-i18n="hero.comingDate">Available March 1</span>
+                            <span class="btn-store" data-i18n="hero.appStore">App Store</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value" data-i18n="hero.stat1Value">AI</span>
+                        <span class="stat-label" data-i18n="hero.stat1Label">Voice input</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-value" data-i18n="hero.stat2Value">0</span>
+                        <span class="stat-label" data-i18n="hero.stat2Label">Ads</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-value" data-i18n="hero.stat3Value">&lt; 5s</span>
+                        <span class="stat-label" data-i18n="hero.stat3Label">To log an event</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="screenshot-carousel">
+                                <img src="assets/screenshots/en/Main.png" alt="Lupibu Home Screen" class="screenshot active" loading="eager">
+                                <img src="assets/screenshots/en/Calendar.png" alt="Lupibu Calendar" class="screenshot" loading="lazy">
+                                <img src="assets/screenshots/en/Growth.png" alt="Lupibu Growth Tracking" class="screenshot" loading="lazy">
+                                <img src="assets/screenshots/en/Milestone.png" alt="Lupibu Milestones" class="screenshot" loading="lazy">
+                                <img src="assets/screenshots/en/Articles.png" alt="Lupibu Articles" class="screenshot" loading="lazy">
+                                <img src="assets/screenshots/en/Select%20event.png" alt="Lupibu Event Selection" class="screenshot" loading="lazy">
+                                <img src="assets/screenshots/en/Add%20event%20form.png" alt="Lupibu Add Event" class="screenshot" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                        <span class="carousel-dot"></span>
+                    </div>
+                    <div class="phone-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="features.label">Everything in one app</span>
+                <h2 class="section-title" data-i18n-html="features.title">Track the past. Plan ahead.<br>Enjoy the moment.</h2>
+                <p class="section-subtitle" data-i18n="features.subtitle">From daily routines to big milestones — Lupibu gives you clarity in the beautiful chaos of parenthood.</p>
+            </div>
+            <div class="features-grid">
+                <!-- Row 1: 3 cards -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18" />
+                            <path d="m19 9-5 5-4-4-3 3" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.growth.title">Growth charts you can trust</h3>
+                    <p class="feature-desc" data-i18n="features.growth.desc">Record weight, height, and teeth — see them plotted on WHO curves with full history. Walk into the pediatrician's office with confidence.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.milestones.title">Every first, captured forever</h3>
+                    <p class="feature-desc" data-i18n="features.milestones.desc">First smile, first steps, first tooth — mark milestones, attach photos, get confetti, and share a beautiful card with grandma.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.calendar.title">Your day at a glance</h3>
+                    <p class="feature-desc" data-i18n="features.calendar.desc">Visual timeline of everything that happened — and everything planned. Edit, delete, use timers. Past events and future schedules in one view.</p>
+                </div>
+                <!-- Center: Voice card (hero feature) -->
+                <div class="feature-card feature-card-large">
+                    <div class="feature-icon feature-icon-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                            <line x1="12" x2="12" y1="19" y2="22" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.voice.title">Hands busy? Just speak</h3>
+                    <p class="feature-desc" data-i18n="features.voice.desc">Press the mic and say what happened — "ate porridge 150 grams", "fell asleep at 2pm". AI understands natural speech in English, Russian, and Kazakh. No typing needed.</p>
+                    <div class="feature-tag" data-i18n="features.voice.tag">AI Voice</div>
+                </div>
+                <!-- Row 3: 3 cards -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.reminders.title">Schedules, timers & reminders</h3>
+                    <p class="feature-desc" data-i18n="features.reminders.desc">Use built-in sleep and feeding schedules, set timers for any event, get gentle nudges when it's time. Plan ahead — Lupibu remembers so you don't have to.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.multiChild.title">Multiple children</h3>
+                    <p class="feature-desc" data-i18n="features.multiChild.desc">Add as many kids as you need and switch between them in a tap. Each child gets their own timeline, charts, and milestones.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <polyline points="21 15 16 10 5 21" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="features.photos.title">Photos on every event</h3>
+                    <p class="feature-desc" data-i18n="features.photos.desc">Attach photos to any entry — snap the doctor's prescription, capture a milestone moment, save what matters where it belongs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="howItWorks.label">How It Works</span>
+                <h2 class="section-title" data-i18n="howItWorks.title">Three steps to calmer parenting</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step1.title">Add your little one</h3>
+                        <p data-i18n="howItWorks.step1.desc">Name, birthday, photo — 30 seconds and you're ready. Add as many children as you need.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step2.title">Speak or tap</h3>
+                        <p data-i18n="howItWorks.step2.desc">Record events by voice or pick from the list. Use timers, attach photos, edit anything — your way.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step3.title">Watch them grow</h3>
+                        <p data-i18n="howItWorks.step3.desc">Growth charts, milestones, daily timeline — Lupibu turns your entries into a story you'll want to revisit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="testimonials.label">Parents say</span>
+                <h2 class="section-title" data-i18n="testimonials.title">They tried it. They stayed.</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonials.t1.text">"I was skeptical about voice input. Then I tried saying 'ate banana 50 grams' while rocking my baby — and it just worked. I can't go back to typing."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <span class="author-name" data-i18n="testimonials.t1.name">Anna K.</span>
+                            <span class="author-role" data-i18n="testimonials.t1.role">Mom, 8-month baby</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonials.t2.text">"The growth charts calmed my anxiety. Seeing my son right on the WHO curve made me breathe easier at the pediatrician visit."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">D</div>
+                        <div class="author-info">
+                            <span class="author-name" data-i18n="testimonials.t2.name">Dmitry S.</span>
+                            <span class="author-role" data-i18n="testimonials.t2.role">First-time dad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonials.t3.text">"When my daughter took her first steps, I got confetti in the app and a gorgeous card to send to grandma. Such a lovely touch."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <span class="author-name" data-i18n="testimonials.t3.name">Aigerim T.</span>
+                            <span class="author-role" data-i18n="testimonials.t3.role">Mom of two</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section id="download" class="download-cta">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <img src="assets/logo.png" alt="Lupibu" class="cta-logo">
+                    <h2 class="cta-title" data-i18n="cta.title">Your baby's story starts here</h2>
+                    <p class="cta-subtitle" data-i18n="cta.subtitle">Basic features are free. No ads.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-white btn-lg">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                            </svg>
+                            <span class="btn-text-group">
+                                <span class="btn-label" data-i18n="hero.comingDate">Available March 1</span>
+                                <span class="btn-store" data-i18n="hero.appStore">App Store</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="contact.label">Get in Touch</span>
+                <h2 class="section-title" data-i18n="contact.title">Have a question or idea?</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">We'd love to hear from you. Drop us a message and we'll get back to you soon.</p>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactName" data-i18n="contact.name">Name</label>
+                        <input type="text" id="contactName" name="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail" data-i18n="contact.email">Email</label>
+                        <input type="email" id="contactEmail" name="email" required data-i18n-placeholder="contact.emailPlaceholder" placeholder="your@email.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage" data-i18n="contact.message">Message</label>
+                    <textarea id="contactMessage" name="message" rows="5" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="How can we help?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg contact-submit">
+                    <span data-i18n="contact.send">Send Message</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo-inline-primary.svg" alt="Lupibu" class="footer-logo">
+                    <p class="footer-tagline" data-i18n="footer.tagline">Just say it. We'll remember.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.product">Product</h4>
+                        <a href="#features" data-i18n="footer.product.features">Features</a>
+                        <a href="#how-it-works" data-i18n="footer.product.howItWorks">How It Works</a>
+                        <a href="#contact" data-i18n="footer.product.contact">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 data-i18n="footer.legal">Legal</h4>
+                        <a href="legal.html?doc=privacy" class="legal-link" data-doc="privacy" data-i18n="footer.legal.privacy">Privacy Policy</a>
+                        <a href="legal.html?doc=terms" class="legal-link" data-doc="terms" data-i18n="footer.legal.terms">Terms of Use</a>
+                        <a href="legal.html?doc=disclaimer" class="legal-link" data-doc="disclaimer" data-i18n="footer.legal.disclaimer">Medical Disclaimer</a>
+                        <a href="legal.html?doc=data_consent" class="legal-link" data-doc="data_consent" data-i18n="footer.legal.dataConsent">Data Consent</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2026 Lupibu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
