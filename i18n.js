@@ -5,93 +5,90 @@
 const translations = {
     en: {
         // Nav
-        'nav.features': 'Features',
-        'nav.howItWorks': 'How It Works',
-        'nav.reviews': 'Reviews',
-        'nav.contact': 'Contact',
-        'nav.download': 'Download',
+        'nav.joinBeta': 'Join Beta',
 
         // Hero
-        'hero.badge': 'Your child\'s growth companion',
-        'hero.title': '<span class="hero-title-sm">They grow so fast</span><span class="gradient-text">Don\'t miss a thing</span>',
-        'hero.subtitle': 'Feedings, sleep, growth, milestones — your baby\'s world changes every day. Lupibu keeps it all in one place so you can worry less and be present more. And when your hands are full, just say it — AI will log it for you.',
-        'hero.comingDate': 'Available March 1',
-        'hero.appStore': 'App Store',
+        'hero.badge': 'Beta testing is open',
+        'hero.title': 'Predicts sleep.<br>Understands voice.<br>Remembers everything.',
+        'hero.subtitle': 'Smart baby tracker with AI assistant. Knows when it\'s time to sleep, logs by voice, and answers your questions.',
+        'hero.cta': 'Join the beta test',
+        'hero.ctaSub': '3 months Premium free after launch',
         'hero.stat1Value': 'AI',
-        'hero.stat1Label': 'Voice input',
-        'hero.stat2Value': '0',
-        'hero.stat2Label': 'Ads',
+        'hero.stat1Label': 'Assistant',
+        'hero.stat2Value': '12',
+        'hero.stat2Label': 'Entry types',
         'hero.stat3Value': '< 5s',
-        'hero.stat3Label': 'To log an event',
+        'hero.stat3Label': 'Voice logging',
 
-        // Features
-        'features.label': 'Everything in one app',
-        'features.title': 'Track the past. Plan ahead.<br>Enjoy the moment.',
-        'features.subtitle': 'From daily routines to big milestones — Lupibu gives you clarity in the beautiful chaos of parenthood.',
-        'features.voice.title': 'Hands busy? Just speak',
-        'features.voice.desc': 'Press the mic and say what happened — "ate porridge 150 grams", "fell asleep at 2pm". AI understands natural speech in English, Russian, and Kazakh. No typing needed.',
-        'features.voice.tag': 'AI Voice',
-        'features.growth.title': 'Growth charts you can trust',
-        'features.growth.desc': 'Record weight, height, and teeth — see them plotted on WHO curves with full history. Walk into the pediatrician\'s office with confidence.',
-        'features.milestones.title': 'Every first, captured forever',
-        'features.milestones.desc': 'First smile, first steps, first tooth — mark milestones, attach photos, get confetti, and share a beautiful card with grandma.',
-        'features.calendar.title': 'Your day at a glance',
-        'features.calendar.desc': 'Visual timeline of everything that happened — and everything planned. Edit, delete, use timers. Past events and future schedules in one view.',
-        'features.reminders.title': 'Schedules, timers & reminders',
-        'features.reminders.desc': 'Use built-in sleep and feeding schedules, set timers for any event, get gentle nudges when it\'s time. Plan ahead — Lupibu remembers so you don\'t have to.',
-        'features.multiChild.title': 'Multiple children',
-        'features.multiChild.desc': 'Add as many kids as you need and switch between them in a tap. Each child gets their own timeline, charts, and milestones.',
-        'features.photos.title': 'Photos on every event',
-        'features.photos.desc': 'Attach photos to any entry — snap the doctor\'s prescription, capture a milestone moment, save what matters where it belongs.',
-        'features.articles.title': 'Articles by age',
-        'features.articles.desc': 'Pediatrician-backed articles matched to your child\'s current stage. The right answers at the right time.',
+        // Problem
+        'problem.label': 'Sound familiar?',
+        'problem.title': 'When to put down? How long did they sleep?<br>Why are they crying?',
+        'problem.text': 'The first two years are an endless stream of questions. You google, ask friends, scroll through forums. Every time you get generic advice that doesn\'t account for your child.',
+        'problem.answer': 'Lupibu learns from your baby\'s data and gives answers that work for them \u2014 not for "the average child from a chart."',
+
+        // Sleep
+        'sleep.label': 'Sleep Intelligence',
+        'sleep.title': 'Knows when your baby should sleep',
+        'sleep.desc': 'Personalized wake windows, sleep time prediction, weekly analytics. Lupibu learns from your child\'s data specifically.',
+        'sleep.bullet1': 'Next sleep prediction on the home screen',
+        'sleep.bullet2': 'Weekly map: day and night sleep patterns',
+        'sleep.bullet3': 'Each day\'s details in one tap',
+
+        // AI
+        'ai.label': 'AI Assistant',
+        'ai.title': 'Ask anything \u2014 get answers based on your child\'s data',
+        'ai.desc': 'Not generic internet advice, but specific answers based on what you\'ve logged. The assistant sees all 12 entry types and finds patterns that are hard to notice on your own.',
+        'ai.prompt1': '"Why did she sleep so little yesterday?"',
+        'ai.prompt2': '"How many times did he eat today?"',
+        'ai.prompt3': '"When was the last vaccination?"',
+
+        // Tracking
+        'tracking.label': 'Easy logging',
+        'tracking.title': 'Three ways to log',
+        'tracking.desc': 'Fill out a form, dictate by voice, or type in chat \u2014 choose what\'s convenient right now. 12 entry types with timers, photos, and notes.',
+        'tracking.feat1': 'Form with fields',
+        'tracking.feat2': 'Voice in 3 languages',
+        'tracking.feat3': 'Text in chat',
+        'tracking.feat4': 'Timers for sleep & feeding',
+
+        // Family
+        'family.label': 'For the whole family',
+        'family.title': 'Multiple children, one app',
+        'family.desc': 'Switch between children in one tap. Share access with your partner. Dark theme for nighttime feedings. The app adapts to your family.',
+        'family.feat1': 'Multiple children',
+        'family.feat2': 'Family sharing',
+        'family.feat3': 'Dark theme',
+        'family.feat4': 'Personalization',
 
         // How It Works
-        'howItWorks.label': 'How It Works',
-        'howItWorks.title': 'Three steps to calmer parenting',
-        'howItWorks.step1.title': 'Add your little one',
-        'howItWorks.step1.desc': 'Name, birthday, photo — 30 seconds and you\'re ready. Add as many children as you need.',
-        'howItWorks.step2.title': 'Speak or tap',
-        'howItWorks.step2.desc': 'Record events by voice or pick from the list. Use timers, attach photos, edit anything — your way.',
-        'howItWorks.step3.title': 'Watch them grow',
-        'howItWorks.step3.desc': 'Growth charts, milestones, daily timeline — Lupibu turns your entries into a story you\'ll want to revisit.',
+        'howItWorks.label': 'Getting started',
+        'howItWorks.title': 'Three minutes to your first entry',
+        'howItWorks.step1.title': 'Add your baby',
+        'howItWorks.step1.desc': 'Name, date of birth \u2014 and you\'re ready.',
+        'howItWorks.step2.title': 'Log by voice or manually',
+        'howItWorks.step2.desc': 'Tap an entry type or speak. AI recognizes everything.',
+        'howItWorks.step3.title': 'Get predictions and answers',
+        'howItWorks.step3.desc': 'The more data, the smarter the app gets.',
 
-        // Testimonials
-        'testimonials.label': 'Parents say',
-        'testimonials.title': 'They tried it. They stayed.',
-        'testimonials.t1.text': '"I was skeptical about voice input. Then I tried saying \'ate banana 50 grams\' while rocking my baby — and it just worked. I can\'t go back to typing."',
-        'testimonials.t1.name': 'Anna K.',
-        'testimonials.t1.role': 'Mom, 8-month baby',
-        'testimonials.t2.text': '"The growth charts calmed my anxiety. Seeing my son right on the WHO curve made me breathe easier at the pediatrician visit."',
-        'testimonials.t2.name': 'Dmitry S.',
-        'testimonials.t2.role': 'First-time dad',
-        'testimonials.t3.text': '"When my daughter took her first steps, I got confetti in the app and a gorgeous card to send to grandma. Such a lovely touch."',
-        'testimonials.t3.name': 'Aigerim T.',
-        'testimonials.t3.role': 'Mom of two',
+        // Beta
+        'beta.title': 'Try it before everyone else',
+        'beta.desc': 'Sleep prediction, AI assistant, voice logging in 3 languages \u2014 all this is already working. Join the beta, test it with your child, and get 3 months Premium free after launch.',
+        'beta.namePlaceholder': 'Your name',
+        'beta.tgPlaceholder': 'Email or @telegram',
+        'beta.submit': 'I want to participate',
+        'beta.note': 'iOS \u00b7 TestFlight \u00b7 Free \u00b7 No spam',
+        'beta.success': 'Thank you! We\'ll reach out on Telegram soon.',
 
-        // CTA
-        'cta.title': 'Your baby\'s story starts here',
-        'cta.subtitle': 'Basic features are free. No ads.',
-
-        // Contact
-        'contact.label': 'Get in Touch',
-        'contact.title': 'Have a question or idea?',
-        'contact.subtitle': 'We\'d love to hear from you. Drop us a message and we\'ll get back to you soon.',
-        'contact.name': 'Name',
-        'contact.namePlaceholder': 'Your name',
-        'contact.email': 'Email',
-        'contact.emailPlaceholder': 'your@email.com',
-        'contact.message': 'Message',
-        'contact.messagePlaceholder': 'How can we help?',
-        'contact.send': 'Send Message',
-        'contact.success': 'Your email client will open now. Thank you!',
+        // Founder
+        'founder.quote': '"Hi, I\'m Azat \u2014 the developer of Lupibu. I created this app when I became a dad and realized that existing trackers are just notepads. Logging data is easy, but getting answers from it was impossible. Lupibu is designed to think alongside you. Your feedback directly shapes what the product becomes."',
+        'founder.name': 'Azat, founder of Lupibu',
 
         // Footer
-        'footer.tagline': 'Just say it. We\'ll remember.',
+        'footer.tagline': 'Sleep prediction & AI assistant for parents',
         'footer.product': 'Product',
         'footer.product.features': 'Features',
         'footer.product.howItWorks': 'How It Works',
-        'footer.product.contact': 'Contact',
+        'footer.product.beta': 'Beta Test',
         'footer.legal': 'Legal',
         'footer.legal.privacy': 'Privacy Policy',
         'footer.legal.terms': 'Terms of Use',
@@ -100,95 +97,90 @@ const translations = {
         'footer.copyright': '\u00a9 2026 Lupibu. All rights reserved.',
 
         // Meta
-        'meta.description': 'Lupibu — your child\'s growth companion. Track feedings, sleep, growth on WHO charts, milestones, schedules — all in one app. AI voice input in 3 languages.',
-        'meta.title': 'Lupibu \u2014 They Grow So Fast. Don\'t Miss a Thing'
+        'meta.description': 'Lupibu \u2014 smart baby sleep tracker with AI assistant. Predicts sleep, answers questions about your child, works with voice in 3 languages. Beta testing open.',
+        'meta.title': 'Lupibu \u2014 Smart Baby Sleep Tracker with AI Assistant'
     },
 
     // ============================================
-    // РУССКИЙ — транскреация
+    // РУССКИЙ
     // Тон: тёплый, на «ты», подруга рядом
     // ============================================
     ru: {
-        'nav.features': 'Возможности',
-        'nav.howItWorks': 'Как это работает',
-        'nav.reviews': 'Отзывы',
-        'nav.contact': 'Контакты',
-        'nav.download': 'Скачать',
+        'nav.joinBeta': 'Присоединиться',
 
-        'hero.badge': 'Помощник в развитии малыша',
-        'hero.title': '<span class="hero-title-sm">Они растут так быстро</span><span class="gradient-text">Не упусти ни дня</span>',
-        'hero.subtitle': 'Кормления, сон, рост, первые достижения — мир малыша меняется каждый день. Lupibu соберёт всё в одном месте, чтобы меньше тревог — и больше моментов рядом. А когда руки заняты — просто скажи, ИИ всё запишет.',
-        'hero.comingDate': 'Доступно с 1 марта',
-        'hero.appStore': 'App Store',
+        'hero.badge': 'Бета-тест открыт',
+        'hero.title': 'Предсказывает сон.<br>Понимает голос.<br>Помнит всё.',
+        'hero.subtitle': 'Умный дневник малыша с ИИ-помощником. Знает, когда пора спать, записывает голосом и отвечает на твои вопросы.',
+        'hero.cta': 'Присоединиться к бета-тесту',
+        'hero.ctaSub': '3 месяца Premium бесплатно после запуска',
         'hero.stat1Value': 'ИИ',
-        'hero.stat1Label': 'Голосовой ввод',
-        'hero.stat2Value': '0',
-        'hero.stat2Label': 'Рекламы',
+        'hero.stat1Label': 'Ассистент',
+        'hero.stat2Value': '12',
+        'hero.stat2Label': 'Типов записей',
         'hero.stat3Value': '< 5с',
-        'hero.stat3Label': 'Записать событие',
+        'hero.stat3Label': 'Записать голосом',
 
-        'features.label': 'Всё в одном приложении',
-        'features.title': 'Записывай прошлое. Планируй будущее.<br>Наслаждайся моментом.',
-        'features.subtitle': 'От ежедневной рутины до больших достижений — Lupibu помогает разобраться в прекрасном хаосе родительства.',
-        'features.voice.title': 'Руки заняты? Просто скажи',
-        'features.voice.desc': 'Нажми на микрофон и расскажи — «поел кашу 150 грамм», «уснул в два». ИИ понимает живую речь на русском, казахском и английском. Набирать ничего не нужно.',
-        'features.voice.tag': 'ИИ',
-        'features.growth.title': 'Графики роста, которым доверяешь',
-        'features.growth.desc': 'Вес, рост и зубки — на графиках ВОЗ с полной историей. Иди к педиатру с уверенностью, а не с тревогой.',
-        'features.milestones.title': 'Каждое «впервые» — навсегда',
-        'features.milestones.desc': 'Первая улыбка, первые шаги, первый зубик — отмечай, прикрепляй фото, лови конфетти и отправляй открытку бабушке.',
-        'features.calendar.title': 'Весь день — как на ладони',
-        'features.calendar.desc': 'Визуальный таймлайн всего, что было — и всего, что запланировано. Редактируй, удаляй, используй таймеры. Прошлое и будущее в одном экране.',
-        'features.reminders.title': 'Расписания, таймеры и напоминания',
-        'features.reminders.desc': 'Готовые расписания сна и кормлений, таймеры для любого события, мягкие напоминания. Планируй наперёд — Lupibu запомнит за тебя.',
-        'features.multiChild.title': 'Несколько детей',
-        'features.multiChild.desc': 'Добавляй сколько угодно малышей и переключайся одним касанием. У каждого — свой таймлайн, графики и достижения.',
-        'features.photos.title': 'Фото к каждому событию',
-        'features.photos.desc': 'Прикрепляй фото к любой записи — назначение врача, первые шаги, важный момент. Всё там, где нужно, а не в галерее.',
-        'features.articles.title': 'Статьи по возрасту',
-        'features.articles.desc': 'Материалы от педиатров — под текущий этап развития. Нужные ответы в нужный момент.',
+        'problem.label': 'Знакомо?',
+        'problem.title': 'Когда уложить? Сколько спал?<br>Почему плачет?',
+        'problem.text': 'Первые два года \u2014 бесконечный поток вопросов. Гуглишь, спрашиваешь подруг, листаешь форумы. И каждый раз получаешь общие советы, которые не учитывают именно твоего ребёнка.',
+        'problem.answer': 'Lupibu учится на данных твоего малыша и даёт ответы, которые работают для него \u2014 а не для \u00abсреднего ребёнка из таблицы\u00bb.',
 
-        'howItWorks.label': 'Как это работает',
-        'howItWorks.title': 'Три шага к спокойному родительству',
+        'sleep.label': 'Интеллект сна',
+        'sleep.title': 'Знает, когда малышу пора спать',
+        'sleep.desc': 'Персональные окна бодрствования, предсказание времени сна, еженедельная аналитика. Lupibu учится на данных именно твоего ребёнка.',
+        'sleep.bullet1': 'Прогноз следующего сна на главном экране',
+        'sleep.bullet2': 'Недельная карта: дневной и ночной сон',
+        'sleep.bullet3': 'Детали каждого дня по клику',
+
+        'ai.label': 'ИИ-ассистент',
+        'ai.title': 'Спроси что угодно \u2014 получи ответ по данным твоего ребёнка',
+        'ai.desc': 'Не общие советы из интернета, а конкретные ответы на основе того, что ты записала. Ассистент видит все 12 типов записей и находит связи, которые сложно заметить самой.',
+        'ai.prompt1': '\u00abПочему она вчера так мало спала?\u00bb',
+        'ai.prompt2': '\u00abСколько раз он ел сегодня?\u00bb',
+        'ai.prompt3': '\u00abКогда была последняя прививка?\u00bb',
+
+        'tracking.label': 'Удобный ввод',
+        'tracking.title': 'Три способа записать',
+        'tracking.desc': 'Заполни форму, продиктуй голосом или напиши в чат \u2014 выбирай, что удобно прямо сейчас. 12 типов записей с таймерами, фото и заметками.',
+        'tracking.feat1': 'Форма с полями',
+        'tracking.feat2': 'Голос на 3 языках',
+        'tracking.feat3': 'Текст в чат',
+        'tracking.feat4': 'Таймеры сна и кормлений',
+
+        // Family
+        'family.label': 'Для всей семьи',
+        'family.title': 'Несколько детей, одно приложение',
+        'family.desc': 'Переключайся между детьми одним касанием. Дай доступ партнёру. Тёмная тема для ночных кормлений. Приложение подстраивается под твою семью.',
+        'family.feat1': 'Несколько детей',
+        'family.feat2': 'Семейный доступ',
+        'family.feat3': 'Тёмная тема',
+        'family.feat4': 'Персонализация',
+
+        'howItWorks.label': 'Как начать',
+        'howItWorks.title': 'Три минуты до первой записи',
         'howItWorks.step1.title': 'Добавь малыша',
-        'howItWorks.step1.desc': 'Имя, дата рождения, фото — полминуты, и готово. Добавляй столько детей, сколько нужно.',
-        'howItWorks.step2.title': 'Скажи или нажми',
-        'howItWorks.step2.desc': 'Записывай события голосом или выбирай из списка. Используй таймеры, прикрепляй фото, редактируй — как тебе удобно.',
-        'howItWorks.step3.title': 'Наблюдай, как растут',
-        'howItWorks.step3.desc': 'Графики роста, достижения, дневной таймлайн — Lupibu превратит записи в историю, которую захочется пересматривать.',
+        'howItWorks.step1.desc': 'Имя, дата рождения \u2014 и готово.',
+        'howItWorks.step2.title': 'Записывай голосом или вручную',
+        'howItWorks.step2.desc': 'Нажми на тип записи или скажи голосом. ИИ всё распознает.',
+        'howItWorks.step3.title': 'Получай прогнозы и ответы',
+        'howItWorks.step3.desc': 'Чем больше данных, тем умнее приложение.',
 
-        'testimonials.label': 'Мамы и папы говорят',
-        'testimonials.title': 'Попробовали — полюбили',
-        'testimonials.t1.text': '«Думала, голосовой ввод — баловство. Укачивала дочку, сказала «поела банан 50 грамм» — и всё записалось само. Набирать вручную? Ни за что.»',
-        'testimonials.t1.name': 'Аня К.',
-        'testimonials.t1.role': 'Мама, дочке 8 месяцев',
-        'testimonials.t2.text': '«Перед приёмом в поликлинике открыл графики роста — сын точно по кривой ВОЗ. Педиатр даже спросила, что за приложение.»',
-        'testimonials.t2.name': 'Дима С.',
-        'testimonials.t2.role': 'Папа первенца',
-        'testimonials.t3.text': '«Дочка сделала первые шаги — а в приложении конфетти и красивая открытка. Отправила бабушке, та расплакалась от счастья.»',
-        'testimonials.t3.name': 'Айгерим Т.',
-        'testimonials.t3.role': 'Мама двоих',
+        'beta.title': 'Попробуй раньше всех',
+        'beta.desc': 'Предсказание сна, ИИ-ассистент, голосовой ввод на 3 языках \u2014 всё это уже работает. Присоединяйся к бете, тестируй на своём малыше и получи 3 месяца Premium бесплатно после запуска.',
+        'beta.namePlaceholder': 'Твоё имя',
+        'beta.tgPlaceholder': 'Email или @телеграм',
+        'beta.submit': 'Хочу участвовать',
+        'beta.note': 'iOS \u00b7 TestFlight \u00b7 Бесплатно \u00b7 Без спама',
+        'beta.success': 'Спасибо! Скоро напишем тебе в Telegram.',
 
-        'cta.title': 'Они так быстро растут. Не упусти ни дня.',
-        'cta.subtitle': 'Базовые функции — бесплатно. Без рекламы.',
+        'founder.quote': '\u00abПривет, я Азат \u2014 разработчик Lupibu. Я создал это приложение, когда стал папой и понял, что существующие трекеры \u2014 это просто блокноты. Записывать данные легко, а вот получить из них ответ \u2014 невозможно. Lupibu задуман как приложение, которое думает вместе с тобой. Твоя обратная связь напрямую влияет на то, каким станет продукт.\u00bb',
+        'founder.name': 'Азат, основатель Lupibu',
 
-        'contact.label': 'Напиши нам',
-        'contact.title': 'Есть вопрос или идея?',
-        'contact.subtitle': 'Мы рады обратной связи. Напиши — ответим как можно скорее.',
-        'contact.name': 'Имя',
-        'contact.namePlaceholder': 'Как тебя зовут',
-        'contact.email': 'Email',
-        'contact.emailPlaceholder': 'твой@email.com',
-        'contact.message': 'Сообщение',
-        'contact.messagePlaceholder': 'Чем можем помочь?',
-        'contact.send': 'Отправить',
-        'contact.success': 'Сейчас откроется почтовый клиент. Спасибо!',
-
-        'footer.tagline': 'Они растут — мы записываем.',
+        'footer.tagline': 'Предсказание сна и ИИ-помощник для родителей',
         'footer.product': 'Продукт',
         'footer.product.features': 'Возможности',
         'footer.product.howItWorks': 'Как это работает',
-        'footer.product.contact': 'Контакты',
+        'footer.product.beta': 'Бета-тест',
         'footer.legal': 'Документы',
         'footer.legal.privacy': 'Политика конфиденциальности',
         'footer.legal.terms': 'Условия использования',
@@ -196,95 +188,90 @@ const translations = {
         'footer.legal.dataConsent': 'Согласие на обработку данных',
         'footer.copyright': '\u00a9 2026 Lupibu. Все права защищены.',
 
-        'meta.description': 'Lupibu — помощник в развитии малыша. Кормления, сон, рост по ВОЗ, достижения, расписания, фото — всё в одном приложении. Голосовой ввод с ИИ.',
-        'meta.title': 'Lupibu \u2014 Они растут так быстро. Не упусти ни дня'
+        'meta.description': 'Lupibu \u2014 умный трекер сна и дневник малыша с ИИ-ассистентом. Предсказывает сон, отвечает на вопросы, работает голосом на 3 языках. Бета-тест открыт.',
+        'meta.title': 'Lupibu \u2014 Умный трекер сна и дневник малыша с ИИ-ассистентом'
     },
 
     // ============================================
-    // ҚАЗАҚША — транскреация
+    // ҚАЗАҚША
     // Тон: жылы, құрметті «Сіз», отбасылық
     // ============================================
     kk: {
-        'nav.features': 'Мүмкіндіктер',
-        'nav.howItWorks': 'Қалай жұмыс істейді',
-        'nav.reviews': 'Пікірлер',
-        'nav.contact': 'Байланыс',
-        'nav.download': 'Жүктеу',
+        'nav.joinBeta': 'Қосылу',
 
-        'hero.badge': 'Балаңыздың сенімді серігі',
-        'hero.title': '<span class="hero-title-sm">Көз ілеспей өсіп кетеді</span><span class="gradient-text">Бір сәтін де жіберіп алмаңыз</span>',
-        'hero.subtitle': 'Тамақтану, ұйқы, бой өсу, алғашқы жетістіктер — сәбиіңіздің әлемі күн сайын өзгереді. Lupibu бәрін бір жерде сақтайды, сіз уайымдамай, жанында болыңыз. Ал қолыңыз бос болмаса — айта салыңыз, жасанды интеллект өзі жазып қояды.',
-        'hero.comingDate': '1 наурыздан',
-        'hero.appStore': 'App Store',
+        'hero.badge': 'Бета-тест ашық',
+        'hero.title': 'Ұйқыны болжайды.<br>Дауысты түсінеді.<br>Бәрін есінде сақтайды.',
+        'hero.subtitle': 'ЖИ-көмекшісі бар ақылды сәби күнделігі. Ұйқы уақытын біледі, дауыспен жазады және сұрақтарыңызға жауап береді.',
+        'hero.cta': 'Бета-тестке қосылу',
+        'hero.ctaSub': 'Іске қосылғаннан кейін 3 ай Premium тегін',
         'hero.stat1Value': 'ЖИ',
-        'hero.stat1Label': 'Дауыспен жазу',
-        'hero.stat2Value': '0',
-        'hero.stat2Label': 'Жарнама',
+        'hero.stat1Label': 'Көмекші',
+        'hero.stat2Value': '12',
+        'hero.stat2Label': 'Жазба түрі',
         'hero.stat3Value': '< 5с',
-        'hero.stat3Label': 'Жазу жылдамдығы',
+        'hero.stat3Label': 'Дауыспен жазу',
 
-        'features.label': 'Бәрі бір қосымшада',
-        'features.title': 'Өткенді жазыңыз. Болашақты жоспарлаңыз.<br>Әр сәтті қадірлеңіз.',
-        'features.subtitle': 'Күнделікті тірліктен ірі жетістіктерге дейін — Lupibu ата-ана болудың қуанышты да қызу кезеңінде тірегіңіз болады.',
-        'features.voice.title': 'Қолыңыз бос емес пе? Айта салыңыз',
-        'features.voice.desc': 'Микрофонды басып, не болғанын айтыңыз — «ботқа жеді 150 грамм», «сағат екіде ұйықтады». Жасанды интеллект қазақша, орысша, ағылшынша тірі сөзді түсінеді. Теруге уақыт кетірмейсіз.',
-        'features.voice.tag': 'ЖИ',
-        'features.growth.title': 'Сенімді өсу графиктері',
-        'features.growth.desc': 'Салмақ, бой, тістер — ДДҰ нормалары бойынша толық тарихы бар графикте. Педиатрға барғанда өзіңізге сенімді болыңыз.',
-        'features.milestones.title': 'Әр «алғашқы» — мәңгілік естелік',
-        'features.milestones.desc': 'Алғашқы күлкі, алғашқы қадам, алғашқы тіс — белгілеңіз, фото тіркеңіз, конфетти ұшырыңыз, әжеге ашықхат жіберіңіз.',
-        'features.calendar.title': 'Бүкіл күніңіз — көз алдыңызда',
-        'features.calendar.desc': 'Не болғанын, не жоспарланғанын визуалды таймлайннан көріңіз. Өзгертіңіз, жойыңыз, таймер қойыңыз. Өткен мен болашақ — бір экранда.',
-        'features.reminders.title': 'Кестелер, таймерлер, еске салулар',
-        'features.reminders.desc': 'Дайын ұйқы мен тамақтану кестелері, кез келген оқиғаға таймер, жұмсақ еске салулар. Алдын ала жоспарлаңыз — Lupibu Сіз үшін есінде сақтайды.',
-        'features.multiChild.title': 'Бірнеше бала',
-        'features.multiChild.desc': 'Қанша бала болса да қосыңыз — бір басумен ауысыңыз. Әр баланың өз таймлайны, графиктері мен жетістіктері бар.',
-        'features.photos.title': 'Әр оқиғаға фото',
-        'features.photos.desc': 'Кез келген жазбаға фото тіркеңіз — дәрігер тағайындауы, алғашқы қадам, маңызды сәт. Бәрі өз орнында — галереяда іздемейсіз.',
-        'features.articles.title': 'Жасына сай мақалалар',
-        'features.articles.desc': 'Педиатрлар жазған мақалалар — балаңыздың қазіргі даму кезеңіне сай. Қажет жауап қажет уақытта.',
+        'problem.label': 'Таныс па?',
+        'problem.title': 'Қашан жатқызу керек? Қанша ұйықтады?<br>Неге жылайды?',
+        'problem.text': 'Алғашқы екі жыл \u2014 сұрақтардың аяқталмас ағыны. Гуглдейсіз, құрбыларыңыздан сұрайсыз, форумдарды парақтайсыз. Әр жолы дәл сіздің балаңызды ескермейтін жалпы кеңестер аласыз.',
+        'problem.answer': 'Lupibu сіздің сәбиіңіздің деректерінен үйреніп, оған жұмыс істейтін жауаптар береді \u2014 \u00abкестедегі орташа бала\u00bb үшін емес.',
 
-        'howItWorks.label': 'Қалай жұмыс істейді',
-        'howItWorks.title': 'Тыныш ата-аналыққа үш қадам',
+        'sleep.label': 'Ұйқы интеллекті',
+        'sleep.title': 'Сәбиіңізге қашан ұйықтау керек екенін біледі',
+        'sleep.desc': 'Жеке сергек терезелер, ұйқы уақытын болжау, апталық аналитика. Lupibu дәл сіздің балаңыздың деректерінен үйренеді.',
+        'sleep.bullet1': 'Басты экранда келесі ұйқы болжамы',
+        'sleep.bullet2': 'Апталық карта: күндізгі және түнгі ұйқы',
+        'sleep.bullet3': 'Әр күннің мәліметтері бір басумен',
+
+        'ai.label': 'ЖИ-көмекші',
+        'ai.title': 'Кез келген нәрсені сұраңыз \u2014 балаңыздың деректері бойынша жауап алыңыз',
+        'ai.desc': 'Интернеттен жалпы кеңестер емес, сіз жазған деректерге негізделген нақты жауаптар. Көмекші барлық 12 жазба түрін көреді және өзіңіз байқау қиын байланыстарды табады.',
+        'ai.prompt1': '\u00abНеге ол кеше аз ұйықтады?\u00bb',
+        'ai.prompt2': '\u00abБүгін ол неше рет тамақ жеді?\u00bb',
+        'ai.prompt3': '\u00abСоңғы егу қашан болды?\u00bb',
+
+        'tracking.label': 'Оңай жазу',
+        'tracking.title': 'Жазудың үш жолы',
+        'tracking.desc': 'Форманы толтырыңыз, дауыспен айтыңыз немесе чатқа жазыңыз \u2014 қазір ыңғайлысын таңдаңыз. 12 жазба түрі таймерлермен, фотолармен және жазбалармен.',
+        'tracking.feat1': 'Өрістері бар форма',
+        'tracking.feat2': '3 тілде дауыспен',
+        'tracking.feat3': 'Чатқа мәтін',
+        'tracking.feat4': 'Ұйқы мен тамақтану таймерлері',
+
+        // Family
+        'family.label': 'Бүкіл отбасы үшін',
+        'family.title': 'Бірнеше бала, бір қосымша',
+        'family.desc': 'Балалар арасында бір басумен ауысыңыз. Жұбайыңызға қол жеткізу беріңіз. Түнгі тамақтану үшін қараңғы тақырып. Қосымша отбасыңызға бейімделеді.',
+        'family.feat1': 'Бірнеше бала',
+        'family.feat2': 'Отбасылық қол жеткізу',
+        'family.feat3': 'Қараңғы тақырып',
+        'family.feat4': 'Жекелендіру',
+
+        'howItWorks.label': 'Қалай бастау керек',
+        'howItWorks.title': 'Алғашқы жазбаға дейін үш минут',
         'howItWorks.step1.title': 'Балаңызды қосыңыз',
-        'howItWorks.step1.desc': 'Аты, туған күні, фото — жарты минутта бәрі дайын. Балаларды қанша десеңіз, сонша қосасыз.',
-        'howItWorks.step2.title': 'Айтыңыз немесе басыңыз',
-        'howItWorks.step2.desc': 'Оқиғаларды дауыспен жазыңыз немесе тізімнен таңдаңыз. Таймер қойыңыз, фото тіркеңіз, өзгертіңіз — өзіңізге ыңғайлы.',
-        'howItWorks.step3.title': 'Өсуін бақылаңыз',
-        'howItWorks.step3.desc': 'Өсу графиктері, жетістіктер, күнделікті таймлайн — Lupibu жазбаларды қайта-қайта парақтағыңыз келетін тарихқа айналдырады.',
+        'howItWorks.step1.desc': 'Аты, туған күні \u2014 дайынсыз.',
+        'howItWorks.step2.title': 'Дауыспен немесе қолмен жазыңыз',
+        'howItWorks.step2.desc': 'Жазба түрін басыңыз немесе дауыспен айтыңыз. ЖИ бәрін тани алады.',
+        'howItWorks.step3.title': 'Болжамдар мен жауаптар алыңыз',
+        'howItWorks.step3.desc': 'Деректер көп болған сайын қосымша ақылды бола түседі.',
 
-        'testimonials.label': 'Ата-аналар айтады',
-        'testimonials.title': 'Қолданды — ұнатты',
-        'testimonials.t1.text': '«Дауыспен жазуға сенбей едім. Сәбиді тербетіп отырып «банан жеді 50 грамм» дедім — бәрі өзі жазылды! Енді қолмен теруге қайтпаймын.»',
-        'testimonials.t1.name': 'Анар Б.',
-        'testimonials.t1.role': 'Ана, сәбиі 8 айлық',
-        'testimonials.t2.text': '«Педиатрға бармас бұрын өсу графигін аштым — ұлым ДДҰ нормасында екен. Дәрігердің өзі қосымшаның атын сұрап жазып алды.»',
-        'testimonials.t2.name': 'Ерлан М.',
-        'testimonials.t2.role': 'Жас әке',
-        'testimonials.t3.text': '«Қызым алғашқы қадамын жасағанда қосымшада конфетти ұшып, әжеге жіберуге ашықхат шықты. Әжем қуанғаннан жылап қалды!»',
-        'testimonials.t3.name': 'Айгерім Т.',
-        'testimonials.t3.role': 'Екі баланың анасы',
+        'beta.title': 'Бәрінен бұрын байқап көріңіз',
+        'beta.desc': 'Ұйқы болжамы, ЖИ-көмекші, 3 тілде дауыспен жазу \u2014 бәрі жұмыс істеп тұр. Бетаға қосылыңыз, өз сәбиіңізбен тестілеңіз және іске қосылғаннан кейін 3 ай Premium тегін алыңыз.',
+        'beta.namePlaceholder': 'Атыңыз',
+        'beta.tgPlaceholder': 'Email немесе @телеграм',
+        'beta.submit': 'Қатысқым келеді',
+        'beta.note': 'iOS \u00b7 TestFlight \u00b7 Тегін \u00b7 Спамсыз',
+        'beta.success': 'Рахмет! Telegram-да жақын арада хабарласамыз.',
 
-        'cta.title': 'Балаңыздың тарихы осы жерден басталады',
-        'cta.subtitle': 'Негізгі мүмкіндіктер — тегін. Жарнамасыз.',
+        'founder.quote': '\u00abСәлеметсіз бе, мен Азат \u2014 Lupibu әзірлеушісі. Бұл қосымшаны әке болғанда жасадым, себебі бар трекерлер жай блокнот екенін түсіндім. Деректерді жазу оңай, бірақ олардан жауап алу мүмкін емес еді. Lupibu сізбен бірге ойлайтын қосымша ретінде жасалды. Сіздің пікіріңіз өнімнің қандай болатынына тікелей әсер етеді.\u00bb',
+        'founder.name': 'Азат, Lupibu негізін қалаушы',
 
-        'contact.label': 'Бізге жазыңыз',
-        'contact.title': 'Сұрағыңыз бар ма? Ойыңызбен бөлісіңіз!',
-        'contact.subtitle': 'Пікіріңізге қуаныштымыз. Жазыңыз — тез арада жауап береміз.',
-        'contact.name': 'Аты-жөні',
-        'contact.namePlaceholder': 'Атыңыз',
-        'contact.email': 'Электрондық пошта',
-        'contact.emailPlaceholder': 'сіздің@email.com',
-        'contact.message': 'Хабарлама',
-        'contact.messagePlaceholder': 'Қалай көмектесе аламыз?',
-        'contact.send': 'Жіберу',
-        'contact.success': 'Пошта клиенті қазір ашылады. Рахмет!',
-
-        'footer.tagline': 'Сіз айтыңыз — біз жазамыз.',
+        'footer.tagline': 'Ұйқы болжамы және ата-аналарға арналған ЖИ-көмекші',
         'footer.product': 'Өнім',
         'footer.product.features': 'Мүмкіндіктер',
         'footer.product.howItWorks': 'Қалай жұмыс істейді',
-        'footer.product.contact': 'Байланыс',
+        'footer.product.beta': 'Бета-тест',
         'footer.legal': 'Құжаттар',
         'footer.legal.privacy': 'Құпиялылық саясаты',
         'footer.legal.terms': 'Қолдану шарттары',
@@ -292,8 +279,8 @@ const translations = {
         'footer.legal.dataConsent': 'Деректерді өңдеуге келісім',
         'footer.copyright': '\u00a9 2026 Lupibu. Барлық құқықтар қорғалған.',
 
-        'meta.description': 'Lupibu — балаңыздың сенімді серігі. Тамақтану, ұйқы, ДДҰ өсу графиктері, жетістіктер, кестелер, фотолар — бәрі бір қосымшада. Дауыспен жазу жасанды интеллект арқылы.',
-        'meta.title': 'Lupibu \u2014 Көз ілеспей өсіп кетеді. Бір сәтін де жіберіп алмаңыз.'
+        'meta.description': 'Lupibu \u2014 ЖИ-көмекшісі бар ақылды сәби ұйқы трекері. Ұйқыны болжайды, балаңыз туралы сұрақтарға жауап береді, 3 тілде дауыспен жұмыс істейді. Бета-тест ашық.',
+        'meta.title': 'Lupibu \u2014 ЖИ-көмекшісі бар ақылды сәби ұйқы трекері'
     }
 };
 
@@ -348,6 +335,12 @@ function applyTranslations(lang) {
         if (doc) el.href = 'legal.html?doc=' + doc + '&lang=' + lang;
     });
 
+    // Update screenshots to match language
+    document.querySelectorAll('[data-screenshot]').forEach(img => {
+        const key = img.dataset.screenshot;
+        img.src = 'screenshots/' + lang + '_' + key + '.png';
+    });
+
     // Update meta
     document.documentElement.lang = lang;
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -367,11 +360,9 @@ function setLanguage(lang) {
     localStorage.setItem('lupibu-lang', lang);
     applyTranslations(lang);
 
-    // Update switcher button text
     const currentBtn = document.querySelector('.lang-current');
     if (currentBtn) currentBtn.textContent = langLabels[lang];
 
-    // Update active state in dropdown
     document.querySelectorAll('.lang-option').forEach(opt => {
         opt.classList.toggle('active', opt.dataset.lang === lang);
     });
@@ -384,22 +375,18 @@ function initI18n() {
     const lang = detectLanguage();
     applyTranslations(lang);
 
-    // Update switcher button
     const currentBtn = document.querySelector('.lang-current');
     if (currentBtn) currentBtn.textContent = langLabels[lang];
 
-    // Mark active option
     document.querySelectorAll('.lang-option').forEach(opt => {
         opt.classList.toggle('active', opt.dataset.lang === lang);
         opt.addEventListener('click', function (e) {
             e.stopPropagation();
             setLanguage(this.dataset.lang);
-            // Close dropdown
             this.closest('.lang-switcher').classList.remove('open');
         });
     });
 
-    // Toggle dropdown
     const switcher = document.querySelector('.lang-switcher');
     if (switcher) {
         switcher.querySelector('.lang-toggle').addEventListener('click', function (e) {
@@ -407,7 +394,6 @@ function initI18n() {
             switcher.classList.toggle('open');
         });
 
-        // Close on outside click
         document.addEventListener('click', () => {
             switcher.classList.remove('open');
         });
