@@ -5,14 +5,15 @@
 const translations = {
     en: {
         // Nav
-        'nav.joinBeta': 'Join Beta',
+        'nav.joinBeta': 'Telegram',
 
         // Hero
         'hero.badge': 'Beta testing is open',
         'hero.title': 'Predicts sleep.<br>Understands voice.<br>Remembers everything.',
-        'hero.subtitle': 'Smart baby tracker with AI assistant. Knows when it\'s time to sleep, logs by voice, and answers your questions.',
-        'hero.cta': 'Join the beta test',
+        'hero.subtitle': 'AI-powered baby tracker. Predicts sleep, logs by voice, answers your questions.',
+        'hero.cta': 'Join Telegram',
         'hero.ctaSub': '3 months Premium free after launch',
+        'hero.joinTelegram': 'or join our Telegram',
         'hero.stat1Value': 'AI',
         'hero.stat1Label': 'Assistant',
         'hero.stat2Value': '12',
@@ -23,7 +24,7 @@ const translations = {
         // Problem
         'problem.label': 'Sound familiar?',
         'problem.title': 'When to put down? How long did they sleep?<br>Why are they crying?',
-        'problem.text': 'The first two years are an endless stream of questions. You google, ask friends, scroll through forums. Every time you get generic advice that doesn\'t account for your child.',
+        'problem.text': 'Endless questions for two years. You google, ask friends, scroll forums \u2014 and always get generic advice.',
         'problem.answer': 'Lupibu learns from your baby\'s data and gives answers that work for them \u2014 not for "the average child from a chart."',
 
         // Sleep
@@ -37,7 +38,7 @@ const translations = {
         // AI
         'ai.label': 'AI Assistant',
         'ai.title': 'Ask anything \u2014 get answers based on your child\'s data',
-        'ai.desc': 'Not generic internet advice, but specific answers based on what you\'ve logged. The assistant sees all 12 entry types and finds patterns that are hard to notice on your own.',
+        'ai.desc': 'Specific answers based on your data. Sees all 12 entry types and finds patterns you\'d miss.',
         'ai.prompt1': '"Why did she sleep so little yesterday?"',
         'ai.prompt2': '"How many times did he eat today?"',
         'ai.prompt3': '"When was the last vaccination?"',
@@ -45,7 +46,7 @@ const translations = {
         // Tracking
         'tracking.label': 'Easy logging',
         'tracking.title': 'Three ways to log',
-        'tracking.desc': 'Fill out a form, dictate by voice, or type in chat \u2014 choose what\'s convenient right now. 12 entry types with timers, photos, and notes.',
+        'tracking.desc': 'Form, voice, or chat \u2014 your choice. 12 entry types with timers, photos, and notes.',
         'tracking.feat1': 'Form with fields',
         'tracking.feat2': 'Voice in 3 languages',
         'tracking.feat3': 'Text in chat',
@@ -54,7 +55,7 @@ const translations = {
         // Family
         'family.label': 'For the whole family',
         'family.title': 'Multiple children, one app',
-        'family.desc': 'Switch between children in one tap. Share access with your partner. Dark theme for nighttime feedings. The app adapts to your family.',
+        'family.desc': 'Switch children in one tap. Share with your partner. Dark theme for night feedings.',
         'family.feat1': 'Multiple children',
         'family.feat2': 'Family sharing',
         'family.feat3': 'Dark theme',
@@ -70,17 +71,23 @@ const translations = {
         'howItWorks.step3.title': 'Get predictions and answers',
         'howItWorks.step3.desc': 'The more data, the smarter the app gets.',
 
-        // Beta
-        'beta.title': 'Try it before everyone else',
-        'beta.desc': 'Sleep prediction, AI assistant, voice logging in 3 languages \u2014 all this is already working. Join the beta, test it with your child, and get 3 months Premium free after launch.',
-        'beta.namePlaceholder': 'Your name',
-        'beta.tgPlaceholder': 'Email or @telegram',
-        'beta.submit': 'I want to participate',
-        'beta.note': 'iOS \u00b7 TestFlight \u00b7 Free \u00b7 No spam',
-        'beta.success': 'Thank you! We\'ll reach out on Telegram soon.',
+        // Community
+        'beta.title': 'Join our community',
+        'beta.desc': 'Beta testers, news, and direct feedback \u2014 all in one place.',
+        'beta.joinTelegram': 'Join Telegram',
+        'beta.note': 'Free \u00b7 No spam \u00b7 Direct access',
+
+        // Contact
+        'contact.title': 'Questions or suggestions?',
+        'contact.desc': 'Write to us \u2014 we read everything.',
+        'contact.namePlaceholder': 'Your name',
+        'contact.contactPlaceholder': 'Email or @telegram',
+        'contact.messagePlaceholder': 'Your message...',
+        'contact.submit': 'Send',
+        'contact.success': 'Thank you! We\'ll get back to you soon.',
 
         // Founder
-        'founder.quote': '"Hi, I\'m Azat \u2014 the developer of Lupibu. I created this app when I became a dad and realized that existing trackers are just notepads. Logging data is easy, but getting answers from it was impossible. Lupibu is designed to think alongside you. Your feedback directly shapes what the product becomes."',
+        'founder.quote': '"I built Lupibu when I became a dad and realized trackers are just notepads \u2014 they store data but give no answers. Lupibu thinks with you. Your feedback shapes the product."',
         'founder.name': 'Azat, founder of Lupibu',
 
         // Footer
@@ -89,6 +96,7 @@ const translations = {
         'footer.product.features': 'Features',
         'footer.product.howItWorks': 'How It Works',
         'footer.product.beta': 'Beta Test',
+        'footer.product.telegram': 'Telegram',
         'footer.legal': 'Legal',
         'footer.legal.privacy': 'Privacy Policy',
         'footer.legal.terms': 'Terms of Use',
@@ -106,13 +114,14 @@ const translations = {
     // Тон: тёплый, на «ты», подруга рядом
     // ============================================
     ru: {
-        'nav.joinBeta': 'Присоединиться',
+        'nav.joinBeta': 'Telegram',
 
         'hero.badge': 'Бета-тест открыт',
         'hero.title': 'Предсказывает сон.<br>Понимает голос.<br>Помнит всё.',
-        'hero.subtitle': 'Умный дневник малыша с ИИ-помощником. Знает, когда пора спать, записывает голосом и отвечает на твои вопросы.',
-        'hero.cta': 'Присоединиться к бета-тесту',
+        'hero.subtitle': 'ИИ-трекер малыша. Предсказывает сон, записывает голосом, отвечает на вопросы.',
+        'hero.cta': 'Вступить в Telegram',
         'hero.ctaSub': '3 месяца Premium бесплатно после запуска',
+        'hero.joinTelegram': 'или вступить в наш Telegram',
         'hero.stat1Value': 'ИИ',
         'hero.stat1Label': 'Ассистент',
         'hero.stat2Value': '12',
@@ -122,7 +131,7 @@ const translations = {
 
         'problem.label': 'Знакомо?',
         'problem.title': 'Когда уложить? Сколько спал?<br>Почему плачет?',
-        'problem.text': 'Первые два года \u2014 бесконечный поток вопросов. Гуглишь, спрашиваешь подруг, листаешь форумы. И каждый раз получаешь общие советы, которые не учитывают именно твоего ребёнка.',
+        'problem.text': 'Два года вопросов. Гуглишь, спрашиваешь подруг, листаешь форумы \u2014 и всегда получаешь общие советы.',
         'problem.answer': 'Lupibu учится на данных твоего малыша и даёт ответы, которые работают для него \u2014 а не для \u00abсреднего ребёнка из таблицы\u00bb.',
 
         'sleep.label': 'Интеллект сна',
@@ -134,14 +143,14 @@ const translations = {
 
         'ai.label': 'ИИ-ассистент',
         'ai.title': 'Спроси что угодно \u2014 получи ответ по данным твоего ребёнка',
-        'ai.desc': 'Не общие советы из интернета, а конкретные ответы на основе того, что ты записала. Ассистент видит все 12 типов записей и находит связи, которые сложно заметить самой.',
+        'ai.desc': 'Конкретные ответы на основе твоих данных. Видит все 12 типов записей и находит связи, которые сложно заметить.',
         'ai.prompt1': '\u00abПочему она вчера так мало спала?\u00bb',
         'ai.prompt2': '\u00abСколько раз он ел сегодня?\u00bb',
         'ai.prompt3': '\u00abКогда была последняя прививка?\u00bb',
 
         'tracking.label': 'Удобный ввод',
         'tracking.title': 'Три способа записать',
-        'tracking.desc': 'Заполни форму, продиктуй голосом или напиши в чат \u2014 выбирай, что удобно прямо сейчас. 12 типов записей с таймерами, фото и заметками.',
+        'tracking.desc': 'Форма, голос или чат \u2014 выбирай что удобно. 12 типов записей с таймерами, фото и заметками.',
         'tracking.feat1': 'Форма с полями',
         'tracking.feat2': 'Голос на 3 языках',
         'tracking.feat3': 'Текст в чат',
@@ -150,7 +159,7 @@ const translations = {
         // Family
         'family.label': 'Для всей семьи',
         'family.title': 'Несколько детей, одно приложение',
-        'family.desc': 'Переключайся между детьми одним касанием. Дай доступ партнёру. Тёмная тема для ночных кормлений. Приложение подстраивается под твою семью.',
+        'family.desc': 'Переключайся между детьми одним касанием. Дай доступ партнёру. Тёмная тема для ночных кормлений.',
         'family.feat1': 'Несколько детей',
         'family.feat2': 'Семейный доступ',
         'family.feat3': 'Тёмная тема',
@@ -165,15 +174,22 @@ const translations = {
         'howItWorks.step3.title': 'Получай прогнозы и ответы',
         'howItWorks.step3.desc': 'Чем больше данных, тем умнее приложение.',
 
-        'beta.title': 'Попробуй раньше всех',
-        'beta.desc': 'Предсказание сна, ИИ-ассистент, голосовой ввод на 3 языках \u2014 всё это уже работает. Присоединяйся к бете, тестируй на своём малыше и получи 3 месяца Premium бесплатно после запуска.',
-        'beta.namePlaceholder': 'Твоё имя',
-        'beta.tgPlaceholder': 'Email или @телеграм',
-        'beta.submit': 'Хочу участвовать',
-        'beta.note': 'iOS \u00b7 TestFlight \u00b7 Бесплатно \u00b7 Без спама',
-        'beta.success': 'Спасибо! Скоро напишем тебе в Telegram.',
+        // Сообщество
+        'beta.title': 'Вступай в сообщество',
+        'beta.desc': 'Бета-тестеры, новости и обратная связь \u2014 всё в одном месте.',
+        'beta.joinTelegram': 'Вступить в Telegram',
+        'beta.note': 'Бесплатно \u00b7 Без спама \u00b7 Прямой доступ',
 
-        'founder.quote': '\u00abПривет, я Азат \u2014 разработчик Lupibu. Я создал это приложение, когда стал папой и понял, что существующие трекеры \u2014 это просто блокноты. Записывать данные легко, а вот получить из них ответ \u2014 невозможно. Lupibu задуман как приложение, которое думает вместе с тобой. Твоя обратная связь напрямую влияет на то, каким станет продукт.\u00bb',
+        // Форма связи
+        'contact.title': 'Вопросы или предложения?',
+        'contact.desc': 'Напиши нам \u2014 читаем всё.',
+        'contact.namePlaceholder': 'Имя',
+        'contact.contactPlaceholder': 'Email или @телеграм',
+        'contact.messagePlaceholder': 'Твоё сообщение...',
+        'contact.submit': 'Отправить',
+        'contact.success': 'Спасибо! Скоро ответим.',
+
+        'founder.quote': '\u00abЯ создал Lupibu, когда стал папой и понял: трекеры \u2014 это блокноты. Данные хранят, а ответов не дают. Lupibu думает вместе с тобой. Твой фидбек формирует продукт.\u00bb',
         'founder.name': 'Азат, основатель Lupibu',
 
         'footer.tagline': 'Предсказание сна и ИИ-помощник для родителей',
@@ -181,6 +197,7 @@ const translations = {
         'footer.product.features': 'Возможности',
         'footer.product.howItWorks': 'Как это работает',
         'footer.product.beta': 'Бета-тест',
+        'footer.product.telegram': 'Telegram',
         'footer.legal': 'Документы',
         'footer.legal.privacy': 'Политика конфиденциальности',
         'footer.legal.terms': 'Условия использования',
@@ -197,13 +214,14 @@ const translations = {
     // Тон: жылы, құрметті «Сіз», отбасылық
     // ============================================
     kk: {
-        'nav.joinBeta': 'Қосылу',
+        'nav.joinBeta': 'Telegram',
 
         'hero.badge': 'Бета-тест ашық',
         'hero.title': 'Ұйқыны болжайды.<br>Дауысты түсінеді.<br>Бәрін есінде сақтайды.',
-        'hero.subtitle': 'ЖИ-көмекшісі бар ақылды сәби күнделігі. Ұйқы уақытын біледі, дауыспен жазады және сұрақтарыңызға жауап береді.',
-        'hero.cta': 'Бета-тестке қосылу',
+        'hero.subtitle': 'ЖИ-сәби трекері. Ұйқыны болжайды, дауыспен жазады, сұрақтарға жауап береді.',
+        'hero.cta': 'Telegram-ға қосылу',
         'hero.ctaSub': 'Іске қосылғаннан кейін 3 ай Premium тегін',
+        'hero.joinTelegram': 'немесе Telegram-ға қосылыңыз',
         'hero.stat1Value': 'ЖИ',
         'hero.stat1Label': 'Көмекші',
         'hero.stat2Value': '12',
@@ -213,7 +231,7 @@ const translations = {
 
         'problem.label': 'Таныс па?',
         'problem.title': 'Қашан жатқызу керек? Қанша ұйықтады?<br>Неге жылайды?',
-        'problem.text': 'Алғашқы екі жыл \u2014 сұрақтардың аяқталмас ағыны. Гуглдейсіз, құрбыларыңыздан сұрайсыз, форумдарды парақтайсыз. Әр жолы дәл сіздің балаңызды ескермейтін жалпы кеңестер аласыз.',
+        'problem.text': 'Екі жыл сұрақтар. Гуглдейсіз, сұрайсыз, форумдарды парақтайсыз \u2014 және әрқашан жалпы кеңестер аласыз.',
         'problem.answer': 'Lupibu сіздің сәбиіңіздің деректерінен үйреніп, оған жұмыс істейтін жауаптар береді \u2014 \u00abкестедегі орташа бала\u00bb үшін емес.',
 
         'sleep.label': 'Ұйқы интеллекті',
@@ -225,14 +243,14 @@ const translations = {
 
         'ai.label': 'ЖИ-көмекші',
         'ai.title': 'Кез келген нәрсені сұраңыз \u2014 балаңыздың деректері бойынша жауап алыңыз',
-        'ai.desc': 'Интернеттен жалпы кеңестер емес, сіз жазған деректерге негізделген нақты жауаптар. Көмекші барлық 12 жазба түрін көреді және өзіңіз байқау қиын байланыстарды табады.',
+        'ai.desc': 'Сіздің деректеріңізге негізделген нақты жауаптар. Барлық 12 жазба түрін көреді және байқау қиын байланыстарды табады.',
         'ai.prompt1': '\u00abНеге ол кеше аз ұйықтады?\u00bb',
         'ai.prompt2': '\u00abБүгін ол неше рет тамақ жеді?\u00bb',
         'ai.prompt3': '\u00abСоңғы егу қашан болды?\u00bb',
 
         'tracking.label': 'Оңай жазу',
         'tracking.title': 'Жазудың үш жолы',
-        'tracking.desc': 'Форманы толтырыңыз, дауыспен айтыңыз немесе чатқа жазыңыз \u2014 қазір ыңғайлысын таңдаңыз. 12 жазба түрі таймерлермен, фотолармен және жазбалармен.',
+        'tracking.desc': 'Форма, дауыс немесе чат \u2014 ыңғайлысын таңдаңыз. 12 жазба түрі таймерлермен, фотолармен және жазбалармен.',
         'tracking.feat1': 'Өрістері бар форма',
         'tracking.feat2': '3 тілде дауыспен',
         'tracking.feat3': 'Чатқа мәтін',
@@ -241,7 +259,7 @@ const translations = {
         // Family
         'family.label': 'Бүкіл отбасы үшін',
         'family.title': 'Бірнеше бала, бір қосымша',
-        'family.desc': 'Балалар арасында бір басумен ауысыңыз. Жұбайыңызға қол жеткізу беріңіз. Түнгі тамақтану үшін қараңғы тақырып. Қосымша отбасыңызға бейімделеді.',
+        'family.desc': 'Балалар арасында бір басумен ауысыңыз. Жұбайыңызға қол жеткізу беріңіз. Түнгі тамақтану үшін қараңғы тақырып.',
         'family.feat1': 'Бірнеше бала',
         'family.feat2': 'Отбасылық қол жеткізу',
         'family.feat3': 'Қараңғы тақырып',
@@ -256,15 +274,22 @@ const translations = {
         'howItWorks.step3.title': 'Болжамдар мен жауаптар алыңыз',
         'howItWorks.step3.desc': 'Деректер көп болған сайын қосымша ақылды бола түседі.',
 
-        'beta.title': 'Бәрінен бұрын байқап көріңіз',
-        'beta.desc': 'Ұйқы болжамы, ЖИ-көмекші, 3 тілде дауыспен жазу \u2014 бәрі жұмыс істеп тұр. Бетаға қосылыңыз, өз сәбиіңізбен тестілеңіз және іске қосылғаннан кейін 3 ай Premium тегін алыңыз.',
-        'beta.namePlaceholder': 'Атыңыз',
-        'beta.tgPlaceholder': 'Email немесе @телеграм',
-        'beta.submit': 'Қатысқым келеді',
-        'beta.note': 'iOS \u00b7 TestFlight \u00b7 Тегін \u00b7 Спамсыз',
-        'beta.success': 'Рахмет! Telegram-да жақын арада хабарласамыз.',
+        // Қауымдастық
+        'beta.title': 'Қауымдастыққа қосылыңыз',
+        'beta.desc': 'Бета-тестерлер, жаңалықтар және кері байланыс \u2014 бәрі бір жерде.',
+        'beta.joinTelegram': 'Telegram-ға қосылу',
+        'beta.note': 'Тегін \u00b7 Спамсыз \u00b7 Тікелей қол жеткізу',
 
-        'founder.quote': '\u00abСәлеметсіз бе, мен Азат \u2014 Lupibu әзірлеушісі. Бұл қосымшаны әке болғанда жасадым, себебі бар трекерлер жай блокнот екенін түсіндім. Деректерді жазу оңай, бірақ олардан жауап алу мүмкін емес еді. Lupibu сізбен бірге ойлайтын қосымша ретінде жасалды. Сіздің пікіріңіз өнімнің қандай болатынына тікелей әсер етеді.\u00bb',
+        // Байланыс формасы
+        'contact.title': 'Сұрақтар немесе ұсыныстар?',
+        'contact.desc': 'Бізге жазыңыз \u2014 бәрін оқимыз.',
+        'contact.namePlaceholder': 'Атыңыз',
+        'contact.contactPlaceholder': 'Email немесе @телеграм',
+        'contact.messagePlaceholder': 'Сіздің хабарламаңыз...',
+        'contact.submit': 'Жіберу',
+        'contact.success': 'Рахмет! Жақын арада жауап береміз.',
+
+        'founder.quote': '\u00abLupibu-ды әке болғанда жасадым \u2014 трекерлер жай блокнот, деректерді сақтайды, бірақ жауап бермейді. Lupibu сізбен бірге ойлайды. Сіздің пікіріңіз өнімді қалыптастырады.\u00bb',
         'founder.name': 'Азат, Lupibu негізін қалаушы',
 
         'footer.tagline': 'Ұйқы болжамы және ата-аналарға арналған ЖИ-көмекші',
@@ -272,6 +297,7 @@ const translations = {
         'footer.product.features': 'Мүмкіндіктер',
         'footer.product.howItWorks': 'Қалай жұмыс істейді',
         'footer.product.beta': 'Бета-тест',
+        'footer.product.telegram': 'Telegram',
         'footer.legal': 'Құжаттар',
         'footer.legal.privacy': 'Құпиялылық саясаты',
         'footer.legal.terms': 'Қолдану шарттары',

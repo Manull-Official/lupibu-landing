@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initSmoothScroll();
     initScrollAnimations();
     initNavbarScroll();
-    initBetaForm();
+    initContactForm();
     initStickyCta();
 });
 
@@ -37,7 +37,7 @@ function initSmoothScroll() {
 function initScrollAnimations() {
     const elements = document.querySelectorAll(
         '.feature-text, .feature-visual, .step, .section-header, ' +
-        '.problem-container, .beta-card, .founder-container'
+        '.problem-container, .beta-card, .founder-container, .contact-container'
     );
 
     elements.forEach(el => el.classList.add('fade-in'));
@@ -70,39 +70,31 @@ function initNavbarScroll() {
 }
 
 /**
- * Beta form — sends via mailto and shows success
+ * Contact form — sends via mailto and shows success
  */
-function initBetaForm() {
-    const form = document.getElementById('betaForm');
+function initContactForm() {
+    const form = document.getElementById('contactForm');
     if (!form) return;
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const name = form.querySelector('#betaName').value.trim();
-        const tg = form.querySelector('#betaTelegram').value.trim();
+        const name = form.querySelector('#contactName').value.trim();
+        const contact = form.querySelector('#contactEmail').value.trim();
+        const message = form.querySelector('#contactMessage').value.trim();
 
-        if (!name || !tg) return;
+        if (!name || !contact || !message) return;
 
-        // Send email with details
-        const subject = encodeURIComponent('Lupibu Beta — ' + name);
+        const subject = encodeURIComponent('Lupibu — ' + name);
         const body = encodeURIComponent(
             'Name: ' + name + '\n' +
-            'Telegram: ' + tg + '\n\n' +
-            'Wants to join the Lupibu beta test.'
+            'Contact: ' + contact + '\n\n' +
+            message
         );
         window.location.href = 'mailto:admin@manull.com?subject=' + subject + '&body=' + body;
 
-        // Show success message
-        const lang = localStorage.getItem('lupibu-lang') || 'en';
-        const dict = typeof translations !== 'undefined' ? (translations[lang] || {}) : {};
-        const successText = dict['beta.success'] || 'Thank you! We\'ll reach out on Telegram soon.';
-
-        form.classList.add('success');
-        const msg = document.createElement('p');
-        msg.className = 'beta-success-msg';
-        msg.textContent = successText;
-        form.appendChild(msg);
+        form.style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'block';
     });
 }
 
