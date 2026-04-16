@@ -1,6 +1,6 @@
 
 PRIVACY POLICY
-Version 2.0 dated 03.04.2026
+Version 1.0 dated 17.04.2026
 
 1. INTRODUCTION
 1.1. Lupibu ("We", "Us", "Our") respects your privacy. This Privacy Policy explains how we collect, use, store, share, and protect your personal information when you use the Lupibu mobile application (the "App").

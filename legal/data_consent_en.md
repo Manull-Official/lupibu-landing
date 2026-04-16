@@ -1,7 +1,7 @@
 
 DATA PROCESSING CONSENT
 
-Version 2.0 — 03.04.2026
+Version 1.0 — 17.04.2026
 
 1. CONSENT GRANT
 I hereby grant my explicit consent to the collection, processing, and storage of my personal data and the personal data of my child by the Developer of the "Lupibu" application (hereinafter — the "Operator").

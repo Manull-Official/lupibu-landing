@@ -1,6 +1,6 @@
 
 TERMS OF USE
-Version 2.0 dated 03.04.2026
+Version 1.0 dated 17.04.2026
 
 1. GENERAL PROVISIONS
 1.1. These Terms of Use (hereinafter — "Agreement") constitute a legally binding agreement between the Developer of the mobile application "Lupibu" (hereinafter — "App", "We") and you (hereinafter — "User").
