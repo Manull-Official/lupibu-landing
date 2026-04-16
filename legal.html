@@ -163,7 +163,39 @@
                 <img src="assets/logo-inline-primary.svg" alt="Lupibu" class="logo-img">
             </a>
             <div class="nav-right">
-                <a href="index.html" class="btn btn-primary btn-nav" id="homeBtn">Home</a>
+                <div class="lang-switcher">
+                    <button class="lang-toggle" aria-label="Change language">
+                        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                        <span class="lang-current">EN</span>
+                        <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en">
+                            <span class="lang-option-code">EN</span>
+                            <span class="lang-option-name">English</span>
+                        </button>
+                        <button class="lang-option" data-lang="ru">
+                            <span class="lang-option-code">RU</span>
+                            <span class="lang-option-name">Русский</span>
+                        </button>
+                        <button class="lang-option" data-lang="kk">
+                            <span class="lang-option-code">KZ</span>
+                            <span class="lang-option-name">Қазақша</span>
+                        </button>
+                    </div>
+                </div>
+                <a href="mailto:contact@lupibu.com" class="nav-email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>contact@lupibu.com</span>
+                </a>
             </div>
         </div>
     </nav>
@@ -184,8 +216,8 @@
         data_consent: { en: 'Data Consent', ru: 'Согласие на обработку данных', kk: 'Деректерді өңдеуге келісім' }
     };
 
-    var homeLabels = { en: 'Home', ru: 'Главная', kk: 'Басты бет' };
     var backLabels = { en: 'Back', ru: 'Назад', kk: 'Артқа' };
+    var langLabels = { en: 'EN', ru: 'RU', kk: 'KZ' };
 
     /**
      * Simple markdown-to-HTML converter for legal docs
@@ -297,40 +329,27 @@
         return text;
     }
 
+    var VALID_DOCS = ['privacy', 'terms', 'disclaimer', 'data_consent'];
+    var VALID_LANGS = ['en', 'ru', 'kk'];
+
+    function getDoc() {
+        var d = new URLSearchParams(window.location.search).get('doc') || 'privacy';
+        return VALID_DOCS.indexOf(d) !== -1 ? d : 'privacy';
+    }
+
     /**
-     * Initialize the legal page
+     * Render the legal document for the given language and wire up the back button.
      */
-    (function () {
-        var params = new URLSearchParams(window.location.search);
-        var doc = params.get('doc') || 'privacy';
-        var lang = params.get('lang') || (localStorage.getItem && localStorage.getItem('lupibu-lang')) || 'en';
-        var validDocs = ['privacy', 'terms', 'disclaimer', 'data_consent'];
-        var validLangs = ['en', 'ru', 'kk'];
-
-        var d = validDocs.indexOf(doc) !== -1 ? doc : 'privacy';
-        var l = validLangs.indexOf(lang) !== -1 ? lang : 'en';
-
-        // Set page language
+    function renderLegalDoc(l) {
+        var d = getDoc();
         document.documentElement.lang = l;
 
-        // Translate Home button
-        var homeBtn = document.getElementById('homeBtn');
-        if (homeBtn) homeBtn.textContent = homeLabels[l] || 'Home';
-
-        // Build the header with back button
         var content = document.getElementById('legalContent');
         var title = (docTitles[d] && docTitles[d][l]) || 'Legal';
         var backText = backLabels[l] || 'Back';
 
-        // Check if we came from the app (referrer-based or no referrer means likely in-app browser)
-        var backHref = 'index.html';
-        if (document.referrer && document.referrer.indexOf('lupibu.com') === -1 && document.referrer.indexOf('localhost') === -1) {
-            // Came from app — back button should use history
-            backHref = 'javascript:history.back()';
-        }
-
         var headerHtml = '<div class="legal-header-row">' +
-            '<a href="' + backHref + '" class="legal-back">' +
+            '<a href="index.html" class="legal-back" id="legalBack">' +
                 '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>' +
                 backText +
             '</a>' +
@@ -339,13 +358,83 @@
 
         document.title = 'Lupibu — ' + title;
 
-        // Render from inlined markdown (legal-content.js)
         var key = d + '_' + l;
         if (docs && docs[key]) {
             content.innerHTML = headerHtml + '<div id="legalBody">' + renderMarkdown(docs[key]) + '</div>';
         } else {
             content.innerHTML = headerHtml + '<p style="text-align:center;color:#999;padding:2rem 0">Document not found.</p>';
         }
+
+        // Wire the back button: when the user came from the same site, use
+        // history.back() so the browser restores the previous scroll position
+        // (e.g. the footer they clicked the legal link from).
+        var backLink = document.getElementById('legalBack');
+        if (backLink) {
+            backLink.addEventListener('click', function (e) {
+                var sameOrigin = false;
+                try {
+                    sameOrigin = !!document.referrer &&
+                        new URL(document.referrer).origin === window.location.origin;
+                } catch (_) { /* ignore */ }
+                if (sameOrigin && window.history.length > 1) {
+                    e.preventDefault();
+                    window.history.back();
+                }
+            });
+        }
+    }
+
+    /**
+     * Initialize the lang switcher on the legal page.
+     */
+    function initLegalLangSwitcher(currentLang) {
+        var currentBtn = document.querySelector('.lang-current');
+        if (currentBtn) currentBtn.textContent = langLabels[currentLang] || 'EN';
+
+        document.querySelectorAll('.lang-option').forEach(function (opt) {
+            opt.classList.toggle('active', opt.dataset.lang === currentLang);
+            opt.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var newLang = this.dataset.lang;
+                if (VALID_LANGS.indexOf(newLang) === -1) return;
+                try { localStorage.setItem('lupibu-lang', newLang); } catch (_) {}
+
+                var params = new URLSearchParams(window.location.search);
+                params.set('lang', newLang);
+                var newUrl = window.location.pathname + '?' + params.toString();
+                window.history.replaceState(null, '', newUrl);
+
+                if (currentBtn) currentBtn.textContent = langLabels[newLang] || newLang.toUpperCase();
+                document.querySelectorAll('.lang-option').forEach(function (o) {
+                    o.classList.toggle('active', o.dataset.lang === newLang);
+                });
+                this.closest('.lang-switcher').classList.remove('open');
+
+                renderLegalDoc(newLang);
+            });
+        });
+
+        var switcher = document.querySelector('.lang-switcher');
+        if (switcher) {
+            switcher.querySelector('.lang-toggle').addEventListener('click', function (e) {
+                e.stopPropagation();
+                switcher.classList.toggle('open');
+            });
+            document.addEventListener('click', function () {
+                switcher.classList.remove('open');
+            });
+        }
+    }
+
+    (function () {
+        var urlLang = new URLSearchParams(window.location.search).get('lang');
+        var storedLang = null;
+        try { storedLang = localStorage.getItem('lupibu-lang'); } catch (_) {}
+        var lang = urlLang || storedLang || 'en';
+        if (VALID_LANGS.indexOf(lang) === -1) lang = 'en';
+
+        renderLegalDoc(lang);
+        initLegalLangSwitcher(lang);
     })();
     </script>
 </body>
