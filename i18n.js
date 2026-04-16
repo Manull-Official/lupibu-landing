@@ -5,98 +5,54 @@
 const translations = {
     en: {
         // Nav
-        'nav.joinBeta': 'Telegram',
+        'nav.download': 'Download',
 
         // Hero
-        'hero.badge': 'Beta testing is open',
-        'hero.title': 'Predicts sleep.<br>Understands voice.<br>Remembers everything.',
-        'hero.subtitle': 'AI-powered baby tracker. Predicts sleep, logs by voice, answers your questions.',
-        'hero.cta': 'Join Telegram',
-        'hero.ctaSub': '3 months Premium free after launch',
-        'hero.joinTelegram': 'or join our Telegram',
-        'hero.stat1Value': 'AI',
-        'hero.stat1Label': 'Assistant',
+        'hero.title': 'She\'s about to get sleepy.<br>You\'ll know before she does.',
+        'hero.subtitle': 'A baby tracker that learns your child\'s rhythm — and tells you what\'s next.',
+        'hero.stat1Value': '1',
+        'hero.stat1Label': 'Tap to log by voice',
         'hero.stat2Value': '12',
-        'hero.stat2Label': 'Entry types',
-        'hero.stat3Value': '< 5s',
-        'hero.stat3Label': 'Voice logging',
+        'hero.stat2Label': 'Things you can track',
+        'hero.stat3Value': 'AI',
+        'hero.stat3Label': 'That knows your baby',
+        'hero.trust': 'No ads. No data selling. Built by a dad who was tired of dumb trackers.',
 
-        // Problem
-        'problem.label': 'Sound familiar?',
-        'problem.title': 'When to put down? How long did they sleep?<br>Why are they crying?',
-        'problem.text': 'Endless questions for two years. You google, ask friends, scroll forums \u2014 and always get generic advice.',
-        'problem.answer': 'Lupibu learns from your baby\'s data and gives answers that work for them \u2014 not for "the average child from a chart."',
+        // Tracking + History
+        'tracking.label': 'Your baby\'s full story',
+        'tracking.title': 'Every feed. Every nap. Every everything.',
+        'tracking.desc': '12 entry types \u2014 from diapers to doctor visits. AI reads all of it. Ask "why was today rough?" and it actually knows.',
 
-        // Sleep
-        'sleep.label': 'Sleep Intelligence',
-        'sleep.title': 'Knows when your baby should sleep',
-        'sleep.desc': 'Personalized wake windows, sleep time prediction, weekly analytics. Lupibu learns from your child\'s data specifically.',
-        'sleep.bullet1': 'Next sleep prediction on the home screen',
-        'sleep.bullet2': 'Weekly map: day and night sleep patterns',
-        'sleep.bullet3': 'Each day\'s details in one tap',
+        // AI Assistant
+        'ai.label': 'Like texting a nurse at 3am',
+        'ai.title': 'Say it. Ask it. It just gets it.',
+        'ai.desc': 'Voice-log in 3 languages, hands-free, in 5 seconds. Ask anything \u2014 "Is she eating enough?" \u2014 and get answers from your data, not Google.',
 
-        // AI
-        'ai.label': 'AI Assistant',
-        'ai.title': 'Ask anything \u2014 get answers based on your child\'s data',
-        'ai.desc': 'Specific answers based on your data. Sees all 12 entry types and finds patterns you\'d miss.',
-        'ai.prompt1': '"Why did she sleep so little yesterday?"',
-        'ai.prompt2': '"How many times did he eat today?"',
-        'ai.prompt3': '"When was the last vaccination?"',
-
-        // Tracking
-        'tracking.label': 'Easy logging',
-        'tracking.title': 'Three ways to log',
-        'tracking.desc': 'Form, voice, or chat \u2014 your choice. 12 entry types with timers, photos, and notes.',
-        'tracking.feat1': 'Form with fields',
-        'tracking.feat2': 'Voice in 3 languages',
-        'tracking.feat3': 'Text in chat',
-        'tracking.feat4': 'Timers for sleep & feeding',
+        // Sleep Intelligence
+        'sleep.label': 'Your baby\'s sleep, decoded',
+        'sleep.title': 'Predicts the next nap. Not guesses \u2014 knows.',
+        'sleep.desc': 'Wake windows that learn from your baby. Weekly analytics that show what\'s working.',
 
         // Family
-        'family.label': 'For the whole family',
-        'family.title': 'Multiple children, one app',
-        'family.desc': 'Switch children in one tap. Share with your partner. Dark theme for night feedings.',
-        'family.feat1': 'Multiple children',
-        'family.feat2': 'Family sharing',
-        'family.feat3': 'Dark theme',
-        'family.feat4': 'Personalization',
+        'family.label': 'And so much more',
+        'family.title': 'Built for how families actually work.',
+        'family.desc': 'Multiple kids, family sharing, dark mode, iOS widget, timers, photo diary. Everything a real parent needs \u2014 nothing they don\'t.',
 
-        // How It Works
-        'howItWorks.label': 'Getting started',
-        'howItWorks.title': 'Three minutes to your first entry',
-        'howItWorks.step1.title': 'Add your baby',
-        'howItWorks.step1.desc': 'Name, date of birth \u2014 and you\'re ready.',
-        'howItWorks.step2.title': 'Log by voice or manually',
-        'howItWorks.step2.desc': 'Tap an entry type or speak. AI recognizes everything.',
-        'howItWorks.step3.title': 'Get predictions and answers',
-        'howItWorks.step3.desc': 'The more data, the smarter the app gets.',
+        // Download CTA
+        'download.title': 'Tonight could be different',
+        'download.desc': 'Free download. Your first week of Pro is on us.',
 
-        // Community
-        'beta.title': 'Join our community',
-        'beta.desc': 'Beta testers, news, and direct feedback \u2014 all in one place.',
-        'beta.joinTelegram': 'Join Telegram',
-        'beta.note': 'Free \u00b7 No spam \u00b7 Direct access',
-
-        // Contact
-        'contact.title': 'Questions or suggestions?',
-        'contact.desc': 'Write to us \u2014 we read everything.',
-        'contact.namePlaceholder': 'Your name',
-        'contact.contactPlaceholder': 'Email or @telegram',
-        'contact.messagePlaceholder': 'Your message...',
-        'contact.submit': 'Send',
-        'contact.success': 'Thank you! We\'ll get back to you soon.',
-
-        // Founder
-        'founder.quote': '"I built Lupibu when I became a dad and realized trackers are just notepads \u2014 they store data but give no answers. Lupibu thinks with you. Your feedback shapes the product."',
-        'founder.name': 'Azat, founder of Lupibu',
+        // Sticky CTA
+        'sticky.cta': 'Download Lupibu',
+        'sticky.sub': 'Free + 7-day Pro trial',
 
         // Footer
-        'footer.tagline': 'Sleep prediction & AI assistant for parents',
+        'footer.tagline': 'Knows your baby\'s next nap before you do',
         'footer.product': 'Product',
         'footer.product.features': 'Features',
-        'footer.product.howItWorks': 'How It Works',
-        'footer.product.beta': 'Beta Test',
-        'footer.product.telegram': 'Telegram',
+        'footer.product.download': 'Download',
+        'footer.product.community': 'Community',
+        'footer.product.support': 'Support',
         'footer.legal': 'Legal',
         'footer.legal.privacy': 'Privacy Policy',
         'footer.legal.terms': 'Terms of Use',
@@ -105,99 +61,54 @@ const translations = {
         'footer.copyright': '\u00a9 2026 Lupibu. All rights reserved.',
 
         // Meta
-        'meta.description': 'Lupibu \u2014 smart baby sleep tracker with AI assistant. Predicts sleep, answers questions about your child, works with voice in 3 languages. Beta testing open.',
-        'meta.title': 'Lupibu \u2014 Smart Baby Sleep Tracker with AI Assistant'
+        'meta.description': 'Lupibu learns your baby\'s sleep rhythm, predicts the next nap, and answers parenting questions from your data. Voice logging in 3 languages. Free to try.',
+        'meta.title': 'Lupibu \u2014 Baby Sleep Tracker That Predicts Naps'
     },
 
     // ============================================
     // РУССКИЙ
-    // Тон: тёплый, на «ты», подруга рядом
     // ============================================
     ru: {
-        'nav.joinBeta': 'Telegram',
+        'nav.download': 'Скачать',
 
-        'hero.badge': 'Бета-тест открыт',
-        'hero.title': 'Предсказывает сон.<br>Понимает голос.<br>Помнит всё.',
-        'hero.subtitle': 'ИИ-трекер малыша. Предсказывает сон, записывает голосом, отвечает на вопросы.',
-        'hero.cta': 'Вступить в Telegram',
-        'hero.ctaSub': '3 месяца Premium бесплатно после запуска',
-        'hero.joinTelegram': 'или вступить в наш Telegram',
-        'hero.stat1Value': 'ИИ',
-        'hero.stat1Label': 'Ассистент',
+        'hero.title': 'Она вот-вот захочет спать.<br>Ты узнаешь раньше неё.',
+        'hero.subtitle': 'Трекер, который изучает ритм твоего малыша — и подсказывает, что дальше.',
+        'hero.stat1Value': '1',
+        'hero.stat1Label': 'Нажми — и скажи голосом',
         'hero.stat2Value': '12',
         'hero.stat2Label': 'Типов записей',
-        'hero.stat3Value': '< 5с',
-        'hero.stat3Label': 'Записать голосом',
+        'hero.stat3Value': 'ИИ',
+        'hero.stat3Label': 'Который знает твоего малыша',
+        'hero.trust': 'Без рекламы. Без продажи данных. Сделал папа, которому надоели тупые трекеры.',
 
-        'problem.label': 'Знакомо?',
-        'problem.title': 'Когда уложить? Сколько спал?<br>Почему плачет?',
-        'problem.text': 'Два года вопросов. Гуглишь, спрашиваешь подруг, листаешь форумы \u2014 и всегда получаешь общие советы.',
-        'problem.answer': 'Lupibu учится на данных твоего малыша и даёт ответы, которые работают для него \u2014 а не для \u00abсреднего ребёнка из таблицы\u00bb.',
+        'tracking.label': 'Вся история малыша',
+        'tracking.title': 'Каждое кормление. Каждый сон. Вообще всё.',
+        'tracking.desc': '12 типов записей — от подгузников до визитов к врачу. ИИ читает всё. Спроси \u00abпочему сегодня было тяжело?\u00bb — он реально знает.',
 
-        'sleep.label': 'Интеллект сна',
-        'sleep.title': 'Знает, когда малышу пора спать',
-        'sleep.desc': 'Персональные окна бодрствования, предсказание времени сна, еженедельная аналитика. Lupibu учится на данных именно твоего ребёнка.',
-        'sleep.bullet1': 'Прогноз следующего сна на главном экране',
-        'sleep.bullet2': 'Недельная карта: дневной и ночной сон',
-        'sleep.bullet3': 'Детали каждого дня по клику',
+        'ai.label': 'Как написать педиатру в 3 ночи',
+        'ai.title': 'Скажи. Спроси. Поймёт.',
+        'ai.desc': 'Диктуй на 3 языках, без рук, за 5 секунд. Спроси что угодно — \u00abОна нормально ест?\u00bb — и получи ответ из своих данных, а не из гугла.',
 
-        'ai.label': 'ИИ-ассистент',
-        'ai.title': 'Спроси что угодно \u2014 получи ответ по данным твоего ребёнка',
-        'ai.desc': 'Конкретные ответы на основе твоих данных. Видит все 12 типов записей и находит связи, которые сложно заметить.',
-        'ai.prompt1': '\u00abПочему она вчера так мало спала?\u00bb',
-        'ai.prompt2': '\u00abСколько раз он ел сегодня?\u00bb',
-        'ai.prompt3': '\u00abКогда была последняя прививка?\u00bb',
+        'sleep.label': 'Сон малыша — как на ладони',
+        'sleep.title': 'Предсказывает следующий сон. Не гадает — знает.',
+        'sleep.desc': 'Окна бодрствования, которые подстраиваются под твоего малыша. Недельная аналитика — сразу видно, что работает.',
 
-        'tracking.label': 'Удобный ввод',
-        'tracking.title': 'Три способа записать',
-        'tracking.desc': 'Форма, голос или чат \u2014 выбирай что удобно. 12 типов записей с таймерами, фото и заметками.',
-        'tracking.feat1': 'Форма с полями',
-        'tracking.feat2': 'Голос на 3 языках',
-        'tracking.feat3': 'Текст в чат',
-        'tracking.feat4': 'Таймеры сна и кормлений',
+        'family.label': 'И это далеко не всё',
+        'family.title': 'Для настоящей жизни с детьми.',
+        'family.desc': 'Несколько детей, семейный доступ, тёмная тема, виджет iOS, таймеры, фотодневник. Всё, что нужно — ничего лишнего.',
 
-        // Family
-        'family.label': 'Для всей семьи',
-        'family.title': 'Несколько детей, одно приложение',
-        'family.desc': 'Переключайся между детьми одним касанием. Дай доступ партнёру. Тёмная тема для ночных кормлений.',
-        'family.feat1': 'Несколько детей',
-        'family.feat2': 'Семейный доступ',
-        'family.feat3': 'Тёмная тема',
-        'family.feat4': 'Персонализация',
+        'download.title': 'Этой ночью всё может быть иначе',
+        'download.desc': 'Скачай бесплатно. Первая неделя Pro — в подарок.',
 
-        'howItWorks.label': 'Как начать',
-        'howItWorks.title': 'Три минуты до первой записи',
-        'howItWorks.step1.title': 'Добавь малыша',
-        'howItWorks.step1.desc': 'Имя, дата рождения \u2014 и готово.',
-        'howItWorks.step2.title': 'Записывай голосом или вручную',
-        'howItWorks.step2.desc': 'Нажми на тип записи или скажи голосом. ИИ всё распознает.',
-        'howItWorks.step3.title': 'Получай прогнозы и ответы',
-        'howItWorks.step3.desc': 'Чем больше данных, тем умнее приложение.',
+        'sticky.cta': 'Скачать Lupibu',
+        'sticky.sub': 'Бесплатно + 7 дней Pro',
 
-        // Сообщество
-        'beta.title': 'Вступай в сообщество',
-        'beta.desc': 'Бета-тестеры, новости и обратная связь \u2014 всё в одном месте.',
-        'beta.joinTelegram': 'Вступить в Telegram',
-        'beta.note': 'Бесплатно \u00b7 Без спама \u00b7 Прямой доступ',
-
-        // Форма связи
-        'contact.title': 'Вопросы или предложения?',
-        'contact.desc': 'Напиши нам \u2014 читаем всё.',
-        'contact.namePlaceholder': 'Имя',
-        'contact.contactPlaceholder': 'Email или @телеграм',
-        'contact.messagePlaceholder': 'Твоё сообщение...',
-        'contact.submit': 'Отправить',
-        'contact.success': 'Спасибо! Скоро ответим.',
-
-        'founder.quote': '\u00abЯ создал Lupibu, когда стал папой и понял: трекеры \u2014 это блокноты. Данные хранят, а ответов не дают. Lupibu думает вместе с тобой. Твой фидбек формирует продукт.\u00bb',
-        'founder.name': 'Азат, основатель Lupibu',
-
-        'footer.tagline': 'Предсказание сна и ИИ-помощник для родителей',
+        'footer.tagline': 'Знает про сон малыша раньше тебя',
         'footer.product': 'Продукт',
         'footer.product.features': 'Возможности',
-        'footer.product.howItWorks': 'Как это работает',
-        'footer.product.beta': 'Бета-тест',
-        'footer.product.telegram': 'Telegram',
+        'footer.product.download': 'Скачать',
+        'footer.product.community': 'Сообщество',
+        'footer.product.support': 'Поддержка',
         'footer.legal': 'Документы',
         'footer.legal.privacy': 'Политика конфиденциальности',
         'footer.legal.terms': 'Условия использования',
@@ -205,99 +116,54 @@ const translations = {
         'footer.legal.dataConsent': 'Согласие на обработку данных',
         'footer.copyright': '\u00a9 2026 Lupibu. Все права защищены.',
 
-        'meta.description': 'Lupibu \u2014 умный трекер сна и дневник малыша с ИИ-ассистентом. Предсказывает сон, отвечает на вопросы, работает голосом на 3 языках. Бета-тест открыт.',
-        'meta.title': 'Lupibu \u2014 Умный трекер сна и дневник малыша с ИИ-ассистентом'
+        'meta.description': 'Lupibu изучает ритм сна малыша, предсказывает следующий сон и отвечает на вопросы по твоим данным. Голосовой ввод на 3 языках. Попробуй бесплатно.',
+        'meta.title': 'Lupibu \u2014 Трекер сна малыша с предсказанием дневного сна'
     },
 
     // ============================================
     // ҚАЗАҚША
-    // Тон: жылы, құрметті «Сіз», отбасылық
     // ============================================
     kk: {
-        'nav.joinBeta': 'Telegram',
+        'nav.download': 'Жүктеу',
 
-        'hero.badge': 'Бета-тест ашық',
-        'hero.title': 'Ұйқыны болжайды.<br>Дауысты түсінеді.<br>Бәрін есінде сақтайды.',
-        'hero.subtitle': 'ЖИ-сәби трекері. Ұйқыны болжайды, дауыспен жазады, сұрақтарға жауап береді.',
-        'hero.cta': 'Telegram-ға қосылу',
-        'hero.ctaSub': 'Іске қосылғаннан кейін 3 ай Premium тегін',
-        'hero.joinTelegram': 'немесе Telegram-ға қосылыңыз',
-        'hero.stat1Value': 'ЖИ',
-        'hero.stat1Label': 'Көмекші',
+        'hero.title': 'Бөпеңіз ұйықтағалы жатыр.<br>Сіз оны одан бұрын білесіз.',
+        'hero.subtitle': 'Сәбиіңіздің ырғағын үйреніп, алдағыны алдын ала айтатын трекер.',
+        'hero.stat1Value': '1',
+        'hero.stat1Label': 'Басыңыз — дауыспен жазыңыз',
         'hero.stat2Value': '12',
         'hero.stat2Label': 'Жазба түрі',
-        'hero.stat3Value': '< 5с',
-        'hero.stat3Label': 'Дауыспен жазу',
+        'hero.stat3Value': 'ЖИ',
+        'hero.stat3Label': 'Сәбиіңізді танитын',
+        'hero.trust': 'Жарнамасыз. Деректер сатылмайды. Қарапайым трекерлерден жалыққан әке жасады.',
 
-        'problem.label': 'Таныс па?',
-        'problem.title': 'Қашан жатқызу керек? Қанша ұйықтады?<br>Неге жылайды?',
-        'problem.text': 'Екі жыл сұрақтар. Гуглдейсіз, сұрайсыз, форумдарды парақтайсыз \u2014 және әрқашан жалпы кеңестер аласыз.',
-        'problem.answer': 'Lupibu сіздің сәбиіңіздің деректерінен үйреніп, оған жұмыс істейтін жауаптар береді \u2014 \u00abкестедегі орташа бала\u00bb үшін емес.',
+        'tracking.label': 'Сәбиіңіздің толық тарихы',
+        'tracking.title': 'Әр тамақтану. Әр ұйқы. Бар-бәрі.',
+        'tracking.desc': 'Жөргектен дәрігерге дейін — 12 жазба түрі. ЖИ бәрін оқиды. \u00abБүгін неге қиын болды?\u00bb деп сұраңыз — шынымен біледі.',
 
-        'sleep.label': 'Ұйқы интеллекті',
-        'sleep.title': 'Сәбиіңізге қашан ұйықтау керек екенін біледі',
-        'sleep.desc': 'Жеке сергек терезелер, ұйқы уақытын болжау, апталық аналитика. Lupibu дәл сіздің балаңыздың деректерінен үйренеді.',
-        'sleep.bullet1': 'Басты экранда келесі ұйқы болжамы',
-        'sleep.bullet2': 'Апталық карта: күндізгі және түнгі ұйқы',
-        'sleep.bullet3': 'Әр күннің мәліметтері бір басумен',
+        'ai.label': 'Түнгі 3-те дәрігерге жазғандай',
+        'ai.title': 'Айтыңыз. Сұраңыз. Түсінеді.',
+        'ai.desc': '3 тілде, қолсыз, 5 секундта дауыспен жазыңыз. \u00abЖеткілікті жеп жатыр ма?\u00bb — гуглден емес, өз деректеріңізден жауап алыңыз.',
 
-        'ai.label': 'ЖИ-көмекші',
-        'ai.title': 'Кез келген нәрсені сұраңыз \u2014 балаңыздың деректері бойынша жауап алыңыз',
-        'ai.desc': 'Сіздің деректеріңізге негізделген нақты жауаптар. Барлық 12 жазба түрін көреді және байқау қиын байланыстарды табады.',
-        'ai.prompt1': '\u00abНеге ол кеше аз ұйықтады?\u00bb',
-        'ai.prompt2': '\u00abБүгін ол неше рет тамақ жеді?\u00bb',
-        'ai.prompt3': '\u00abСоңғы егу қашан болды?\u00bb',
+        'sleep.label': 'Сәбиіңіздің ұйқысы — алақаныңызда',
+        'sleep.title': 'Келесі ұйқыны болжайды. Болжам емес — біледі.',
+        'sleep.desc': 'Сәбиіңізге бейімделетін ояу уақыт терезелері. Апталық есеп — нені дұрыс істеп жатқаныңыз көрінеді.',
 
-        'tracking.label': 'Оңай жазу',
-        'tracking.title': 'Жазудың үш жолы',
-        'tracking.desc': 'Форма, дауыс немесе чат \u2014 ыңғайлысын таңдаңыз. 12 жазба түрі таймерлермен, фотолармен және жазбалармен.',
-        'tracking.feat1': 'Өрістері бар форма',
-        'tracking.feat2': '3 тілде дауыспен',
-        'tracking.feat3': 'Чатқа мәтін',
-        'tracking.feat4': 'Ұйқы мен тамақтану таймерлері',
+        'family.label': 'Бұл бәрі емес',
+        'family.title': 'Нағыз отбасы өміріне арналған.',
+        'family.desc': 'Бірнеше бала, отбасылық қатынас, қараңғы тақырып, iOS виджеті, таймерлер, фотокүнделік. Қажеті бар — артығы жоқ.',
 
-        // Family
-        'family.label': 'Бүкіл отбасы үшін',
-        'family.title': 'Бірнеше бала, бір қосымша',
-        'family.desc': 'Балалар арасында бір басумен ауысыңыз. Жұбайыңызға қол жеткізу беріңіз. Түнгі тамақтану үшін қараңғы тақырып.',
-        'family.feat1': 'Бірнеше бала',
-        'family.feat2': 'Отбасылық қол жеткізу',
-        'family.feat3': 'Қараңғы тақырып',
-        'family.feat4': 'Жекелендіру',
+        'download.title': 'Бүгін түнде бәрі басқаша болуы мүмкін',
+        'download.desc': 'Тегін жүктеңіз. Pro-ның алғашқы аптасы — сыйлық.',
 
-        'howItWorks.label': 'Қалай бастау керек',
-        'howItWorks.title': 'Алғашқы жазбаға дейін үш минут',
-        'howItWorks.step1.title': 'Балаңызды қосыңыз',
-        'howItWorks.step1.desc': 'Аты, туған күні \u2014 дайынсыз.',
-        'howItWorks.step2.title': 'Дауыспен немесе қолмен жазыңыз',
-        'howItWorks.step2.desc': 'Жазба түрін басыңыз немесе дауыспен айтыңыз. ЖИ бәрін тани алады.',
-        'howItWorks.step3.title': 'Болжамдар мен жауаптар алыңыз',
-        'howItWorks.step3.desc': 'Деректер көп болған сайын қосымша ақылды бола түседі.',
+        'sticky.cta': 'Lupibu жүктеу',
+        'sticky.sub': 'Тегін + 7 күн Pro',
 
-        // Қауымдастық
-        'beta.title': 'Қауымдастыққа қосылыңыз',
-        'beta.desc': 'Бета-тестерлер, жаңалықтар және кері байланыс \u2014 бәрі бір жерде.',
-        'beta.joinTelegram': 'Telegram-ға қосылу',
-        'beta.note': 'Тегін \u00b7 Спамсыз \u00b7 Тікелей қол жеткізу',
-
-        // Байланыс формасы
-        'contact.title': 'Сұрақтар немесе ұсыныстар?',
-        'contact.desc': 'Бізге жазыңыз \u2014 бәрін оқимыз.',
-        'contact.namePlaceholder': 'Атыңыз',
-        'contact.contactPlaceholder': 'Email немесе @телеграм',
-        'contact.messagePlaceholder': 'Сіздің хабарламаңыз...',
-        'contact.submit': 'Жіберу',
-        'contact.success': 'Рахмет! Жақын арада жауап береміз.',
-
-        'founder.quote': '\u00abLupibu-ды әке болғанда жасадым \u2014 трекерлер жай блокнот, деректерді сақтайды, бірақ жауап бермейді. Lupibu сізбен бірге ойлайды. Сіздің пікіріңіз өнімді қалыптастырады.\u00bb',
-        'founder.name': 'Азат, Lupibu негізін қалаушы',
-
-        'footer.tagline': 'Ұйқы болжамы және ата-аналарға арналған ЖИ-көмекші',
+        'footer.tagline': 'Сәбиіңіздің ұйқысын сізден бұрын біледі',
         'footer.product': 'Өнім',
         'footer.product.features': 'Мүмкіндіктер',
-        'footer.product.howItWorks': 'Қалай жұмыс істейді',
-        'footer.product.beta': 'Бета-тест',
-        'footer.product.telegram': 'Telegram',
+        'footer.product.download': 'Жүктеу',
+        'footer.product.community': 'Қоғамдастық',
+        'footer.product.support': 'Қолдау',
         'footer.legal': 'Құжаттар',
         'footer.legal.privacy': 'Құпиялылық саясаты',
         'footer.legal.terms': 'Қолдану шарттары',
@@ -305,8 +171,8 @@ const translations = {
         'footer.legal.dataConsent': 'Деректерді өңдеуге келісім',
         'footer.copyright': '\u00a9 2026 Lupibu. Барлық құқықтар қорғалған.',
 
-        'meta.description': 'Lupibu \u2014 ЖИ-көмекшісі бар ақылды сәби ұйқы трекері. Ұйқыны болжайды, балаңыз туралы сұрақтарға жауап береді, 3 тілде дауыспен жұмыс істейді. Бета-тест ашық.',
-        'meta.title': 'Lupibu \u2014 ЖИ-көмекшісі бар ақылды сәби ұйқы трекері'
+        'meta.description': 'Lupibu сәбиіңіздің ұйқы ырғағын үйреніп, келесі ұйқыны болжайды, деректеріңіз бойынша сұрақтарға жауап береді. 3 тілде дауыспен жазу. Тегін.',
+        'meta.title': 'Lupibu \u2014 Сәби ұйқысын болжайтын трекер'
     }
 };
 
@@ -348,11 +214,6 @@ function applyTranslations(lang) {
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
         const key = el.getAttribute('data-i18n-html');
         if (dict[key]) el.innerHTML = dict[key];
-    });
-
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        if (dict[key]) el.placeholder = dict[key];
     });
 
     // Update legal links with current language

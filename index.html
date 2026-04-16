@@ -7,7 +7,7 @@
     <meta name="description"
         content="Lupibu — smart baby sleep tracker with AI assistant. Predicts sleep, answers questions about your child, works with voice in 3 languages.">
     <meta name="keywords"
-        content="baby sleep tracker, baby diary, sleep prediction, AI assistant for parents, baby tracker">
+        content="baby sleep tracker, baby diary, sleep prediction, AI assistant for parents, baby tracker app">
     <meta name="theme-color" content="#FA7C50">
     <meta property="og:title" content="Lupibu — Smart Baby Sleep Tracker">
     <meta property="og:description"
@@ -62,7 +62,8 @@
                         </button>
                     </div>
                 </div>
-                <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" class="btn btn-primary btn-nav" data-i18n="nav.joinBeta">Telegram</a>
+                <!-- TODO: Replace # with actual App Store URL -->
+                <a href="#" class="btn btn-primary btn-nav btn-appstore-nav" data-i18n="nav.download">Download</a>
             </div>
         </div>
     </nav>
@@ -72,47 +73,43 @@
         <div class="hero-glow"></div>
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span data-i18n="hero.badge">Beta testing is open</span>
-                </div>
                 <h1 class="hero-title" data-i18n-html="hero.title">
-                    Predicts sleep.<br>Understands voice.<br>Remembers everything.
+                    She's about to get sleepy.<br>You'll know before she does.
                 </h1>
                 <p class="hero-subtitle" data-i18n="hero.subtitle">
-                    AI-powered baby tracker. Predicts sleep, logs by voice, answers your questions.
+                    A baby tracker that learns your child's rhythm — and tells you what's next.
                 </p>
                 <div class="hero-cta">
-                    <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-                        <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472z"/></svg>
-                        <span data-i18n="hero.cta">Join Telegram</span>
+                    <!-- TODO: Replace # with actual App Store URL -->
+                    <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                        <img src="assets/appstore-badge.svg" alt="Download on the App Store" class="appstore-img">
                     </a>
-                    <p class="hero-cta-sub" data-i18n="hero.ctaSub">3 months Premium free after launch</p>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-value" data-i18n="hero.stat1Value">AI</span>
-                        <span class="stat-label" data-i18n="hero.stat1Label">Assistant</span>
+                        <span class="stat-value" data-i18n="hero.stat1Value">1</span>
+                            <span class="stat-label" data-i18n="hero.stat1Label">Tap to log by voice</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
                         <span class="stat-value" data-i18n="hero.stat2Value">12</span>
-                        <span class="stat-label" data-i18n="hero.stat2Label">Entry types</span>
+                        <span class="stat-label" data-i18n="hero.stat2Label">Things you can track</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
-                        <span class="stat-value" data-i18n="hero.stat3Value">&lt; 5s</span>
-                        <span class="stat-label" data-i18n="hero.stat3Label">Voice logging</span>
+                        <span class="stat-value" data-i18n="hero.stat3Value">AI</span>
+                        <span class="stat-label" data-i18n="hero.stat3Label">That knows your baby</span>
                     </div>
                 </div>
+                <p class="hero-trust" data-i18n="hero.trust">No ads. No data selling. Built by a dad who was tired of dumb trackers.</p>
             </div>
             <div class="hero-visual">
                 <div class="phone-mockup hero-phone">
                     <div class="phone-frame">
                         <div class="phone-notch"></div>
                         <div class="phone-screen">
-                            <img src="screenshots/en_1_sleep_predict.png" alt="Lupibu — sleep prediction"
-                                class="screen-img" data-screenshot="1_sleep_predict" loading="eager">
+                            <img src="screenshots/en_1_sleep_widget.png" alt="Lupibu — sleep prediction"
+                                class="screen-img" data-screenshot="1_sleep_widget" loading="eager">
                         </div>
                     </div>
                 </div>
@@ -120,36 +117,20 @@
         </div>
     </section>
 
-    <!-- Problem Statement -->
-    <section class="problem">
-        <div class="container problem-container">
-            <span class="section-label" data-i18n="problem.label">Sound familiar?</span>
-            <h2 class="section-title problem-title" data-i18n-html="problem.title">When to put down? How long did
-                they sleep?<br>Why are they crying?</h2>
-            <p class="problem-text" data-i18n="problem.text">
-                Endless questions for two years. You google, ask friends, scroll forums — and always get generic advice.
-            </p>
-            <p class="problem-answer" data-i18n="problem.answer">
-                Lupibu learns from your baby's data and gives answers that work for them — not for "the average child from a chart."
-            </p>
-        </div>
-    </section>
-
-    <!-- Feature 1: Sleep Intelligence -->
+    <!-- Feature 1: Track Everything + History -->
     <section id="features" class="feature-section">
-        <div class="container feature-row">
+        <div class="container feature-row feature-row-reverse">
             <div class="feature-text">
-                <span class="section-label label-purple" data-i18n="sleep.label">Sleep Intelligence</span>
-                <h2 class="feature-heading" data-i18n="sleep.title">Knows when your baby should sleep</h2>
-                <p class="feature-desc" data-i18n="sleep.desc">Personalized wake windows, sleep time prediction,
-                    weekly analytics. Lupibu learns from your child's data specifically.</p>
+                <span class="section-label" data-i18n="tracking.label">Your baby's full story</span>
+                <h2 class="feature-heading" data-i18n="tracking.title">Every feed. Every nap. Every everything.</h2>
+                <p class="feature-desc" data-i18n="tracking.desc">12 entry types — from diapers to doctor visits. AI reads all of it. Ask "why was today rough?" and it actually knows.</p>
             </div>
             <div class="feature-visual feature-visual-pair">
                 <div class="phone-mockup phone-front">
                     <div class="phone-frame">
                         <div class="phone-notch"></div>
                         <div class="phone-screen">
-                            <img src="screenshots/en_2_sleep_analytics.png" alt="" data-screenshot="2_sleep_analytics"
+                            <img src="screenshots/en_2_add_entry.png" alt="" data-screenshot="2_add_entry"
                                 loading="lazy" class="screen-img">
                         </div>
                     </div>
@@ -158,8 +139,8 @@
                     <div class="phone-frame">
                         <div class="phone-notch"></div>
                         <div class="phone-screen">
-                            <img src="screenshots/en_3_sleep_daily_details.png" alt=""
-                                data-screenshot="3_sleep_daily_details" loading="lazy" class="screen-img">
+                            <img src="screenshots/en_8_history.png" alt=""
+                                data-screenshot="8_history" loading="lazy" class="screen-img">
                         </div>
                     </div>
                 </div>
@@ -171,62 +152,26 @@
     <section class="feature-section feature-dark">
         <div class="container feature-row feature-row-reverse">
             <div class="feature-text">
-                <span class="section-label label-ai" data-i18n="ai.label">AI Assistant</span>
-                <h2 class="feature-heading" data-i18n="ai.title">Ask anything — get answers based on your child's
-                    data</h2>
-                <p class="feature-desc" data-i18n="ai.desc">Specific answers based on your data. Sees all 12 entry types and finds patterns you'd miss.</p>
+                <span class="section-label label-ai" data-i18n="ai.label">Like texting a nurse at 3am</span>
+                <h2 class="feature-heading" data-i18n="ai.title">Say it. Ask it. It just gets it.</h2>
+                <p class="feature-desc" data-i18n="ai.desc">Voice-log in 3 languages, hands-free, in 5 seconds. Ask anything — "Is she eating enough?" — and get answers from your data, not Google.</p>
             </div>
-            <div class="feature-visual">
-                <div class="phone-mockup">
+            <div class="feature-visual feature-visual-pair">
+                <div class="phone-mockup phone-front">
                     <div class="phone-frame">
                         <div class="phone-notch"></div>
                         <div class="phone-screen">
-                            <img src="screenshots/en_6_ai_chat.png" alt="" data-screenshot="6_ai_chat" loading="lazy"
-                                class="screen-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature 3: Easy Logging -->
-    <section class="feature-section">
-        <div class="container feature-row">
-            <div class="feature-text">
-                <span class="section-label" data-i18n="tracking.label">Easy logging</span>
-                <h2 class="feature-heading" data-i18n="tracking.title">Three ways to log</h2>
-                <p class="feature-desc" data-i18n="tracking.desc">Form, voice, or chat — your choice. 12 entry types with timers, photos, and notes.</p>
-            </div>
-            <div class="feature-visual">
-                <div class="phone-mockup">
-                    <div class="phone-frame">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen">
-                            <img src="screenshots/en_4_add_entry.png" alt="" data-screenshot="4_add_entry"
+                            <img src="screenshots/en_5_add_entries_with_ai.png" alt="" data-screenshot="5_add_entries_with_ai"
                                 loading="lazy" class="screen-img">
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature 4: Family & Personalization -->
-    <section class="feature-section">
-        <div class="container feature-row feature-row-reverse">
-            <div class="feature-text">
-                <span class="section-label" data-i18n="family.label">For the whole family</span>
-                <h2 class="feature-heading" data-i18n="family.title">Multiple children, one app</h2>
-                <p class="feature-desc" data-i18n="family.desc">Switch children in one tap. Share with your partner. Dark theme for night feedings.</p>
-            </div>
-            <div class="feature-visual">
-                <div class="phone-mockup">
+                <div class="phone-mockup phone-back">
                     <div class="phone-frame">
                         <div class="phone-notch"></div>
                         <div class="phone-screen">
-                            <img src="screenshots/en_7_multiple_childrend_n_dark_mode.png" alt=""
-                                data-screenshot="7_multiple_childrend_n_dark_mode" loading="lazy" class="screen-img">
+                            <img src="screenshots/en_6_chat_with_ai.png" alt=""
+                                data-screenshot="6_chat_with_ai" loading="lazy" class="screen-img">
                         </div>
                     </div>
                 </div>
@@ -234,87 +179,81 @@
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label" data-i18n="howItWorks.label">Getting started</span>
-                <h2 class="section-title" data-i18n="howItWorks.title">Three minutes to your first entry</h2>
+    <!-- Feature 3: Sleep Intelligence + Statistics -->
+    <section class="feature-section">
+        <div class="container feature-row">
+            <div class="feature-text">
+                <span class="section-label label-purple" data-i18n="sleep.label">Your baby's sleep, decoded</span>
+                <h2 class="feature-heading" data-i18n="sleep.title">Predicts the next nap. Not guesses — knows.</h2>
+                <p class="feature-desc" data-i18n="sleep.desc">Wake windows that learn from your baby. Weekly analytics that show what's working.</p>
             </div>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3 data-i18n="howItWorks.step1.title">Add your baby</h3>
-                    <p data-i18n="howItWorks.step1.desc">Name, date of birth — and you're ready.</p>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3 data-i18n="howItWorks.step2.title">Log by voice or manually</h3>
-                    <p data-i18n="howItWorks.step2.desc">Tap an entry type or speak. AI recognizes everything.</p>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3 data-i18n="howItWorks.step3.title">Get predictions and answers</h3>
-                    <p data-i18n="howItWorks.step3.desc">The more data, the smarter the app gets.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Beta CTA -->
-    <section id="beta" class="beta-section">
-        <div class="container">
-            <div class="beta-card">
-                <div class="beta-content">
-                    <h2 class="beta-title" data-i18n="beta.title">Join our community</h2>
-                    <p class="beta-desc" data-i18n="beta.desc">Beta testers, news, and direct feedback — all in one place.</p>
-                    <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" class="btn btn-white btn-lg beta-tg-btn">
-                        <svg viewBox="0 0 24 24" fill="currentColor" class="btn-icon"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472z"/></svg>
-                        <span data-i18n="beta.joinTelegram">Join Telegram</span>
-                    </a>
-                    <p class="beta-note" data-i18n="beta.note">Free · No spam · Direct access</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-container">
-                <h2 class="section-title contact-title" data-i18n="contact.title">Questions or suggestions?</h2>
-                <p class="contact-desc" data-i18n="contact.desc">Write to us — we read everything.</p>
-                <form class="contact-form" id="contactForm">
-                    <div class="contact-form-row">
-                        <input type="text" id="contactName" required placeholder="Your name"
-                            data-i18n-placeholder="contact.namePlaceholder" autocomplete="name">
-                        <input type="text" id="contactEmail" required placeholder="Email or @telegram"
-                            data-i18n-placeholder="contact.contactPlaceholder">
+            <div class="feature-visual feature-visual-pair">
+                <div class="phone-mockup phone-front">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <img src="screenshots/en_3_sleep_statistics.png" alt="" data-screenshot="3_sleep_statistics"
+                                loading="lazy" class="screen-img">
+                        </div>
                     </div>
-                    <textarea id="contactMessage" required rows="4" placeholder="Your message..."
-                        data-i18n-placeholder="contact.messagePlaceholder"></textarea>
-                    <button type="submit" class="btn btn-primary btn-lg contact-submit">
-                        <span data-i18n="contact.submit">Send</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <polyline points="12 5 19 12 12 19" />
-                        </svg>
-                    </button>
-                </form>
-                <p class="contact-success-msg" id="contactSuccess" style="display:none"
-                    data-i18n="contact.success">Thank you! We'll get back to you soon.</p>
+                </div>
+                <div class="phone-mockup phone-back">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <img src="screenshots/en_4_detailed_sleep_statistics.png" alt=""
+                                data-screenshot="4_detailed_sleep_statistics" loading="lazy" class="screen-img">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Founder Note -->
-    <section class="founder">
-        <div class="container founder-container">
-            <div class="founder-avatar">A</div>
-            <blockquote class="founder-quote" data-i18n="founder.quote">"I built Lupibu when I became a dad and realized trackers are just notepads — they store data but give no answers. Lupibu thinks with you. Your feedback shapes the product."</blockquote>
-            <p class="founder-name" data-i18n="founder.name">Azat, founder of Lupibu</p>
+    <!-- Feature 4: Family + Dark Mode -->
+    <section class="feature-section">
+        <div class="container feature-row">
+            <div class="feature-text">
+                <span class="section-label" data-i18n="family.label">And so much more</span>
+                <h2 class="feature-heading" data-i18n="family.title">Built for how families actually work.</h2>
+                <p class="feature-desc" data-i18n="family.desc">Multiple kids, family sharing, dark mode, iOS widget, timers, photo diary. Everything a real parent needs — nothing they don't.</p>
+            </div>
+            <div class="feature-visual feature-visual-pair">
+                <div class="phone-mockup phone-front">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <img src="screenshots/en_7_switch_child.png" alt=""
+                                data-screenshot="7_switch_child" loading="lazy" class="screen-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-mockup phone-back">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <img src="screenshots/en_9_dark_theme.png" alt=""
+                                data-screenshot="9_dark_theme" loading="lazy" class="screen-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="download-card">
+                <div class="download-content">
+                    <h2 class="download-title" data-i18n="download.title">Tonight could be different</h2>
+                    <p class="download-desc" data-i18n="download.desc">Free download. Your first week of Pro is on us.</p>
+                    <!-- TODO: Replace # with actual App Store URL -->
+                    <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                        <img src="assets/appstore-badge.svg" alt="Download on the App Store" class="appstore-img appstore-img-invert">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -324,15 +263,26 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <img src="assets/logo-inline-primary.svg" alt="Lupibu" class="footer-logo">
-                    <p class="footer-tagline" data-i18n="footer.tagline">Sleep prediction & AI assistant for parents</p>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Knows your baby's next nap before you do</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/lupibu.app" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.threads.net/@lupibu.app" target="_blank" rel="noopener" aria-label="Threads" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.59 12c.025 3.086.718 5.496 2.057 7.164 1.432 1.781 3.632 2.695 6.54 2.717 2.227-.033 4.093-.6 5.246-1.46a5.12 5.12 0 001.733-2.14c.39-.944.466-2.22-.14-3.263-.39-.672-1.072-1.2-2.028-1.573a8.66 8.66 0 01-.396 2.254c-.678 1.86-2.023 3.03-3.856 3.363a5.87 5.87 0 01-1.042.093c-1.282 0-2.47-.437-3.346-1.236-.98-.894-1.533-2.177-1.46-3.6.128-2.48 1.946-4.254 4.728-4.618a9.11 9.11 0 013.205.166c-.063-.658-.184-1.27-.373-1.821-.38-1.108-1.026-1.837-1.96-2.164a4.86 4.86 0 00-1.59-.222c-1.78.052-3.024.82-3.763 1.62l-1.415-1.37C7.4 4.14 9.182 3.12 11.558 3.058c.756-.014 1.478.07 2.15.273 1.372.42 2.383 1.4 2.943 2.868.32.84.527 1.786.612 2.833.67.224 1.263.506 1.774.847 1.31.872 2.146 2.142 2.42 3.672.315 1.762-.018 3.4-.962 4.742-.885 1.26-2.25 2.17-4.053 2.702-1.39.41-2.95.62-4.643.65-.436.004-.868-.007-1.285-.035a10.94 10.94 0 01-.328-.02zm.698-7.607c-1.824.232-2.86 1.175-2.925 2.44-.04.742.24 1.39.782 1.884.544.496 1.312.748 2.167.748.244 0 .497-.021.748-.066 1.187-.215 2.08-.97 2.523-2.156.26-.697.38-1.506.384-2.396a7.06 7.06 0 00-3.679-.454z"/></svg>
+                        </a>
+                        <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" aria-label="Telegram" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472z"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
                         <h4 data-i18n="footer.product">Product</h4>
                         <a href="#features" data-i18n="footer.product.features">Features</a>
-                        <a href="#how-it-works" data-i18n="footer.product.howItWorks">How It Works</a>
-                        <a href="#beta" data-i18n="footer.product.beta">Beta Test</a>
-                        <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" data-i18n="footer.product.telegram">Telegram</a>
+                        <a href="#download" data-i18n="footer.product.download">Download</a>
+                        <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" data-i18n="footer.product.community">Community</a>
+                        <a href="mailto:contact@lupibu.com" data-i18n="footer.product.support">Support</a>
                     </div>
                     <div class="footer-col">
                         <h4 data-i18n="footer.legal">Legal</h4>
@@ -355,8 +305,9 @@
 
     <!-- Sticky Mobile CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" class="btn btn-primary sticky-cta-btn" data-i18n="hero.cta">Join Telegram</a>
-        <span class="sticky-cta-sub" data-i18n="hero.ctaSub">3 months Premium free</span>
+        <!-- TODO: Replace # with actual App Store URL -->
+        <a href="#" class="btn btn-primary sticky-cta-btn" data-i18n="sticky.cta">Download Lupibu</a>
+        <span class="sticky-cta-sub" data-i18n="sticky.sub">Free with 7-day Pro trial</span>
     </div>
 
     <script src="i18n.js"></script>
