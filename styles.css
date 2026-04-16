@@ -165,6 +165,25 @@ ul { list-style: none; }
     gap: var(--space-md);
 }
 
+.nav-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--gray-500);
+    transition: color var(--transition-fast);
+}
+
+.nav-email svg {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-email:hover {
+    color: var(--brand);
+}
+
 /* Language Switcher */
 .lang-switcher { position: relative; }
 
