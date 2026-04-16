@@ -8,7 +8,7 @@ const translations = {
         'nav.download': 'Download',
 
         // Hero
-        'hero.title': 'She\'s about to get sleepy.<br>You\'ll know before she does.',
+        'hero.title': 'Your baby is about to get sleepy.<br>You\'ll know first.',
         'hero.subtitle': 'A baby tracker that learns your child\'s rhythm — and tells you what\'s next.',
         'hero.stat1Value': '1',
         'hero.stat1Label': 'Tap to log by voice',
@@ -26,7 +26,7 @@ const translations = {
         // AI Assistant
         'ai.label': 'Like texting a nurse at 3am',
         'ai.title': 'Say it. Ask it. It just gets it.',
-        'ai.desc': 'Voice-log in 3 languages, hands-free, in 5 seconds. Ask anything \u2014 "Is she eating enough?" \u2014 and get answers from your data, not Google.',
+        'ai.desc': 'Voice-log in 3 languages, hands-free, in 5 seconds. Ask anything \u2014 "Is the baby eating enough?" \u2014 and get answers from your data, not Google.',
 
         // Sleep Intelligence
         'sleep.label': 'Your baby\'s sleep, decoded',
@@ -71,7 +71,7 @@ const translations = {
     ru: {
         'nav.download': 'Скачать',
 
-        'hero.title': 'Она вот-вот захочет спать.<br>Ты узнаешь раньше неё.',
+        'hero.title': 'Малыш вот-вот захочет спать.<br>Ты узнаешь первым.',
         'hero.subtitle': 'Трекер, который изучает ритм твоего малыша — и подсказывает, что дальше.',
         'hero.stat1Value': '1',
         'hero.stat1Label': 'Нажми — и скажи голосом',
@@ -87,7 +87,7 @@ const translations = {
 
         'ai.label': 'Как написать педиатру в 3 ночи',
         'ai.title': 'Скажи. Спроси. Поймёт.',
-        'ai.desc': 'Диктуй на 3 языках, без рук, за 5 секунд. Спроси что угодно — \u00abОна нормально ест?\u00bb — и получи ответ из своих данных, а не из гугла.',
+        'ai.desc': 'Диктуй на 3 языках, без рук, за 5 секунд. Спроси что угодно — \u00abМалыш нормально ест?\u00bb — и получи ответ из своих данных, а не из гугла.',
 
         'sleep.label': 'Сон малыша — как на ладони',
         'sleep.title': 'Предсказывает следующий сон. Не гадает — знает.',
