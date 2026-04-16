@@ -168,16 +168,16 @@ ul { list-style: none; }
 .nav-email {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
+    gap: var(--space-xs);
     color: var(--gray-500);
+    font-size: var(--text-small);
     transition: color var(--transition-fast);
 }
 
 .nav-email svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
 .nav-email:hover {
@@ -672,7 +672,7 @@ ul { list-style: none; }
 
 .footer-email {
     display: inline-block;
-    margin-top: var(--space-sm);
+    margin-top: var(--space-lg);
     font-size: var(--text-small);
     color: var(--gray-400);
     transition: color var(--transition-fast);
@@ -826,6 +826,7 @@ ul { list-style: none; }
 @media (max-width: 768px) {
     .sticky-cta { display: block; }
     .btn-nav { display: none; }
+    .nav-email span { display: none; }
 
     .hero {
         padding-top: calc(56px + var(--space-lg));
