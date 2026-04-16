@@ -41,11 +41,22 @@ If you downloaded the App from the Apple App Store, the following terms apply:
 7.6. **Intellectual Property Rights:** In the event of any third party intellectual property infringement claim, We, not Apple, will be solely responsible.
 7.7. **Third Party Beneficiary:** Apple and Apple's subsidiaries are third party beneficiaries of this Agreement.
 
-8. LIMITATION OF LIABILITY
-8.1. To the fullest extent permitted by applicable law, in no event will We be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the App.
+8. SUBSCRIPTIONS AND PAYMENTS
+8.1. **Free Tier and Lupibu Pro.** Core features of the App are available free of charge. A paid subscription ("Lupibu Pro") unlocks additional features such as advanced analytics, unlimited AI assistant usage, and other premium capabilities described in-app at the time of purchase.
+8.2. **Pricing and Billing.** Current pricing is displayed in the App prior to purchase and may vary by region and currency. As of the version date of this Agreement, Lupibu Pro is offered as a monthly plan (approx. USD 6.99 per month) and an annual plan (approx. USD 39.99 per year), subject to change. All prices are shown inclusive of applicable taxes where required by law.
+8.3. **Free Trial.** New subscribers may be offered a free trial period (typically 7 days). If you do not cancel before the trial ends, the subscription will automatically convert to a paid subscription and your Apple ID will be charged at the rate shown at the time of sign-up. Trial eligibility is determined by Apple and may be limited to one trial per Apple ID household.
+8.4. **Auto-Renewal.** Subscriptions automatically renew for successive periods of the same length unless auto-renew is turned off at least 24 hours before the end of the current period. Your Apple ID will be charged for renewal within 24 hours before the end of the current period.
+8.5. **Payment Processing.** All subscriptions are sold and billed by Apple through your Apple ID, subject to the Apple Media Services Terms and Conditions. We do not process, store, or have access to your payment card details.
+8.6. **Managing and Cancelling Your Subscription.** You can manage or cancel your subscription at any time in iOS Settings → [your name] → Subscriptions. Cancellation takes effect at the end of the current billing period; you retain access to Pro features until then. **Deleting the App or deleting your Lupibu account does NOT cancel an active subscription** — you must cancel through Apple's subscription settings separately.
+8.7. **Refunds.** All refund requests are handled by Apple under Apple's refund policy. To request a refund, visit reportaproblem.apple.com. We cannot issue refunds directly and have no control over Apple's refund decisions.
+8.8. **Changes to Pricing and Features.** We may change subscription prices, plan structure, or the specific features included in Pro. For existing subscribers, material price increases will take effect only at the next renewal and will be communicated in advance as required by Apple.
+8.9. **Family Sharing.** Where supported, subscriptions may be shared with members of your Apple Family Sharing group per Apple's rules. We do not control the availability or limits of Family Sharing.
 
-9. CHANGES TO THIS AGREEMENT
-9.1. We reserve the right, at our sole discretion, to modify or replace these Terms at any time.
+9. LIMITATION OF LIABILITY
+9.1. To the fullest extent permitted by applicable law, in no event will We be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the App.
 
-10. CONTACT INFORMATION
+10. CHANGES TO THIS AGREEMENT
+10.1. We reserve the right, at our sole discretion, to modify or replace these Terms at any time.
+
+11. CONTACT INFORMATION
 For any questions regarding this Agreement, please contact us at: contact@lupibu.com

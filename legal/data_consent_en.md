@@ -14,6 +14,7 @@ I authorize the processing of the following categories of data:
 
 **Parent data:**
 *   Name (obtained via Apple Sign-In)
+*   Email address (obtained via Apple Sign-In; may be an Apple private relay address)
 *   Apple ID identifier (for authentication)
 
 **Child data:**
@@ -52,11 +53,12 @@ The Operator engages the following third parties for data processing:
 
 | Processor | Purpose | Server Location |
 |---|---|---|
-| Google Cloud Platform | Database hosting, backend infrastructure, photo storage | United States |
+| Google Cloud Platform | Database hosting, backend infrastructure, photo storage | European Union (Warsaw, Poland — `europe-central2`) |
 | Firebase (Google) | User authentication, analytics | United States |
 | PostHog | Product analytics | European Union (Frankfurt) |
-| Sentry | Crash reporting and error monitoring | United States |
+| Sentry | Crash reporting, error monitoring, sampled session replay (masked text and images) | United States |
 | Google Gemini AI / Vertex AI | Voice transcription, AI recommendations | United States |
+| Telegram Bot API | In-app feedback delivery to support team | Global (Telegram infrastructure) |
 
 Data is transmitted to these processors solely for the stated purposes and in compliance with applicable data protection agreements.
 

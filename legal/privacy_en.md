@@ -12,7 +12,7 @@ Version 2.0 dated 03.04.2026
 We collect personal information only to the extent necessary for the App to function and to improve your experience.
 
 2.1. **Information You Provide Directly:**
-*   **Account Data:** Your name, as provided through Apple Sign-In during registration. We do not collect your email address — Apple Sign-In handles authentication without sharing your email with us.
+*   **Account Data:** Your name and email address, as provided through Apple Sign-In during registration. If you chose "Hide My Email" in Apple Sign-In, we receive only a private Apple relay address (e.g. `xxx@privaterelay.appleid.com`), not your real email. The email is used for essential service communications (account recovery, legal notices) only; we do not send marketing emails.
 *   **Child Data:** Name, gender, and date of birth of your child. **By providing this data, you confirm that you are the parent or legal guardian of the child and have full authority to provide this information.**
 *   **Entries and Logs:** Sleep records (start time, end time, quality rating), feeding records (breast/bottle/food, timestamps), and other daily tracking entries (diaper, walk, doctor visit, medication, vaccination, symptoms, massage, custom entries).
 *   **Photos:** Photos you attach to entries. A single photo can be attached to any entry. Photos are uploaded to and stored in Google Cloud Storage.
@@ -23,10 +23,11 @@ We collect personal information only to the extent necessary for the App to func
 *   **Device Information:** Device type, operating system version.
 *   **Usage Analytics:** App usage patterns and feature interactions, collected via Firebase Analytics and PostHog.
 *   **Crash Reports:** Technical error data, device state, and stack traces, collected via Sentry to diagnose and fix bugs.
+*   **Session Replay (sampled):** Sentry records anonymized replays of app sessions for approximately 10% of users (100% of sessions where an error occurs). Replays capture screen navigation, taps, and scroll events. **All text inputs and images are masked by default**, so typed content, child names, and photos are not visible in the recording. You can disable crash and replay collection in the device's system diagnostics settings (iOS: Settings → Privacy & Security → Analytics & Improvements).
 *   **Push Notification Tokens:** Device tokens used to deliver push notifications (sleep reminders, daily tips).
 
 2.3. **Information We Do NOT Collect:**
-*   We do not collect your email address, phone number, or location data.
+*   We do not collect your phone number or location data.
 *   We do not collect biometric data.
 *   We do not collect payment or financial information.
 *   We do not serve ads or collect data for advertising purposes.
@@ -54,18 +55,19 @@ We use collected information for the following purposes:
 
 | **Provider** | **Purpose** | **Data Processed** | **Server Location** |
 |---|---|---|---|
-| Google Cloud Platform | Hosting, database, photo storage | All app data, uploaded photos | United States |
-| Firebase Auth | User authentication | Apple Sign-In token, user ID | United States |
+| Google Cloud Platform | Hosting, database, photo storage | All app data, uploaded photos | European Union (Warsaw, Poland — `europe-central2`) |
+| Firebase Auth | User authentication | Apple Sign-In token, user ID, email (possibly Apple relay) | United States |
 | Firebase Analytics | Usage analytics | Anonymous usage events, device info | United States |
 | PostHog | Product analytics | Anonymous usage events, device info | EU (Frankfurt, Germany) |
-| Sentry | Crash reporting | Error logs, device state, stack traces | United States |
+| Sentry | Crash reporting, sampled session replay (masked text and images) | Error logs, device state, stack traces, anonymized session recordings | United States |
 | Google Gemini AI / Vertex AI | Voice transcription, AI assistant | Voice audio (real-time, not stored), conversation text, child tracking data | United States |
+| Telegram Bot API | Feedback delivery to our support team | Feedback message text, attached screenshots, technical logs (when you submit feedback in-app) | Global (routed through Telegram infrastructure) |
 
 5.3. Each subprocessor is bound by data processing agreements that require them to protect your data in accordance with applicable laws.
 5.4. **Legal Disclosure:** We may disclose your information if required to do so by law, court order, or a valid request from a government authority of the Republic of Kazakhstan.
 
 6. INTERNATIONAL DATA TRANSFERS
-6.1. Your data may be transferred to and processed in countries outside the Republic of Kazakhstan, including the United States and EU member states (Germany).
+6.1. Your data may be transferred to and processed in countries outside the Republic of Kazakhstan, including EU member states (Poland for backend hosting and photo storage; Germany for product analytics) and the United States (for Firebase Auth, Firebase Analytics, Sentry, and Google Gemini AI / Vertex AI).
 6.2. When transferring data internationally, we ensure that adequate safeguards are in place, including data processing agreements with our subprocessors that meet the requirements of Kazakhstan's data protection law and GDPR standards.
 
 7. DATA RETENTION
