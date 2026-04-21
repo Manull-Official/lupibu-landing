@@ -10,13 +10,13 @@ const translations = {
         // Hero
         'hero.title': 'Your baby is about to get sleepy.<br>You\'ll know first.',
         'hero.subtitle': 'A baby tracker that learns your child\'s rhythm — and tells you what\'s next.',
-        'hero.stat1Value': '3s',
-        'hero.stat1Label': 'To voice-log a nap',
-        'hero.stat2Value': '12',
-        'hero.stat2Label': 'Entry types — feeds, naps, meds',
-        'hero.stat3Value': 'AI',
-        'hero.stat3Label': 'Answers from your data, not Google',
-        'hero.trust': 'Private by default. No ads, no data selling. Built by a dad tired of dumb trackers.',
+        'hero.stat1Value': '12 types',
+        'hero.stat1Label': 'Log anything in one tap',
+        'hero.stat2Value': '15 min',
+        'hero.stat2Label': 'Before the next nap',
+        'hero.stat3Value': '24/7',
+        'hero.stat3Label': 'AI on your baby’s data',
+        'hero.trust': 'Less guessing. Less anxiety. Calmer days and nights.',
 
         // Tracking + History
         'tracking.label': 'Your baby\'s full story',
@@ -39,8 +39,8 @@ const translations = {
         'family.desc': 'Multiple kids, family sharing, dark mode, iOS widget, timers, photo diary. Everything a real parent needs \u2014 nothing they don\'t.',
 
         // Download CTA
-        'download.title': 'Tonight could be different',
-        'download.desc': 'Free download. Your first week of Pro is on us.',
+        'download.title': 'Calmer nights start tonight',
+        'download.desc': 'Free to download. 7 days of Pro on us.',
 
         // Sticky CTA
         'sticky.cta': 'Download Lupibu',
@@ -51,8 +51,7 @@ const translations = {
         'footer.product': 'Product',
         'footer.product.features': 'Features',
         'footer.product.download': 'Download',
-        'footer.product.community': 'Community',
-        'footer.product.support': 'Support',
+        'footer.product.help': 'Help Center',
         'footer.legal': 'Legal',
         'footer.legal.privacy': 'Privacy Policy',
         'footer.legal.terms': 'Terms of Use',
@@ -73,13 +72,13 @@ const translations = {
 
         'hero.title': 'Малыш вот-вот захочет спать.<br>Ты узнаешь первым.',
         'hero.subtitle': 'Трекер, который изучает ритм твоего малыша — и подсказывает, что дальше.',
-        'hero.stat1Value': '3 сек',
-        'hero.stat1Label': 'Записать сон голосом',
-        'hero.stat2Value': '12',
-        'hero.stat2Label': 'Типов записей — сон, еда, лекарства',
-        'hero.stat3Value': 'ИИ',
-        'hero.stat3Label': 'Ответы из твоих данных, не из гугла',
-        'hero.trust': 'Приватно по умолчанию. Без рекламы и продажи данных. Сделал папа, которому надоели тупые трекеры.',
+        'hero.stat1Value': '12 типов',
+        'hero.stat1Label': 'Запись в один тап',
+        'hero.stat2Value': '15 мин',
+        'hero.stat2Label': 'До следующего сна',
+        'hero.stat3Value': '24/7',
+        'hero.stat3Label': 'AI по данным малыша',
+        'hero.trust': 'Меньше гаданий. Меньше тревоги. Спокойнее дни и ночи.',
 
         'tracking.label': 'Вся история малыша',
         'tracking.title': 'Каждое кормление. Каждый сон. Вообще всё.',
@@ -97,8 +96,8 @@ const translations = {
         'family.title': 'Для настоящей жизни с детьми.',
         'family.desc': 'Несколько детей, семейный доступ, тёмная тема, виджет iOS, таймеры, фотодневник. Всё, что нужно — ничего лишнего.',
 
-        'download.title': 'Этой ночью всё может быть иначе',
-        'download.desc': 'Скачай бесплатно. Первая неделя Pro — в подарок.',
+        'download.title': 'Спокойные ночи начинаются сегодня',
+        'download.desc': 'Скачайте бесплатно. 7 дней Pro — в подарок.',
 
         'sticky.cta': 'Скачать Lupibu',
         'sticky.sub': 'Бесплатно + 7 дней Pro',
@@ -107,8 +106,7 @@ const translations = {
         'footer.product': 'Продукт',
         'footer.product.features': 'Возможности',
         'footer.product.download': 'Скачать',
-        'footer.product.community': 'Сообщество',
-        'footer.product.support': 'Поддержка',
+        'footer.product.help': 'Справочный центр',
         'footer.legal': 'Документы',
         'footer.legal.privacy': 'Политика конфиденциальности',
         'footer.legal.terms': 'Условия использования',
@@ -128,13 +126,13 @@ const translations = {
 
         'hero.title': 'Бөпеңіз ұйықтағалы жатыр.<br>Сіз оны одан бұрын білесіз.',
         'hero.subtitle': 'Сәбиіңіздің ырғағын үйреніп, алдағыны алдын ала айтатын трекер.',
-        'hero.stat1Value': '3 сек',
-        'hero.stat1Label': 'Ұйқыны дауыспен жазу',
-        'hero.stat2Value': '12',
-        'hero.stat2Label': 'Жазба түрі — ұйқы, тамақ, дәрі',
-        'hero.stat3Value': 'ЖИ',
-        'hero.stat3Label': 'Жауаптар деректеріңізден, гуглден емес',
-        'hero.trust': 'Әдепкі бойынша жеке. Жарнамасыз, деректер сатылмайды. Қарапайым трекерлерден жалыққан әке жасады.',
+        'hero.stat1Value': '12 түрі',
+        'hero.stat1Label': 'Бір түртумен жазу',
+        'hero.stat2Value': '15 мин',
+        'hero.stat2Label': 'Келесі ұйқыға дейін',
+        'hero.stat3Value': '24/7',
+        'hero.stat3Label': 'Сәбиіңіз деректерімен AI',
+        'hero.trust': 'Аз жорамал. Азырақ алаңдаушылық. Тыныштау күндер мен түндер.',
 
         'tracking.label': 'Сәбиіңіздің толық тарихы',
         'tracking.title': 'Әр тамақтану. Әр ұйқы. Бар-бәрі.',
@@ -152,8 +150,8 @@ const translations = {
         'family.title': 'Нағыз отбасы өміріне арналған.',
         'family.desc': 'Бірнеше бала, отбасылық қатынас, қараңғы тақырып, iOS виджеті, таймерлер, фотокүнделік. Қажеті бар — артығы жоқ.',
 
-        'download.title': 'Бүгін түнде бәрі басқаша болуы мүмкін',
-        'download.desc': 'Тегін жүктеңіз. Pro-ның алғашқы аптасы — сыйлық.',
+        'download.title': 'Тыныш түндер бүгіннен басталады',
+        'download.desc': 'Тегін жүктеңіз. Pro-ның 7 күні — сыйлыққа.',
 
         'sticky.cta': 'Lupibu жүктеу',
         'sticky.sub': 'Тегін + 7 күн Pro',
@@ -162,8 +160,7 @@ const translations = {
         'footer.product': 'Өнім',
         'footer.product.features': 'Мүмкіндіктер',
         'footer.product.download': 'Жүктеу',
-        'footer.product.community': 'Қоғамдастық',
-        'footer.product.support': 'Қолдау',
+        'footer.product.help': 'Анықтама орталығы',
         'footer.legal': 'Құжаттар',
         'footer.legal.privacy': 'Құпиялылық саясаты',
         'footer.legal.terms': 'Қолдану шарттары',
@@ -222,10 +219,15 @@ function applyTranslations(lang) {
         if (doc) el.href = 'legal.html?doc=' + doc + '&lang=' + lang;
     });
 
+    // Update help center links with current language
+    document.querySelectorAll('.help-link').forEach(el => {
+        el.href = 'help.html?lang=' + lang;
+    });
+
     // Update screenshots to match language
     document.querySelectorAll('[data-screenshot]').forEach(img => {
         const key = img.dataset.screenshot;
-        img.src = 'screenshots/' + lang + '_' + key + '.png';
+        img.src = 'screenshots/' + lang + '_' + key + '.webp';
     });
 
     // Update meta

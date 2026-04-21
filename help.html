@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupibu — Help Center</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+
+<body class="help-body">
+    <nav class="navbar" id="helpNavbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo-inline-primary.svg" alt="Lupibu" class="logo-img">
+            </a>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <button class="lang-toggle" aria-label="Change language">
+                        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20" />
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                        <span class="lang-current">EN</span>
+                        <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en">
+                            <span class="lang-option-code">EN</span>
+                            <span class="lang-option-name">English</span>
+                        </button>
+                        <button class="lang-option" data-lang="ru">
+                            <span class="lang-option-code">RU</span>
+                            <span class="lang-option-name">Русский</span>
+                        </button>
+                        <button class="lang-option" data-lang="kk">
+                            <span class="lang-option-code">KZ</span>
+                            <span class="lang-option-name">Қазақша</span>
+                        </button>
+                    </div>
+                </div>
+                <a href="mailto:contact@lupibu.com" class="nav-email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>contact@lupibu.com</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="help-page">
+        <div class="container">
+            <div id="helpRoot"></div>
+        </div>
+    </main>
+
+    <script src="help-content.js"></script>
+    <script>
+    /* ============================================================
+       LUPIBU HELP CENTER - ROUTER + RENDERERS
+       Three views: home | category | article (via query params)
+       ============================================================ */
+
+    var VALID_LANGS = ['en', 'ru', 'kk'];
+
+    // UI strings (small enough to keep inline rather than adding to i18n.js)
+    var UI = {
+        en: {
+            title: 'Help Center',
+            lead: 'Short, honest answers — from setup to sleep predictions and AI.',
+            searchPlaceholder: 'Search — timers, Apple, sleep, AI…',
+            popularTitle: 'Popular questions',
+            categoriesTitle: 'Browse by topic',
+            sidebarHome: 'Help Center',
+            menuOpen: 'Browse topics',
+            menuClose: 'Close menu',
+            readTime: function (n) { return n + ' min read'; },
+            tldr: 'In short',
+            relatedTitle: 'Related articles',
+            helpfulTitle: 'Was this article helpful?',
+            helpfulYes: 'Yes, thanks',
+            helpfulNo: 'Not really',
+            helpfulThanks: 'Thanks for the feedback.',
+            contactTitle: 'Still need help?',
+            contactLead: 'Write to us — we read every message.',
+            contactCta: 'Email support',
+            emptyResults: 'No articles match — try different words or browse categories.',
+            notFound: 'Article not found.',
+            category: 'Category',
+            langLabel: 'EN'
+        },
+        ru: {
+            title: 'Справочный центр',
+            lead: 'Короткие, честные ответы — от первого запуска до прогнозов сна и AI.',
+            searchPlaceholder: 'Поиск — таймер, Apple, сон, AI…',
+            popularTitle: 'Популярные вопросы',
+            categoriesTitle: 'Темы',
+            sidebarHome: 'Справочный центр',
+            menuOpen: 'Темы',
+            menuClose: 'Закрыть',
+            readTime: function (n) { return n + ' мин чтения'; },
+            tldr: 'Кратко',
+            relatedTitle: 'Связанные статьи',
+            helpfulTitle: 'Статья была полезной?',
+            helpfulYes: 'Да, спасибо',
+            helpfulNo: 'Не очень',
+            helpfulThanks: 'Спасибо за отзыв.',
+            contactTitle: 'Нужна помощь?',
+            contactLead: 'Напишите нам — мы читаем каждое письмо.',
+            contactCta: 'Написать в поддержку',
+            emptyResults: 'Ничего не нашли — попробуйте другие слова или посмотрите по темам.',
+            notFound: 'Статья не найдена.',
+            category: 'Тема',
+            langLabel: 'RU'
+        },
+        kk: {
+            title: 'Анықтама орталығы',
+            lead: 'Қысқа, шынайы жауаптар — алғашқы іске қосудан ұйқы болжамдары мен ЖИ-ге дейін.',
+            searchPlaceholder: 'Іздеу — таймер, Apple, ұйқы, ЖИ…',
+            popularTitle: 'Танымал сұрақтар',
+            categoriesTitle: 'Тақырыптар',
+            sidebarHome: 'Анықтама орталығы',
+            menuOpen: 'Тақырыптар',
+            menuClose: 'Жабу',
+            readTime: function (n) { return n + ' мин оқу'; },
+            tldr: 'Қысқаша',
+            relatedTitle: 'Ұқсас мақалалар',
+            helpfulTitle: 'Мақала пайдалы болды ма?',
+            helpfulYes: 'Иә, рахмет',
+            helpfulNo: 'Онша емес',
+            helpfulThanks: 'Пікіріңіз үшін рахмет.',
+            contactTitle: 'Көмек керек пе?',
+            contactLead: 'Бізге жазыңыз — әр хатты оқимыз.',
+            contactCta: 'Қолдауға жазу',
+            emptyResults: 'Ештеңе табылмады — басқа сөздер көріңіз немесе тақырыптарды қараңыз.',
+            notFound: 'Мақала табылмады.',
+            category: 'Тақырып',
+            langLabel: 'KZ'
+        }
+    };
+
+    // Inline icon library (stroke-based, matches existing landing aesthetic)
+    var ICONS = {
+        sparkles: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>',
+        moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+        edit: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>',
+        mic: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 19v3"/></svg>',
+        users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+        star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+        shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+        search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>',
+        chevronDown: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>',
+        arrowRight: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>',
+        clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+        mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>',
+        home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a2 2 0 0 1-2 2h-4v-7h-6v7H5a2 2 0 0 1-2-2z"/></svg>',
+        menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>',
+        close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+    };
+
+    /* ------------------------------------------------------------
+       Markdown renderer (extended: ## headings + bullets + bold + links)
+       ------------------------------------------------------------ */
+    function renderMarkdown(md) {
+        if (!md) return '';
+        var lines = md.split('\n');
+        var html = '';
+        var inList = false;
+        var paraBuffer = [];
+
+        function flushPara() {
+            if (paraBuffer.length) {
+                html += '<p>' + formatInline(paraBuffer.join(' ')) + '</p>';
+                paraBuffer = [];
+            }
+        }
+        function flushList() {
+            if (inList) { html += '</ul>'; inList = false; }
+        }
+
+        for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            var trimmed = line.trim();
+
+            if (!trimmed) {
+                flushPara();
+                flushList();
+                continue;
+            }
+
+            if (trimmed.indexOf('## ') === 0) {
+                flushPara();
+                flushList();
+                html += '<h2>' + formatInline(trimmed.slice(3)) + '</h2>';
+                continue;
+            }
+
+            if (trimmed.indexOf('- ') === 0 || trimmed.indexOf('* ') === 0) {
+                flushPara();
+                if (!inList) { html += '<ul>'; inList = true; }
+                html += '<li>' + formatInline(trimmed.slice(2)) + '</li>';
+                continue;
+            }
+
+            flushList();
+            paraBuffer.push(trimmed);
+        }
+
+        flushPara();
+        flushList();
+        return html;
+    }
+
+    function formatInline(text) {
+        text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+        return text;
+    }
+
+    /* ------------------------------------------------------------
+       Routing helpers
+       ------------------------------------------------------------ */
+    function getParams() {
+        var p = new URLSearchParams(window.location.search);
+        return {
+            article: p.get('article') || null,
+            category: p.get('category') || null,
+            lang: p.get('lang') || null,
+            source: p.get('source') || null,
+            from: p.get('from') || null,
+            q: p.get('q') || ''
+        };
+    }
+
+    function resolveLang() {
+        var urlLang = getParams().lang;
+        var stored = null;
+        try { stored = localStorage.getItem('lupibu-lang'); } catch (_) {}
+        var l = urlLang || stored || 'en';
+        return VALID_LANGS.indexOf(l) !== -1 ? l : 'en';
+    }
+
+    function buildUrl(overrides) {
+        var p = new URLSearchParams(window.location.search);
+        Object.keys(overrides).forEach(function (k) {
+            var v = overrides[k];
+            if (v === null || v === undefined || v === '') p.delete(k);
+            else p.set(k, v);
+        });
+        // Drop route + provenance keys we didn't explicitly set (to avoid carrying stale ones)
+        ['article', 'category', 'from'].forEach(function (k) {
+            if (!(k in overrides)) p.delete(k);
+        });
+        var qs = p.toString();
+        return 'help.html' + (qs ? '?' + qs : '');
+    }
+
+    function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+    }
+
+    function getArticle(slug, lang) {
+        return helpArticles[slug + '_' + lang] || null;
+    }
+
+    function getCategory(slug, lang) {
+        var cats = helpCategories[lang] || [];
+        for (var i = 0; i < cats.length; i++) if (cats[i].slug === slug) return cats[i];
+        return null;
+    }
+
+    function getArticlesByCategory(slug, lang) {
+        var out = [];
+        var seen = {};
+        Object.keys(helpArticles).forEach(function (key) {
+            var suffix = '_' + lang;
+            if (key.indexOf(suffix) !== key.length - suffix.length) return;
+            var art = helpArticles[key];
+            if (art.category !== slug) return;
+            if (seen[art.slug]) return;
+            seen[art.slug] = true;
+            out.push(art);
+        });
+        return out;
+    }
+
+    function getAllArticles(lang) {
+        var out = [];
+        var seen = {};
+        Object.keys(helpArticles).forEach(function (key) {
+            var suffix = '_' + lang;
+            if (key.indexOf(suffix) !== key.length - suffix.length) return;
+            var art = helpArticles[key];
+            if (seen[art.slug]) return;
+            seen[art.slug] = true;
+            out.push(art);
+        });
+        return out;
+    }
+
+    /* ------------------------------------------------------------
+       Fuzzy search (no deps). Match tokens against title+keywords.
+       ------------------------------------------------------------ */
+    function searchArticles(query, lang) {
+        var q = query.trim().toLowerCase();
+        if (!q) return [];
+        var tokens = q.split(/\s+/).filter(Boolean);
+        var all = getAllArticles(lang);
+        var scored = [];
+
+        all.forEach(function (art) {
+            var haystack = (art.title + ' ' + (art.keywords || []).join(' ') + ' ' + (art.tldr || '')).toLowerCase();
+            var score = 0;
+            var allMatched = true;
+            tokens.forEach(function (t) {
+                if (haystack.indexOf(t) !== -1) {
+                    score += 1;
+                    if (art.title.toLowerCase().indexOf(t) !== -1) score += 2;
+                    if ((art.keywords || []).some(function (k) { return k.toLowerCase().indexOf(t) !== -1; })) score += 1;
+                } else {
+                    allMatched = false;
+                }
+            });
+            if (allMatched && score > 0) scored.push({ art: art, score: score });
+        });
+
+        scored.sort(function (a, b) { return b.score - a.score; });
+        return scored.slice(0, 8).map(function (x) { return x.art; });
+    }
+
+    /* ------------------------------------------------------------
+       Mobile menu trigger (visible only <=960px via CSS)
+       ------------------------------------------------------------ */
+    function renderMobileMenuButton(lang) {
+        var t = UI[lang];
+        return '<button type="button" class="help-menu-btn" id="helpMenuBtn" aria-controls="helpSidebar" aria-expanded="false">' +
+            '<span class="help-menu-btn-icon">' + ICONS.menu + '</span>' +
+            '<span>' + escapeHtml(t.menuOpen) + '</span>' +
+        '</button>';
+    }
+
+    // Scrim sits behind the off-canvas sidebar on mobile. Tapping it closes the drawer.
+    // Always rendered — CSS controls visibility via body.menu-open.
+    function renderSidebarScrim(lang) {
+        var t = UI[lang];
+        return '<div class="help-sidebar-scrim" id="helpSidebarScrim" aria-hidden="true" aria-label="' + escapeHtml(t.menuClose) + '"></div>';
+    }
+
+    /* ------------------------------------------------------------
+       View renderers
+       ------------------------------------------------------------ */
+    function renderHome(lang) {
+        var t = UI[lang];
+        var popular = helpPopularQuestions[lang] || [];
+
+        var popularHtml = popular.map(function (q) {
+            return '<a class="help-popular-item" href="' + buildUrl({ article: q.slug, category: null, from: 'home', lang: lang }) + '">' +
+                '<span>' + escapeHtml(q.title) + '</span>' +
+                '<span class="help-popular-arrow">' + ICONS.arrowRight + '</span>' +
+            '</a>';
+        }).join('');
+
+        var main = '' +
+            renderMobileMenuButton(lang) +
+            '<section class="help-hero">' +
+                '<h1 class="help-hero-title">' + escapeHtml(t.title) + '</h1>' +
+                '<p class="help-hero-lead">' + escapeHtml(t.lead) + '</p>' +
+            '</section>' +
+            '<section class="help-section">' +
+                '<h2 class="help-section-title">' + escapeHtml(t.popularTitle) + '</h2>' +
+                '<div class="help-popular-list">' + popularHtml + '</div>' +
+            '</section>' +
+            renderContactBlock(lang);
+
+        return '<div class="help-layout">' +
+            renderSidebar({ activeCategorySlug: null, currentArticle: null, isHome: true }, lang) +
+            '<div class="help-layout-main">' + main + '</div>' +
+            renderSidebarScrim(lang) +
+        '</div>';
+    }
+
+    /**
+     * Renders the left hierarchy. Pixel-identical across home/category/article so the
+     * rail never visually shifts as the user moves. Only the `is-current` flag on the
+     * home tile differs between views.
+     * ctx = { activeCategorySlug: string | null, currentArticle: object | null, isHome: boolean }
+     * Category auto-expands when it is the active category (category view) or when it's
+     * the parent of the current article (article view).
+     * On mobile this whole aside becomes an off-canvas drawer (see styles.css ≤960px).
+     */
+    function renderSidebar(ctx, lang) {
+        var t = UI[lang];
+        var cats = helpCategories[lang] || [];
+        var currentArticle = ctx.currentArticle;
+        var isHome = !!ctx.isHome;
+        var activeSlug = ctx.activeCategorySlug || (currentArticle ? currentArticle.category : null);
+
+        // Every category is always expanded: on mobile the drawer is a one-stop drill-down
+        // (user taps a section, sees its articles, picks one — no intermediate "category page").
+        // On desktop it doubles as a docs-style always-visible ToC (Stripe/Mintlify pattern).
+        var itemsHtml = cats.map(function (c) {
+            var isActive = activeSlug === c.slug;
+            var arts = getArticlesByCategory(c.slug, lang);
+            var childrenHtml = arts.length
+                ? '<ul class="help-sidebar-articles">' + arts.map(function (a) {
+                    var isCurrent = currentArticle && a.slug === currentArticle.slug;
+                    return '<li>' +
+                        '<a class="help-sidebar-article' + (isCurrent ? ' is-current' : '') + '" ' +
+                        (isCurrent ? 'aria-current="page" ' : '') +
+                        'href="' + buildUrl({ article: a.slug, category: null, from: 'category:' + c.slug, lang: lang }) + '">' +
+                        escapeHtml(a.title) +
+                        '</a>' +
+                    '</li>';
+                }).join('') + '</ul>'
+                : '';
+
+            // Category is a collapsible section. Only the current-article's category is
+            // expanded by default — keeps the drawer scannable with many sections.
+            var expanded = isActive;
+            return '<li class="help-sidebar-cat' + (expanded ? ' is-expanded' : '') + (isActive ? ' is-active' : '') + '">' +
+                '<button type="button" class="help-sidebar-cat-label" aria-expanded="' + (expanded ? 'true' : 'false') + '">' +
+                    '<span class="help-sidebar-cat-icon help-cat-' + c.color + '">' + (ICONS[c.icon] || '') + '</span>' +
+                    '<span class="help-sidebar-cat-title">' + escapeHtml(c.title) + '</span>' +
+                    '<span class="help-sidebar-cat-chevron">' + ICONS.chevronDown + '</span>' +
+                '</button>' +
+                childrenHtml +
+            '</li>';
+        }).join('');
+
+        // Sidebar is pixel-identical across all three views — only the "is-current" state on
+        // the home tile changes. Search input always rendered so the left rail feels stable
+        // as the user moves between home, category, and article pages.
+        var homeClass = 'help-sidebar-home' + (isHome ? ' is-current' : '');
+        var homeAria = isHome ? ' aria-current="page"' : '';
+
+        return '<aside class="help-sidebar" id="helpSidebar" aria-label="' + escapeHtml(t.categoriesTitle) + '">' +
+            // Top row shown only on mobile (drawer mode). Home tile doubles as "go to help root"
+            // and the close X sits inline with it — no dead space above.
+            '<div class="help-sidebar-top">' +
+                '<a class="' + homeClass + '"' + homeAria + ' href="' + buildUrl({ article: null, category: null, lang: lang }) + '">' +
+                    '<span class="help-sidebar-home-icon">' + ICONS.home + '</span>' +
+                    '<span class="help-sidebar-home-label">' + escapeHtml(t.sidebarHome) + '</span>' +
+                '</a>' +
+                '<button type="button" class="help-sidebar-close" id="helpSidebarClose" aria-label="' + escapeHtml(t.menuClose) + '">' +
+                    ICONS.close +
+                '</button>' +
+            '</div>' +
+            '<div class="help-sidebar-search">' +
+                '<span class="help-sidebar-search-icon">' + ICONS.search + '</span>' +
+                '<input type="text" id="helpSidebarSearchInput" class="help-sidebar-search-input" placeholder="' + escapeHtml(t.searchPlaceholder) + '" autocomplete="off" spellcheck="false" />' +
+                '<div class="help-search-results" id="helpSidebarSearchResults" hidden></div>' +
+            '</div>' +
+            '<nav><ul class="help-sidebar-list">' + itemsHtml + '</ul></nav>' +
+        '</aside>';
+    }
+
+    function renderArticle(slug, lang) {
+        var t = UI[lang];
+        var art = getArticle(slug, lang);
+        if (!art) return renderNotFound(lang);
+
+        var cat = getCategory(art.category, lang);
+        var fromParam = getParams().from;
+
+        var related = (art.related || []).map(function (s) {
+            var r = getArticle(s, lang);
+            if (!r) return '';
+            // Related links keep context — user is moving "sideways" within the doc tree
+            return '<a class="help-related-item" href="' + buildUrl({ article: r.slug, category: null, from: fromParam || ('category:' + art.category), lang: lang }) + '">' +
+                '<h4>' + escapeHtml(r.title) + '</h4>' +
+                '<p>' + escapeHtml(r.tldr || '') + '</p>' +
+            '</a>';
+        }).join('');
+
+        document.title = 'Lupibu — ' + art.title;
+
+        var articleMain = '' +
+            renderMobileMenuButton(lang) +
+            '<article class="help-article">' +
+                '<header class="help-article-header">' +
+                    '<h1>' + escapeHtml(art.title) + '</h1>' +
+                    '<div class="help-article-meta">' +
+                        (cat ? '<span class="help-article-tag help-cat-' + cat.color + '-bg">' + escapeHtml(cat.title) + '</span>' : '') +
+                        '<span class="help-article-meta-item">' + ICONS.clock + escapeHtml(t.readTime(art.readMinutes || 2)) + '</span>' +
+                    '</div>' +
+                '</header>' +
+                (art.tldr ? '<div class="help-tldr"><span class="help-tldr-label">' + escapeHtml(t.tldr) + '</span><p>' + escapeHtml(art.tldr) + '</p></div>' : '') +
+                '<div class="help-article-body">' + renderMarkdown(art.body) + '</div>' +
+                '<div class="help-helpful" id="helpHelpful" data-article="' + escapeHtml(art.slug) + '">' +
+                    '<span class="help-helpful-title">' + escapeHtml(t.helpfulTitle) + '</span>' +
+                    '<div class="help-helpful-actions">' +
+                        '<button class="help-helpful-btn" data-vote="yes">' + escapeHtml(t.helpfulYes) + '</button>' +
+                        '<button class="help-helpful-btn" data-vote="no">' + escapeHtml(t.helpfulNo) + '</button>' +
+                    '</div>' +
+                '</div>' +
+            '</article>' +
+            (related ? '<section class="help-section"><h2 class="help-section-title">' + escapeHtml(t.relatedTitle) + '</h2><div class="help-related-list">' + related + '</div></section>' : '') +
+            renderContactBlock(lang);
+
+        return '<div class="help-layout">' +
+            renderSidebar({ activeCategorySlug: art.category, currentArticle: art }, lang) +
+            '<div class="help-layout-main">' + articleMain + '</div>' +
+            renderSidebarScrim(lang) +
+        '</div>';
+    }
+
+    function renderContactBlock(lang) {
+        var t = UI[lang];
+        return '<section class="help-contact">' +
+            '<h3>' + escapeHtml(t.contactTitle) + '</h3>' +
+            '<p>' + escapeHtml(t.contactLead) + '</p>' +
+            '<a class="help-contact-btn" href="mailto:contact@lupibu.com">' + ICONS.mail + '<span>' + escapeHtml(t.contactCta) + '</span></a>' +
+        '</section>';
+    }
+
+    function renderNotFound(lang) {
+        var t = UI[lang];
+        return renderMobileMenuButton(lang) +
+        '<div class="help-empty">' + escapeHtml(t.notFound) + '</div>' +
+        renderContactBlock(lang);
+    }
+
+    /* ------------------------------------------------------------
+       Top-level render + wiring
+       ------------------------------------------------------------ */
+    function render(lang) {
+        var p = getParams();
+        var root = document.getElementById('helpRoot');
+        document.documentElement.lang = lang;
+
+        // Default title (overridden by article view)
+        document.title = 'Lupibu — ' + UI[lang].title;
+
+        // Two routes only: home and article. Categories are just grouping labels in the sidebar.
+        // Legacy `?category=...` URLs fall through to home — sidebar exposes every article anyway.
+        if (p.article) {
+            root.innerHTML = renderArticle(p.article, lang);
+            wireHelpful();
+        } else {
+            root.innerHTML = renderHome(lang);
+        }
+        wireSearch('helpSidebarSearchInput', 'helpSidebarSearchResults', lang);
+
+        wireMobileDrawer();
+
+        // Smooth in-page navigation — keep hash for anchors, drop scroll jump
+        window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+
+    /* ------------------------------------------------------------
+       Mobile drawer wiring.
+       Trigger = hamburger in main column. Open state = body.menu-open.
+       Close on: scrim tap, close button, ESC, any link/button click inside sidebar.
+       Body scroll is locked while open so users don't accidentally scroll the page.
+       ------------------------------------------------------------ */
+    function wireMobileDrawer() {
+        var btn = document.getElementById('helpMenuBtn');
+        var sidebar = document.getElementById('helpSidebar');
+        var scrim = document.getElementById('helpSidebarScrim');
+        var closeBtn = document.getElementById('helpSidebarClose');
+        if (!btn || !sidebar || !scrim) return;
+
+        function setOpen(open) {
+            document.body.classList.toggle('menu-open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            scrim.setAttribute('aria-hidden', open ? 'false' : 'true');
+            // Lock page scroll when drawer is up — prevents two-scroll conflict between sidebar and page
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+
+        btn.addEventListener('click', function () { setOpen(true); });
+        scrim.addEventListener('click', function () { setOpen(false); });
+        if (closeBtn) closeBtn.addEventListener('click', function () { setOpen(false); });
+
+        // Delegated click handler:
+        //   - Category toggle button → flip expanded state, don't close drawer.
+        //   - Any other link/button → close drawer (navigation about to happen).
+        sidebar.addEventListener('click', function (e) {
+            var toggle = e.target && e.target.closest ? e.target.closest('.help-sidebar-cat-label') : null;
+            if (toggle) {
+                var li = toggle.parentElement;
+                var nowExpanded = !li.classList.contains('is-expanded');
+                li.classList.toggle('is-expanded', nowExpanded);
+                toggle.setAttribute('aria-expanded', nowExpanded ? 'true' : 'false');
+                return;
+            }
+            var target = e.target && e.target.closest ? e.target.closest('a,button') : null;
+            if (target && target !== closeBtn) setOpen(false);
+        });
+
+        // ESC to close — attached once on document (guarded) because document survives re-renders,
+        // so without the guard every lang switch would stack another listener.
+        if (!wireMobileDrawer._escBound) {
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
+                    document.body.classList.remove('menu-open');
+                    document.body.style.overflow = '';
+                    var b = document.getElementById('helpMenuBtn');
+                    if (b) b.setAttribute('aria-expanded', 'false');
+                    var s = document.getElementById('helpSidebarScrim');
+                    if (s) s.setAttribute('aria-hidden', 'true');
+                }
+            });
+            wireMobileDrawer._escBound = true;
+        }
+    }
+
+    function wireSearch(inputId, resultsId, lang) {
+        var input = document.getElementById(inputId);
+        var resultsEl = document.getElementById(resultsId);
+        if (!input || !resultsEl) return;
+        var t = UI[lang];
+
+        function showResults(items) {
+            if (!items.length) {
+                resultsEl.innerHTML = '<div class="help-search-empty">' + escapeHtml(t.emptyResults) + '</div>';
+                resultsEl.hidden = false;
+                return;
+            }
+            resultsEl.innerHTML = items.map(function (a) {
+                return '<a class="help-search-item" href="' + buildUrl({ article: a.slug, category: null, from: 'home', lang: lang }) + '">' +
+                    '<span class="help-search-item-title">' + escapeHtml(a.title) + '</span>' +
+                    '<span class="help-search-item-tldr">' + escapeHtml(a.tldr || '') + '</span>' +
+                '</a>';
+            }).join('');
+            resultsEl.hidden = false;
+        }
+
+        var debounce;
+        input.addEventListener('input', function () {
+            clearTimeout(debounce);
+            var q = input.value;
+            if (!q || q.trim().length < 2) { resultsEl.hidden = true; resultsEl.innerHTML = ''; return; }
+            debounce = setTimeout(function () {
+                showResults(searchArticles(q, lang));
+            }, 100);
+        });
+
+        input.addEventListener('blur', function () {
+            // Delay so click on result registers first
+            setTimeout(function () { resultsEl.hidden = true; }, 150);
+        });
+        input.addEventListener('focus', function () {
+            if (input.value.trim().length >= 2) resultsEl.hidden = false;
+        });
+    }
+
+    function wireHelpful() {
+        var box = document.getElementById('helpHelpful');
+        if (!box) return;
+        box.querySelectorAll('.help-helpful-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var vote = btn.getAttribute('data-vote');
+                var slug = box.getAttribute('data-article');
+                try {
+                    var key = 'lupibu-helpful:' + slug;
+                    localStorage.setItem(key, vote);
+                } catch (_) {}
+                var lang = resolveLang();
+                box.innerHTML = '<span class="help-helpful-title">' + escapeHtml(UI[lang].helpfulThanks) + '</span>';
+            });
+        });
+    }
+
+    function initLangSwitcher(currentLang) {
+        var currentBtn = document.querySelector('.lang-current');
+        if (currentBtn) currentBtn.textContent = UI[currentLang].langLabel;
+
+        document.querySelectorAll('.lang-option').forEach(function (opt) {
+            opt.classList.toggle('active', opt.dataset.lang === currentLang);
+            opt.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var newLang = this.dataset.lang;
+                if (VALID_LANGS.indexOf(newLang) === -1) return;
+                try { localStorage.setItem('lupibu-lang', newLang); } catch (_) {}
+
+                var params = new URLSearchParams(window.location.search);
+                params.set('lang', newLang);
+                window.history.replaceState(null, '', window.location.pathname + '?' + params.toString());
+
+                if (currentBtn) currentBtn.textContent = UI[newLang].langLabel;
+                document.querySelectorAll('.lang-option').forEach(function (o) {
+                    o.classList.toggle('active', o.dataset.lang === newLang);
+                });
+                this.closest('.lang-switcher').classList.remove('open');
+
+                render(newLang);
+            });
+        });
+
+        var switcher = document.querySelector('.lang-switcher');
+        if (switcher) {
+            switcher.querySelector('.lang-toggle').addEventListener('click', function (e) {
+                e.stopPropagation();
+                switcher.classList.toggle('open');
+            });
+            document.addEventListener('click', function () {
+                switcher.classList.remove('open');
+            });
+        }
+    }
+
+    (function init() {
+        var p = getParams();
+        // When opened from the iOS app, hide the navbar for a native in-webview feel
+        if (p.source === 'app') {
+            var nav = document.getElementById('helpNavbar');
+            if (nav) nav.style.display = 'none';
+            document.body.classList.add('help-in-app');
+        }
+        var lang = resolveLang();
+        render(lang);
+        initLangSwitcher(lang);
+    })();
+    </script>
+</body>
+
+</html>

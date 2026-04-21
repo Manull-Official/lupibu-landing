@@ -23,6 +23,40 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Lupibu",
+      "alternateName": "Lupibu — Smart Baby Sleep Tracker",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "applicationSubCategory": "Parenting",
+      "description": "Smart baby sleep tracker with AI assistant. Predicts sleep, answers questions about your child, works with voice in English, Russian and Kazakh.",
+      "url": "https://lupibu.com",
+      "inLanguage": ["en", "ru", "kk"],
+      "image": "https://lupibu.com/assets/logo.png",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Sleep prediction with personalized wake windows",
+        "AI assistant — chat and voice logging",
+        "12 entry types: sleep, feeding, diaper, walk, doctor and more",
+        "Multi-child family sharing",
+        "Weekly sleep statistics and analytics",
+        "Dark mode and iOS widget",
+        "3 languages: English, Russian, Kazakh"
+      ],
+      "screenshot": [
+        "https://lupibu.com/screenshots/en_1_sleep_widget.webp",
+        "https://lupibu.com/screenshots/en_2_add_entry.webp",
+        "https://lupibu.com/screenshots/en_3_sleep_statistics.webp",
+        "https://lupibu.com/screenshots/en_5_add_entries_with_ai.webp",
+        "https://lupibu.com/screenshots/en_6_chat_with_ai.webp",
+        "https://lupibu.com/screenshots/en_9_dark_theme.webp"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -72,12 +106,13 @@
         </div>
     </nav>
 
+    <main id="main" role="main">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
         <div class="hero-glow"></div>
         <div class="container hero-container">
             <div class="hero-content">
-                <h1 class="hero-title" data-i18n-html="hero.title">
+                <h1 class="hero-title" id="hero-title" data-i18n-html="hero.title">
                     Your baby is about to get sleepy.<br>You'll know first.
                 </h1>
                 <p class="hero-subtitle" data-i18n="hero.subtitle">
@@ -91,28 +126,28 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-value" data-i18n="hero.stat1Value">3s</span>
-                        <span class="stat-label" data-i18n="hero.stat1Label">To voice-log a nap</span>
+                        <span class="stat-value" data-i18n="hero.stat1Value">12 types</span>
+                        <span class="stat-label" data-i18n="hero.stat1Label">Log anything in one tap</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
-                        <span class="stat-value" data-i18n="hero.stat2Value">12</span>
-                        <span class="stat-label" data-i18n="hero.stat2Label">Entry types — feeds, naps, meds</span>
+                        <span class="stat-value" data-i18n="hero.stat2Value">15 min</span>
+                        <span class="stat-label" data-i18n="hero.stat2Label">Before the next nap</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
-                        <span class="stat-value" data-i18n="hero.stat3Value">AI</span>
-                        <span class="stat-label" data-i18n="hero.stat3Label">Answers from your data, not Google</span>
+                        <span class="stat-value" data-i18n="hero.stat3Value">24/7</span>
+                        <span class="stat-label" data-i18n="hero.stat3Label">AI on your baby’s data</span>
                     </div>
                 </div>
-                <p class="hero-trust" data-i18n="hero.trust">Private by default. No ads, no data selling. Built by a dad tired of dumb trackers.</p>
+                <p class="hero-trust" data-i18n="hero.trust">Less guessing. Less anxiety. Calmer days and nights.</p>
             </div>
             <div class="hero-visual">
                 <div class="phone-mockup hero-phone">
                     <div class="phone-frame">
 
                         <div class="phone-screen">
-                            <img src="screenshots/en_1_sleep_widget.png" alt="Lupibu — sleep prediction"
+                            <img src="screenshots/en_1_sleep_widget.webp" alt="Lupibu — sleep prediction"
                                 class="screen-img" data-screenshot="1_sleep_widget" loading="eager">
                         </div>
                     </div>
@@ -122,11 +157,11 @@
     </section>
 
     <!-- Feature 1: Track Everything + History -->
-    <section id="features" class="feature-section">
+    <section id="features" class="feature-section" aria-labelledby="tracking-title">
         <div class="container feature-row feature-row-reverse">
             <div class="feature-text">
                 <span class="section-label" data-i18n="tracking.label">Your baby's full story</span>
-                <h2 class="feature-heading" data-i18n="tracking.title">Every feed. Every nap. Every everything.</h2>
+                <h2 class="feature-heading" id="tracking-title" data-i18n="tracking.title">Every feed. Every nap. Every everything.</h2>
                 <p class="feature-desc" data-i18n="tracking.desc">12 entry types — from diapers to doctor visits. AI reads all of it. Ask "why was today rough?" and it actually knows.</p>
             </div>
             <div class="feature-visual feature-visual-pair">
@@ -134,7 +169,7 @@
                     <div class="phone-frame">
 
                         <div class="phone-screen">
-                            <img src="screenshots/en_2_add_entry.png" alt="" data-screenshot="2_add_entry"
+                            <img src="screenshots/en_2_add_entry.webp" alt="Lupibu — one-tap entry logging screen" data-screenshot="2_add_entry"
                                 loading="lazy" class="screen-img">
                         </div>
                     </div>
@@ -143,7 +178,7 @@
                     <div class="phone-frame">
 
                         <div class="phone-screen">
-                            <img src="screenshots/en_8_history.png" alt=""
+                            <img src="screenshots/en_8_history.webp" alt="Lupibu — timeline history of all logged baby events"
                                 data-screenshot="8_history" loading="lazy" class="screen-img">
                         </div>
                     </div>
@@ -153,11 +188,11 @@
     </section>
 
     <!-- Feature 2: AI Assistant (Dark Section) -->
-    <section class="feature-section feature-dark">
+    <section class="feature-section feature-dark" id="ai" aria-labelledby="ai-title">
         <div class="container feature-row feature-row-reverse">
             <div class="feature-text">
                 <span class="section-label label-ai" data-i18n="ai.label">Like texting a nurse at 3am</span>
-                <h2 class="feature-heading" data-i18n="ai.title">Say it. Ask it. It just gets it.</h2>
+                <h2 class="feature-heading" id="ai-title" data-i18n="ai.title">Say it. Ask it. It just gets it.</h2>
                 <p class="feature-desc" data-i18n="ai.desc">Voice-log in 3 languages, hands-free, in 5 seconds. Ask anything — "Is she eating enough?" — and get answers from your data, not Google.</p>
             </div>
             <div class="feature-visual feature-visual-pair">
@@ -165,7 +200,7 @@
                     <div class="phone-frame">
 
                         <div class="phone-screen">
-                            <img src="screenshots/en_5_add_entries_with_ai.png" alt="" data-screenshot="5_add_entries_with_ai"
+                            <img src="screenshots/en_5_add_entries_with_ai.webp" alt="Lupibu — voice-driven AI entry creation" data-screenshot="5_add_entries_with_ai"
                                 loading="lazy" class="screen-img">
                         </div>
                     </div>
@@ -174,7 +209,7 @@
                     <div class="phone-frame">
 
                         <div class="phone-screen">
-                            <img src="screenshots/en_6_chat_with_ai.png" alt=""
+                            <img src="screenshots/en_6_chat_with_ai.webp" alt="Lupibu — chat conversation with the AI sleep assistant"
                                 data-screenshot="6_chat_with_ai" loading="lazy" class="screen-img">
                         </div>
                     </div>
@@ -184,11 +219,11 @@
     </section>
 
     <!-- Feature 3: Sleep Intelligence + Statistics -->
-    <section class="feature-section">
+    <section class="feature-section" id="sleep" aria-labelledby="sleep-title">
         <div class="container feature-row">
             <div class="feature-text">
                 <span class="section-label label-purple" data-i18n="sleep.label">Your baby's sleep, decoded</span>
-                <h2 class="feature-heading" data-i18n="sleep.title">Predicts the next nap. Not guesses — knows.</h2>
+                <h2 class="feature-heading" id="sleep-title" data-i18n="sleep.title">Predicts the next nap. Not guesses — knows.</h2>
                 <p class="feature-desc" data-i18n="sleep.desc">Wake windows that learn from your baby. Weekly analytics that show what's working.</p>
             </div>
             <div class="feature-visual feature-visual-pair">
@@ -196,7 +231,7 @@
                     <div class="phone-frame">
 
                         <div class="phone-screen">
-                            <img src="screenshots/en_3_sleep_statistics.png" alt="" data-screenshot="3_sleep_statistics"
+                            <img src="screenshots/en_3_sleep_statistics.webp" alt="Lupibu — weekly sleep statistics chart" data-screenshot="3_sleep_statistics"
                                 loading="lazy" class="screen-img">
                         </div>
                     </div>
@@ -205,7 +240,7 @@
                     <div class="phone-frame">
 
                         <div class="phone-screen">
-                            <img src="screenshots/en_4_detailed_sleep_statistics.png" alt=""
+                            <img src="screenshots/en_4_detailed_sleep_statistics.webp" alt="Lupibu — detailed nap and night sleep breakdown"
                                 data-screenshot="4_detailed_sleep_statistics" loading="lazy" class="screen-img">
                         </div>
                     </div>
@@ -215,11 +250,11 @@
     </section>
 
     <!-- Feature 4: Family + Dark Mode -->
-    <section class="feature-section">
+    <section class="feature-section" id="family" aria-labelledby="family-title">
         <div class="container feature-row">
             <div class="feature-text">
                 <span class="section-label" data-i18n="family.label">And so much more</span>
-                <h2 class="feature-heading" data-i18n="family.title">Built for how families actually work.</h2>
+                <h2 class="feature-heading" id="family-title" data-i18n="family.title">Built for how families actually work.</h2>
                 <p class="feature-desc" data-i18n="family.desc">Multiple kids, family sharing, dark mode, iOS widget, timers, photo diary. Everything a real parent needs — nothing they don't.</p>
             </div>
             <div class="feature-visual feature-visual-pair">
@@ -227,7 +262,7 @@
                     <div class="phone-frame">
 
                         <div class="phone-screen">
-                            <img src="screenshots/en_7_switch_child.png" alt=""
+                            <img src="screenshots/en_7_switch_child.webp" alt="Lupibu — multi-child selector for family sharing"
                                 data-screenshot="7_switch_child" loading="lazy" class="screen-img">
                         </div>
                     </div>
@@ -236,7 +271,7 @@
                     <div class="phone-frame">
 
                         <div class="phone-screen">
-                            <img src="screenshots/en_9_dark_theme.png" alt=""
+                            <img src="screenshots/en_9_dark_theme.webp" alt="Lupibu — dark mode with sleep widget at night"
                                 data-screenshot="9_dark_theme" loading="lazy" class="screen-img">
                         </div>
                     </div>
@@ -246,31 +281,21 @@
     </section>
 
     <!-- Download CTA -->
-    <section id="download" class="download-section">
+    <section id="download" class="download-section" aria-labelledby="download-title">
         <div class="container">
             <div class="download-card">
                 <div class="download-content">
-                    <h2 class="download-title" data-i18n="download.title">Tonight could be different</h2>
-                    <p class="download-desc" data-i18n="download.desc">Free download. Your first week of Pro is on us.</p>
+                    <h2 class="download-title" id="download-title" data-i18n="download.title">Calmer nights start tonight</h2>
+                    <p class="download-desc" data-i18n="download.desc">Free to download. 7 days of Pro on us.</p>
                     <!-- TODO: Replace # with actual App Store URL -->
                     <a href="#" class="appstore-badge" aria-label="Download on the App Store">
                         <img src="assets/appstore-badge.svg" alt="Download on the App Store" class="appstore-img appstore-img-invert">
                     </a>
-                    <div class="download-social">
-                        <a href="https://www.instagram.com/lupibu.app" target="_blank" rel="noopener" aria-label="Instagram" class="download-social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        </a>
-                        <a href="https://www.threads.net/@lupibu.app" target="_blank" rel="noopener" aria-label="Threads" class="download-social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.59 12c.025 3.086.718 5.496 2.057 7.164 1.432 1.781 3.632 2.695 6.54 2.717 2.227-.033 4.093-.6 5.246-1.46a5.12 5.12 0 001.733-2.14c.39-.944.466-2.22-.14-3.263-.39-.672-1.072-1.2-2.028-1.573a8.66 8.66 0 01-.396 2.254c-.678 1.86-2.023 3.03-3.856 3.363a5.87 5.87 0 01-1.042.093c-1.282 0-2.47-.437-3.346-1.236-.98-.894-1.533-2.177-1.46-3.6.128-2.48 1.946-4.254 4.728-4.618a9.11 9.11 0 013.205.166c-.063-.658-.184-1.27-.373-1.821-.38-1.108-1.026-1.837-1.96-2.164a4.86 4.86 0 00-1.59-.222c-1.78.052-3.024.82-3.763 1.62l-1.415-1.37C7.4 4.14 9.182 3.12 11.558 3.058c.756-.014 1.478.07 2.15.273 1.372.42 2.383 1.4 2.943 2.868.32.84.527 1.786.612 2.833.67.224 1.263.506 1.774.847 1.31.872 2.146 2.142 2.42 3.672.315 1.762-.018 3.4-.962 4.742-.885 1.26-2.25 2.17-4.053 2.702-1.39.41-2.95.62-4.643.65-.436.004-.868-.007-1.285-.035a10.94 10.94 0 01-.328-.02zm.698-7.607c-1.824.232-2.86 1.175-2.925 2.44-.04.742.24 1.39.782 1.884.544.496 1.312.748 2.167.748.244 0 .497-.021.748-.066 1.187-.215 2.08-.97 2.523-2.156.26-.697.38-1.506.384-2.396a7.06 7.06 0 00-3.679-.454z"/></svg>
-                        </a>
-                        <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" aria-label="Telegram" class="download-social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472z"/></svg>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -297,8 +322,7 @@
                         <h4 data-i18n="footer.product">Product</h4>
                         <a href="#features" data-i18n="footer.product.features">Features</a>
                         <a href="#download" data-i18n="footer.product.download">Download</a>
-                        <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" data-i18n="footer.product.community">Community</a>
-                        <a href="mailto:contact@lupibu.com" data-i18n="footer.product.support">Support</a>
+                        <a href="help.html" class="help-link" data-i18n="footer.product.help">Help Center</a>
                     </div>
                     <div class="footer-col">
                         <h4 data-i18n="footer.legal">Legal</h4>
