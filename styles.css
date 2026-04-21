@@ -732,7 +732,6 @@ ul { list-style: none; }
 
 .footer-col a:hover { color: var(--white); }
 
-/* Featured footer link — Help Center stands out from plain links */
 .footer-bottom {
     padding-top: var(--space-md);
     text-align: center;
