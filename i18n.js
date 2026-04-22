@@ -8,46 +8,46 @@ const translations = {
         'nav.download': 'Download',
 
         // Hero
-        'hero.title': 'Your baby is about to get sleepy.<br>You\'ll know first.',
-        'hero.subtitle': 'A baby tracker that learns your child\'s rhythm — and tells you what\'s next.',
-        'hero.stat1Value': '12 types',
-        'hero.stat1Label': 'Log anything in one tap',
-        'hero.stat2Value': '15 min',
-        'hero.stat2Label': 'Before the next nap',
+        'hero.title': 'The calmest way<br>to raise a small human.',
+        'hero.subtitle': 'Lupibu learns your baby’s rhythm, predicts the next nap, and turns every day into something you can actually read.',
+        'hero.stat1Value': '12',
+        'hero.stat1Label': 'One-tap entry types',
+        'hero.stat2Value': '~15 min',
+        'hero.stat2Label': 'Heads-up before the next nap',
         'hero.stat3Value': '24/7',
-        'hero.stat3Label': 'AI on your baby’s data',
-        'hero.trust': 'Less guessing. Less anxiety. Calmer days and nights.',
+        'hero.stat3Label': 'AI trained on your logs',
+        'hero.trust': 'Fewer guesses. Less second-guessing. Calmer days and nights.',
 
         // Tracking + History
-        'tracking.label': 'Your baby\'s full story',
-        'tracking.title': 'Every feed. Every nap. Every everything.',
-        'tracking.desc': '12 entry types \u2014 from diapers to doctor visits. AI reads all of it. Ask "why was today rough?" and it actually knows.',
+        'tracking.label': 'The whole picture',
+        'tracking.title': 'Every feed, nap, and tiny moment — in one place.',
+        'tracking.desc': 'Twelve entry types, from diapers to doctor visits, logged in a single tap. Your whole day becomes a timeline you can scroll, search, and share with your partner or pediatrician.',
 
         // AI Assistant
-        'ai.label': 'Like texting a nurse at 3am',
-        'ai.title': 'Say it. Ask it. It just gets it.',
-        'ai.desc': 'Voice-log in 3 languages, hands-free, in 5 seconds. Ask anything \u2014 "Is the baby eating enough?" \u2014 and get answers from your data, not Google.',
+        'ai.label': 'An assistant that actually knows your baby',
+        'ai.title': 'Ask a real question. Get a real answer.',
+        'ai.desc': '“Why was today rough?” “Is she eating enough?” Lupibu answers from your own logs, not the internet. Voice logging in English, Russian, and Kazakh — hands-free, about five seconds per entry.',
 
         // Sleep Intelligence
-        'sleep.label': 'Your baby\'s sleep, decoded',
-        'sleep.title': 'Predicts the next nap. Not guesses \u2014 knows.',
-        'sleep.desc': 'Wake windows that learn from your baby. Weekly analytics that show what\'s working.',
+        'sleep.label': 'Sleep, made predictable',
+        'sleep.title': 'Know when the next nap is coming.',
+        'sleep.desc': 'Lupibu studies your baby’s wake windows and flags the drowsy moment before it arrives. Weekly analytics show what’s working, so you spend less of the day guessing.',
 
         // Family
-        'family.label': 'And so much more',
-        'family.title': 'Built for how families actually work.',
-        'family.desc': 'Multiple kids, family sharing, dark mode, iOS widget, timers, photo diary. Everything a real parent needs \u2014 nothing they don\'t.',
+        'family.label': 'Built for real family life',
+        'family.title': 'Designed around the way you actually live.',
+        'family.desc': 'Multiple children, shared access with your partner, iOS widget, timers, dark mode, and a quiet photo diary of the early days. Everything a parent needs, nothing they don’t.',
 
         // Download CTA
-        'download.title': 'Calmer nights start tonight',
-        'download.desc': 'Free to download. 7 days of Pro on us.',
+        'download.title': 'Calmer nights start tonight.',
+        'download.desc': 'Free to download. Seven days of Pro on the house.',
 
         // Sticky CTA
         'sticky.cta': 'Download Lupibu',
-        'sticky.sub': 'Free + 7-day Pro trial',
+        'sticky.sub': 'Free · 7-day Pro trial',
 
         // Footer
-        'footer.tagline': 'Knows your baby\'s next nap before you do',
+        'footer.tagline': 'Knows your baby’s next nap before you do.',
         'footer.product': 'Product',
         'footer.product.features': 'Features',
         'footer.product.download': 'Download',
@@ -57,11 +57,11 @@ const translations = {
         'footer.legal.terms': 'Terms of Use',
         'footer.legal.disclaimer': 'Medical Disclaimer',
         'footer.legal.dataConsent': 'Data Consent',
-        'footer.copyright': '\u00a9 2026 Lupibu. All rights reserved.',
+        'footer.copyright': '© 2026 Lupibu. All rights reserved.',
 
         // Meta
-        'meta.description': 'Lupibu learns your baby\'s sleep rhythm, predicts the next nap, and answers parenting questions from your data. Voice logging in 3 languages. Free to try.',
-        'meta.title': 'Lupibu \u2014 Baby Sleep Tracker That Predicts Naps'
+        'meta.description': 'Lupibu is the baby sleep tracker that learns your child’s rhythm, predicts the next nap, and answers your questions from your own logs. Free to try.',
+        'meta.title': 'Lupibu — The Baby Sleep Tracker That Predicts Naps'
     },
 
     // ============================================
@@ -70,39 +70,39 @@ const translations = {
     ru: {
         'nav.download': 'Скачать',
 
-        'hero.title': 'Малыш вот-вот захочет спать.<br>Ты узнаешь первым.',
-        'hero.subtitle': 'Трекер, который изучает ритм твоего малыша — и подсказывает, что дальше.',
-        'hero.stat1Value': '12 типов',
-        'hero.stat1Label': 'Запись в один тап',
-        'hero.stat2Value': '15 мин',
+        'hero.title': 'Спокойный способ<br>проживать первые годы.',
+        'hero.subtitle': 'Lupibu изучает ритм Вашего малыша, подсказывает, когда пора укладываться, и превращает хаос дня в понятную картину.',
+        'hero.stat1Value': '12',
+        'hero.stat1Label': 'Записей одним касанием',
+        'hero.stat2Value': '~15 мин',
         'hero.stat2Label': 'До следующего сна',
         'hero.stat3Value': '24/7',
-        'hero.stat3Label': 'AI по данным малыша',
-        'hero.trust': 'Меньше гаданий. Меньше тревоги. Спокойнее дни и ночи.',
+        'hero.stat3Label': 'ИИ-ассистент по Вашим данным',
+        'hero.trust': 'Меньше догадок. Меньше тревоги. Спокойнее дни и ночи.',
 
-        'tracking.label': 'Вся история малыша',
-        'tracking.title': 'Каждое кормление. Каждый сон. Вообще всё.',
-        'tracking.desc': '12 типов записей — от подгузников до визитов к врачу. ИИ читает всё. Спроси \u00abпочему сегодня было тяжело?\u00bb — он реально знает.',
+        'tracking.label': 'Вся картина целиком',
+        'tracking.title': 'Каждое кормление, каждый сон, каждый день — в одной ленте.',
+        'tracking.desc': 'Двенадцать типов записей — от подгузников до визитов к врачу — добавляются одним касанием. День превращается в удобную историю, которой легко поделиться с партнёром или педиатром.',
 
-        'ai.label': 'Как написать педиатру в 3 ночи',
-        'ai.title': 'Скажи. Спроси. Поймёт.',
-        'ai.desc': 'Диктуй на 3 языках, без рук, за 5 секунд. Спроси что угодно — \u00abМалыш нормально ест?\u00bb — и получи ответ из своих данных, а не из гугла.',
+        'ai.label': 'Ассистент, который знает именно Вашего малыша',
+        'ai.title': 'Задайте человеческий вопрос — получите человеческий ответ.',
+        'ai.desc': '«Почему сегодня было тяжело?», «Достаточно ли он ест?» — Lupibu отвечает по Вашим записям, а не по поисковику. Голосовой ввод на трёх языках: русский, казахский, английский. Без рук, около пяти секунд на запись.',
 
-        'sleep.label': 'Сон малыша — как на ладони',
-        'sleep.title': 'Предсказывает следующий сон. Не гадает — знает.',
-        'sleep.desc': 'Окна бодрствования, которые подстраиваются под твоего малыша. Недельная аналитика — сразу видно, что работает.',
+        'sleep.label': 'Сон, который больше не сюрприз',
+        'sleep.title': 'Узнавайте о следующем сне заранее.',
+        'sleep.desc': 'Lupibu изучает окна бодрствования Вашего малыша и предупреждает о приближении сна до того, как появятся слёзы. Недельная аналитика показывает, что уже работает.',
 
-        'family.label': 'И это далеко не всё',
-        'family.title': 'Для настоящей жизни с детьми.',
-        'family.desc': 'Несколько детей, семейный доступ, тёмная тема, виджет iOS, таймеры, фотодневник. Всё, что нужно — ничего лишнего.',
+        'family.label': 'Сделано под настоящую семейную жизнь',
+        'family.title': 'Подстраивается под Ваш ритм, а не наоборот.',
+        'family.desc': 'Несколько детей, общий доступ с партнёром, виджет для iOS, таймеры, тёмная тема и тихий фотодневник первых месяцев. Всё, что действительно нужно родителю, и ничего лишнего.',
 
-        'download.title': 'Спокойные ночи начинаются сегодня',
-        'download.desc': 'Скачайте бесплатно. 7 дней Pro — в подарок.',
+        'download.title': 'Спокойные ночи начинаются сегодня.',
+        'download.desc': 'Бесплатная загрузка. Семь дней Pro — в подарок.',
 
         'sticky.cta': 'Скачать Lupibu',
-        'sticky.sub': 'Бесплатно + 7 дней Pro',
+        'sticky.sub': 'Бесплатно · 7 дней Pro',
 
-        'footer.tagline': 'Знает про сон малыша раньше тебя',
+        'footer.tagline': 'Знает о следующем сне малыша раньше Вас.',
         'footer.product': 'Продукт',
         'footer.product.features': 'Возможности',
         'footer.product.download': 'Скачать',
@@ -112,64 +112,64 @@ const translations = {
         'footer.legal.terms': 'Условия использования',
         'footer.legal.disclaimer': 'Медицинская оговорка',
         'footer.legal.dataConsent': 'Согласие на обработку данных',
-        'footer.copyright': '\u00a9 2026 Lupibu. Все права защищены.',
+        'footer.copyright': '© 2026 Lupibu. Все права защищены.',
 
-        'meta.description': 'Lupibu изучает ритм сна малыша, предсказывает следующий сон и отвечает на вопросы по твоим данным. Голосовой ввод на 3 языках. Попробуй бесплатно.',
-        'meta.title': 'Lupibu \u2014 Трекер сна малыша с предсказанием дневного сна'
+        'meta.description': 'Lupibu — трекер сна малыша с ИИ-ассистентом. Изучает ритм ребёнка, предсказывает следующий сон и отвечает на Ваши вопросы по Вашим данным. Попробуйте бесплатно.',
+        'meta.title': 'Lupibu — трекер сна малыша с предсказанием снов'
     },
 
     // ============================================
     // ҚАЗАҚША
     // ============================================
     kk: {
-        'nav.download': 'Жүктеу',
+        'nav.download': 'Жүктеп алу',
 
-        'hero.title': 'Бөпеңіз ұйықтағалы жатыр.<br>Сіз оны одан бұрын білесіз.',
-        'hero.subtitle': 'Сәбиіңіздің ырғағын үйреніп, алдағыны алдын ала айтатын трекер.',
-        'hero.stat1Value': '12 түрі',
-        'hero.stat1Label': 'Бір түртумен жазу',
-        'hero.stat2Value': '15 мин',
-        'hero.stat2Label': 'Келесі ұйқыға дейін',
+        'hero.title': 'Алғашқы жылдарды<br>жайлы өткізудің жолы.',
+        'hero.subtitle': 'Lupibu сәбиіңіздің ырғағын үйреніп, келесі ұйқыны алдын ала ескертеді және күніңізді түсінікті тарихқа айналдырады.',
+        'hero.stat1Value': '12',
+        'hero.stat1Label': 'Бір тиюмен жазба түрі',
+        'hero.stat2Value': '~15 мин',
+        'hero.stat2Label': 'Келесі ұйқыға дейінгі ескерту',
         'hero.stat3Value': '24/7',
-        'hero.stat3Label': 'Сәбиіңіз деректерімен AI',
-        'hero.trust': 'Аз жорамал. Азырақ алаңдаушылық. Тыныштау күндер мен түндер.',
+        'hero.stat3Label': 'Жазбаларыңызбен жұмыс істейтін AI',
+        'hero.trust': 'Болжам азаяды, уайым басылады, күндер мен түндер жайлы болады.',
 
-        'tracking.label': 'Сәбиіңіздің толық тарихы',
-        'tracking.title': 'Әр тамақтану. Әр ұйқы. Бар-бәрі.',
-        'tracking.desc': 'Жөргектен дәрігерге дейін — 12 жазба түрі. ЖИ бәрін оқиды. \u00abБүгін неге қиын болды?\u00bb деп сұраңыз — шынымен біледі.',
+        'tracking.label': 'Толық көрініс',
+        'tracking.title': 'Әр тамақтану, әр ұйқы, әр сәт — бір лентада.',
+        'tracking.desc': 'Жөргектен дәрігерге дейін — жазбаның он екі түрі бір тиюмен қосылады. Күніңіз жолсеріктей қарап шығуға, іздеуге және жұбайыңызбен не педиатрмен бөлісуге ыңғайлы тарихқа айналады.',
 
-        'ai.label': 'Түнгі 3-те дәрігерге жазғандай',
-        'ai.title': 'Айтыңыз. Сұраңыз. Түсінеді.',
-        'ai.desc': '3 тілде, қолсыз, 5 секундта дауыспен жазыңыз. \u00abЖеткілікті жеп жатыр ма?\u00bb — гуглден емес, өз деректеріңізден жауап алыңыз.',
+        'ai.label': 'Сіздің сәбиіңізді білетін ассистент',
+        'ai.title': 'Қарапайым сұрақ қойыңыз — нақты жауап алыңыз.',
+        'ai.desc': '«Бүгін неге қиын болды?», «Тамағы жеткілікті ме?» — Lupibu жауабын іздеу жүйесінен емес, Сіздің өз жазбаларыңыздан табады. Қазақша, орысша және ағылшынша дауыспен жазу — қолыңыз бос, шамамен бес секундта.',
 
-        'sleep.label': 'Сәбиіңіздің ұйқысы — алақаныңызда',
-        'sleep.title': 'Келесі ұйқыны болжайды. Болжам емес — біледі.',
-        'sleep.desc': 'Сәбиіңізге бейімделетін ояу уақыт терезелері. Апталық есеп — нені дұрыс істеп жатқаныңыз көрінеді.',
+        'sleep.label': 'Ұйқы енді күтпеген жаңалық емес',
+        'sleep.title': 'Келесі ұйқы қашан келетінін алдын ала біліңіз.',
+        'sleep.desc': 'Lupibu сәбиіңіздің ояу уақыт терезелерін бақылап, ұйқы таяғанын алдын ала ескертеді. Апталық талдау не тиімді жұмыс істеп жатқанын анық көрсетеді.',
 
-        'family.label': 'Бұл бәрі емес',
-        'family.title': 'Нағыз отбасы өміріне арналған.',
-        'family.desc': 'Бірнеше бала, отбасылық қатынас, қараңғы тақырып, iOS виджеті, таймерлер, фотокүнделік. Қажеті бар — артығы жоқ.',
+        'family.label': 'Нағыз отбасы өміріне арналған',
+        'family.title': 'Сіздің ырғағыңызға икемделеді — керісінше емес.',
+        'family.desc': 'Бірнеше бала, жұбайыңызбен ортақ кіру, iOS виджеті, таймерлер, қараңғы тақырып және алғашқы айлардың тыныш фотокүнделігі. Ата-анаға қажеттінің бәрі, артығы жоқ.',
 
-        'download.title': 'Тыныш түндер бүгіннен басталады',
-        'download.desc': 'Тегін жүктеңіз. Pro-ның 7 күні — сыйлыққа.',
+        'download.title': 'Тыныш түндер бүгіннен басталады.',
+        'download.desc': 'Жүктеу тегін. Pro-ның алғашқы жеті күні — сыйға.',
 
-        'sticky.cta': 'Lupibu жүктеу',
-        'sticky.sub': 'Тегін + 7 күн Pro',
+        'sticky.cta': 'Lupibu-ді жүктеп алу',
+        'sticky.sub': 'Тегін · 7 күн Pro',
 
-        'footer.tagline': 'Сәбиіңіздің ұйқысын сізден бұрын біледі',
+        'footer.tagline': 'Сәбиіңіздің келесі ұйқысын Сізден бұрын біледі.',
         'footer.product': 'Өнім',
         'footer.product.features': 'Мүмкіндіктер',
-        'footer.product.download': 'Жүктеу',
+        'footer.product.download': 'Жүктеп алу',
         'footer.product.help': 'Анықтама орталығы',
         'footer.legal': 'Құжаттар',
         'footer.legal.privacy': 'Құпиялылық саясаты',
         'footer.legal.terms': 'Қолдану шарттары',
-        'footer.legal.disclaimer': 'Медициналық ескерту',
+        'footer.legal.disclaimer': 'Медициналық ескертпе',
         'footer.legal.dataConsent': 'Деректерді өңдеуге келісім',
-        'footer.copyright': '\u00a9 2026 Lupibu. Барлық құқықтар қорғалған.',
+        'footer.copyright': '© 2026 Lupibu. Барлық құқықтар қорғалған.',
 
-        'meta.description': 'Lupibu сәбиіңіздің ұйқы ырғағын үйреніп, келесі ұйқыны болжайды, деректеріңіз бойынша сұрақтарға жауап береді. 3 тілде дауыспен жазу. Тегін.',
-        'meta.title': 'Lupibu \u2014 Сәби ұйқысын болжайтын трекер'
+        'meta.description': 'Lupibu — AI-ассистенті бар сәби ұйқысының трекері. Сәбиіңіздің ырғағын үйренеді, келесі ұйқыны болжайды және сұрақтарыңызға Сіздің деректеріңіз бойынша жауап береді. Тегін көріп көріңіз.',
+        'meta.title': 'Lupibu — сәби ұйқысын болжайтын трекер'
     }
 };
 
