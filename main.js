@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initScrollAnimations();
     initNavbarScroll();
     initStickyCta();
+    initHeroVideoToggle();
 });
 
 /**
@@ -82,4 +83,35 @@ function initStickyCta() {
     }, { threshold: 0 });
 
     observer.observe(hero);
+}
+
+/**
+ * Toggle between video and screenshot in the hero section on click
+ */
+function initHeroVideoToggle() {
+    const heroScreen = document.getElementById('heroPhoneScreen');
+    const heroVideo = document.getElementById('heroVideo');
+    const heroImg = document.getElementById('heroImg');
+    const tapHint = document.getElementById('heroTapHint');
+
+    if (!heroScreen || !heroVideo || !heroImg) return;
+
+    let showVideo = true;
+
+    heroScreen.addEventListener('click', () => {
+        showVideo = !showVideo;
+        if (showVideo) {
+            heroVideo.style.opacity = '1';
+            heroImg.style.opacity = '0';
+            if (tapHint) {
+                tapHint.style.opacity = '1';
+            }
+        } else {
+            heroVideo.style.opacity = '0';
+            heroImg.style.opacity = '1';
+            if (tapHint) {
+                tapHint.style.opacity = '0';
+            }
+        }
+    });
 }

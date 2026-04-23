@@ -101,7 +101,7 @@
                     <span>contact@lupibu.com</span>
                 </a>
                 <!-- TODO: Replace # with actual App Store URL -->
-                <a href="#" class="btn btn-primary btn-nav btn-appstore-nav" data-i18n="nav.download">Download</a>
+                <a href="https://apps.apple.com/us/app/lupibu/id6758586869" class="btn btn-primary btn-nav btn-appstore-nav" data-i18n="nav.download" target="_blank" rel="noopener">Download</a>
             </div>
         </div>
     </nav>
@@ -120,9 +120,12 @@
                 </p>
                 <div class="hero-cta">
                     <!-- TODO: Replace # with actual App Store URL -->
-                    <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                    <a href="https://apps.apple.com/us/app/lupibu/id6758586869" class="appstore-badge" aria-label="Download on the App Store" target="_blank" rel="noopener">
                         <img src="assets/appstore-badge.svg" alt="Download on the App Store" class="appstore-img">
                     </a>
+                    <div class="qr-code-wrapper desktop-only">
+                        <img src="assets/qr-code.svg" alt="QR code" class="qr-code-img">
+                    </div>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
@@ -146,10 +149,14 @@
                 <div class="phone-mockup hero-phone">
                     <div class="phone-frame">
 
-                        <div class="phone-screen">
-                            <img src="screenshots/en_1_sleep_widget.webp" alt="Lupibu — sleep prediction"
-                                class="screen-img" data-screenshot="1_sleep_widget" loading="eager">
+                        <div class="phone-screen hero-toggle-screen" id="heroPhoneScreen">
+                            <video src="assets/hero-video.mp4" autoplay muted loop playsinline class="screen-video" id="heroVideo"></video>
+                            <img src="screenshots/en_1_sleep_widget.webp" alt="Lupibu — sleep prediction" class="screen-img" id="heroImg" data-screenshot="1_sleep_widget" loading="eager" style="opacity: 0; position: absolute; top: 0; left: 0; transition: opacity 0.3s;">
                         </div>
+                    </div>
+                    <div class="tap-hint" id="heroTapHint">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="M13 13l6 6"/></svg>
+                        <span data-i18n="hero.tapHint">Tap to toggle screen</span>
                     </div>
                 </div>
             </div>
@@ -287,10 +294,14 @@
                 <div class="download-content">
                     <h2 class="download-title" id="download-title" data-i18n="download.title">Calmer nights start tonight</h2>
                     <p class="download-desc" data-i18n="download.desc">Free to download. 7 days of Pro on us.</p>
-                    <!-- TODO: Replace # with actual App Store URL -->
-                    <a href="#" class="appstore-badge" aria-label="Download on the App Store">
-                        <img src="assets/appstore-badge.svg" alt="Download on the App Store" class="appstore-img appstore-img-invert">
-                    </a>
+                    <div class="download-cta-group">
+                        <a href="https://apps.apple.com/us/app/lupibu/id6758586869" class="appstore-badge" aria-label="Download on the App Store" target="_blank" rel="noopener">
+                            <img src="assets/appstore-badge.svg" alt="Download on the App Store" class="appstore-img appstore-img-invert">
+                        </a>
+                        <div class="qr-code-wrapper desktop-only">
+                            <img src="assets/qr-code.svg" alt="QR code" class="qr-code-img">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -346,7 +357,7 @@
     <!-- Sticky Mobile CTA -->
     <div class="sticky-cta" id="stickyCta">
         <!-- TODO: Replace # with actual App Store URL -->
-        <a href="#" class="btn btn-primary sticky-cta-btn" data-i18n="sticky.cta">Download Lupibu</a>
+        <a href="https://apps.apple.com/us/app/lupibu/id6758586869" class="btn btn-primary sticky-cta-btn" data-i18n="sticky.cta" target="_blank" rel="noopener">Download Lupibu</a>
         <span class="sticky-cta-sub" data-i18n="sticky.sub">Free with 7-day Pro trial</span>
     </div>
 

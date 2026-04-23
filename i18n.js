@@ -8,7 +8,7 @@ const translations = {
         'nav.download': 'Download',
 
         // Hero
-        'hero.title': 'The calmest way<br>to raise a small human.',
+        'hero.title': 'The calmest way<br>to raise a small human',
         'hero.subtitle': 'Lupibu learns your baby’s rhythm, predicts the next nap, and turns every day into something you can actually read.',
         'hero.stat1Value': '12',
         'hero.stat1Label': 'One-tap entry types',
@@ -17,6 +17,7 @@ const translations = {
         'hero.stat3Value': '24/7',
         'hero.stat3Label': 'AI trained on your logs',
         'hero.trust': 'Fewer guesses. Less second-guessing. Calmer days and nights.',
+        'hero.tapHint': 'Tap to toggle screen',
 
         // Tracking + History
         'tracking.label': 'The whole picture',
@@ -70,7 +71,7 @@ const translations = {
     ru: {
         'nav.download': 'Скачать',
 
-        'hero.title': 'Перестаньте гадать<br>про сон малыша.',
+        'hero.title': 'Самый спокойный способ<br>растить малыша',
         'hero.subtitle': 'Lupibu изучает ритм малыша и предсказывает следующий сон.',
         'hero.stat1Value': '12',
         'hero.stat1Label': 'Записей одним касанием',
@@ -79,6 +80,7 @@ const translations = {
         'hero.stat3Value': '24/7',
         'hero.stat3Label': 'ИИ-ассистент по Вашим данным',
         'hero.trust': 'Меньше догадок. Спокойнее дни и ночи.',
+        'hero.tapHint': 'Нажмите на экран',
 
         'tracking.label': 'Весь день в одном месте',
         'tracking.title': 'Кормления, сны и всё остальное — в одной ленте.',
@@ -124,7 +126,7 @@ const translations = {
     kk: {
         'nav.download': 'Жүктеп алу',
 
-        'hero.title': 'Алғашқы жылдарды<br>жайлы өткізудің жолы.',
+        'hero.title': 'Алғашқы жылдарды<br>жайлы өткізудің жолы',
         'hero.subtitle': 'Lupibu сәбиіңіздің ырғағын үйреніп, келесі ұйқыны алдын ала ескертеді және күніңізді түсінікті тарихқа айналдырады.',
         'hero.stat1Value': '12',
         'hero.stat1Label': 'Бір тиюмен жазба түрі',
@@ -133,6 +135,7 @@ const translations = {
         'hero.stat3Value': '24/7',
         'hero.stat3Label': 'Жазбаларыңызбен жұмыс істейтін AI',
         'hero.trust': 'Болжам азаяды, уайым басылады, күндер мен түндер жайлы болады.',
+        'hero.tapHint': 'Экранды басыңыз',
 
         'tracking.label': 'Толық көрініс',
         'tracking.title': 'Әр тамақтану, әр ұйқы, әр сәт — бір лентада.',

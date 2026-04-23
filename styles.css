@@ -356,7 +356,11 @@ ul { list-style: none; }
 }
 
 .hero-cta {
-    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
 }
 
 .hero-stats {
@@ -427,16 +431,55 @@ ul { list-style: none; }
 .phone-screen {
     width: 100%;
     height: 100%;
-    background: var(--white);
+    background: #000;
     border-radius: calc(var(--phone-radius) - var(--phone-bezel));
     overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.1s ease-out;
 }
 
-.screen-img {
+.phone-screen:active {
+    transform: scale(0.985);
+}
+
+.screen-img, .screen-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
+}
+
+/* Tap Hint */
+.tap-hint {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--text-micro);
+    font-weight: 700;
+    color: var(--gray-800);
+    z-index: 10;
+    border: 1px solid var(--gray-200);
+    animation: bounce-top 2s infinite ease-in-out;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.tap-hint svg {
+    color: var(--brand);
+}
+
+@keyframes bounce-top {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -4px); }
 }
 
 /* ========================================
@@ -499,6 +542,38 @@ ul { list-style: none; }
 
 .appstore-img-invert {
     filter: invert(1);
+}
+
+/* ========================================
+   QR CODE
+   ======================================== */
+.desktop-only {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop-only {
+        display: flex;
+    }
+}
+
+.qr-code-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    padding: 8px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+    height: 76px;
+    width: 76px;
+}
+
+.qr-code-img {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-sm);
 }
 
 /* ========================================
@@ -633,6 +708,18 @@ ul { list-style: none; }
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.5;
     margin-bottom: var(--space-lg);
+}
+
+.download-cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.download-cta-group .qr-code-wrapper {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ========================================
