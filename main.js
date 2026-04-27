@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initScrollAnimations();
     initNavbarScroll();
     initStickyCta();
-    initHeroVideoToggle();
 });
 
 /**
@@ -20,13 +19,13 @@ function initSmoothScroll() {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
 
-            e.preventDefault();
             const target = document.querySelector(targetId);
-            if (target) {
-                const offset = 80;
-                const pos = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                window.scrollTo({ top: pos, behavior: 'smooth' });
-            }
+            if (!target) return;
+
+            e.preventDefault();
+            const offset = 80;
+            const pos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: pos, behavior: 'smooth' });
         });
     });
 }
@@ -85,33 +84,5 @@ function initStickyCta() {
     observer.observe(hero);
 }
 
-/**
- * Toggle between video and screenshot in the hero section on click
- */
-function initHeroVideoToggle() {
-    const heroScreen = document.getElementById('heroPhoneScreen');
-    const heroVideo = document.getElementById('heroVideo');
-    const heroImg = document.getElementById('heroImg');
-    const tapHint = document.getElementById('heroTapHint');
 
-    if (!heroScreen || !heroVideo || !heroImg) return;
 
-    let showVideo = true;
-
-    heroScreen.addEventListener('click', () => {
-        showVideo = !showVideo;
-        if (showVideo) {
-            heroVideo.style.opacity = '1';
-            heroImg.style.opacity = '0';
-            if (tapHint) {
-                tapHint.style.opacity = '1';
-            }
-        } else {
-            heroVideo.style.opacity = '0';
-            heroImg.style.opacity = '1';
-            if (tapHint) {
-                tapHint.style.opacity = '0';
-            }
-        }
-    });
-}

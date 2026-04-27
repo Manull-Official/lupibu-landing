@@ -5,17 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Lupibu — smart baby sleep tracker with AI assistant. Predicts sleep, answers questions about your child, works with voice in 3 languages.">
+        content="Lupibu — the calm baby tracker. Stop guessing wake windows; an AI assistant learns your baby's rhythm and predicts the next nap.">
     <meta name="keywords"
         content="baby sleep tracker, baby diary, sleep prediction, AI assistant for parents, baby tracker app">
     <meta name="theme-color" content="#FA7C50">
-    <meta property="og:title" content="Lupibu — Smart Baby Sleep Tracker">
+    <meta property="og:title" content="Lupibu — Stop guessing when baby is overtired">
     <meta property="og:description"
-        content="Predicts sleep, answers questions about your child, works with voice.">
+        content="An AI baby tracker that learns your baby's rhythm. A quiet notification before nap time. 7-day Pro trial free.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lupibu.com/">
+    <meta property="og:site_name" content="Lupibu">
     <meta property="og:image" content="https://lupibu.com/assets/logo.png">
+    <meta property="og:image:width" content="2433">
+    <meta property="og:image:height" content="2658">
+    <meta property="og:image:alt" content="Lupibu — calm baby tracker">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lupibu — Stop guessing when baby is overtired">
+    <meta name="twitter:description" content="An AI baby tracker that learns your baby's rhythm. A quiet notification before nap time.">
+    <meta name="twitter:image" content="https://lupibu.com/assets/logo.png">
 
-    <title>Lupibu — Smart Baby Sleep Tracker with AI Assistant</title>
+    <link rel="canonical" href="https://lupibu.com/">
+    <link rel="alternate" hreflang="en" href="https://lupibu.com/">
+    <link rel="alternate" hreflang="ru" href="https://lupibu.com/?lang=ru">
+    <link rel="alternate" hreflang="kk" href="https://lupibu.com/?lang=kk">
+    <link rel="alternate" hreflang="x-default" href="https://lupibu.com/">
+
+    <title>Lupibu — The Calm Baby Tracker</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,19 +48,15 @@
       "operatingSystem": "iOS",
       "applicationCategory": "HealthApplication",
       "applicationSubCategory": "Parenting",
-      "description": "Smart baby sleep tracker with AI assistant. Predicts sleep, answers questions about your child, works with voice in English, Russian and Kazakh.",
+      "description": "A calm baby tracker that learns your baby's rhythm. Stop guessing wake windows — an AI assistant predicts the next nap and answers from your own logs. Works with voice in English, Russian and Kazakh.",
       "url": "https://lupibu.com",
       "inLanguage": ["en", "ru", "kk"],
       "image": "https://lupibu.com/assets/logo.png",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "featureList": [
-        "Sleep prediction with personalized wake windows",
-        "AI assistant — chat and voice logging",
-        "12 entry types: sleep, feeding, diaper, walk, doctor and more",
-        "Multi-child family sharing",
-        "Weekly sleep statistics and analytics",
-        "Dark mode and iOS widget",
-        "3 languages: English, Russian, Kazakh"
+        "Personalized sleep prediction — wake windows learned from your baby's data",
+        "AI assistant that remembers your history",
+        "Voice, one-tap, or manual logging"
       ],
       "screenshot": [
         "https://lupibu.com/screenshots/en_1_sleep_widget.webp",
@@ -96,12 +107,6 @@
                         </button>
                     </div>
                 </div>
-                <a href="mailto:contact@lupibu.com" class="nav-email">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    <span>contact@lupibu.com</span>
-                </a>
-                <!-- TODO: Replace # with actual App Store URL -->
-                <a href="https://apps.apple.com/us/app/lupibu/id6758586869" class="btn btn-primary btn-nav btn-appstore-nav" data-i18n="nav.download" target="_blank" rel="noopener">Download</a>
             </div>
         </div>
     </nav>
@@ -119,74 +124,30 @@
                     A baby tracker that learns your child's rhythm — and tells you what's next.
                 </p>
                 <div class="hero-cta">
-                    <!-- TODO: Replace # with actual App Store URL -->
                     <a href="https://apps.apple.com/us/app/lupibu/id6758586869" class="appstore-badge" aria-label="Download on the App Store" target="_blank" rel="noopener">
                         <img src="assets/appstore-badge.svg" alt="Download on the App Store" class="appstore-img">
                     </a>
-                    <div class="qr-code-wrapper desktop-only">
+                    <button type="button" class="qr-code-wrapper desktop-only" aria-label="Hover to enlarge QR code">
                         <img src="assets/qr-code.svg" alt="QR code" class="qr-code-img">
-                    </div>
+                    </button>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-value" data-i18n="hero.stat1Value">12 types</span>
-                        <span class="stat-label" data-i18n="hero.stat1Label">Log anything in one tap</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-value" data-i18n="hero.stat2Value">15 min</span>
-                        <span class="stat-label" data-i18n="hero.stat2Label">Before the next nap</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-value" data-i18n="hero.stat3Value">24/7</span>
-                        <span class="stat-label" data-i18n="hero.stat3Label">AI on your baby’s data</span>
-                    </div>
-                </div>
-                <p class="hero-trust" data-i18n="hero.trust">Less guessing. Less anxiety. Calmer days and nights.</p>
+                <p class="hero-proof" data-i18n="sticky.sub">7-day Pro trial</p>
             </div>
             <div class="hero-visual">
-                <div class="phone-mockup hero-phone">
-                    <div class="phone-frame">
-
-                        <div class="phone-screen hero-toggle-screen" id="heroPhoneScreen">
-                            <video src="assets/hero-video.mp4" autoplay muted loop playsinline class="screen-video" id="heroVideo"></video>
-                            <img src="screenshots/en_1_sleep_widget.webp" alt="Lupibu — sleep prediction" class="screen-img" id="heroImg" data-screenshot="1_sleep_widget" loading="eager" style="opacity: 0; position: absolute; top: 0; left: 0; transition: opacity 0.3s;">
+                <div class="phone-stack">
+                    <div class="phone-frame phone-stack-side phone-stack-left">
+                        <div class="phone-screen">
+                            <img src="screenshots/en_9_dark_theme.webp" alt="Lupibu — dark mode for nighttime" data-screenshot="9_dark_theme" loading="lazy" class="screen-img">
                         </div>
                     </div>
-                    <div class="tap-hint" id="heroTapHint">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="M13 13l6 6"/></svg>
-                        <span data-i18n="hero.tapHint">Tap to toggle screen</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature 1: Track Everything + History -->
-    <section id="features" class="feature-section" aria-labelledby="tracking-title">
-        <div class="container feature-row feature-row-reverse">
-            <div class="feature-text">
-                <span class="section-label" data-i18n="tracking.label">Your baby's full story</span>
-                <h2 class="feature-heading" id="tracking-title" data-i18n="tracking.title">Every feed. Every nap. Every everything.</h2>
-                <p class="feature-desc" data-i18n="tracking.desc">12 entry types — from diapers to doctor visits. AI reads all of it. Ask "why was today rough?" and it actually knows.</p>
-            </div>
-            <div class="feature-visual feature-visual-pair">
-                <div class="phone-mockup phone-front">
-                    <div class="phone-frame">
-
+                    <div class="phone-frame phone-stack-main">
                         <div class="phone-screen">
-                            <img src="screenshots/en_2_add_entry.webp" alt="Lupibu — one-tap entry logging screen" data-screenshot="2_add_entry"
-                                loading="lazy" class="screen-img">
+                            <img src="screenshots/en_1_sleep_widget.webp" alt="Lupibu — sleep prediction widget" data-screenshot="1_sleep_widget" loading="eager" class="screen-img">
                         </div>
                     </div>
-                </div>
-                <div class="phone-mockup phone-back">
-                    <div class="phone-frame">
-
+                    <div class="phone-frame phone-stack-side phone-stack-right">
                         <div class="phone-screen">
-                            <img src="screenshots/en_8_history.webp" alt="Lupibu — timeline history of all logged baby events"
-                                data-screenshot="8_history" loading="lazy" class="screen-img">
+                            <img src="screenshots/en_6_chat_with_ai.webp" alt="Lupibu — AI assistant" data-screenshot="6_chat_with_ai" loading="lazy" class="screen-img">
                         </div>
                     </div>
                 </div>
@@ -194,163 +155,77 @@
         </div>
     </section>
 
-    <!-- Feature 2: AI Assistant (Dark Section) -->
-    <section class="feature-section feature-dark" id="ai" aria-labelledby="ai-title">
-        <div class="container feature-row feature-row-reverse">
-            <div class="feature-text">
-                <span class="section-label label-ai" data-i18n="ai.label">Like texting a nurse at 3am</span>
-                <h2 class="feature-heading" id="ai-title" data-i18n="ai.title">Say it. Ask it. It just gets it.</h2>
-                <p class="feature-desc" data-i18n="ai.desc">Voice-log in 3 languages, hands-free, in 5 seconds. Ask anything — "Is she eating enough?" — and get answers from your data, not Google.</p>
-            </div>
-            <div class="feature-visual feature-visual-pair">
-                <div class="phone-mockup phone-front">
-                    <div class="phone-frame">
 
-                        <div class="phone-screen">
-                            <img src="screenshots/en_5_add_entries_with_ai.webp" alt="Lupibu — voice-driven AI entry creation" data-screenshot="5_add_entries_with_ai"
-                                loading="lazy" class="screen-img">
-                        </div>
-                    </div>
-                </div>
-                <div class="phone-mockup phone-back">
-                    <div class="phone-frame">
-
-                        <div class="phone-screen">
-                            <img src="screenshots/en_6_chat_with_ai.webp" alt="Lupibu — chat conversation with the AI sleep assistant"
-                                data-screenshot="6_chat_with_ai" loading="lazy" class="screen-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature 3: Sleep Intelligence + Statistics -->
-    <section class="feature-section" id="sleep" aria-labelledby="sleep-title">
-        <div class="container feature-row">
-            <div class="feature-text">
-                <span class="section-label label-purple" data-i18n="sleep.label">Your baby's sleep, decoded</span>
-                <h2 class="feature-heading" id="sleep-title" data-i18n="sleep.title">Predicts the next nap. Not guesses — knows.</h2>
-                <p class="feature-desc" data-i18n="sleep.desc">Wake windows that learn from your baby. Weekly analytics that show what's working.</p>
-            </div>
-            <div class="feature-visual feature-visual-pair">
-                <div class="phone-mockup phone-front">
-                    <div class="phone-frame">
-
-                        <div class="phone-screen">
-                            <img src="screenshots/en_3_sleep_statistics.webp" alt="Lupibu — weekly sleep statistics chart" data-screenshot="3_sleep_statistics"
-                                loading="lazy" class="screen-img">
-                        </div>
-                    </div>
-                </div>
-                <div class="phone-mockup phone-back">
-                    <div class="phone-frame">
-
-                        <div class="phone-screen">
-                            <img src="screenshots/en_4_detailed_sleep_statistics.webp" alt="Lupibu — detailed nap and night sleep breakdown"
-                                data-screenshot="4_detailed_sleep_statistics" loading="lazy" class="screen-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature 4: Family + Dark Mode -->
-    <section class="feature-section" id="family" aria-labelledby="family-title">
-        <div class="container feature-row">
-            <div class="feature-text">
-                <span class="section-label" data-i18n="family.label">And so much more</span>
-                <h2 class="feature-heading" id="family-title" data-i18n="family.title">Built for how families actually work.</h2>
-                <p class="feature-desc" data-i18n="family.desc">Multiple kids, family sharing, dark mode, iOS widget, timers, photo diary. Everything a real parent needs — nothing they don't.</p>
-            </div>
-            <div class="feature-visual feature-visual-pair">
-                <div class="phone-mockup phone-front">
-                    <div class="phone-frame">
-
-                        <div class="phone-screen">
-                            <img src="screenshots/en_7_switch_child.webp" alt="Lupibu — multi-child selector for family sharing"
-                                data-screenshot="7_switch_child" loading="lazy" class="screen-img">
-                        </div>
-                    </div>
-                </div>
-                <div class="phone-mockup phone-back">
-                    <div class="phone-frame">
-
-                        <div class="phone-screen">
-                            <img src="screenshots/en_9_dark_theme.webp" alt="Lupibu — dark mode with sleep widget at night"
-                                data-screenshot="9_dark_theme" loading="lazy" class="screen-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download CTA -->
-    <section id="download" class="download-section" aria-labelledby="download-title">
+    <!-- Testimonials — real App Store reviews (5★, App Store Kazakhstan) -->
+    <section class="testimonials-section" id="testimonials" aria-label="Reviews from the App Store">
         <div class="container">
-            <div class="download-card">
-                <div class="download-content">
-                    <h2 class="download-title" id="download-title" data-i18n="download.title">Calmer nights start tonight</h2>
-                    <p class="download-desc" data-i18n="download.desc">Free to download. 7 days of Pro on us.</p>
-                    <div class="download-cta-group">
-                        <a href="https://apps.apple.com/us/app/lupibu/id6758586869" class="appstore-badge" aria-label="Download on the App Store" target="_blank" rel="noopener">
-                            <img src="assets/appstore-badge.svg" alt="Download on the App Store" class="appstore-img appstore-img-invert">
-                        </a>
-                        <div class="qr-code-wrapper desktop-only">
-                            <img src="assets/qr-code.svg" alt="QR code" class="qr-code-img">
-                        </div>
-                    </div>
-                </div>
+            <p class="testimonials-rating" data-i18n="testimonials.label">⭐⭐⭐⭐⭐ 5.0 on the App Store</p>
+            <div class="testimonials-grid">
+                <figure class="testimonial">
+                    <blockquote data-i18n="testimonials.t1.text">"I use Lupibu every day to track sleep, feedings, and my baby's routine. The app is easy to use, with a clean design and helpful reminders. It really helps bring more structure and calm into daily parenting."</blockquote>
+                    <figcaption>
+                        <span class="testimonial-name" data-i18n="testimonials.t1.author">Асиманариманова</span>
+                        <span class="testimonial-source" data-i18n="testimonials.source">App Store</span>
+                    </figcaption>
+                </figure>
+                <figure class="testimonial">
+                    <blockquote data-i18n="testimonials.t2.text">"Lupibu makes tracking my baby's routine so much easier. The sleep insights and reminders are especially helpful. Clean design and very intuitive to use."</blockquote>
+                    <figcaption>
+                        <span class="testimonial-name" data-i18n="testimonials.t2.author">-Айгулечка-</span>
+                        <span class="testimonial-source" data-i18n="testimonials.source">App Store</span>
+                    </figcaption>
+                </figure>
+                <figure class="testimonial">
+                    <blockquote data-i18n="testimonials.t3.text">"Интуитивно понятное и удобное приложение. Очень помогло разгрузить голову. Отдельное спасибо за ИИ-ассистента — выручает очень."</blockquote>
+                    <figcaption>
+                        <span class="testimonial-name" data-i18n="testimonials.t3.author">kavinskyyn</span>
+                        <span class="testimonial-source" data-i18n="testimonials.source">App Store</span>
+                    </figcaption>
+                </figure>
             </div>
         </div>
+    </section>
+
+
+    <!-- Pre-footer slogan — emotional anchor before legal/copyright -->
+    <section class="slogan-section" aria-hidden="true">
+        <p class="slogan-tagline" data-i18n="slogan.tagline">Less guessing. More peaceful days and nights.</p>
     </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (3-col: brand · contact · help; copyright full-width below) -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/logo-inline-primary.svg" alt="Lupibu" class="footer-logo">
-                    <p class="footer-tagline" data-i18n="footer.tagline">Knows your baby's next nap before you do</p>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/lupibu.app" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        </a>
-                        <a href="https://www.threads.net/@lupibu.app" target="_blank" rel="noopener" aria-label="Threads" class="social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.59 12c.025 3.086.718 5.496 2.057 7.164 1.432 1.781 3.632 2.695 6.54 2.717 2.227-.033 4.093-.6 5.246-1.46a5.12 5.12 0 001.733-2.14c.39-.944.466-2.22-.14-3.263-.39-.672-1.072-1.2-2.028-1.573a8.66 8.66 0 01-.396 2.254c-.678 1.86-2.023 3.03-3.856 3.363a5.87 5.87 0 01-1.042.093c-1.282 0-2.47-.437-3.346-1.236-.98-.894-1.533-2.177-1.46-3.6.128-2.48 1.946-4.254 4.728-4.618a9.11 9.11 0 013.205.166c-.063-.658-.184-1.27-.373-1.821-.38-1.108-1.026-1.837-1.96-2.164a4.86 4.86 0 00-1.59-.222c-1.78.052-3.024.82-3.763 1.62l-1.415-1.37C7.4 4.14 9.182 3.12 11.558 3.058c.756-.014 1.478.07 2.15.273 1.372.42 2.383 1.4 2.943 2.868.32.84.527 1.786.612 2.833.67.224 1.263.506 1.774.847 1.31.872 2.146 2.142 2.42 3.672.315 1.762-.018 3.4-.962 4.742-.885 1.26-2.25 2.17-4.053 2.702-1.39.41-2.95.62-4.643.65-.436.004-.868-.007-1.285-.035a10.94 10.94 0 01-.328-.02zm.698-7.607c-1.824.232-2.86 1.175-2.925 2.44-.04.742.24 1.39.782 1.884.544.496 1.312.748 2.167.748.244 0 .497-.021.748-.066 1.187-.215 2.08-.97 2.523-2.156.26-.697.38-1.506.384-2.396a7.06 7.06 0 00-3.679-.454z"/></svg>
-                        </a>
-                        <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" aria-label="Telegram" class="social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472z"/></svg>
-                        </a>
-                    </div>
-                    <a href="mailto:contact@lupibu.com" class="footer-email">contact@lupibu.com</a>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h4 data-i18n="footer.product">Product</h4>
-                        <a href="#features" data-i18n="footer.product.features">Features</a>
-                        <a href="#download" data-i18n="footer.product.download">Download</a>
-                        <a href="help.html" class="help-link" data-i18n="footer.product.help">Help Center</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4 data-i18n="footer.legal">Legal</h4>
-                        <a href="legal.html?doc=privacy" class="legal-link" data-doc="privacy"
-                            data-i18n="footer.legal.privacy">Privacy Policy</a>
-                        <a href="legal.html?doc=terms" class="legal-link" data-doc="terms"
-                            data-i18n="footer.legal.terms">Terms of Use</a>
-                        <a href="legal.html?doc=disclaimer" class="legal-link" data-doc="disclaimer"
-                            data-i18n="footer.legal.disclaimer">Medical Disclaimer</a>
-                        <a href="legal.html?doc=data_consent" class="legal-link" data-doc="data_consent"
-                            data-i18n="footer.legal.dataConsent">Data Consent</a>
-                    </div>
-                </div>
+        <div class="footer-top">
+            <img src="assets/logo-inline-primary.svg" alt="Lupibu" class="footer-logo">
+            <div class="footer-icons">
+                <a href="mailto:contact@lupibu.com" class="social-link" aria-label="Email contact@lupibu.com">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+                <a href="https://www.instagram.com/lupibu.app" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://www.threads.net/@lupibu.app" target="_blank" rel="noopener" class="social-link" aria-label="Threads">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.59 12c.025 3.086.718 5.496 2.057 7.164 1.432 1.781 3.632 2.695 6.54 2.717 2.227-.033 4.093-.6 5.246-1.46a5.12 5.12 0 001.733-2.14c.39-.944.466-2.22-.14-3.263-.39-.672-1.072-1.2-2.028-1.573a8.66 8.66 0 01-.396 2.254c-.678 1.86-2.023 3.03-3.856 3.363a5.87 5.87 0 01-1.042.093c-1.282 0-2.47-.437-3.346-1.236-.98-.894-1.533-2.177-1.46-3.6.128-2.48 1.946-4.254 4.728-4.618a9.11 9.11 0 013.205.166c-.063-.658-.184-1.27-.373-1.821-.38-1.108-1.026-1.837-1.96-2.164a4.86 4.86 0 00-1.59-.222c-1.78.052-3.024.82-3.763 1.62l-1.415-1.37C7.4 4.14 9.182 3.12 11.558 3.058c.756-.014 1.478.07 2.15.273 1.372.42 2.383 1.4 2.943 2.868.32.84.527 1.786.612 2.833.67.224 1.263.506 1.774.847 1.31.872 2.146 2.142 2.42 3.672.315 1.762-.018 3.4-.962 4.742-.885 1.26-2.25 2.17-4.053 2.702-1.39.41-2.95.62-4.643.65-.436.004-.868-.007-1.285-.035a10.94 10.94 0 01-.328-.02zm.698-7.607c-1.824.232-2.86 1.175-2.925 2.44-.04.742.24 1.39.782 1.884.544.496 1.312.748 2.167.748.244 0 .497-.021.748-.066 1.187-.215 2.08-.97 2.523-2.156.26-.697.38-1.506.384-2.396a7.06 7.06 0 00-3.679-.454z"/></svg>
+                </a>
+                <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" class="social-link" aria-label="Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472z"/></svg>
+                </a>
             </div>
-            <div class="footer-bottom">
-                <p data-i18n="footer.copyright">&copy; 2026 Lupibu. All rights reserved.</p>
-            </div>
+            <nav class="footer-legal" aria-label="Legal">
+                <a href="legal.html?doc=privacy" class="footer-legal-link" data-doc="privacy" data-i18n="footer.legal.privacy">Privacy Policy</a>
+                <a href="legal.html?doc=terms" class="footer-legal-link" data-doc="terms" data-i18n="footer.legal.terms">Terms of Use</a>
+                <a href="legal.html?doc=disclaimer" class="footer-legal-link" data-doc="disclaimer" data-i18n="footer.legal.disclaimer">Medical Disclaimer</a>
+                <a href="legal.html?doc=data_consent" class="footer-legal-link" data-doc="data_consent" data-i18n="footer.legal.dataConsent">Data Consent</a>
+            </nav>
+        </div>
+        <div class="footer-content">
+            <a href="help.html" class="footer-help">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                <span data-i18n="footer.product.help">Help Center</span>
+            </a>
+        </div>
+        <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 Lupibu. All rights reserved.</p>
         </div>
     </footer>
 
@@ -358,7 +233,7 @@
     <div class="sticky-cta" id="stickyCta">
         <!-- TODO: Replace # with actual App Store URL -->
         <a href="https://apps.apple.com/us/app/lupibu/id6758586869" class="btn btn-primary sticky-cta-btn" data-i18n="sticky.cta" target="_blank" rel="noopener">Download Lupibu</a>
-        <span class="sticky-cta-sub" data-i18n="sticky.sub">Free with 7-day Pro trial</span>
+        <span class="sticky-cta-sub" data-i18n="sticky.sub">7-day Pro trial</span>
     </div>
 
     <script src="i18n.js"></script>

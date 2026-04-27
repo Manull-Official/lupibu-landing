@@ -8,52 +8,34 @@ const translations = {
         'nav.download': 'Download',
 
         // Hero
-        'hero.title': 'The calmest way<br>to raise a small human',
-        'hero.subtitle': 'Lupibu learns your baby’s rhythm, predicts the next nap, and turns every day into something you can actually read.',
-        'hero.stat1Value': '12',
-        'hero.stat1Label': 'One-tap entry types',
-        'hero.stat2Value': '~15 min',
-        'hero.stat2Label': 'Heads-up before the next nap',
-        'hero.stat3Value': '24/7',
-        'hero.stat3Label': 'AI trained on your logs',
-        'hero.trust': 'Fewer guesses. Less second-guessing. Calmer days and nights.',
-        'hero.tapHint': 'Tap to toggle screen',
+        'hero.title': 'Stop guessing when your baby is overtired.',
+        'hero.subtitle': 'A quiet notification before nap time.',
 
-        // Tracking + History
-        'tracking.label': 'The whole picture',
-        'tracking.title': 'Every feed, nap, and tiny moment — in one place.',
-        'tracking.desc': 'Twelve entry types, from diapers to doctor visits, logged in a single tap. Your whole day becomes a timeline you can scroll, search, and share with your partner or pediatrician.',
+        // Testimonials (real App Store reviews)
+        'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 on the App Store',
+        'testimonials.source': 'App Store',
+        'testimonials.t1.text': '"I use Lupibu every day to track sleep, feedings, and my baby\'s routine. The app is easy to use, with a clean design and helpful reminders. It really helps bring more structure and calm into daily parenting."',
+        'testimonials.t1.author': 'Асиманариманова',
+        'testimonials.t2.text': '"Lupibu makes tracking my baby\'s routine so much easier. The sleep insights and reminders are especially helpful. Clean design and very intuitive to use."',
+        'testimonials.t2.author': '-Айгулечка-',
+        'testimonials.t3.text': '"Intuitive and convenient app. It really helped me clear my head. Special thanks for the AI assistant — it\'s a real lifesaver."',
+        'testimonials.t3.author': 'kavinskyyn',
 
-        // AI Assistant
-        'ai.label': 'An assistant that actually knows your baby',
-        'ai.title': 'Ask a real question. Get a real answer.',
-        'ai.desc': '“Why was today rough?” “Is she eating enough?” Lupibu answers from your own logs, not the internet. Voice logging in English, Russian, and Kazakh — hands-free, about five seconds per entry.',
 
-        // Sleep Intelligence
-        'sleep.label': 'Sleep, made predictable',
-        'sleep.title': 'Know when the next nap is coming.',
-        'sleep.desc': 'Lupibu studies your baby’s wake windows and flags the drowsy moment before it arrives. Weekly analytics show what’s working, so you spend less of the day guessing.',
 
-        // Family
-        'family.label': 'Built for real family life',
-        'family.title': 'Designed around the way you actually live.',
-        'family.desc': 'Multiple children, shared access with your partner, iOS widget, timers, dark mode, and a quiet photo diary of the early days. Everything a parent needs, nothing they don’t.',
+        // QR code hint (under desktop QR)
+        'qr.hint': 'Hover to enlarge',
 
-        // Download CTA
-        'download.title': 'Calmer nights start tonight.',
-        'download.desc': 'Free to download. Seven days of Pro on the house.',
+        // Pre-footer slogan
+        'slogan.tagline': 'Less guessing. More peaceful days and nights.',
 
         // Sticky CTA
         'sticky.cta': 'Download Lupibu',
-        'sticky.sub': 'Free · 7-day Pro trial',
+        'sticky.sub': '7-day Pro trial',
 
         // Footer
-        'footer.tagline': 'Knows your baby’s next nap before you do.',
-        'footer.product': 'Product',
-        'footer.product.features': 'Features',
         'footer.product.download': 'Download',
         'footer.product.help': 'Help Center',
-        'footer.legal': 'Legal',
         'footer.legal.privacy': 'Privacy Policy',
         'footer.legal.terms': 'Terms of Use',
         'footer.legal.disclaimer': 'Medical Disclaimer',
@@ -61,8 +43,8 @@ const translations = {
         'footer.copyright': '© 2026 Lupibu. All rights reserved.',
 
         // Meta
-        'meta.description': 'Lupibu is the baby sleep tracker that learns your child’s rhythm, predicts the next nap, and answers your questions from your own logs. Free to try.',
-        'meta.title': 'Lupibu — The Baby Sleep Tracker That Predicts Naps'
+        'meta.description': 'An AI baby tracker that learns your baby’s rhythm. Stop guessing wake windows — a quiet notification before nap time. 7 days of Pro free.',
+        'meta.title': 'Lupibu — The Calm Baby Tracker'
     },
 
     // ============================================
@@ -71,53 +53,37 @@ const translations = {
     ru: {
         'nav.download': 'Скачать',
 
-        'hero.title': 'Самый спокойный способ<br>растить малыша',
-        'hero.subtitle': 'Lupibu изучает ритм малыша и предсказывает следующий сон.',
-        'hero.stat1Value': '12',
-        'hero.stat1Label': 'Записей одним касанием',
-        'hero.stat2Value': '~15 мин',
-        'hero.stat2Label': 'До следующего сна',
-        'hero.stat3Value': '24/7',
-        'hero.stat3Label': 'ИИ-ассистент по Вашим данным',
-        'hero.trust': 'Меньше догадок. Спокойнее дни и ночи.',
-        'hero.tapHint': 'Нажмите на экран',
+        'hero.title': 'Сон малыша — без догадок.',
+        'hero.subtitle': 'Подскажем, когда пора в кроватку.',
 
-        'tracking.label': 'Весь день в одном месте',
-        'tracking.title': 'Кормления, сны и всё остальное — в одной ленте.',
-        'tracking.desc': '12 типов записей — от подгузников до визитов к врачу. Добавляются одним касанием. Легко показать партнёру или педиатру.',
+        'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 в App Store',
+        'testimonials.source': 'App Store',
+        'testimonials.t1.text': '«Пользуюсь Lupibu каждый день — записываю сон, кормления и распорядок малыша. Простое приложение, аккуратный дизайн, удобные напоминания. С ним повседневная жизнь с ребёнком стала спокойнее и понятнее.»',
+        'testimonials.t1.author': 'Асиманариманова',
+        'testimonials.t2.text': '«С Lupibu вести режим малыша намного проще. Особенно нравятся разборы сна и напоминания. Аккуратно сделано, всё интуитивно понятно.»',
+        'testimonials.t2.author': '-Айгулечка-',
+        'testimonials.t3.text': '«Интуитивно понятное и удобное приложение. Очень помогло разгрузить голову. Отдельное спасибо за ИИ-ассистента — выручает очень.»',
+        'testimonials.t3.author': 'kavinskyyn',
 
-        'ai.label': 'Ассистент, который знает Вашего малыша',
-        'ai.title': 'Спросите — получите ответ по Вашим данным.',
-        'ai.desc': 'Lupibu отвечает по Вашим записям, а не по поисковику. Голосовой ввод на русском, казахском и английском — около 5 секунд на запись.',
 
-        'sleep.label': 'Предсказуемый сон',
-        'sleep.title': 'Узнавайте о следующем сне заранее.',
-        'sleep.desc': 'Lupibu изучает окна бодрствования и предсказывает следующий сон. Недельная аналитика показывает, что работает.',
 
-        'family.label': 'Для реальной семьи',
-        'family.title': 'Работает так, как живёт Ваша семья.',
-        'family.desc': 'Несколько детей, общий доступ с партнёром, виджет для iOS, таймеры, тёмная тема и фотодневник.',
+        'qr.hint': 'Наведите для увеличения',
 
-        'download.title': 'Спокойные ночи — уже сегодня.',
-        'download.desc': 'Бесплатно. 7 дней Pro в подарок.',
+        'slogan.tagline': 'Меньше догадок. Спокойнее дни и ночи.',
 
         'sticky.cta': 'Скачать Lupibu',
-        'sticky.sub': 'Бесплатно · 7 дней Pro',
+        'sticky.sub': 'Пробный Pro на 7 дней',
 
-        'footer.tagline': 'Предсказывает следующий сон малыша.',
-        'footer.product': 'Продукт',
-        'footer.product.features': 'Возможности',
         'footer.product.download': 'Скачать',
         'footer.product.help': 'Справочный центр',
-        'footer.legal': 'Документы',
         'footer.legal.privacy': 'Политика конфиденциальности',
         'footer.legal.terms': 'Условия использования',
         'footer.legal.disclaimer': 'Медицинская оговорка',
         'footer.legal.dataConsent': 'Согласие на обработку данных',
         'footer.copyright': '© 2026 Lupibu. Все права защищены.',
 
-        'meta.description': 'Lupibu — трекер сна малыша с ИИ-ассистентом. Изучает ритм ребёнка, предсказывает следующий сон и отвечает на вопросы по Вашим данным. Бесплатно.',
-        'meta.title': 'Lupibu — трекер сна малыша с предсказанием снов'
+        'meta.description': 'ИИ-трекер малыша, который изучает ритм вашего ребёнка. Перестаньте угадывать окна бодрствования — тихое уведомление перед сном. 7 дней Pro бесплатно.',
+        'meta.title': 'Lupibu — спокойный трекер малыша'
     },
 
     // ============================================
@@ -126,53 +92,37 @@ const translations = {
     kk: {
         'nav.download': 'Жүктеп алу',
 
-        'hero.title': 'Алғашқы жылдарды<br>жайлы өткізудің жолы',
-        'hero.subtitle': 'Lupibu сәбиіңіздің ырғағын үйреніп, келесі ұйқыны алдын ала ескертеді және күніңізді түсінікті тарихқа айналдырады.',
-        'hero.stat1Value': '12',
-        'hero.stat1Label': 'Бір тиюмен жазба түрі',
-        'hero.stat2Value': '~15 мин',
-        'hero.stat2Label': 'Келесі ұйқыға дейінгі ескерту',
-        'hero.stat3Value': '24/7',
-        'hero.stat3Label': 'Жазбаларыңызбен жұмыс істейтін AI',
-        'hero.trust': 'Болжам азаяды, уайым басылады, күндер мен түндер жайлы болады.',
-        'hero.tapHint': 'Экранды басыңыз',
+        'hero.title': 'Сәби ұйқысы — болжамсыз.',
+        'hero.subtitle': 'Уақыты келгенде ескертеміз.',
 
-        'tracking.label': 'Толық көрініс',
-        'tracking.title': 'Әр тамақтану, әр ұйқы, әр сәт — бір лентада.',
-        'tracking.desc': 'Жөргектен дәрігерге дейін — жазбаның он екі түрі бір тиюмен қосылады. Күніңіз жолсеріктей қарап шығуға, іздеуге және жұбайыңызбен не педиатрмен бөлісуге ыңғайлы тарихқа айналады.',
+        'testimonials.label': '⭐⭐⭐⭐⭐ App Store-да 5.0',
+        'testimonials.source': 'App Store',
+        'testimonials.t1.text': '«Lupibu-ді күн сайын пайдаланамын — сәбидің ұйқысын, тамағын, күн тәртібін жазып отырамын. Қосымша қарапайым, дизайны таза, ескертулері ыңғайлы. Сәбимен өткен күндер реттелген әрі тыныш бола түсті.»',
+        'testimonials.t1.author': 'Асиманариманова',
+        'testimonials.t2.text': '«Lupibu арқылы сәбидің күн тәртібін жүргізу әлдеқайда жеңілдеді. Әсіресе ұйқы туралы талдаулар мен ескертулер пайдалы. Дизайны таза, бәрі ыңғайлы.»',
+        'testimonials.t2.author': '-Айгулечка-',
+        'testimonials.t3.text': '«Интуитивті әрі ыңғайлы қосымша. Басымды босатуға көп көмектесті. AI-көмекшіге бөлек рахмет — шынымен құтқарады.»',
+        'testimonials.t3.author': 'kavinskyyn',
 
-        'ai.label': 'Сіздің сәбиіңізді білетін ассистент',
-        'ai.title': 'Қарапайым сұрақ қойыңыз — нақты жауап алыңыз.',
-        'ai.desc': '«Бүгін неге қиын болды?», «Тамағы жеткілікті ме?» — Lupibu жауабын іздеу жүйесінен емес, Сіздің өз жазбаларыңыздан табады. Қазақша, орысша және ағылшынша дауыспен жазу — қолыңыз бос, шамамен бес секундта.',
 
-        'sleep.label': 'Ұйқы енді күтпеген жаңалық емес',
-        'sleep.title': 'Келесі ұйқы қашан келетінін алдын ала біліңіз.',
-        'sleep.desc': 'Lupibu сәбиіңіздің ояу уақыт терезелерін бақылап, ұйқы таяғанын алдын ала ескертеді. Апталық талдау не тиімді жұмыс істеп жатқанын анық көрсетеді.',
 
-        'family.label': 'Нағыз отбасы өміріне арналған',
-        'family.title': 'Сіздің ырғағыңызға икемделеді — керісінше емес.',
-        'family.desc': 'Бірнеше бала, жұбайыңызбен ортақ кіру, iOS виджеті, таймерлер, қараңғы тақырып және алғашқы айлардың тыныш фотокүнделігі. Ата-анаға қажеттінің бәрі, артығы жоқ.',
+        'qr.hint': 'Үлкейту үшін меңзеңіз',
 
-        'download.title': 'Тыныш түндер бүгіннен басталады.',
-        'download.desc': 'Жүктеу тегін. Pro-ның алғашқы жеті күні — сыйға.',
+        'slogan.tagline': 'Болжам аз. Тыныш күн мен түн көп.',
 
         'sticky.cta': 'Lupibu-ді жүктеп алу',
-        'sticky.sub': 'Тегін · 7 күн Pro',
+        'sticky.sub': '7 күндік Pro сынағы',
 
-        'footer.tagline': 'Сәбиіңіздің келесі ұйқысын Сізден бұрын біледі.',
-        'footer.product': 'Өнім',
-        'footer.product.features': 'Мүмкіндіктер',
         'footer.product.download': 'Жүктеп алу',
         'footer.product.help': 'Анықтама орталығы',
-        'footer.legal': 'Құжаттар',
         'footer.legal.privacy': 'Құпиялылық саясаты',
         'footer.legal.terms': 'Қолдану шарттары',
         'footer.legal.disclaimer': 'Медициналық ескертпе',
         'footer.legal.dataConsent': 'Деректерді өңдеуге келісім',
         'footer.copyright': '© 2026 Lupibu. Барлық құқықтар қорғалған.',
 
-        'meta.description': 'Lupibu — AI-ассистенті бар сәби ұйқысының трекері. Сәбиіңіздің ырғағын үйренеді, келесі ұйқыны болжайды және сұрақтарыңызға Сіздің деректеріңіз бойынша жауап береді. Тегін көріп көріңіз.',
-        'meta.title': 'Lupibu — сәби ұйқысын болжайтын трекер'
+        'meta.description': 'Сәбиіңіздің ырғағын үйренетін ЖИ-трекер. Ояну терезелерін болжауды доғарыңыз — ұйықтар алдындағы тыныш ескерту. Pro-ның 7 күні тегін.',
+        'meta.title': 'Lupibu — тыныш сәби трекері'
     }
 };
 
@@ -186,9 +136,12 @@ const langLabels = {
 };
 
 /**
- * Detect the best language: localStorage > navigator.language > default
+ * Detect the best language: ?lang= URL param > localStorage > navigator.language > default
  */
 function detectLanguage() {
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    if (urlLang && SUPPORTED_LANGS.includes(urlLang)) return urlLang;
+
     const saved = localStorage.getItem('lupibu-lang');
     if (saved && SUPPORTED_LANGS.includes(saved)) return saved;
 
@@ -198,6 +151,16 @@ function detectLanguage() {
     if (browserLang.startsWith('kk') || browserLang.startsWith('kz')) return 'kk';
 
     return DEFAULT_LANG;
+}
+
+/**
+ * Update <link rel="canonical"> to the current-lang URL so Google indexes it correctly.
+ */
+function updateCanonical(lang) {
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) return;
+    const base = window.location.origin + window.location.pathname;
+    canonical.href = lang === DEFAULT_LANG ? base : base + '?lang=' + lang;
 }
 
 /**
@@ -242,6 +205,7 @@ function applyTranslations(lang) {
     if (dict['meta.title']) {
         document.title = dict['meta.title'];
     }
+    updateCanonical(lang);
 }
 
 /**
@@ -251,6 +215,12 @@ function setLanguage(lang) {
     if (!SUPPORTED_LANGS.includes(lang)) lang = DEFAULT_LANG;
     localStorage.setItem('lupibu-lang', lang);
     applyTranslations(lang);
+
+    // Reflect chosen language in the URL so Google sees a distinct URL per locale.
+    const url = new URL(window.location.href);
+    if (lang === DEFAULT_LANG) url.searchParams.delete('lang');
+    else url.searchParams.set('lang', lang);
+    window.history.replaceState({}, '', url.toString());
 
     const currentBtn = document.querySelector('.lang-current');
     if (currentBtn) currentBtn.textContent = langLabels[lang];
