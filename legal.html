@@ -4,6 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lupibu legal documents — Privacy Policy, Terms of Use, Medical Disclaimer, and Data Consent.">
+    <meta name="theme-color" content="#FA7C50">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+
+    <meta property="og:title" content="Lupibu — Legal">
+    <meta property="og:description" content="Privacy Policy, Terms of Use, Medical Disclaimer, and Data Consent for Lupibu.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lupibu.com/legal.html">
+    <meta property="og:site_name" content="Lupibu">
+    <meta property="og:image" content="https://lupibu.com/assets/logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lupibu — Legal">
+    <meta name="twitter:description" content="Privacy Policy, Terms of Use, Medical Disclaimer, and Data Consent for Lupibu.">
+    <meta name="twitter:image" content="https://lupibu.com/assets/logo.png">
+
+    <link rel="canonical" href="https://lupibu.com/legal.html">
+    <link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html">
+    <link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?lang=ru">
+    <link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?lang=kk">
+    <link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html">
+
     <title>Lupibu — Legal</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -216,6 +238,29 @@
         data_consent: { en: 'Data Consent', ru: 'Согласие на обработку данных', kk: 'Деректерді өңдеуге келісім' }
     };
 
+    var docDescriptions = {
+        privacy: {
+            en: 'How Lupibu collects, stores, and protects your baby tracking data — and your rights.',
+            ru: 'Как Lupibu собирает, хранит и защищает данные о вашем малыше — и ваши права.',
+            kk: 'Lupibu сәбиіңіз туралы деректерді қалай жинайды, сақтайды және қорғайды — және сіздің құқықтарыңыз.'
+        },
+        terms: {
+            en: 'The terms governing your use of the Lupibu app and services.',
+            ru: 'Условия использования приложения и сервисов Lupibu.',
+            kk: 'Lupibu қосымшасы мен қызметтерін пайдалану шарттары.'
+        },
+        disclaimer: {
+            en: 'Lupibu is a tracking tool, not medical advice. Read the disclaimer.',
+            ru: 'Lupibu — инструмент для ведения дневника, а не медицинский совет. Прочтите оговорку.',
+            kk: 'Lupibu — күнделік құралы, медициналық кеңес емес. Ескертпені оқыңыз.'
+        },
+        data_consent: {
+            en: 'How we ask for and process consent for your baby tracking data.',
+            ru: 'Как мы запрашиваем согласие и обрабатываем данные о вашем малыше.',
+            kk: 'Сәбиіңіз туралы деректерге келісімді қалай сұраймыз және өңдейміз.'
+        }
+    };
+
     var backLabels = { en: 'Back', ru: 'Назад', kk: 'Артқа' };
     var langLabels = { en: 'EN', ru: 'RU', kk: 'KZ' };
 
@@ -332,6 +377,39 @@
     var VALID_DOCS = ['privacy', 'terms', 'disclaimer', 'data_consent'];
     var VALID_LANGS = ['en', 'ru', 'kk'];
 
+    function setMeta(name, content) {
+        if (!content) return;
+        var el = document.querySelector('meta[name="' + name + '"]');
+        if (!el) {
+            el = document.createElement('meta');
+            el.setAttribute('name', name);
+            document.head.appendChild(el);
+        }
+        el.setAttribute('content', content);
+    }
+
+    // Each (doc, lang) pair is a distinct page — canonical points to itself, hreflang
+    // alternates point to the same doc in the other two languages.
+    function updateSeoLinks(lang, doc) {
+        var base = window.location.origin + '/legal.html';
+        function urlFor(l) {
+            var qs = new URLSearchParams();
+            // privacy is the default doc — drop the param so canonical URLs are stable
+            if (doc && doc !== 'privacy') qs.set('doc', doc);
+            if (l !== 'en') qs.set('lang', l);
+            var s = qs.toString();
+            return base + (s ? '?' + s : '');
+        }
+        var canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.href = urlFor(lang);
+        VALID_LANGS.forEach(function (l) {
+            var link = document.querySelector('link[rel="alternate"][hreflang="' + l + '"]');
+            if (link) link.href = urlFor(l);
+        });
+        var xd = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+        if (xd) xd.href = urlFor('en');
+    }
+
     function getDoc() {
         var d = new URLSearchParams(window.location.search).get('doc') || 'privacy';
         return VALID_DOCS.indexOf(d) !== -1 ? d : 'privacy';
@@ -357,6 +435,8 @@
         '</div>';
 
         document.title = 'Lupibu — ' + title;
+        setMeta('description', (docDescriptions[d] && docDescriptions[d][l]) || '');
+        updateSeoLinks(l, d);
 
         var key = d + '_' + l;
         if (docs && docs[key]) {

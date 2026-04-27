@@ -4,6 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lupibu Help Center — quick, honest answers about setup, sleep predictions, voice logging, and the AI assistant.">
+    <meta name="theme-color" content="#FA7C50">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="googlebot" content="index,follow,max-image-preview:large">
+
+    <meta property="og:title" content="Lupibu Help Center">
+    <meta property="og:description" content="Quick, honest answers — from setup to sleep predictions and the AI assistant.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lupibu.com/help.html">
+    <meta property="og:site_name" content="Lupibu">
+    <meta property="og:image" content="https://lupibu.com/assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lupibu Help Center">
+    <meta name="twitter:description" content="Quick, honest answers — from setup to sleep predictions and the AI assistant.">
+    <meta name="twitter:image" content="https://lupibu.com/assets/logo.png">
+
+    <link rel="canonical" href="https://lupibu.com/help.html">
+    <link rel="alternate" hreflang="en" href="https://lupibu.com/help.html">
+    <link rel="alternate" hreflang="ru" href="https://lupibu.com/help.html?lang=ru">
+    <link rel="alternate" hreflang="kk" href="https://lupibu.com/help.html?lang=kk">
+    <link rel="alternate" hreflang="x-default" href="https://lupibu.com/help.html">
+
     <title>Lupibu — Help Center</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,6 +96,8 @@
     // UI strings (small enough to keep inline rather than adding to i18n.js)
     var UI = {
         en: {
+            metaTitle: 'Lupibu Help Center — answers about sleep, AI, and setup',
+            metaDesc: 'Lupibu Help Center — quick, honest answers about setup, sleep predictions, voice logging, and the AI assistant.',
             title: 'Help Center',
             lead: 'Short, honest answers — from setup to sleep predictions and the AI assistant.',
             searchPlaceholder: 'Search — timers, Apple, sleep, AI…',
@@ -98,6 +122,8 @@
             langLabel: 'EN'
         },
         ru: {
+            metaTitle: 'Справочный центр Lupibu — ответы про сон, ИИ и настройку',
+            metaDesc: 'Справочный центр Lupibu — короткие, честные ответы про настройку, прогнозы сна, голосовые записи и ИИ-ассистента.',
             title: 'Справочный центр',
             lead: 'Короткие, честные ответы — от первого запуска до прогнозов сна и ИИ-ассистента.',
             searchPlaceholder: 'Поиск — таймер, Apple, сон, ИИ…',
@@ -122,6 +148,8 @@
             langLabel: 'RU'
         },
         kk: {
+            metaTitle: 'Lupibu анықтама орталығы — ұйқы, AI және баптау туралы',
+            metaDesc: 'Lupibu анықтама орталығы — баптау, ұйқы болжамдары, дауыстық жазу және AI-ассистент туралы қысқа әрі шынайы жауаптар.',
             title: 'Анықтама орталығы',
             lead: 'Қысқа, шынайы жауаптар — алғашқы іске қосудан ұйқы болжамдары мен AI-ассистентке дейін.',
             searchPlaceholder: 'Іздеу — таймер, Apple, ұйқы, AI…',
@@ -483,6 +511,7 @@
         }).join('');
 
         document.title = 'Lupibu — ' + art.title;
+        if (art.tldr) setMeta('description', art.tldr);
 
         var articleMain = '' +
             renderMobileMenuButton(lang) +
@@ -539,7 +568,8 @@
         document.documentElement.lang = lang;
 
         // Default title (overridden by article view)
-        document.title = 'Lupibu — ' + UI[lang].title;
+        document.title = UI[lang].metaTitle || ('Lupibu — ' + UI[lang].title);
+        setMeta('description', UI[lang].metaDesc);
 
         // Two routes only: home and article. Categories are just grouping labels in the sidebar.
         // Legacy `?category=...` URLs fall through to home — sidebar exposes every article anyway.
@@ -552,9 +582,43 @@
         wireSearch('helpSidebarSearchInput', 'helpSidebarSearchResults', lang);
 
         wireMobileDrawer();
+        updateSeoLinks(lang);
 
         // Smooth in-page navigation — keep hash for anchors, drop scroll jump
         window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+
+    function setMeta(name, content) {
+        if (!content) return;
+        var el = document.querySelector('meta[name="' + name + '"]');
+        if (!el) {
+            el = document.createElement('meta');
+            el.setAttribute('name', name);
+            document.head.appendChild(el);
+        }
+        el.setAttribute('content', content);
+    }
+
+    // Each (article, lang) pair is a distinct page. Canonical points to itself; hreflang
+    // alternates point to the same article in the other two languages.
+    function updateSeoLinks(lang) {
+        var base = window.location.origin + '/help.html';
+        var article = new URLSearchParams(window.location.search).get('article');
+        function urlFor(l) {
+            var qs = new URLSearchParams();
+            if (article) qs.set('article', article);
+            if (l !== 'en') qs.set('lang', l);
+            var s = qs.toString();
+            return base + (s ? '?' + s : '');
+        }
+        var canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.href = urlFor(lang);
+        VALID_LANGS.forEach(function (l) {
+            var link = document.querySelector('link[rel="alternate"][hreflang="' + l + '"]');
+            if (link) link.href = urlFor(l);
+        });
+        var xd = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+        if (xd) xd.href = urlFor('en');
     }
 
     /* ------------------------------------------------------------

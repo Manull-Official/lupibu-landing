@@ -44,7 +44,7 @@ const translations = {
 
         // Meta
         'meta.description': 'An AI baby tracker that learns your baby’s rhythm. Stop guessing wake windows — a quiet notification before nap time. 7 days of Pro free.',
-        'meta.title': 'Lupibu — The Calm Baby Tracker'
+        'meta.title': 'Lupibu — AI baby tracker that predicts your next nap'
     },
 
     // ============================================
@@ -83,7 +83,7 @@ const translations = {
         'footer.copyright': '© 2026 Lupibu. Все права защищены.',
 
         'meta.description': 'ИИ-трекер малыша, который изучает ритм вашего ребёнка. Перестаньте угадывать окна бодрствования — тихое уведомление перед сном. 7 дней Pro бесплатно.',
-        'meta.title': 'Lupibu — спокойный трекер малыша'
+        'meta.title': 'Lupibu — ИИ-трекер малыша: подскажет, когда пора спать'
     },
 
     // ============================================
@@ -122,7 +122,7 @@ const translations = {
         'footer.copyright': '© 2026 Lupibu. Барлық құқықтар қорғалған.',
 
         'meta.description': 'Сәбиіңіздің ырғағын үйренетін ЖИ-трекер. Ояну терезелерін болжауды доғарыңыз — ұйықтар алдындағы тыныш ескерту. Pro-ның 7 күні тегін.',
-        'meta.title': 'Lupibu — тыныш сәби трекері'
+        'meta.title': 'Lupibu — сәбидің ұйқысын болжайтын ЖИ-трекер'
     }
 };
 

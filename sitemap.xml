@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Landing -->
+  <url>
+    <loc>https://lupibu.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/?lang=ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/?lang=kk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Help Center -->
+  <url>
+    <loc>https://lupibu.com/help.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help.html?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help.html?lang=ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help.html?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help.html?lang=kk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help.html?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal — Privacy Policy (default doc) -->
+  <url>
+    <loc>https://lupibu.com/legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/legal.html?lang=ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/legal.html?lang=kk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Legal — Terms of Use -->
+  <url>
+    <loc>https://lupibu.com/legal.html?doc=terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html?doc=terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?doc=terms&amp;lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?doc=terms&amp;lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html?doc=terms"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/legal.html?doc=terms&amp;lang=ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html?doc=terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?doc=terms&amp;lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?doc=terms&amp;lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html?doc=terms"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/legal.html?doc=terms&amp;lang=kk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html?doc=terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?doc=terms&amp;lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?doc=terms&amp;lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html?doc=terms"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Legal — Medical Disclaimer -->
+  <url>
+    <loc>https://lupibu.com/legal.html?doc=disclaimer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html?doc=disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?doc=disclaimer&amp;lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?doc=disclaimer&amp;lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html?doc=disclaimer"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/legal.html?doc=disclaimer&amp;lang=ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html?doc=disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?doc=disclaimer&amp;lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?doc=disclaimer&amp;lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html?doc=disclaimer"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/legal.html?doc=disclaimer&amp;lang=kk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html?doc=disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?doc=disclaimer&amp;lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?doc=disclaimer&amp;lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html?doc=disclaimer"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Legal — Data Consent -->
+  <url>
+    <loc>https://lupibu.com/legal.html?doc=data_consent</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html?doc=data_consent"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?doc=data_consent&amp;lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?doc=data_consent&amp;lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html?doc=data_consent"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/legal.html?doc=data_consent&amp;lang=ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html?doc=data_consent"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?doc=data_consent&amp;lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?doc=data_consent&amp;lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html?doc=data_consent"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/legal.html?doc=data_consent&amp;lang=kk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/legal.html?doc=data_consent"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/legal.html?doc=data_consent&amp;lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/legal.html?doc=data_consent&amp;lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/legal.html?doc=data_consent"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
