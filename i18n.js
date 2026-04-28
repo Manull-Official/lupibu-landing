@@ -44,7 +44,19 @@ const translations = {
 
         // Meta
         'meta.description': 'An AI baby tracker that learns your baby’s rhythm. Stop guessing wake windows — a quiet notification before nap time. 7 days of Pro free.',
-        'meta.title': 'Lupibu — AI baby tracker that predicts your next nap'
+        'meta.title': 'Lupibu — AI baby tracker that predicts your next nap',
+
+        // Referral / 404 page
+        'referral.badge': 'Special invite',
+        'referral.titlePrefix': 'A gift from',
+        'referral.titleFallback': 'You’ve got an invite',
+        'referral.subtitle': 'Download Lupibu and your invite code applies automatically.',
+        'referral.codeLabel': 'Code:',
+        'referral.trust': '7-day Pro trial · No credit card',
+        'referral.copied': 'Copied',
+        'notfound.title': 'Page not found',
+        'notfound.text': 'The page you’re looking for doesn’t exist. Let’s get you home.',
+        'notfound.home': 'Back to Lupibu'
     },
 
     // ============================================
@@ -83,7 +95,19 @@ const translations = {
         'footer.copyright': '© 2026 Lupibu. Все права защищены.',
 
         'meta.description': 'ИИ-трекер малыша, который изучает ритм вашего ребёнка. Перестаньте угадывать окна бодрствования — тихое уведомление перед сном. 7 дней Pro бесплатно.',
-        'meta.title': 'Lupibu — ИИ-трекер малыша: подскажет, когда пора спать'
+        'meta.title': 'Lupibu — ИИ-трекер малыша: подскажет, когда пора спать',
+
+        // Referral / 404 page
+        'referral.badge': 'Личное приглашение',
+        'referral.titlePrefix': 'Подарок от',
+        'referral.titleFallback': 'У вас приглашение в Lupibu',
+        'referral.subtitle': 'Скачайте Lupibu — промокод применится автоматически.',
+        'referral.codeLabel': 'Промокод:',
+        'referral.trust': 'Pro на 7 дней · Без карты',
+        'referral.copied': 'Скопировано',
+        'notfound.title': 'Страница не найдена',
+        'notfound.text': 'Такой страницы не существует. Вернёмся на главную.',
+        'notfound.home': 'На главную Lupibu'
     },
 
     // ============================================
@@ -122,7 +146,19 @@ const translations = {
         'footer.copyright': '© 2026 Lupibu. Барлық құқықтар қорғалған.',
 
         'meta.description': 'Сәбиіңіздің ырғағын үйренетін ЖИ-трекер. Ояну терезелерін болжауды доғарыңыз — ұйықтар алдындағы тыныш ескерту. Pro-ның 7 күні тегін.',
-        'meta.title': 'Lupibu — сәбидің ұйқысын болжайтын ЖИ-трекер'
+        'meta.title': 'Lupibu — сәбидің ұйқысын болжайтын ЖИ-трекер',
+
+        // Referral / 404 page
+        'referral.badge': 'Жеке шақыру',
+        'referral.titlePrefix': 'Сыйлық —',
+        'referral.titleFallback': 'Сізге Lupibu-ға шақыру келді',
+        'referral.subtitle': 'Lupibu-ны жүктеп алыңыз — промокод автоматты түрде қолданылады.',
+        'referral.codeLabel': 'Промокод:',
+        'referral.trust': '7 күндік Pro · Картасыз',
+        'referral.copied': 'Көшірілді',
+        'notfound.title': 'Бет табылмады',
+        'notfound.text': 'Мұндай бет жоқ. Басты бетке оралайық.',
+        'notfound.home': 'Lupibu басты бетіне'
     }
 };
 

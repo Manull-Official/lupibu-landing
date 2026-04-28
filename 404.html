@@ -19,17 +19,22 @@
     <style>
         /* ───────── 404 / Referral page-only styles ───────── */
 
-        .page-404 {
+        /* HTML `hidden` attribute is overridden by `display: flex/grid` in
+           sibling rules — make sure it always wins. */
+        [hidden] { display: none !important; }
+
+        body.page-404 {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        main.r-main {
+        body.page-404 main.r-main {
             flex: 1;
             display: flex;
             align-items: center;
-            padding: calc(64px + var(--space-xl)) 0 var(--space-2xl);
+            justify-content: center;
+            padding: calc(72px + var(--space-2xl)) 0 var(--space-2xl);
             background: linear-gradient(180deg, var(--brand-bg) 0%, var(--white) 100%);
         }
 
@@ -70,7 +75,6 @@
 
         .r-partner {
             color: var(--brand);
-            white-space: nowrap;
         }
 
         .r-subtitle {
@@ -217,36 +221,67 @@
 </head>
 
 <body class="page-404">
-    <!-- Navigation (matches main site, simplified) -->
+    <!-- Navigation — 1:1 copy from index.html so chrome stays consistent -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="logo">
                 <img src="/assets/logo-inline-primary.svg" alt="Lupibu" class="logo-img">
             </a>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <button class="lang-toggle" aria-label="Change language">
+                        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                        <span class="lang-current">EN</span>
+                        <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en">
+                            <span class="lang-option-code">EN</span>
+                            <span class="lang-option-name">English</span>
+                        </button>
+                        <button class="lang-option" data-lang="ru">
+                            <span class="lang-option-code">RU</span>
+                            <span class="lang-option-name">Русский</span>
+                        </button>
+                        <button class="lang-option" data-lang="kk">
+                            <span class="lang-option-code">KZ</span>
+                            <span class="lang-option-name">Қазақша</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
     <main class="r-main" role="main">
         <div class="container">
-            <!-- Loading state — visible until JS resolves the path -->
+            <!-- Loading state — visible until JS resolves the path. -->
             <section id="r-loading" class="r-loading" aria-hidden="true">
                 <div class="r-spinner" role="status" aria-label="Loading"></div>
             </section>
 
-            <!-- Referral state (/r/<slug>) -->
+            <!-- Referral state (/r/<slug>). -->
             <section id="r-referral" class="r-card" hidden>
                 <div class="r-eyebrow">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                     </svg>
-                    <span data-r="badge">Special invite</span>
+                    <span data-i18n="referral.badge">Special invite</span>
                 </div>
                 <h1 class="r-title">
-                    <span data-r="titlePrefix">A gift from</span>
+                    <span data-i18n="referral.titlePrefix" id="r-title-prefix">A gift from</span>
                     <span class="r-partner" id="r-partner-name"></span>
                 </h1>
-                <p class="r-subtitle" data-r="subtitle">
+                <p class="r-subtitle" data-i18n="referral.subtitle">
                     Download Lupibu and your invite code applies automatically.
                 </p>
                 <div class="r-cta">
@@ -255,7 +290,7 @@
                         <img src="/assets/appstore-badge.svg" alt="Download on the App Store" class="appstore-img">
                     </button>
                     <div class="r-code-row" aria-live="polite">
-                        <span class="r-code-label" data-r="codeLabel">Code:</span>
+                        <span class="r-code-label" data-i18n="referral.codeLabel">Code:</span>
                         <span class="r-code-value" id="r-slug-value"></span>
                         <button type="button" class="r-copy-btn" id="r-copy-btn"
                             aria-label="Copy invite code">
@@ -266,132 +301,83 @@
                             </svg>
                         </button>
                     </div>
-                    <p class="r-trust" data-r="trust">7-day Pro trial · No credit card</p>
+                    <p class="r-trust" data-i18n="referral.trust">7-day Pro trial · No credit card</p>
                 </div>
             </section>
 
-            <!-- Plain 404 -->
+            <!-- Plain 404. -->
             <section id="r-notfound" class="nf-card" hidden>
                 <div class="nf-code">404</div>
-                <h1 class="nf-title" data-r="nfTitle">Page not found</h1>
-                <p class="nf-text" data-r="nfText">
+                <h1 class="nf-title" data-i18n="notfound.title">Page not found</h1>
+                <p class="nf-text" data-i18n="notfound.text">
                     The page you’re looking for doesn’t exist. Let’s get you home.
                 </p>
-                <a href="/" class="nf-link" data-r="nfHome">Back to Lupibu</a>
+                <a href="/" class="nf-link" data-i18n="notfound.home">Back to Lupibu</a>
             </section>
         </div>
     </main>
 
+    <!-- Footer — 1:1 copy from index.html (3-col: brand / icons / legal). -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <a href="/help.html" class="footer-help">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                        <path d="M12 17h.01"/>
-                    </svg>
-                    <span data-r="help">Help Center</span>
+        <div class="footer-top">
+            <img src="/assets/logo-inline-primary.svg" alt="Lupibu" class="footer-logo">
+            <div class="footer-icons">
+                <a href="mailto:contact@lupibu.com" class="social-link" aria-label="Email contact@lupibu.com">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+                <a href="https://www.instagram.com/lupibu.app" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://www.threads.net/@lupibu.app" target="_blank" rel="noopener" class="social-link" aria-label="Threads">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.59 12c.025 3.086.718 5.496 2.057 7.164 1.432 1.781 3.632 2.695 6.54 2.717 2.227-.033 4.093-.6 5.246-1.46a5.12 5.12 0 001.733-2.14c.39-.944.466-2.22-.14-3.263-.39-.672-1.072-1.2-2.028-1.573a8.66 8.66 0 01-.396 2.254c-.678 1.86-2.023 3.03-3.856 3.363a5.87 5.87 0 01-1.042.093c-1.282 0-2.47-.437-3.346-1.236-.98-.894-1.533-2.177-1.46-3.6.128-2.48 1.946-4.254 4.728-4.618a9.11 9.11 0 013.205.166c-.063-.658-.184-1.27-.373-1.821-.38-1.108-1.026-1.837-1.96-2.164a4.86 4.86 0 00-1.59-.222c-1.78.052-3.024.82-3.763 1.62l-1.415-1.37C7.4 4.14 9.182 3.12 11.558 3.058c.756-.014 1.478.07 2.15.273 1.372.42 2.383 1.4 2.943 2.868.32.84.527 1.786.612 2.833.67.224 1.263.506 1.774.847 1.31.872 2.146 2.142 2.42 3.672.315 1.762-.018 3.4-.962 4.742-.885 1.26-2.25 2.17-4.053 2.702-1.39.41-2.95.62-4.643.65-.436.004-.868-.007-1.285-.035a10.94 10.94 0 01-.328-.02zm.698-7.607c-1.824.232-2.86 1.175-2.925 2.44-.04.742.24 1.39.782 1.884.544.496 1.312.748 2.167.748.244 0 .497-.021.748-.066 1.187-.215 2.08-.97 2.523-2.156.26-.697.38-1.506.384-2.396a7.06 7.06 0 00-3.679-.454z"/></svg>
+                </a>
+                <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" class="social-link" aria-label="Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472z"/></svg>
                 </a>
             </div>
-            <p class="footer-copyright">&copy; 2026 Lupibu</p>
+            <nav class="footer-legal" aria-label="Legal">
+                <a href="legal.html?doc=privacy" class="footer-legal-link legal-link" data-doc="privacy" data-i18n="footer.legal.privacy">Privacy Policy</a>
+                <a href="legal.html?doc=terms" class="footer-legal-link legal-link" data-doc="terms" data-i18n="footer.legal.terms">Terms of Use</a>
+                <a href="legal.html?doc=disclaimer" class="footer-legal-link legal-link" data-doc="disclaimer" data-i18n="footer.legal.disclaimer">Medical Disclaimer</a>
+                <a href="legal.html?doc=data_consent" class="footer-legal-link legal-link" data-doc="data_consent" data-i18n="footer.legal.dataConsent">Data Consent</a>
+            </nav>
+        </div>
+        <div class="footer-content">
+            <a href="help.html" class="footer-help help-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                <span data-i18n="footer.product.help">Help Center</span>
+            </a>
+        </div>
+        <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 Lupibu. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Shared scripts: i18n.js drives the lang switcher + data-i18n
+         population, main.js wires nav-scroll/lang-dropdown chrome. The
+         page-specific /r/<slug> logic lives in the inline IIFE below. -->
+    <script src="/i18n.js"></script>
+    <script src="/main.js"></script>
     <script>
     (function () {
         'use strict';
 
         // ── Config ─────────────────────────────────────────────
-        // API base — production landing only ever runs on lupibu.com
-        // (CORS allowlist on the backend is exactly these origins).
+        // Production landing only ever runs on lupibu.com — the backend
+        // CORS allowlist is exactly that origin (and www).
         var API_BASE = 'https://api.lupibu.com/api/v1';
         var APPSTORE_URL = 'https://apps.apple.com/us/app/lupibu/id6758586869';
-        // Must match mobile/src/shared/lib/referral.ts:32.
+        // Must match mobile/src/shared/lib/referral.ts:39.
         var CLIPBOARD_SENTINEL = 'lupibu_ref:';
         // Must match backend referral_partners.slug grammar.
         var SLUG_RE = /^[a-z0-9_]{1,64}$/;
         var REFERRAL_PATH_RE = /^\/r\/([^\/?#]+)\/?$/;
 
-        // ── Translations (inline; this page is the only entry point) ─
-        var T = {
-            en: {
-                badge: 'Special invite',
-                titlePrefix: 'A gift from',
-                titleFallback: 'You’ve got an invite',
-                subtitle: 'Download Lupibu and your invite code applies automatically.',
-                codeLabel: 'Code:',
-                trust: '7-day Pro trial · No credit card',
-                nfTitle: 'Page not found',
-                nfText: 'The page you’re looking for doesn’t exist. Let’s get you home.',
-                nfHome: 'Back to Lupibu',
-                help: 'Help Center',
-                copied: 'Copied'
-            },
-            ru: {
-                badge: 'Личное приглашение',
-                titlePrefix: 'Подарок от',
-                titleFallback: 'У вас приглашение в Lupibu',
-                subtitle: 'Скачайте Lupibu — промокод применится автоматически.',
-                codeLabel: 'Промокод:',
-                trust: 'Pro на 7 дней · Без карты',
-                nfTitle: 'Страница не найдена',
-                nfText: 'Такой страницы не существует. Вернёмся на главную.',
-                nfHome: 'На главную Lupibu',
-                help: 'Справочный центр',
-                copied: 'Скопировано'
-            },
-            kk: {
-                badge: 'Жеке шақыру',
-                titlePrefix: 'Сыйлық ',
-                titleFallback: 'Сізге Lupibu-ға шақыру келді',
-                subtitle: 'Lupibu-ны жүктеп алыңыз — промокод автоматты түрде қолданылады.',
-                codeLabel: 'Промокод:',
-                trust: 'Pro 7 күн · Картасыз',
-                nfTitle: 'Бет табылмады',
-                nfText: 'Мұндай бет жоқ. Басты бетке оралайық.',
-                nfHome: 'Lupibu басты бетіне',
-                help: 'Көмек орталығы',
-                copied: 'Көшірілді'
-            }
-        };
-
-        // Resolve language: ?lang= > localStorage > navigator > 'en'.
-        // Mirrors i18n.js detection so a user’s pick on the main site
-        // carries over here.
-        function detectLang() {
-            var url = new URLSearchParams(location.search).get('lang');
-            if (url && T[url]) return url;
-            try {
-                var saved = localStorage.getItem('lupibu-lang');
-                if (saved && T[saved]) return saved;
-            } catch (_) { /* private mode etc. */ }
-            var nav = (navigator.language || '').toLowerCase();
-            if (nav.indexOf('ru') === 0) return 'ru';
-            if (nav.indexOf('kk') === 0 || nav.indexOf('kz') === 0) return 'kk';
-            return 'en';
-        }
-
-        function applyTranslations(lang) {
-            var dict = T[lang] || T.en;
-            document.documentElement.lang = lang;
-            document.querySelectorAll('[data-r]').forEach(function (el) {
-                var key = el.getAttribute('data-r');
-                if (dict[key] !== undefined) el.textContent = dict[key];
-            });
-        }
-
         function show(id) {
             ['r-loading', 'r-referral', 'r-notfound'].forEach(function (sectionId) {
                 var el = document.getElementById(sectionId);
                 if (!el) return;
-                if (sectionId === id) {
-                    el.hidden = false;
-                    el.removeAttribute('aria-hidden');
-                } else {
-                    el.hidden = true;
-                }
+                el.hidden = sectionId !== id;
             });
         }
 
@@ -405,8 +391,8 @@
         }
 
         // Validate against the backend. Returns { displayName } on success,
-        // null on 404, throws on network/CORS failure (caller falls back to
-        // the slug-only render path so the funnel still works).
+        // null on 404, throws on network / CORS failure (caller falls back
+        // to the slug-only render path so the funnel stays open).
         function validateSlug(slug) {
             return fetch(
                 API_BASE + '/referrals/validate?slug=' + encodeURIComponent(slug),
@@ -428,7 +414,6 @@
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 return navigator.clipboard.writeText(payload).catch(function () {});
             }
-            // Legacy fallback for older browsers.
             try {
                 var ta = document.createElement('textarea');
                 ta.value = payload;
@@ -442,15 +427,12 @@
             return Promise.resolve();
         }
 
-        function flashCopied(lang) {
+        function flashCopied() {
             var btn = document.getElementById('r-copy-btn');
             if (!btn) return;
             btn.classList.add('copied');
-            // Swap icon to a checkmark.
             var icon = document.getElementById('r-copy-icon');
-            if (icon) {
-                icon.innerHTML = '<polyline points="20 6 9 17 4 12"/>';
-            }
+            if (icon) icon.innerHTML = '<polyline points="20 6 9 17 4 12"/>';
             setTimeout(function () {
                 btn.classList.remove('copied');
                 if (icon) {
@@ -461,20 +443,23 @@
             }, 1800);
         }
 
-        function renderReferral(slug, displayName, lang) {
-            var dict = T[lang] || T.en;
+        function renderReferral(slug, displayName) {
             var nameEl = document.getElementById('r-partner-name');
-            var titlePrefixEl = document.querySelector('[data-r="titlePrefix"]');
+            var titlePrefixEl = document.getElementById('r-title-prefix');
 
             if (displayName) {
+                // Translation already populated titlePrefix via data-i18n.
                 nameEl.textContent = displayName;
-                titlePrefixEl.textContent = dict.titlePrefix;
             } else {
-                // API unreachable or partner lookup failed — keep the funnel
-                // open with a generic title; the slug still travels via the
-                // clipboard sentinel and the backend resolves it on signup.
+                // API unreachable or partner lookup failed — keep the
+                // funnel open with the localized fallback title; the slug
+                // still travels via the clipboard sentinel and the backend
+                // resolves it on signup.
+                var dict = (typeof translations !== 'undefined')
+                    ? (translations[document.documentElement.lang] || translations.en)
+                    : {};
                 titlePrefixEl.textContent = '';
-                nameEl.textContent = dict.titleFallback;
+                nameEl.textContent = dict['referral.titleFallback'] || 'You’ve got an invite';
             }
 
             document.getElementById('r-slug-value').textContent = slug;
@@ -483,8 +468,6 @@
             var appBtn = document.getElementById('r-appstore-btn');
             appBtn.addEventListener('click', function () {
                 copySentinel(slug).then(function () {
-                    // Open in a new tab on desktop; same tab on iOS so the
-                    // App Store handoff feels instant.
                     var isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
                     if (isiOS) {
                         location.href = APPSTORE_URL;
@@ -496,15 +479,15 @@
 
             var copyBtn = document.getElementById('r-copy-btn');
             copyBtn.addEventListener('click', function () {
-                copySentinel(slug).then(function () { flashCopied(lang); });
+                copySentinel(slug).then(flashCopied);
             });
         }
 
         // ── Boot ───────────────────────────────────────────────
+        // Run AFTER i18n.js has applied translations on DOMContentLoaded.
+        // Both this script and i18n.js attach DOMContentLoaded listeners;
+        // listener order = source order, so i18n.js fires first.
         document.addEventListener('DOMContentLoaded', function () {
-            var lang = detectLang();
-            applyTranslations(lang);
-
             var slug = parseSlugFromPath();
             if (!slug) {
                 show('r-notfound');
@@ -514,20 +497,20 @@
             validateSlug(slug)
                 .then(function (result) {
                     if (result === null) {
-                        // Slug grammar OK but partner doesn’t exist /
+                        // Slug grammar OK but partner doesn't exist or
                         // is inactive. Show the standard 404 — partners
-                        // get rotated and we don’t want stale links to
+                        // get rotated and we don't want stale links to
                         // pretend to work.
                         show('r-notfound');
                         return;
                     }
-                    renderReferral(slug, result.displayName, lang);
+                    renderReferral(slug, result.displayName);
                 })
                 .catch(function () {
                     // Network / CORS failure: keep the funnel open. The
                     // slug is preserved via clipboard, and the backend
                     // re-validates on /auth/login.
-                    renderReferral(slug, null, lang);
+                    renderReferral(slug, null);
                 });
         });
     })();
