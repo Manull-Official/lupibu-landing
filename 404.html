@@ -122,6 +122,16 @@
             margin: 0;
         }
 
+        /* Sub-hint inside step 2: "if you used the direct link, the
+           code applies on its own". Smaller, muted — reads as a
+           footnote, not a competing instruction. */
+        .r-step-note {
+            font-size: var(--text-micro);
+            color: var(--gray-500);
+            line-height: 1.5;
+            margin: 0;
+        }
+
         /* Alt-option block: small divider + secondary action title +
            helper hint. Sits between the search mockup and App Store
            badge so the user understands the App Store path is the
@@ -555,8 +565,6 @@
                                 <span class="r-step-alt-divider" data-i18n="referral.step1Or"></span>
                                 <span class="r-step-alt-title"
                                     data-i18n="referral.step1AltTitle"></span>
-                                <span class="r-step-alt-hint"
-                                    data-i18n="referral.step1AltHint"></span>
                             </div>
                             <button type="button" class="r-step-appstore" id="r-appstore-btn"
                                 aria-label="Download Lupibu on the App Store">
@@ -570,6 +578,7 @@
                         <div class="r-step-body">
                             <h2 class="r-step-title" data-i18n="referral.step2Title"></h2>
                             <p class="r-step-hint" data-i18n="referral.step2Hint"></p>
+                            <p class="r-step-note" data-i18n="referral.step2Note"></p>
                         </div>
                     </li>
                 </ol>
@@ -633,8 +642,8 @@
     <!-- Cache-busting query bumps when i18n keys change so users
          with stale cached i18n.js don't render empty <span>s for new
          translation keys. Bump on every i18n change. -->
-    <script src="/i18n.js?v=20260428b"></script>
-    <script src="/main.js?v=20260428b"></script>
+    <script src="/i18n.js?v=20260428c"></script>
+    <script src="/main.js?v=20260428c"></script>
     <script>
     (function () {
         'use strict';
