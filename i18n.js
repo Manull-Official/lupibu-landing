@@ -55,6 +55,7 @@ const translations = {
         'referral.benefit_yearly': 'Special discount on the yearly plan',
         'referral.codeLabel': 'Code:',
         'referral.copied': 'Copied',
+        'referral.disclaimer': 'Already have Lupibu? Tapping opens the app — but the special discount applies to new sign-ups only.',
         'notfound.title': 'Page not found',
         'notfound.text': 'The page you’re looking for doesn’t exist. Let’s get you home.',
         'notfound.home': 'Back to Lupibu'
@@ -107,6 +108,7 @@ const translations = {
         'referral.benefit_yearly': 'Особая скидка на годовую подписку',
         'referral.codeLabel': 'Промокод:',
         'referral.copied': 'Скопировано',
+        'referral.disclaimer': 'Уже пользуетесь Lupibu? По ссылке откроется приложение, но скидка действует только для новых регистраций.',
         'notfound.title': 'Страница не найдена',
         'notfound.text': 'Такой страницы не существует. Вернёмся на главную.',
         'notfound.home': 'На главную Lupibu'
@@ -159,6 +161,7 @@ const translations = {
         'referral.benefit_yearly': 'Жылдық жазылымға арнайы жеңілдік',
         'referral.codeLabel': 'Промокод:',
         'referral.copied': 'Көшірілді',
+        'referral.disclaimer': 'Lupibu қазірден қолданыста ма? Сілтеме қосымшаны ашады, бірақ жеңілдік тек жаңа тіркелулерге қолданылады.',
         'notfound.title': 'Бет табылмады',
         'notfound.text': 'Мұндай бет жоқ. Басты бетке оралайық.',
         'notfound.home': 'Lupibu басты бетіне'
