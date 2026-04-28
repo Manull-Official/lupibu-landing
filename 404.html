@@ -65,12 +65,18 @@
         .r-eyebrow svg { width: 14px; height: 14px; color: var(--brand); }
 
         .r-title {
-            font-size: var(--text-hero);
+            /* Smaller than --text-hero so long Cyrillic / Kazakh phrases
+               don't overflow the 560px card on desktop. text-wrap:balance
+               keeps the line break visually centered on browsers that
+               support it; older browsers fall through to natural wrap. */
+            font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
             font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -0.025em;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
             color: var(--gray-900);
             margin-bottom: var(--space-md);
+            text-wrap: balance;
+            hyphens: auto;
         }
 
         .r-partner {
@@ -82,8 +88,43 @@
             color: var(--gray-600);
             line-height: 1.55;
             max-width: 460px;
-            margin: 0 auto var(--space-lg);
+            margin: 0 auto var(--space-md);
+            text-wrap: balance;
         }
+
+        .r-benefits {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--space-xs);
+            margin: 0 auto var(--space-lg);
+            padding: 0;
+            list-style: none;
+            text-align: left;
+        }
+
+        .r-benefit {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-small);
+            font-weight: 500;
+            color: var(--gray-800);
+        }
+
+        .r-benefit-check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            background: rgba(45, 212, 191, 0.18);
+            color: #0FA58E;
+            border-radius: 50%;
+        }
+
+        .r-benefit-check svg { width: 12px; height: 12px; }
 
         .r-cta {
             display: flex;
@@ -284,6 +325,26 @@
                 <p class="r-subtitle" data-i18n="referral.subtitle">
                     Download Lupibu and your invite code applies automatically.
                 </p>
+                <ul class="r-benefits" aria-label="Invite benefits">
+                    <li class="r-benefit">
+                        <span class="r-benefit-check" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </span>
+                        <span data-i18n="referral.benefit_trial">7-day Pro trial — free</span>
+                    </li>
+                    <li class="r-benefit">
+                        <span class="r-benefit-check" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </span>
+                        <span data-i18n="referral.benefit_yearly">Special discount on the yearly plan</span>
+                    </li>
+                </ul>
                 <div class="r-cta">
                     <button type="button" class="appstore-badge" id="r-appstore-btn"
                         aria-label="Download Lupibu on the App Store">
@@ -301,7 +362,6 @@
                             </svg>
                         </button>
                     </div>
-                    <p class="r-trust" data-i18n="referral.trust">7-day Pro trial · No credit card</p>
                 </div>
             </section>
 
