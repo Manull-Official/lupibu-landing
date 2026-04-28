@@ -83,48 +83,14 @@
             color: var(--brand);
         }
 
-        .r-subtitle {
+        .r-howto {
             font-size: var(--text-body);
-            color: var(--gray-600);
-            line-height: 1.55;
-            max-width: 460px;
+            color: var(--gray-700);
+            line-height: 1.5;
+            max-width: 420px;
             margin: 0 auto var(--space-md);
             text-wrap: balance;
         }
-
-        .r-benefits {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: var(--space-xs);
-            margin: 0 auto var(--space-lg);
-            padding: 0;
-            list-style: none;
-            text-align: left;
-        }
-
-        .r-benefit {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            font-size: var(--text-small);
-            font-weight: 500;
-            color: var(--gray-800);
-        }
-
-        .r-benefit-check {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-            background: rgba(45, 212, 191, 0.18);
-            color: #0FA58E;
-            border-radius: 50%;
-        }
-
-        .r-benefit-check svg { width: 12px; height: 12px; }
 
         /* ── Promocode card (primary CTA) ───────── */
         .r-promocode-card {
@@ -132,21 +98,13 @@
             flex-direction: column;
             align-items: center;
             gap: var(--space-sm);
-            padding: var(--space-lg) var(--space-xl);
-            margin: var(--space-lg) auto;
+            padding: var(--space-md) var(--space-xl);
+            margin: var(--space-md) auto var(--space-lg);
             max-width: 360px;
             background: linear-gradient(135deg, var(--brand-bg) 0%, #FFEED9 100%);
             border: 1px solid rgba(250, 124, 80, 0.18);
             border-radius: var(--radius-2xl);
             box-shadow: 0 8px 24px rgba(250, 124, 80, 0.10);
-        }
-
-        .r-promocode-label {
-            font-size: var(--text-micro);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--brand-dark);
         }
 
         .r-promocode-value {
@@ -192,87 +150,33 @@
 
         .r-promocode-copy svg { width: 14px; height: 14px; }
 
-        /* ── Steps ───────── */
-        .r-steps {
-            list-style: none;
-            padding: 0;
-            margin: 0 auto var(--space-md);
-            max-width: 480px;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-lg);
-        }
-
-        .r-step {
-            display: flex;
-            gap: var(--space-md);
-            align-items: flex-start;
-        }
-
-        .r-step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            background: var(--brand);
-            color: var(--white);
-            font-weight: 700;
-            font-size: var(--text-small);
-            border-radius: 50%;
-            line-height: 1;
-        }
-
-        .r-step-body {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .r-step-title {
-            font-size: 1.0625rem;
-            font-weight: 600;
-            color: var(--gray-900);
-            margin: 4px 0 var(--space-sm);
-            letter-spacing: -0.01em;
-        }
-
-        .r-step-body .appstore-badge {
-            cursor: pointer;
-            border: none;
-            background: transparent;
-            padding: 0;
-            display: inline-block;
-        }
-
-        .r-step-body .appstore-img { height: 56px; }
-
-        .r-step-or {
-            font-size: var(--text-small);
-            color: var(--gray-500);
-            margin: var(--space-md) 0 var(--space-sm);
-        }
-
-        .r-step-text {
-            font-size: var(--text-small);
-            color: var(--gray-700);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* ── App Store search mockup (visual hint) ───────── */
+        /* ── App Store search mockup (visual hint, primary CTA) ───────── */
         .r-search-mockup {
             display: flex;
             flex-direction: column;
             gap: var(--space-sm);
             padding: var(--space-md);
+            margin: 0 auto var(--space-md);
             background: var(--white);
             border: 1px solid var(--gray-200);
             border-radius: var(--radius-xl);
             max-width: 320px;
             box-shadow: var(--shadow-sm);
         }
+
+        /* App Store badge as secondary fallback — smaller, less prominent. */
+        .r-appstore-secondary {
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            padding: 0;
+            display: inline-block;
+            opacity: 0.85;
+            transition: opacity var(--transition-fast);
+        }
+
+        .r-appstore-secondary:hover { opacity: 1; }
+        .r-appstore-secondary .appstore-img { height: 48px; }
 
         .r-search-bar {
             display: flex;
@@ -476,36 +380,9 @@
                     <span data-i18n="referral.titlePrefix" id="r-title-prefix">A gift from</span>
                     <span class="r-partner" id="r-partner-name"></span>
                 </h1>
-                <p class="r-subtitle" data-i18n="referral.subtitle">
-                    Download Lupibu and your invite code applies automatically.
-                </p>
-                <ul class="r-benefits" aria-label="Invite benefits">
-                    <li class="r-benefit">
-                        <span class="r-benefit-check" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </span>
-                        <span data-i18n="referral.benefit_trial">7-day Pro trial — free</span>
-                    </li>
-                    <li class="r-benefit">
-                        <span class="r-benefit-check" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </span>
-                        <span data-i18n="referral.benefit_yearly">Special discount on the yearly plan</span>
-                    </li>
-                </ul>
-                <!-- PRIMARY: Promocode card. Visually dominant so the
-                     code is what the user remembers / copies, regardless
-                     of which install path they pick. -->
+
+                <!-- Promocode card — visual primary. -->
                 <div class="r-promocode-card">
-                    <span class="r-promocode-label" data-i18n="referral.promocodeLabel">
-                        Your invite code
-                    </span>
                     <span class="r-promocode-value" id="r-slug-value"></span>
                     <button type="button" class="r-promocode-copy" id="r-copy-btn"
                         aria-label="Copy invite code">
@@ -518,63 +395,41 @@
                     </button>
                 </div>
 
-                <!-- Two-step instructions. App Store badge and search hint
-                     live inside Step 1 — both paths copy the clipboard
-                     sentinel under the hood, so attribution works
-                     regardless of which the user chooses. -->
-                <ol class="r-steps">
-                    <li class="r-step">
-                        <span class="r-step-number">1</span>
-                        <div class="r-step-body">
-                            <h3 class="r-step-title" data-i18n="referral.step1Title">
-                                Install Lupibu
-                            </h3>
-                            <button type="button" class="appstore-badge" id="r-appstore-btn"
-                                aria-label="Download Lupibu on the App Store">
-                                <img src="/assets/appstore-badge.svg" alt="Download on the App Store"
-                                    class="appstore-img">
-                            </button>
-                            <p class="r-step-or" data-i18n="referral.step1Or">
-                                or find Lupibu by searching in the App Store:
-                            </p>
-                            <!-- Inline SVG mockup of an App Store search
-                                 result — no external asset, scales cleanly. -->
-                            <div class="r-search-mockup" aria-hidden="true">
-                                <div class="r-search-bar">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="11" cy="11" r="8"/>
-                                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                                    </svg>
-                                    <span class="r-search-query">Lupibu</span>
-                                </div>
-                                <div class="r-search-result">
-                                    <img src="/assets/favicon.png" alt=""
-                                        class="r-search-result-icon">
-                                    <div class="r-search-result-meta">
-                                        <span class="r-search-result-name">Lupibu</span>
-                                        <span class="r-search-result-sub">AI baby tracker</span>
-                                        <span class="r-search-result-rating">★★★★★ 5.0</span>
-                                    </div>
-                                </div>
-                            </div>
+                <!-- Search hint is primary — driving App Store search
+                     installs gives ASO ranking lift, while the App Store
+                     badge below is a fallback for users who don't want
+                     to type. Both paths copy the clipboard sentinel. -->
+                <p class="r-howto" data-i18n="referral.howto">
+                    Find Lupibu in the App Store, then enter the code on the Welcome screen.
+                </p>
+                <div class="r-search-mockup" aria-hidden="true">
+                    <div class="r-search-bar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                        <span class="r-search-query">Lupibu</span>
+                    </div>
+                    <div class="r-search-result">
+                        <img src="/assets/favicon.png" alt=""
+                            class="r-search-result-icon">
+                        <div class="r-search-result-meta">
+                            <span class="r-search-result-name">Lupibu</span>
+                            <span class="r-search-result-sub">AI baby tracker</span>
+                            <span class="r-search-result-rating">★★★★★ 5.0</span>
                         </div>
-                    </li>
-                    <li class="r-step">
-                        <span class="r-step-number">2</span>
-                        <div class="r-step-body">
-                            <h3 class="r-step-title" data-i18n="referral.step2Title">
-                                Apply your code
-                            </h3>
-                            <p class="r-step-text" data-i18n="referral.step2Text">
-                                On the Welcome screen tap «I have a code» and enter the code above.
-                            </p>
-                        </div>
-                    </li>
-                </ol>
+                    </div>
+                </div>
+
+                <button type="button" class="appstore-badge r-appstore-secondary"
+                    id="r-appstore-btn" aria-label="Download Lupibu on the App Store">
+                    <img src="/assets/appstore-badge.svg" alt="Download on the App Store"
+                        class="appstore-img">
+                </button>
 
                 <p class="r-disclaimer" data-i18n="referral.disclaimer">
-                    Already have Lupibu? Tapping opens the app — but the special discount applies to new sign-ups only.
+                    Already have Lupibu? Discount applies to new sign-ups only.
                 </p>
             </section>
 
