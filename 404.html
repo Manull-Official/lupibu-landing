@@ -504,24 +504,12 @@
         }
 
         function renderReferral(slug, displayName) {
-            var nameEl = document.getElementById('r-partner-name');
-            var titlePrefixEl = document.getElementById('r-title-prefix');
-
-            if (displayName) {
-                // Translation already populated titlePrefix via data-i18n.
-                nameEl.textContent = displayName;
-            } else {
-                // API unreachable or partner lookup failed — keep the
-                // funnel open with the localized fallback title; the slug
-                // still travels via the clipboard sentinel and the backend
-                // resolves it on signup.
-                var dict = (typeof translations !== 'undefined')
-                    ? (translations[document.documentElement.lang] || translations.en)
-                    : {};
-                titlePrefixEl.textContent = '';
-                nameEl.textContent = dict['referral.titleFallback'] || 'You’ve got an invite';
-            }
-
+            // Caller guarantees displayName is a non-empty string from the
+            // backend. titlePrefix is already localized by i18n.js via
+            // data-i18n; we only fill in the partner name. There is NO
+            // fallback path: if the backend doesn't confirm the partner,
+            // we show a plain 404 instead of inventing an invite.
+            document.getElementById('r-partner-name').textContent = displayName;
             document.getElementById('r-slug-value').textContent = slug;
             show('r-referral');
 
@@ -556,21 +544,27 @@
 
             validateSlug(slug)
                 .then(function (result) {
-                    if (result === null) {
-                        // Slug grammar OK but partner doesn't exist or
-                        // is inactive. Show the standard 404 — partners
-                        // get rotated and we don't want stale links to
-                        // pretend to work.
+                    // Either the slug is unknown (result === null) or
+                    // the response shape is missing display_name. In
+                    // both cases we refuse to render an invite UI —
+                    // showing "you've got an invite" for an arbitrary
+                    // string would deceive the user and let anyone
+                    // fabricate a referral link by typing /r/whatever.
+                    if (!result || !result.displayName) {
                         show('r-notfound');
                         return;
                     }
                     renderReferral(slug, result.displayName);
                 })
                 .catch(function () {
-                    // Network / CORS failure: keep the funnel open. The
-                    // slug is preserved via clipboard, and the backend
-                    // re-validates on /auth/login.
-                    renderReferral(slug, null);
+                    // Network / CORS failure: we can't confirm the
+                    // partner is real, so the only honest UI is a 404.
+                    // The mobile app re-validates on /auth/login if the
+                    // user downloads anyway, so the funnel still works
+                    // for those who tap the App Store badge from the
+                    // 404 page (they'll see the standard "Back to
+                    // Lupibu" CTA, not a fake invite).
+                    show('r-notfound');
                 });
         });
     })();
