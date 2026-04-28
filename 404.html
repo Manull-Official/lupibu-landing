@@ -122,24 +122,51 @@
             margin: 0;
         }
 
-        .r-step-divider {
+        /* Alt-option block: small divider + secondary action title +
+           helper hint. Sits between the search mockup and App Store
+           badge so the user understands the App Store path is the
+           "or take the shortcut" option. */
+        .r-step-alt {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            margin-top: var(--space-sm);
+        }
+
+        .r-step-alt-divider {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: var(--space-sm);
+            width: 100%;
             font-size: var(--text-micro);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: var(--gray-400);
+            margin-bottom: var(--space-xs);
         }
 
-        .r-step-divider::before,
-        .r-step-divider::after {
+        .r-step-alt-divider::before,
+        .r-step-alt-divider::after {
             content: '';
             flex: 1;
             height: 1px;
             background: var(--gray-200);
+            margin: 0 var(--space-sm);
+        }
+
+        .r-step-alt-title {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            text-align: center;
+        }
+
+        .r-step-alt-hint {
+            font-size: var(--text-micro);
+            color: var(--gray-500);
+            text-align: center;
         }
 
         /* ── Promocode card (primary CTA) ───────── */
@@ -455,9 +482,7 @@
                     <li class="r-step">
                         <span class="r-step-number">1</span>
                         <div class="r-step-body">
-                            <h2 class="r-step-title" data-i18n="referral.step1Title">
-                                Get Lupibu
-                            </h2>
+                            <h2 class="r-step-title" data-i18n="referral.step1Title"></h2>
                             <div class="r-step-mockup" aria-hidden="true">
                                 <div class="r-search-bar">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -477,8 +502,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="r-step-divider">
-                                <span data-i18n="referral.step1Or">or</span>
+                            <div class="r-step-alt">
+                                <span class="r-step-alt-divider" data-i18n="referral.step1Or"></span>
+                                <span class="r-step-alt-title"
+                                    data-i18n="referral.step1AltTitle"></span>
+                                <span class="r-step-alt-hint"
+                                    data-i18n="referral.step1AltHint"></span>
                             </div>
                             <button type="button" class="r-step-appstore" id="r-appstore-btn"
                                 aria-label="Download Lupibu on the App Store">
@@ -490,12 +519,8 @@
                     <li class="r-step">
                         <span class="r-step-number">2</span>
                         <div class="r-step-body">
-                            <h2 class="r-step-title" data-i18n="referral.step2Title">
-                                Enter the code
-                            </h2>
-                            <p class="r-step-hint" data-i18n="referral.step2Hint">
-                                On the Welcome screen, tap «I have a code».
-                            </p>
+                            <h2 class="r-step-title" data-i18n="referral.step2Title"></h2>
+                            <p class="r-step-hint" data-i18n="referral.step2Hint"></p>
                         </div>
                     </li>
                 </ol>
