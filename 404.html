@@ -169,6 +169,34 @@
             text-align: center;
         }
 
+        /* ── Benefits list (under H1) ───────── */
+        .r-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-sm) var(--space-md);
+            list-style: none;
+            padding: 0;
+            margin: 0 auto var(--space-lg);
+            max-width: 460px;
+        }
+
+        .r-benefit {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: var(--text-small);
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+
+        .r-benefit-check {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            color: #0FA58E;
+        }
+
         /* ── Promocode card (primary CTA) ───────── */
         .r-promocode-card {
             display: flex;
@@ -459,6 +487,27 @@
                     <span data-i18n="referral.titlePrefix" id="r-title-prefix">A gift from</span>
                     <span class="r-partner" id="r-partner-name"></span>
                 </h1>
+
+                <!-- What's inside: trial + yearly discount. Two benefits
+                     are enough — adding more dilutes the offer. -->
+                <ul class="r-benefits" aria-label="What's included">
+                    <li class="r-benefit">
+                        <svg class="r-benefit-check" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span data-i18n="referral.benefit_trial"></span>
+                    </li>
+                    <li class="r-benefit">
+                        <svg class="r-benefit-check" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span data-i18n="referral.benefit_yearly"></span>
+                    </li>
+                </ul>
 
                 <!-- Promocode card — visual primary. -->
                 <div class="r-promocode-card">
