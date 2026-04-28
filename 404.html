@@ -360,12 +360,24 @@
             color: var(--gray-500);
         }
 
+        /* Disclaimer is a card-level footnote, not a step-2 sub-line.
+           Right-aligned on desktop + extra top margin visually decouples
+           it from the steps; mobile collapses to center to avoid an
+           awkward right-aligned orphan word on narrow widths. */
         .r-disclaimer {
-            margin-top: var(--space-md);
+            margin-top: var(--space-2xl);
+            margin-bottom: 0;
             font-size: var(--text-micro);
-            line-height: 1.5;
-            color: var(--gray-500);
-            max-width: 420px;
+            line-height: 1.4;
+            color: var(--gray-400);
+            text-align: right;
+        }
+
+        @media (max-width: 640px) {
+            .r-disclaimer {
+                text-align: center;
+                margin-top: var(--space-xl);
+            }
         }
 
         .r-loading {
@@ -642,8 +654,8 @@
     <!-- Cache-busting query bumps when i18n keys change so users
          with stale cached i18n.js don't render empty <span>s for new
          translation keys. Bump on every i18n change. -->
-    <script src="/i18n.js?v=20260428c"></script>
-    <script src="/main.js?v=20260428c"></script>
+    <script src="/i18n.js?v=20260428d"></script>
+    <script src="/main.js?v=20260428d"></script>
     <script>
     (function () {
         'use strict';
