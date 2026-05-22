@@ -31,11 +31,12 @@ function initSmoothScroll() {
 }
 
 /**
- * Fade-in animations on scroll
+ * Fade-in animations on scroll — gentle entry for narrative rows + slogan.
+ * Reduced-motion users get an instant render via the CSS rule in styles.css.
  */
 function initScrollAnimations() {
     const elements = document.querySelectorAll(
-        '.feature-text, .feature-visual, .download-card'
+        '.moments-header, .moment, .moments-footer, .testimonial, .slogan-section'
     );
 
     elements.forEach(el => el.classList.add('fade-in'));
@@ -49,7 +50,7 @@ function initScrollAnimations() {
         });
     }, {
         rootMargin: '0px 0px -80px 0px',
-        threshold: 0.15
+        threshold: 0.1
     });
 
     elements.forEach(el => observer.observe(el));

@@ -1,17 +1,21 @@
 /* ========================================
    LUPIBU LANDING - INTERNATIONALIZATION
+   Positioning: «Ритм мамы» — tight 2026 pass (≤8-word hero)
    ======================================== */
 
 const translations = {
     en: {
-        // Nav
-        'nav.download': 'Download',
+        // A11y
+        'a11y.skipLink': 'Skip to content',
 
-        // Hero
-        'hero.title': 'Stop guessing when your baby is overtired.',
-        'hero.subtitle': 'A quiet notification before nap time.',
+        // Hero — ≤6 words title, ≤12 words subtitle
+        'hero.title': "<span class=\"hero-title-lede\">Baby's rhythm</span><span class=\"hero-title-payoff\">Your day back</span>",
+        'hero.subtitle': "Knows what's next",
+        'hero.proof': 'Free for 7 days',
 
-        // Testimonials (real App Store reviews)
+        // Before / After
+
+        // Testimonials
         'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 on the App Store',
         'testimonials.source': 'App Store',
         'testimonials.t1.text': '"I use Lupibu every day to track sleep, feedings, and my baby\'s routine. The app is easy to use, with a clean design and helpful reminders. It really helps bring more structure and calm into daily parenting."',
@@ -21,30 +25,60 @@ const translations = {
         'testimonials.t3.text': '"Intuitive and convenient app. It really helped me clear my head. Special thanks for the AI assistant — it\'s a real lifesaver."',
         'testimonials.t3.author': 'kavinskyyn',
 
-
-
-        // QR code hint (under desktop QR)
-        'qr.hint': 'Hover to enlarge',
-
-        // Pre-footer slogan
+        // Slogan — Apple-grade: 4 words
         'slogan.tagline': 'Less guessing. More peaceful days and nights.',
 
         // Sticky CTA
-        'sticky.cta': 'Download Lupibu',
-        'sticky.sub': '7-day Pro trial',
+        'sticky.cta': 'Start free',
+        'sticky.sub': 'Free for 7 days',
+        'qr.hint': 'Hover to enlarge',
 
         // Footer
-        'footer.product.download': 'Download',
-        'footer.product.help': 'Help Center',
+        'footer.help.label': 'Help',
+        'footer.help.link': 'Help Center',
+        'footer.legal.label': 'Legal',
         'footer.legal.privacy': 'Privacy Policy',
         'footer.legal.terms': 'Terms of Use',
         'footer.legal.disclaimer': 'Medical Disclaimer',
         'footer.legal.dataConsent': 'Data Consent',
+        'footer.connect.label': 'Connect',
         'footer.copyright': '© 2026 Lupibu. All rights reserved.',
+        // Meta — utility-anchored for SEO
+        'meta.title': 'Lupibu — baby sleep tracker',
+        'meta.description': "Lupibu learns your baby's rhythm and tells you what's next. For mothers. Free for 7 days.",
 
-        // Meta
-        'meta.description': 'An AI baby tracker that learns your baby’s rhythm. Stop guessing wake windows — a quiet notification before nap time. 7 days of Pro free.',
-        'meta.title': 'Lupibu — AI baby tracker that predicts your next nap',
+        // Pay (ЮKassa landing for RU users)
+        'pay.meta.title': 'Lupibu Pro — pay with card',
+        'pay.meta.description': 'Subscribe to Lupibu Pro with a Russian bank card via ЮKassa. Monthly 599 ₽ or yearly 3,999 ₽.',
+        'pay.hero.eyebrow': 'Lupibu Pro',
+        'pay.hero.title': 'Pay with card',
+        'pay.tariff.monthly.label': 'Monthly',
+        'pay.tariff.monthly.price': '599 ₽',
+        'pay.tariff.monthly.period': 'per month',
+        'pay.tariff.monthly.note': 'First 7 days free, then 599 ₽/mo.',
+        'pay.tariff.yearly.label': 'Yearly',
+        'pay.tariff.yearly.badge': '−44%',
+        'pay.tariff.yearly.price': '3,999 ₽',
+        'pay.tariff.yearly.period': 'per year · ≈ 333 ₽/mo',
+        'pay.tariff.yearly.note': 'First 7 days free, then 3,999 ₽/yr. Save 3,189 ₽.',
+        'pay.cancel.notice': 'Cancel anytime.',
+        'pay.intro.text': "A subscription unlocks Lupibu — the app that learns your baby's rhythm and tells you what's next.",
+        'pay.features.f1': 'Sleep predictions',
+        'pay.features.f2': 'AI assistant',
+        'pay.features.f3': 'Voice input',
+        'pay.features.f4': 'PDF report',
+        'pay.features.f5': 'Up to 4 children',
+        'pay.features.f6': 'iOS widget',
+        'pay.cta.pay': 'Pay with card',
+        'pay.features.title': "What\'s in Lupibu Pro",
+        'pay.offer.consent': 'By paying, you agree to the',
+        'pay.consent.link': 'Terms of Use',
+        'pay.merchant.org': 'IP Sariev',
+        'pay.merchant.inn_label': 'IIN',
+        'pay.merchant.address_label': 'Address',
+        'pay.merchant.address_value': '050059, Republic of Kazakhstan, Almaty, Nazarbayev Avenue 229, apt. 24',
+        'pay.merchant.phone_label': 'Phone',
+        'pay.merchant.email_label': 'Email',
 
         // Referral / 404 page
         'referral.badge': 'Special invite',
@@ -52,7 +86,7 @@ const translations = {
         'referral.titleFallback': 'You’ve got an invite',
         'referral.copyCode': 'Copy code',
         'referral.copied': 'Copied',
-        'referral.benefit_trial': '7-day Pro trial — free',
+        'referral.benefit_trial': 'Free for 7 days',
         'referral.benefit_yearly': 'Discount on the yearly plan',
         'referral.step1Title': 'Find Lupibu in the App Store and install it',
         'referral.step1Or': 'or',
@@ -67,13 +101,13 @@ const translations = {
     },
 
     // ============================================
-    // РУССКИЙ
+    // РУССКИЙ — formal «Вы», native phrasing
     // ============================================
     ru: {
-        'nav.download': 'Скачать',
-
-        'hero.title': 'Сон малыша — без догадок.',
-        'hero.subtitle': 'Подскажем, когда пора в кроватку.',
+        'a11y.skipLink': 'К содержимому',
+        'hero.title': '<span class="hero-title-lede">Ритм малыша</span><span class="hero-title-payoff">Ваш день</span>',
+        'hero.subtitle': 'Знает, что дальше',
+        'hero.proof': '7 дней бесплатно',
 
         'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 в App Store',
         'testimonials.source': 'App Store',
@@ -84,39 +118,68 @@ const translations = {
         'testimonials.t3.text': '«Интуитивно понятное и удобное приложение. Очень помогло разгрузить голову. Отдельное спасибо за ИИ-ассистента — выручает очень.»',
         'testimonials.t3.author': 'kavinskyyn',
 
-
-
-        'qr.hint': 'Наведите для увеличения',
-
         'slogan.tagline': 'Меньше догадок. Спокойнее дни и ночи.',
 
-        'sticky.cta': 'Скачать Lupibu',
-        'sticky.sub': 'Пробный Pro на 7 дней',
-
-        'footer.product.download': 'Скачать',
-        'footer.product.help': 'Справочный центр',
+        'sticky.cta': 'Попробовать бесплатно',
+        'sticky.sub': '7 дней бесплатно',
+        'qr.hint': 'Наведите для увеличения',
+        'footer.help.label': 'Помощь',
+        'footer.help.link': 'Справочный центр',
+        'footer.legal.label': 'Юридическое',
         'footer.legal.privacy': 'Политика конфиденциальности',
         'footer.legal.terms': 'Условия использования',
         'footer.legal.disclaimer': 'Медицинская оговорка',
         'footer.legal.dataConsent': 'Согласие на обработку данных',
+        'footer.connect.label': 'Связь',
         'footer.copyright': '© 2026 Lupibu. Все права защищены.',
+        'meta.title': 'Lupibu — трекер сна малыша',
+        'meta.description': 'Lupibu учит ритм малыша и подсказывает, что дальше. Для мам. 7 дней бесплатно.',
 
-        'meta.description': 'ИИ-трекер малыша, который изучает ритм вашего ребёнка. Перестаньте угадывать окна бодрствования — тихое уведомление перед сном. 7 дней Pro бесплатно.',
-        'meta.title': 'Lupibu — ИИ-трекер малыша: подскажет, когда пора спать',
+        // Pay (ЮKassa landing for RU users)
+        'pay.meta.title': 'Оплата Lupibu Pro',
+        'pay.meta.description': 'Оформите подписку Lupibu Pro российской картой через ЮKassa. Месяц — 599 ₽, год — 3 999 ₽.',
+        'pay.hero.eyebrow': 'Lupibu Pro',
+        'pay.hero.title': 'Оплата картой',
+        'pay.tariff.monthly.label': 'На месяц',
+        'pay.tariff.monthly.price': '599 ₽',
+        'pay.tariff.monthly.period': 'в месяц',
+        'pay.tariff.monthly.note': 'Первые 7 дней бесплатно. Далее 599 ₽/мес.',
+        'pay.tariff.yearly.label': 'На год',
+        'pay.tariff.yearly.badge': '−44%',
+        'pay.tariff.yearly.price': '3 999 ₽',
+        'pay.tariff.yearly.period': 'в год · ≈ 333 ₽/мес',
+        'pay.tariff.yearly.note': 'Первые 7 дней бесплатно. Далее 3 999 ₽/год. Экономия 3 189 ₽.',
+        'pay.cancel.notice': 'Отмена в любой момент.',
+        'pay.intro.text': 'Подписка открывает доступ к Lupibu — приложению, которое учит ритм малыша и подсказывает, что дальше.',
+        'pay.features.f1': 'Прогнозы сна',
+        'pay.features.f2': 'ИИ-ассистент',
+        'pay.features.f3': 'Голосовой ввод',
+        'pay.features.f4': 'PDF-отчёт',
+        'pay.features.f5': 'До 4 детей',
+        'pay.features.f6': 'Виджет iOS',
+        'pay.cta.pay': 'Оплатить картой',
+        'pay.offer.consent': 'Оплачивая, вы соглашаетесь с',
+        'pay.consent.link': 'Условиями использования',
+        'pay.merchant.org': 'ИП Сариев',
+        'pay.merchant.inn_label': 'ИИН',
+        'pay.merchant.address_label': 'Адрес',
+        'pay.merchant.address_value': '050059, Республика Казахстан, г. Алматы, пр. Назарбаева 229, кв. 24',
+        'pay.merchant.phone_label': 'Телефон',
+        'pay.merchant.email_label': 'Email',
 
         // Referral / 404 page
         'referral.badge': 'Личное приглашение',
         'referral.titlePrefix': 'Подарок от',
-        'referral.titleFallback': 'У вас приглашение в Lupibu',
+        'referral.titleFallback': 'У Вас приглашение в Lupibu',
         'referral.copyCode': 'Скопировать код',
         'referral.copied': 'Скопировано',
-        'referral.benefit_trial': '7 дней Pro — бесплатно',
+        'referral.benefit_trial': '7 дней бесплатно',
         'referral.benefit_yearly': 'Скидка на годовую подписку',
         'referral.step1Title': 'Найдите Lupibu в App Store и установите',
         'referral.step1Or': 'или',
         'referral.step1AltTitle': 'Установите по прямой ссылке',
         'referral.step2Title': 'Введите код',
-        'referral.step2Hint': 'На экране логина тапните «У меня есть код».',
+        'referral.step2Hint': 'На экране входа нажмите «У меня есть код».',
         'referral.step2Note': 'Если устанавливали по прямой ссылке — промокод применится сам, вводить ничего не нужно.',
         'referral.disclaimer': '*только для новых пользователей.',
         'notfound.title': 'Страница не найдена',
@@ -125,13 +188,13 @@ const translations = {
     },
 
     // ============================================
-    // ҚАЗАҚША
+    // ҚАЗАҚША — native, «Сіз»
     // ============================================
     kk: {
-        'nav.download': 'Жүктеп алу',
-
-        'hero.title': 'Сәби ұйқысы — болжамсыз.',
-        'hero.subtitle': 'Уақыты келгенде ескертеміз.',
+        'a11y.skipLink': 'Мазмұнға өту',
+        'hero.title': '<span class="hero-title-lede">Сәбидің ырғағы</span><span class="hero-title-payoff">Сіздің күніңіз</span>',
+        'hero.subtitle': 'Не боларын біледі',
+        'hero.proof': '7 күн тегін',
 
         'testimonials.label': '⭐⭐⭐⭐⭐ App Store-да 5.0',
         'testimonials.source': 'App Store',
@@ -142,25 +205,54 @@ const translations = {
         'testimonials.t3.text': '«Интуитивті әрі ыңғайлы қосымша. Басымды босатуға көп көмектесті. AI-көмекшіге бөлек рахмет — шынымен құтқарады.»',
         'testimonials.t3.author': 'kavinskyyn',
 
-
-
-        'qr.hint': 'Үлкейту үшін меңзеңіз',
-
         'slogan.tagline': 'Болжам аз. Тыныш күн мен түн көп.',
 
-        'sticky.cta': 'Lupibu-ді жүктеп алу',
-        'sticky.sub': '7 күндік Pro сынағы',
-
-        'footer.product.download': 'Жүктеп алу',
-        'footer.product.help': 'Анықтама орталығы',
+        'sticky.cta': 'Тегін бастау',
+        'sticky.sub': '7 күн тегін',
+        'qr.hint': 'Үлкейту үшін меңзеңіз',
+        'footer.help.label': 'Көмек',
+        'footer.help.link': 'Анықтама орталығы',
+        'footer.legal.label': 'Заңдық',
         'footer.legal.privacy': 'Құпиялылық саясаты',
         'footer.legal.terms': 'Қолдану шарттары',
         'footer.legal.disclaimer': 'Медициналық ескертпе',
         'footer.legal.dataConsent': 'Деректерді өңдеуге келісім',
-        'footer.copyright': '© 2026 Lupibu. Барлық құқықтар қорғалған.',
+        'footer.connect.label': 'Байланыс',
+        'footer.copyright': '© 2026 Lupibu. Барлық құқықтары қорғалған.',
+        'meta.title': 'Lupibu — сәби ұйқы трекері',
+        'meta.description': 'Lupibu сәбидің ырғағын үйреніп, не боларын айтады. Аналарға. 7 күн тегін.',
 
-        'meta.description': 'Сәбиіңіздің ырғағын үйренетін ЖИ-трекер. Ояну терезелерін болжауды доғарыңыз — ұйықтар алдындағы тыныш ескерту. Pro-ның 7 күні тегін.',
-        'meta.title': 'Lupibu — сәбидің ұйқысын болжайтын ЖИ-трекер',
+        // Pay (ЮKassa landing for RU users)
+        'pay.meta.title': 'Lupibu Pro төлеуі',
+        'pay.meta.description': 'Lupibu Pro жазылымын ресейлік картамен ЮKassa арқылы рәсімдеңіз. Ай — 599 ₽, жыл — 3 999 ₽.',
+        'pay.hero.eyebrow': 'Lupibu Pro',
+        'pay.hero.title': 'Картамен төлеу',
+        'pay.tariff.monthly.label': 'Айлық',
+        'pay.tariff.monthly.price': '599 ₽',
+        'pay.tariff.monthly.period': 'айына',
+        'pay.tariff.monthly.note': 'Алғашқы 7 күн тегін. Содан кейін 599 ₽/ай.',
+        'pay.tariff.yearly.label': 'Жылдық',
+        'pay.tariff.yearly.badge': '−44%',
+        'pay.tariff.yearly.price': '3 999 ₽',
+        'pay.tariff.yearly.period': 'жылына · ≈ 333 ₽/ай',
+        'pay.tariff.yearly.note': 'Алғашқы 7 күн тегін. Содан кейін 3 999 ₽/жыл. Үнем 3 189 ₽.',
+        'pay.cancel.notice': 'Кез келген уақытта бас тартуға болады.',
+        'pay.intro.text': 'Жазылым Lupibu қосымшасына қол жеткізуді ашады — ол сәбидің ырғағын үйренеді және не боларын алдын ала айтады.',
+        'pay.features.f1': 'Ұйқы болжамдары',
+        'pay.features.f2': 'AI-көмекші',
+        'pay.features.f3': 'Дауыспен енгізу',
+        'pay.features.f4': 'PDF есеп',
+        'pay.features.f5': '4 балаға дейін',
+        'pay.features.f6': 'iOS виджеті',
+        'pay.cta.pay': 'Картамен төлеу',
+        'pay.offer.consent': 'Төлеу арқылы сіз қабылдайсыз —',
+        'pay.consent.link': 'Қолдану шарттары',
+        'pay.merchant.org': 'ЖК Сариев',
+        'pay.merchant.inn_label': 'ЖСН',
+        'pay.merchant.address_label': 'Мекенжай',
+        'pay.merchant.address_value': '050059, Қазақстан Республикасы, Алматы қ., Назарбаев даңғылы 229, 24-пәтер',
+        'pay.merchant.phone_label': 'Телефон',
+        'pay.merchant.email_label': 'Email',
 
         // Referral / 404 page
         'referral.badge': 'Жеке шақыру',
@@ -168,7 +260,7 @@ const translations = {
         'referral.titleFallback': 'Сізге Lupibu-ға шақыру келді',
         'referral.copyCode': 'Кодты көшіру',
         'referral.copied': 'Көшірілді',
-        'referral.benefit_trial': '7 күн Pro — тегін',
+        'referral.benefit_trial': '7 күн тегін',
         'referral.benefit_yearly': 'Жылдық жазылымға жеңілдік',
         'referral.step1Title': 'App Store-дан Lupibu-ны тауып орнатыңыз',
         'referral.step1Or': 'немесе',

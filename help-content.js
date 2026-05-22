@@ -16,7 +16,7 @@ var helpCategories = {
         { slug: 'sleep',           title: 'Sleep & predictions', desc: 'How forecasts work',             icon: 'moon',     color: 'purple' },
         { slug: 'logging',         title: 'Logging entries',     desc: '12 entry types, timers, edits',  icon: 'edit',     color: 'gray' },
         { slug: 'ai',              title: 'AI & voice',          desc: 'Voice logs, assistant, privacy', icon: 'mic',      color: 'teal' },
-        { slug: 'family',          title: 'Children & family',   desc: 'Multiple kids, sharing access',  icon: 'users',    color: 'purple' },
+        { slug: 'family',          title: 'Children',   desc: 'Multiple kids',  icon: 'users',    color: 'purple' },
         { slug: 'pro',             title: 'Lupibu Pro',          desc: 'Pro vs free, billing, cancel',   icon: 'star',     color: 'brand' },
         { slug: 'privacy',         title: 'Data & privacy',      desc: 'Export, delete, your rights',    icon: 'shield',   color: 'gray' }
     ],
@@ -25,7 +25,7 @@ var helpCategories = {
         { slug: 'sleep',           title: 'Сон и прогнозы',      desc: 'Как работают предсказания',       icon: 'moon',     color: 'purple' },
         { slug: 'logging',         title: 'Ведение дневника',    desc: '12 типов записей, таймеры',       icon: 'edit',     color: 'gray' },
         { slug: 'ai',              title: 'ИИ и голос',          desc: 'Голосовые записи, ассистент',     icon: 'mic',      color: 'teal' },
-        { slug: 'family',          title: 'Дети и семья',        desc: 'Несколько детей, общий доступ',   icon: 'users',    color: 'purple' },
+        { slug: 'family',          title: 'Дети',        desc: 'Несколько детей',   icon: 'users',    color: 'purple' },
         { slug: 'pro',             title: 'Lupibu Pro',          desc: 'Подписка, пробный период',        icon: 'star',     color: 'brand' },
         { slug: 'privacy',         title: 'Данные и приватность',desc: 'Экспорт, удаление, ваши права',   icon: 'shield',   color: 'gray' }
     ],
@@ -34,7 +34,7 @@ var helpCategories = {
         { slug: 'sleep',           title: 'Ұйқы және болжамдар',   desc: 'Болжамдар қалай жұмыс істейді', icon: 'moon',     color: 'purple' },
         { slug: 'logging',         title: 'Күнделік жүргізу',      desc: '12 жазба түрі, таймерлер',      icon: 'edit',     color: 'gray' },
         { slug: 'ai',              title: 'AI және дауыс',         desc: 'Дауыспен жазу, ассистент',      icon: 'mic',      color: 'teal' },
-        { slug: 'family',          title: 'Балалар мен отбасы',    desc: 'Бірнеше бала, ортақ қатынас',   icon: 'users',    color: 'purple' },
+        { slug: 'family',          title: 'Балалар',    desc: 'Бірнеше бала',   icon: 'users',    color: 'purple' },
         { slug: 'pro',             title: 'Lupibu Pro',            desc: 'Жазылым, сынама кезеңі',        icon: 'star',     color: 'brand' },
         { slug: 'privacy',         title: 'Деректер мен құпиялылық', desc: 'Экспорт, жою, құқықтарыңыз',  icon: 'shield',   color: 'gray' }
     ]
@@ -43,25 +43,19 @@ var helpCategories = {
 var helpPopularQuestions = {
     en: [
         { slug: 'sleep-stats-report',  title: 'How to view sleep stats and share a PDF report' },
-        { slug: 'share-partner',       title: 'How to share a child with a partner (invite code)' },
         { slug: 'history-screen',      title: 'How filters and date range work on the History screen' },
-        { slug: 'free-vs-pro',         title: 'What\'s in Free vs Lupibu Pro' },
         { slug: 'delete-account',      title: 'How to delete a child or your whole account' },
         { slug: 'prediction-accuracy', title: 'Why is my sleep prediction off?' }
     ],
     ru: [
         { slug: 'sleep-stats-report',  title: 'Как посмотреть статистику сна и отправить PDF-отчёт' },
-        { slug: 'share-partner',       title: 'Как поделиться доступом с партнёром (код приглашения)' },
         { slug: 'history-screen',      title: 'Как работают фильтры и период на экране истории' },
-        { slug: 'free-vs-pro',         title: 'Что входит в Free и что даёт Lupibu Pro' },
         { slug: 'delete-account',      title: 'Как удалить ребёнка или аккаунт целиком' },
         { slug: 'prediction-accuracy', title: 'Почему прогноз сна бывает неточным' }
     ],
     kk: [
         { slug: 'sleep-stats-report',  title: 'Ұйқы статистикасын көру және PDF есеп жіберу' },
-        { slug: 'share-partner',       title: 'Серіктеспен қатынасты бөлісу (шақыру коды)' },
         { slug: 'history-screen',      title: 'Тарих экранында сүзгі мен кезең қалай жұмыс істейді' },
-        { slug: 'free-vs-pro',         title: 'Free-де не бар және Lupibu Pro не береді' },
         { slug: 'delete-account',      title: 'Баланы немесе аккаунтты қалай жою керек' },
         { slug: 'prediction-accuracy', title: 'Ұйқы болжамы неге дәл болмауы мүмкін' }
     ]
@@ -1153,8 +1147,8 @@ var helpArticles = {
         title: 'Как добавить ещё одного ребёнка',
         readMinutes: 1,
         keywords: ['второй ребёнок', 'близнецы', 'несколько детей', 'профиль', 'добавить'],
-        related: ['switch-children', 'share-partner', 'first-steps'],
-        tldr: 'Профиль → «Добавить ребёнка». На Free — один ребёнок. На Pro — до четырёх. У каждого свои записи и свои прогнозы.',
+        related: ['switch-children', 'first-steps'],
+        tldr: 'Профиль → «Добавить ребёнка». До четырёх детей в аккаунте. У каждого свои записи и свои прогнозы.',
         body:
             'На одном аккаунте можно вести до четырёх детей.\n\n' +
             '## Как добавить\n' +
@@ -1162,10 +1156,11 @@ var helpArticles = {
             '- Прокрутите до списка детей → нажмите **«Добавить ребёнка»**.\n' +
             '- Заполните имя, дату рождения, пол. Фото — по желанию.\n' +
             '- Сохраните.\n\n' +
-            '## Лимиты\n' +
-            '- **Free:** 1 ребёнок.\n' +
-            '- **Lupibu Pro:** до 4 детей.\n\n' +
-            'При добавлении второго ребёнка на Free откроется экран Pro — это не реклама, а единственное ограничение, которое мы строго применяем.\n\n' +
+            '## Лимит
+' +
+            '- До 4 детей в одном аккаунте.
+
+' +
             '## У каждого ребёнка своя история\n' +
             'Окна бодрствования, прогнозы и статистика считаются отдельно для каждого профиля. Записи одного ребёнка не попадают в прогнозы другого.\n\n' +
             'Переключаться между детьми можно на главном экране через плашку с именем — подробнее в статье «Как переключаться между детьми».'
@@ -1176,8 +1171,8 @@ var helpArticles = {
         title: 'How to add another child',
         readMinutes: 1,
         keywords: ['second child', 'twins', 'multiple kids', 'profile', 'add'],
-        related: ['switch-children', 'share-partner', 'first-steps'],
-        tldr: 'Profile → "Add child". Free = 1 child. Pro = up to 4. Each child has its own entries and predictions.',
+        related: ['switch-children', 'first-steps'],
+        tldr: 'Profile → "Add child". Up to 4 children per account. Each child has its own entries and predictions.',
         body:
             'One account supports up to 4 children.\n\n' +
             '## How to add\n' +
@@ -1185,10 +1180,11 @@ var helpArticles = {
             '- Scroll to the children list → tap **"Add child"**\n' +
             '- Fill in name, birth date, gender; photo optional\n' +
             '- Save\n\n' +
-            '## Limits\n' +
-            '- **Free:** 1 child\n' +
-            '- **Lupibu Pro:** up to 4 children\n\n' +
-            'Adding a second child on Free opens the Pro screen — this isn\'t an ad, it\'s the one limit we enforce.\n\n' +
+            '## Limit
+' +
+            '- Up to 4 children per account
+
+' +
             '## Each child has its own history\n' +
             'Wake windows, predictions, and stats are computed per profile. One child\'s entries never feed into another child\'s forecasts.\n\n' +
             'Switch between children via the name pill on the home screen — see "Switching between children".'
@@ -1199,8 +1195,8 @@ var helpArticles = {
         title: 'Тағы бір баланы қалай қосу керек',
         readMinutes: 1,
         keywords: ['екінші бала', 'егіздер', 'бірнеше бала', 'профиль'],
-        related: ['switch-children', 'share-partner', 'first-steps'],
-        tldr: 'Профиль → «Бала қосу». Тегін — 1 бала. Pro — 4 балаға дейін. Әр баланың өз жазбалары мен болжамдары бар.',
+        related: ['switch-children', 'first-steps'],
+        tldr: 'Профиль → «Бала қосу». 4 балаға дейін. Әр баланың өз жазбалары мен болжамдары бар.',
         body:
             'Бір аккаунтта 4 балаға дейін жүргізуге болады.\n\n' +
             '## Қалай қосу керек\n' +
@@ -1208,182 +1204,21 @@ var helpArticles = {
             '- Балалар тізіміне жылжыңыз → **«Бала қосу»** басыңыз\n' +
             '- Аты, туған күні, жынысын енгізіңіз; фото қалауыңыз бойынша\n' +
             '- Сақтаңыз\n\n' +
-            '## Шектеулер\n' +
-            '- **Тегін:** 1 бала\n' +
-            '- **Lupibu Pro:** 4 балаға дейін\n\n' +
-            'Тегін нұсқада екінші бала қосқанда Pro экраны ашылады — бұл жарнама емес, бұл біз қатаң қолданатын жалғыз шектеу.\n\n' +
+            '## Шектеу
+' +
+            '- Бір аккаунтта 4 балаға дейін
+
+' +
             '## Әр баланың өз тарихы бар\n' +
             'Ояу терезелері, болжамдар мен статистика әр профиль үшін бөлек есептеледі. Бір баланың жазбалары екінші баланың болжамына ешқашан араласпайды.\n\n' +
             'Балалар арасында ауысу — басты экрандағы аты жазылған плитка арқылы.'
     },
 
-    'share-partner_ru': {
-        slug: 'share-partner',
-        category: 'family',
-        title: 'Как поделиться доступом с партнёром, бабушкой или няней',
-        readMinutes: 2,
-        keywords: ['общий доступ', 'партнёр', 'муж', 'няня', 'бабушка', 'семья', 'код приглашения', 'пригласить'],
-        related: ['add-child', 'switch-children'],
-        tldr: 'Профиль → карточка ребёнка → экран приглашения. Появится короткий 6-значный код — отправьте его кому угодно. После подключения оба будете видеть одни и те же записи.',
-        body:
-            'В Lupibu общий доступ работает по коду приглашения — без email и регистраций «вслепую».\n\n' +
-            '## Как пригласить\n' +
-            '- Откройте **Профиль** → нажмите на карточку ребёнка → стрелка вправо.\n' +
-            '- Откроется экран приглашения. Код генерируется автоматически — что-то вроде **ABC 123**.\n' +
-            '- Нажмите **«Копировать»** или **«Поделиться»** — через iMessage, WhatsApp, Telegram, как удобнее.\n' +
-            '- Приглашённый открывает Lupibu на своём iPhone, вводит код и выбирает роль: мама, папа, бабушка, дедушка, няня, родственник, другое.\n\n' +
-            '## Что видит второй человек\n' +
-            '- Все записи ребёнка.\n' +
-            '- Прогнозы и статистику сна.\n' +
-            '- ИИ-чат по этому ребёнку.\n\n' +
-            'Приглашённый человек может добавлять и редактировать записи. Удалить профиль ребёнка или управлять подпиской может только владелец аккаунта.\n\n' +
-            '## Как удалить участника\n' +
-            'Профиль → карточка ребёнка → список участников семьи → удалить нужного человека.\n\n' +
-            '## Коротко о приватности\n' +
-            'Код одноразовый — как только кто-то им воспользовался, он перестаёт работать. Если код ушёл не тому, сгенерируйте новый.'
-    },
-    'share-partner_en': {
-        slug: 'share-partner',
-        category: 'family',
-        title: 'How to share access with a partner, grandparent, or nanny',
-        readMinutes: 2,
-        keywords: ['share', 'partner', 'spouse', 'nanny', 'grandparent', 'family', 'invite code', 'invite'],
-        related: ['add-child', 'switch-children'],
-        tldr: 'Profile → child card → invite screen. A 6-character code is generated — share it by any channel. Once joined, both sides see the same entries.',
-        body:
-            'Sharing in Lupibu uses a short invite code — no email dance, no blind signup.\n\n' +
-            '## How to invite\n' +
-            '- Open **Profile** → tap the child card → chevron on the right\n' +
-            '- The invite screen generates a code automatically — something like **ABC 123**\n' +
-            '- Tap **"Copy"** or **"Share"** (iMessage, WhatsApp, Telegram — whatever works)\n' +
-            '- The other person opens Lupibu on their iPhone, enters the code, and picks a relation: mother, father, grandmother, grandfather, nanny, relative, other\n\n' +
-            '## What they see\n' +
-            '- All entries for the child\n' +
-            '- Sleep predictions and stats\n' +
-            '- The child\'s AI chat\n\n' +
-            'They can add and edit entries. Only the account owner can delete the child profile or manage the subscription.\n\n' +
-            '## Removing a member\n' +
-            'Profile → child card → family members list → remove the person.\n\n' +
-            '## Privacy note\n' +
-            'The code is single-use — once someone joins with it, the code stops working. If it went to the wrong person, generate a new one.'
-    },
-    'share-partner_kk': {
-        slug: 'share-partner',
-        category: 'family',
-        title: 'Серіктеспен, атаәжемен немесе күтушімен қатынасты қалай бөлісу',
-        readMinutes: 2,
-        keywords: ['ортақ қатынас', 'серіктес', 'күйеу', 'күтуші', 'әже', 'отбасы', 'шақыру коды'],
-        related: ['add-child', 'switch-children'],
-        tldr: 'Профиль → бала картасы → шақыру экраны. 6 таңбалы код жасалады — оны кез келген адамға жіберіңіз. Қосылғаннан кейін екі жақ бір жазбаларды көреді.',
-        body:
-            'Lupibu-де ортақ қатынас қысқа код арқылы жұмыс істейді — email де, соқыр тіркелу де жоқ.\n\n' +
-            '## Қалай шақыру керек\n' +
-            '- **Профильді** ашыңыз → бала картасын басыңыз → оң жақтағы бағыт\n' +
-            '- Шақыру экранында код автоматты түрде жасалады — мысалы **ABC 123**\n' +
-            '- **«Көшіру»** немесе **«Бөлісу»** басыңыз (iMessage, WhatsApp, Telegram — қайсысы ыңғайлы болса)\n' +
-            '- Серіктесіңіз өз iPhone-ында Lupibu-ды ашып, кодты енгізіп, рөлді таңдайды: ана, әке, әже, ата, күтуші, туысқан, басқа\n\n' +
-            '## Ол не көреді\n' +
-            '- Бала жазбаларын\n' +
-            '- Ұйқы болжамдары мен статистиканы\n' +
-            '- Баланың AI-чатын\n\n' +
-            'Ол жазбалар қосып, өңдей алады. Бала профилін жоюды немесе жазылымды басқаруды тек аккаунт иесі істей алады.\n\n' +
-            '## Қатысушыны жою\n' +
-            'Профиль → бала картасы → отбасы мүшелері тізімі → қажетті адамды жою.\n\n' +
-            '## Құпиялылық туралы\n' +
-            'Код бір реттік — адам қосылғаннан кейін код жұмыс істемей қалады. Код қате адамға жіберілсе, жаңасын жасаңыз.'
-    },
 
     /* ======================================== */
     /*  PRO & SUBSCRIPTION (2 articles)         */
     /* ======================================== */
 
-    'free-vs-pro_ru': {
-        slug: 'free-vs-pro',
-        category: 'pro',
-        title: 'Что входит в Free и что даёт Lupibu Pro',
-        readMinutes: 2,
-        keywords: ['pro', 'подписка', 'бесплатно', 'платно', 'что входит', 'ограничения', 'тариф', 'лимиты'],
-        related: ['cancel-subscription', 'add-child', 'sleep-stats-report'],
-        tldr: 'Free — полноценный трекер без ограничений на количество записей. Pro открывает персональные прогнозы сна, полную статистику за 7 дней, до 4 детей и безлимитный ИИ-чат.',
-        body:
-            'Lupibu устроен как soft freemium: приложение полезно бесплатно, а Pro снимает четыре конкретных ограничения.\n\n' +
-            '## Что даёт Free\n' +
-            '- Все 12 типов записей, таймеры, полная история\n' +
-            '- Голосовой ввод в чате\n' +
-            '- Базовая статистика сна — первые 3 дня из 7 (остальное за Pro)\n' +
-            '- Факты по последнему сну и текущему окну бодрствования (без прогноза)\n' +
-            '- **1 ребёнок** в аккаунте\n' +
-            '- **3 сообщения ИИ-ассистенту в день** (счётчик сбрасывается в полночь)\n' +
-            '- Виджет iOS со статусом сна\n\n' +
-            '## Что открывает Pro\n' +
-            '- **Персональные прогнозы сна** — окно бодрствования подстраивается под ритм именно вашего ребёнка.\n' +
-            '- **Полная статистика за 7 дней** — график без обрезки, полный PDF-отчёт.\n' +
-            '- **До 4 детей** в одном аккаунте.\n' +
-            '- **Безлимитный ИИ-чат** — без дневного счётчика.\n' +
-            '- Пуш о приближающемся пробуждении (по прогнозу).\n\n' +
-            '## Цена и пробный период\n' +
-            '- **$6.99/мес** или **$39.99/год** (примерно $3.33/мес)\n' +
-            '- **7 дней Pro бесплатно** для новых пользователей. Отмените в любой момент пробного периода — ни цента не спишется.\n\n' +
-            'Оплата идёт через Apple ID, управление подпиской — в Настройках iPhone.'
-    },
-    'free-vs-pro_en': {
-        slug: 'free-vs-pro',
-        category: 'pro',
-        title: 'What\'s in Free vs Lupibu Pro',
-        readMinutes: 2,
-        keywords: ['pro', 'subscription', 'free', 'paid', 'features', 'limits', 'plan'],
-        related: ['cancel-subscription', 'add-child', 'sleep-stats-report'],
-        tldr: 'Free is a full tracker with no limits on logging. Pro unlocks personalized sleep predictions, the full 7-day stats, up to 4 children, and unlimited AI chat.',
-        body:
-            'Lupibu is soft freemium — the free app is genuinely useful, and Pro lifts 4 specific limits.\n\n' +
-            '## What Free gives you\n' +
-            '- All 12 entry types, timers, full history\n' +
-            '- Voice input in chat\n' +
-            '- Basic sleep stats (first 3 days of 7 — the rest is Pro)\n' +
-            '- Facts about the last sleep and current wake window (no forecast)\n' +
-            '- **1 child**\n' +
-            '- **3 AI messages per day** (counter resets at midnight)\n' +
-            '- iOS widget with sleep status\n\n' +
-            '## What Pro unlocks\n' +
-            '- **Personalized sleep predictions** — the wake window tunes to your actual baby\'s rhythm\n' +
-            '- **Full 7-day stats** — uncut chart, full PDF report\n' +
-            '- **Up to 4 children** in one account\n' +
-            '- **Unlimited AI chat** — no daily counter\n' +
-            '- Push notification at predicted wake time\n\n' +
-            '## Price and trial\n' +
-            '- **$6.99/mo** or **$39.99/year** (~$3.33/mo)\n' +
-            '- **7 days of Pro free** for new users. Cancel any time during the trial — zero charge.\n\n' +
-            'Billed through Apple ID. Manage the subscription in iPhone Settings.'
-    },
-    'free-vs-pro_kk': {
-        slug: 'free-vs-pro',
-        category: 'pro',
-        title: 'Free-де не бар және Lupibu Pro не береді',
-        readMinutes: 2,
-        keywords: ['pro', 'жазылым', 'тегін', 'ақылы', 'шектеулер'],
-        related: ['cancel-subscription', 'add-child', 'sleep-stats-report'],
-        tldr: 'Тегін нұсқа — жазбаларға шектеу қоймайтын толыққанды трекер. Pro жеке ұйқы болжамдарын, 7 күндік толық статистиканы, 4 балаға дейін аккаунт пен шектеусіз AI-чатты ашады.',
-        body:
-            'Lupibu — soft freemium: тегін нұсқа шынымен пайдалы, ал Pro нақты төрт шектеуді алып тастайды.\n\n' +
-            '## Тегін нұсқада не бар\n' +
-            '- 12 жазба түрі, таймерлер, толық тарих\n' +
-            '- Чатта дауыспен енгізу\n' +
-            '- Негізгі ұйқы статистикасы — 7 күннің алғашқы 3-і (қалғаны Pro-да)\n' +
-            '- Соңғы ұйқы мен ағымдағы ояу терезесі туралы дерек (болжамсыз)\n' +
-            '- Аккаунтта **1 бала**\n' +
-            '- **Күніне 3 AI-ассистент хабарламасы** (есептегіш түнгі 12-де қайта басталады)\n' +
-            '- Ұйқы күйін көрсететін iOS виджеті\n\n' +
-            '## Pro не ашады\n' +
-            '- **Жеке ұйқы болжамдары** — ояу терезесі дәл сіздің балаңыздың ырғағына бейімделеді.\n' +
-            '- **7 күндік толық статистика** — қысқартылмаған график, толық PDF есеп.\n' +
-            '- Бір аккаунтта **4 балаға дейін**.\n' +
-            '- **Шектеусіз AI-чат** — тәуліктік есептегішсіз.\n' +
-            '- Болжамды ояну уақытына жақын push хабарлама.\n\n' +
-            '## Бағасы және сынама кезеңі\n' +
-            '- **$6.99/ай** немесе **$39.99/жыл** (шамамен $3.33/ай)\n' +
-            '- Жаңа қолданушыларға **7 күн Pro тегін**. Сынама кезеңінде кез келген уақытта бас тартсаңыз, ақы алынбайды.\n\n' +
-            'Төлем Apple ID арқылы өтеді, жазылымды iPhone Баптауларынан басқарасыз.'
-    },
 
     'cancel-subscription_ru': {
         slug: 'cancel-subscription',
@@ -1391,7 +1226,7 @@ var helpArticles = {
         title: 'Как отменить подписку Pro',
         readMinutes: 1,
         keywords: ['отменить', 'подписка', 'pro', 'списание', 'вернуть', 'refund'],
-        related: ['free-vs-pro'],
+        related: [],
         tldr: 'Отменить можно в любой момент через настройки Apple ID → Подписки. Доступ к Pro сохранится до конца оплаченного периода.',
         body:
             'Отмена подписки — в одно касание, никаких подтверждений по телефону. Мы верим: если Lupibu Pro вам не подходит, лучше расстаться спокойно и честно.\n\n' +
@@ -1402,9 +1237,9 @@ var helpArticles = {
             '## Что произойдёт\n' +
             '- Pro-функции останутся доступны до конца уже оплаченного периода\n' +
             '- Автопродление выключится\n' +
-            '- Все ваши данные сохранятся — можно вернуться к Pro или продолжить на Free\n\n' +
+            '- Все ваши данные сохранятся — можно вернуться к Pro в любой момент\n\n' +
             '## Если отменили в пробный период\n' +
-            'Ничего не спишется. Доступ к Pro сохранится до окончания 7 дней, потом автоматически перейдёте на Free.\n\n' +
+            'Ничего не спишется. Доступ к Pro сохранится до окончания 7 дней.\n\n' +
             '## Возврат денег\n' +
             'Возвраты обрабатывает Apple. Запросить возврат можно через [reportaproblem.apple.com](https://reportaproblem.apple.com) — обычно одобряют, если с момента оплаты прошло немного времени.'
     },
@@ -1414,7 +1249,7 @@ var helpArticles = {
         title: 'How to cancel Pro',
         readMinutes: 1,
         keywords: ['cancel', 'subscription', 'pro', 'refund', 'stop'],
-        related: ['free-vs-pro'],
+        related: [],
         tldr: 'Cancel anytime via Apple ID → Subscriptions. Pro access stays until the end of the paid period.',
         body:
             'Cancellation is one tap, no phone calls, no dark patterns. If Pro isn\'t for you, we\'d rather part cleanly.\n\n' +
@@ -1425,9 +1260,9 @@ var helpArticles = {
             '## What happens\n' +
             '- Pro features stay until the end of the already-paid period\n' +
             '- Auto-renew turns off\n' +
-            '- All your data stays — come back to Pro or stay on Free\n\n' +
+            '- All your data stays — come back to Pro anytime\n\n' +
             '## Canceling during the trial\n' +
-            'Nothing charged. Pro stays until the 7-day trial ends, then you drop to Free automatically.\n\n' +
+            'Nothing charged. Pro stays until the 7-day trial ends.\n\n' +
             '## Refunds\n' +
             'Apple handles refunds. Request via [reportaproblem.apple.com](https://reportaproblem.apple.com) — usually approved if not too much time has passed.'
     },
@@ -1437,7 +1272,7 @@ var helpArticles = {
         title: 'Pro жазылымын қалай тоқтату керек',
         readMinutes: 1,
         keywords: ['бас тарту', 'жазылым', 'pro', 'тоқтату', 'refund'],
-        related: ['free-vs-pro'],
+        related: [],
         tldr: 'Кез келген уақытта Apple ID → Жазылымдар арқылы бас тартуға болады. Pro-ға қатынас төленген кезеңнің соңына дейін сақталады.',
         body:
             'Жазылымды тоқтату — бір басу. Телефон арқылы растау да, жасырын батырмалар да жоқ. Lupibu Pro сізге жараспаса, бейбіт әрі шынайы түрде қоштасқан жөн.\n\n' +
@@ -1448,9 +1283,9 @@ var helpArticles = {
             '## Не болады\n' +
             '- Pro мүмкіндіктері төленген кезеңнің соңына дейін сақталады.\n' +
             '- Автоматты жаңарту өшеді.\n' +
-            '- Деректеріңіз сақталады — Pro-ға қайта оралуыңызға немесе Free-де қалуыңызға болады.\n\n' +
+            '- Деректеріңіз сақталады — Pro-ға кез келген уақытта қайта оралуыңызға болады.\n\n' +
             '## Сынама кезеңінде бас тартсаңыз\n' +
-            'Ешнәрсе алынбайды. Pro 7 күндік сынамаңыздың соңына дейін сақталады, одан кейін автоматты түрде Free-ге ауысасыз.\n\n' +
+            'Ешнәрсе алынбайды. Pro 7 күндік сынамаңыздың соңына дейін сақталады.\n\n' +
             '## Ақшаны қайтару\n' +
             'Қайтаруды Apple өңдейді. Өтінішті [reportaproblem.apple.com](https://reportaproblem.apple.com) арқылы жіберуге болады — төлем жасалғаннан көп уақыт өтпесе, әдетте мақұлданады.'
     },
@@ -1533,7 +1368,7 @@ var helpArticles = {
         title: 'Как посмотреть статистику сна и отправить PDF-отчёт',
         readMinutes: 2,
         keywords: ['статистика', 'отчёт', 'pdf', 'график', 'insights', 'сон', 'экспорт', 'share report'],
-        related: ['prediction-accuracy', 'data-export-delete', 'free-vs-pro'],
+        related: ['prediction-accuracy', 'data-export-delete'],
         tldr: 'Вкладка «Статистика» показывает таймлайн сна за 7 дней и средние показатели. Кнопка «Поделиться отчётом» собирает PDF и отправляет его через стандартное окно iOS.',
         body:
             'Вся аналитика сна собрана на вкладке **Статистика** — это вторая иконка в нижней панели (значок графика).\n\n' +
@@ -1547,9 +1382,7 @@ var helpArticles = {
             '## Как отправить PDF-отчёт\n' +
             '- Прокрутите вниз до кнопки **«Поделиться отчётом»**.\n' +
             '- Сгенерируется PDF: имя ребёнка, период, таймлайн по дням и средние показатели.\n' +
-            '- Откроется стандартное iOS-окно «Поделиться» — можно отправить в почту, AirDrop или мессенджер.\n\n' +
-            '## Что даёт Pro\n' +
-            'На Free видны первые 3 из 7 дней — остальной график и PDF заблокированы. Pro открывает все 7 дней и полный отчёт.'
+            '- Откроется стандартное iOS-окно «Поделиться» — можно отправить в почту, AirDrop или мессенджер.\n\n'
     },
     'sleep-stats-report_en': {
         slug: 'sleep-stats-report',
@@ -1557,7 +1390,7 @@ var helpArticles = {
         title: 'How to view sleep stats and share a report',
         readMinutes: 2,
         keywords: ['stats', 'report', 'pdf', 'chart', 'insights', 'sleep', 'export', 'share report'],
-        related: ['prediction-accuracy', 'data-export-delete', 'free-vs-pro'],
+        related: ['prediction-accuracy', 'data-export-delete'],
         tldr: 'The Insights tab shows a 7-day sleep timeline and averages. "Share report" generates a PDF and sends it through the iOS share sheet.',
         body:
             'All sleep analytics live on the **Insights** tab — the second icon at the bottom (chart).\n\n' +
@@ -1571,9 +1404,7 @@ var helpArticles = {
             '## Sharing the PDF report\n' +
             '- Scroll to the **"Share report"** button\n' +
             '- A PDF is generated: child name, period, day-by-day timeline, averages\n' +
-            '- The iOS share sheet opens — send via mail, AirDrop, messenger\n\n' +
-            '## What Pro unlocks\n' +
-            'On Free, only the first 3 of 7 days are visible — the rest of the chart and the PDF are locked. Pro shows all 7 days and the full report.'
+            '- The iOS share sheet opens — send via mail, AirDrop, messenger\n\n'
     },
     'sleep-stats-report_kk': {
         slug: 'sleep-stats-report',
@@ -1581,7 +1412,7 @@ var helpArticles = {
         title: 'Ұйқы статистикасын қалай көру және есеп жасау',
         readMinutes: 2,
         keywords: ['статистика', 'есеп', 'pdf', 'график', 'insights', 'ұйқы', 'экспорт'],
-        related: ['prediction-accuracy', 'data-export-delete', 'free-vs-pro'],
+        related: ['prediction-accuracy', 'data-export-delete'],
         tldr: 'Статистика қойындысы 7 күндік ұйқы таймлайнін және орташа көрсеткіштерді көрсетеді. «Есеппен бөлісу» батырмасы PDF жасап, iOS share sheet арқылы жібереді.',
         body:
             'Барлық ұйқы аналитикасы **Статистика** қойындысында — төменгі панельдегі екінші белгіше (график).\n\n' +
@@ -1595,9 +1426,7 @@ var helpArticles = {
             '## PDF есепті қалай жіберу\n' +
             '- **«Есеппен бөлісу»** батырмасына дейін жылжыңыз\n' +
             '- PDF жасалады: бала аты, кезең, күн сайынғы таймлайн, орташалар\n' +
-            '- iOS «Бөлісу» терезесі ашылады — поштаға, AirDrop-қа, мессенджерге жіберіңіз\n\n' +
-            '## Pro не ашады\n' +
-            'Тегінде тек 7 күннің алғашқы 3-уі көрінеді — қалған график пен PDF құлыпталған. Pro-да 7 күннің бәрі және толық есеп.'
+            '- iOS «Бөлісу» терезесі ашылады — поштаға, AirDrop-қа, мессенджерге жіберіңіз\n\n'
     },
 
     /* ======================================== */
@@ -1690,7 +1519,7 @@ var helpArticles = {
         title: 'Как переключаться между детьми',
         readMinutes: 1,
         keywords: ['переключить', 'ребёнок', 'близнецы', 'несколько детей', 'активный'],
-        related: ['add-child', 'share-partner'],
+        related: ['add-child'],
         tldr: 'В шапке главного экрана — плашка с именем ребёнка. Нажмите на неё, чтобы выбрать другого. Приложение запоминает выбор между запусками.',
         body:
             'Если у вас больше одного ребёнка, в Lupibu есть быстрый переключатель.\n\n' +
@@ -1711,7 +1540,7 @@ var helpArticles = {
         title: 'Switching between children',
         readMinutes: 1,
         keywords: ['switch', 'child', 'twins', 'multiple kids', 'active'],
-        related: ['add-child', 'share-partner'],
+        related: ['add-child'],
         tldr: 'Tap the name pill in the home header to pick a different child. The app remembers your choice across launches.',
         body:
             'With more than one child, Lupibu gives you a fast switcher.\n\n' +
@@ -1732,7 +1561,7 @@ var helpArticles = {
         title: 'Балалар арасында қалай ауысу керек',
         readMinutes: 1,
         keywords: ['ауыстыру', 'бала', 'бірнеше бала', 'белсенді'],
-        related: ['add-child', 'share-partner'],
+        related: ['add-child'],
         tldr: 'Басты экран шапкасындағы бала аты жазылған плиткаға басыңыз. Қолданба таңдауыңызды келесі іске қосуларға дейін сақтайды.',
         body:
             'Бірден көп бала болса, Lupibu-де жылдам ауыстырғыш бар.\n\n' +
@@ -1759,16 +1588,16 @@ var helpArticles = {
         readMinutes: 3,
         keywords: ['профиль', 'настройки', 'имя', 'язык', 'уведомления', 'единицы', 'выйти', 'logout'],
         related: ['notifications', 'delete-account', 'switch-children'],
-        tldr: 'Всё управление аккаунтом — в одном экране «Профиль» (иконка меню в шапке). Там: имя, язык, уведомления, единицы измерения, дети, семья, Pro и удаление аккаунта.',
+        tldr: 'Всё управление аккаунтом — в одном экране «Профиль» (иконка меню в шапке). Там: имя, язык, уведомления, единицы измерения, дети, Pro и удаление аккаунта.',
         body:
             'В Lupibu нет отдельного меню настроек — всё собрано в одном экране **«Профиль»**. Открывается иконкой меню слева в шапке главного.\n\n' +
             '## Что там сверху\n' +
             '- **Имя** — редактируется на месте: нажмите на карандаш, введите, сохраните\n' +
             '- **Метод входа** — Apple Sign In (только он). Email в интерфейсе не показываем — только Firebase-идентификатор внутри\n\n' +
-            '## Дети и семья\n' +
+            '## Дети\n' +
             '- Список ваших детей (до 4 на Pro)\n' +
             '- **«Добавить ребёнка»** внизу списка\n' +
-            '- Тап по карточке — редактировать или посмотреть список семейных участников\n\n' +
+            '- Тап по карточке — редактировать\n\n' +
             '## Настройки приложения\n' +
             '- **Язык** — English, Русский, Қазақша. Изменение синхронизируется в облако и применяется сразу\n' +
             '- **Единицы объёма** — мл или oz (для кормлений)\n' +
@@ -1788,16 +1617,16 @@ var helpArticles = {
         readMinutes: 3,
         keywords: ['profile', 'settings', 'name', 'language', 'notifications', 'units', 'logout'],
         related: ['notifications', 'delete-account', 'switch-children'],
-        tldr: 'Everything account-related lives on one **Profile** screen (menu icon in the header): name, language, notifications, units, kids, family, Pro, and account deletion.',
+        tldr: 'Everything account-related lives on one **Profile** screen (menu icon in the header): name, language, notifications, units, kids, Pro, and account deletion.',
         body:
             'Lupibu doesn\'t have a separate settings menu — it\'s all on one **Profile** screen. Open it via the menu icon on the left of the home header.\n\n' +
             '## At the top\n' +
             '- **Display name** — edit inline: tap the pencil, type, save\n' +
             '- **Sign-in method** — Apple Sign In only. Email is not shown in the UI; only a Firebase ID is used internally\n\n' +
-            '## Children & family\n' +
+            '## Children\n' +
             '- List of your kids (up to 4 on Pro)\n' +
             '- **"Add child"** at the bottom of the list\n' +
-            '- Tap a card to edit or see family members\n\n' +
+            '- Tap a card to edit\n\n' +
             '## App settings\n' +
             '- **Language** — English, Русский, Қазақша. Change syncs to cloud and applies instantly\n' +
             '- **Volume units** — ml or oz (for feeds)\n' +
@@ -1817,16 +1646,16 @@ var helpArticles = {
         readMinutes: 3,
         keywords: ['профиль', 'баптаулар', 'ат', 'тіл', 'хабарламалар', 'бірлік', 'шығу'],
         related: ['notifications', 'delete-account', 'switch-children'],
-        tldr: 'Аккаунтқа қатысты бәрі бір **Профиль** экранында (шапкадағы мәзір белгішесі): ат, тіл, хабарламалар, бірліктер, балалар, отбасы, Pro және аккаунтты жою.',
+        tldr: 'Аккаунтқа қатысты бәрі бір **Профиль** экранында (шапкадағы мәзір белгішесі): ат, тіл, хабарламалар, бірліктер, балалар, Pro және аккаунтты жою.',
         body:
             'Lupibu-де жеке баптаулар мәзірі жоқ — барлығы бір **Профиль** экранында. Басты экран шапкасының сол жағындағы мәзір белгішесі арқылы ашылады.\n\n' +
             '## Жоғарғы жағында\n' +
             '- **Көрсетілетін ат** — орнында өңделеді: қарандашты басып, жазып, сақтаңыз\n' +
             '- **Кіру әдісі** — тек Apple Sign In. Email интерфейсте көрсетілмейді; ішінде тек Firebase ID қолданылады\n\n' +
-            '## Балалар мен отбасы\n' +
+            '## Балалар\n' +
             '- Балаларыңыздың тізімі (Pro-да 4-ке дейін)\n' +
             '- Тізімнің төменгі жағында **«Бала қосу»**\n' +
-            '- Картаны басу — өңдеу немесе отбасы мүшелерін қарау\n\n' +
+            '- Картаны басу — өңдеу\n\n' +
             '## Қолданба баптаулары\n' +
             '- **Тіл** — English, Русский, Қазақша. Өзгеріс бұлтқа синхрондалып, бірден қолданылады\n' +
             '- **Көлем бірлігі** — мл немесе oz (тамақтандыру үшін)\n' +
@@ -1921,7 +1750,7 @@ var helpArticles = {
         title: 'Как удалить аккаунт или ребёнка',
         readMinutes: 2,
         keywords: ['удалить аккаунт', 'удалить ребёнка', 'закрыть аккаунт', 'забыть меня', 'gdpr'],
-        related: ['data-export-delete', 'cancel-subscription', 'free-vs-pro'],
+        related: ['data-export-delete', 'cancel-subscription'],
         tldr: 'Удалить ребёнка: Профиль → карточка ребёнка → Удалить (только владелец). Удалить аккаунт: красная кнопка внизу Профиля → два подтверждения. Данные стираются сразу.',
         body:
             'Lupibu не прячет удаление. Всё делается в два касания, без писем в поддержку.\n\n' +
@@ -1929,7 +1758,7 @@ var helpArticles = {
             '- Откройте **Профиль** → нажмите на карточку ребёнка.\n' +
             '- На экране редактирования внизу — **«Удалить ребёнка»** (красная).\n' +
             '- Подтвердите.\n\n' +
-            'Удалять ребёнка может только **владелец аккаунта**. Если вы добавлены как член семьи, удалить не получится — попросите владельца или отвяжите себя.\n\n' +
+            'Удалять ребёнка может только **владелец аккаунта**.\n\n' +
             '## Удалить аккаунт\n' +
             '- **Профиль** → прокрутите вниз → красная кнопка **«Удалить аккаунт»**.\n' +
             '- Появится экран с опциями — если у вас Pro, сначала предложат управлять подпиской.\n' +
@@ -1938,7 +1767,6 @@ var helpArticles = {
             '## Что уходит вместе с аккаунтом\n' +
             '- Все профили детей и их записи.\n' +
             '- История ИИ-чата.\n' +
-            '- Связи с членами семьи — они теряют доступ к вашим детям.\n' +
             '- Сам аккаунт. Автопродление подписки нужно отменить отдельно в Apple ID, если вы в пробном периоде (см. «Как отменить подписку Pro»).\n\n' +
             '## Восстановление\n' +
             'После удаления аккаунта восстановить его нельзя — начинать придётся с нуля. Подумайте дважды или сначала напишите нам: [contact@lupibu.com](mailto:contact@lupibu.com).'
@@ -1949,7 +1777,7 @@ var helpArticles = {
         title: 'Deleting a child or your account',
         readMinutes: 2,
         keywords: ['delete account', 'delete child', 'close account', 'forget me', 'gdpr'],
-        related: ['data-export-delete', 'cancel-subscription', 'free-vs-pro'],
+        related: ['data-export-delete', 'cancel-subscription'],
         tldr: 'Delete a child: Profile → child card → Delete (owner only). Delete account: red button at the bottom of Profile → two confirmations, data is wiped immediately.',
         body:
             'Lupibu doesn\'t hide deletion — it\'s two taps, no support tickets.\n\n' +
@@ -1957,7 +1785,7 @@ var helpArticles = {
             '- Open **Profile** → tap the child card\n' +
             '- On the edit screen, at the bottom — **"Delete child"** (red)\n' +
             '- Confirm\n\n' +
-            'Only the **account owner** can delete a child. If you were added as a family member, you can\'t delete — ask the owner, or remove yourself.\n\n' +
+            'Only the **account owner** can delete a child.\n\n' +
             '## Delete account\n' +
             '- **Profile** → scroll to the bottom → red **"Delete account"** button\n' +
             '- A sheet appears with options (if you\'re on Pro, it nudges you to manage the subscription first)\n' +
@@ -1966,7 +1794,6 @@ var helpArticles = {
             '## What\'s gone\n' +
             '- All child profiles and their entries\n' +
             '- AI chat history\n' +
-            '- Family-member links (they lose access to your children)\n' +
             '- The subscription itself — auto-renew has to be canceled separately via Apple ID if you\'re still in trial (see "How to cancel Pro")\n\n' +
             '## Restore\n' +
             'Once the account is deleted, there is no restore — you\'d start from scratch. So think twice, or write us first: [contact@lupibu.com](mailto:contact@lupibu.com).'
@@ -1977,7 +1804,7 @@ var helpArticles = {
         title: 'Баланы немесе аккаунтты қалай жою керек',
         readMinutes: 2,
         keywords: ['аккаунтты жою', 'баланы жою', 'аккаунт жабу', 'мені ұмыт', 'gdpr'],
-        related: ['data-export-delete', 'cancel-subscription', 'free-vs-pro'],
+        related: ['data-export-delete', 'cancel-subscription'],
         tldr: 'Баланы жою: Профиль → бала картасы → Жою (тек иесі). Аккаунтты жою: Профильдің төменгі жағындағы қызыл батырма → екі растау. Деректер бірден жойылады.',
         body:
             'Lupibu жоюды жасырмайды. Барлығы екі басумен істеледі, қолдауға хат жазудың қажеті жоқ.\n\n' +
@@ -1985,7 +1812,7 @@ var helpArticles = {
             '- **Профильді** ашыңыз → бала картасын басыңыз.\n' +
             '- Өңдеу экранының төменгі жағында — **«Баланы жою»** (қызыл).\n' +
             '- Растаңыз.\n\n' +
-            'Баланы **тек аккаунт иесі** жоя алады. Сіз отбасы мүшесі ретінде қосылсаңыз, жою мүмкін емес — иесіне айтыңыз немесе өзіңізді байланыстан шығарыңыз.\n\n' +
+            'Баланы **тек аккаунт иесі** жоя алады.\n\n' +
             '## Аккаунтты жою\n' +
             '- **Профиль** → төменге жылжыңыз → қызыл **«Аккаунтты жою»** батырмасы.\n' +
             '- Опциялары бар терезе ашылады — Pro болсаңыз, алдымен жазылымды басқаруды ұсынады.\n' +
@@ -1994,7 +1821,6 @@ var helpArticles = {
             '## Немен бірге кетеді\n' +
             '- Барлық бала профильдері мен олардың жазбалары.\n' +
             '- ИИ-чат тарихы.\n' +
-            '- Отбасы мүшелерінің байланысы — олар балаларыңызға қатынасты жоғалтады.\n' +
             '- Аккаунттың өзі. Сынама кезеңінде болсаңыз, автожаңартуды Apple ID арқылы бөлек тоқтату керек («Pro жазылымын қалай тоқтату керек» мақаласын қараңыз).\n\n' +
             '## Қалпына келтіру\n' +
             'Аккаунт жойылғаннан кейін қалпына келтіру жоқ — нөлден бастайсыз. Сондықтан екі рет ойланыңыз немесе алдымен бізге жазыңыз: [contact@lupibu.com](mailto:contact@lupibu.com).'
