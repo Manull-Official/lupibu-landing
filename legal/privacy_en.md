@@ -48,6 +48,7 @@ We use collected information for the following purposes:
 *   **Proactive Insights:** Generating daily observations and suggestions based on patterns in your child's data.
 4.2. **Automated Decision-Making:** The App uses automated algorithms (including AI models and statistical methods) to generate sleep schedule recommendations, bedtime predictions, and wake window estimates. These outputs are informational only. No significant decisions affecting your legal rights are made solely through automated processing.
 4.3. **Human Oversight:** You may contact us at any time to request human review of any automated recommendation or to opt out of AI-powered features.
+4.4. **Consent to AI Processing:** Consent to AI-powered processing is included in your acceptance of the Terms of Use and Data Processing Consent during onboarding. The App does not request a separate in-app AI consent before each use of the assistant or voice input. Use of AI features is optional; you can avoid this processing by not using the AI assistant or voice input.
 
 5. DATA SHARING AND THIRD-PARTY PROCESSORS
 5.1. **We do not sell, rent, or trade your personal information.** We do not share data with advertisers.

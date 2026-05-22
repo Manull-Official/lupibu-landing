@@ -9,6 +9,8 @@ I hereby grant my explicit consent to the collection, processing, and storage of
 2. LEGAL BASIS
 This consent is given pursuant to the Law of the Republic of Kazakhstan "On Personal Data and their Protection" and constitutes specific, informed, and unambiguous consent to the processing of personal data.
 
+This consent includes AI-powered processing by Google Gemini AI / Vertex AI for the AI assistant, voice transcription, and proactive insights. For these purposes, Lupibu may send conversation text, voice audio for real-time transcription, relevant child tracking data, and generated AI responses to Google Gemini AI / Vertex AI. Voice audio is processed in real time and is not stored after transcription. AI outputs are informational only and do not replace medical advice.
+
 3. CATEGORIES OF PERSONAL DATA
 I authorize the processing of the following categories of data:
 

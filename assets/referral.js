@@ -2,8 +2,8 @@
     'use strict';
 
     var API_BASE = 'https://api.lupibu.com/api/v1';
-    var APPSTORE_URL = 'https://apps.apple.com/us/app/lupibu/id6758586869';
-    var CLIPBOARD_SENTINEL = 'lupibu_ref:';
+    var APPSTORE_APP_ID = '6758586869';
+    var APPSTORE_URL = 'https://apps.apple.com/us/app/lupibu/id' + APPSTORE_APP_ID;
     var SLUG_RE = /^[a-z0-9_]{1,64}$/;
     var REFERRAL_PATH_RE = /^\/r\/([^\/?#]+)\/?$/;
 
@@ -30,19 +30,39 @@
             if (resp.status === 404) return null;
             if (!resp.ok) throw new Error('http_' + resp.status);
             return resp.json().then(function (json) {
-                return { displayName: (json && json.display_name) || null };
+                if (!json) return null;
+                return {
+                    displayName: json.display_name || null,
+                    offerCode: json.offer_code || null,
+                };
             });
         });
     }
 
-    function copySentinel(slug) {
-        var payload = CLIPBOARD_SENTINEL + slug;
+    // Resolve the Apple Offer Code to embed in the redeem URL. Prefer
+    // the partner-specific code returned by the API; fall back to the
+    // slug uppercased for partners that haven't been assigned a code
+    // yet (e.g. brand-new bloggers still being onboarded). The fallback
+    // makes the page render gracefully even if the partner row is half-
+    // configured — the deep link may not redeem on Apple's side, but the
+    // page won't break.
+    function resolveOfferCode(slug, apiOfferCode) {
+        if (apiOfferCode) return apiOfferCode.toUpperCase();
+        return slug.toUpperCase();
+    }
+
+    function buildRedeemUrl(code) {
+        return 'https://apps.apple.com/redeem?ctx=offercodes&id='
+            + APPSTORE_APP_ID + '&code=' + encodeURIComponent(code);
+    }
+
+    function copyCode(code) {
         if (navigator.clipboard && navigator.clipboard.writeText) {
-            return navigator.clipboard.writeText(payload).catch(function () {});
+            return navigator.clipboard.writeText(code).catch(function () {});
         }
         try {
             var ta = document.createElement('textarea');
-            ta.value = payload;
+            ta.value = code;
             ta.style.position = 'fixed';
             ta.style.opacity = '0';
             document.body.appendChild(ta);
@@ -69,26 +89,35 @@
         }, 1800);
     }
 
-    function renderReferral(slug, displayName) {
+    function renderReferral(slug, displayName, apiOfferCode) {
+        var code = resolveOfferCode(slug, apiOfferCode);
+
         document.getElementById('r-partner-name').textContent = displayName;
-        document.getElementById('r-slug-value').textContent = slug;
+        document.getElementById('r-slug-value').textContent = code;
         show('r-referral');
 
+        // Primary CTA — open Apple's native redeem sheet with the code
+        // pre-filled. On iOS this triggers StoreKit's offer-code UI in
+        // one tap; on other platforms Apple shows a fallback page.
         var appBtn = document.getElementById('r-appstore-btn');
         appBtn.addEventListener('click', function () {
-            copySentinel(slug).then(function () {
-                var isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-                if (isiOS) {
-                    location.href = APPSTORE_URL;
-                } else {
-                    window.open(APPSTORE_URL, '_blank', 'noopener,noreferrer');
-                }
-            });
+            var isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            var redeemUrl = buildRedeemUrl(code);
+            if (isiOS) {
+                location.href = redeemUrl;
+            } else {
+                // Non-iOS: redeem URL won't work — fall back to the App
+                // Store listing so the user can install on their phone
+                // later and redeem there.
+                window.open(APPSTORE_URL, '_blank', 'noopener,noreferrer');
+            }
         });
 
+        // Copy the actual offer code so the user can paste it into the
+        // App Store redeem sheet manually if the deep link doesn't fire.
         var copyBtn = document.getElementById('r-copy-btn');
         copyBtn.addEventListener('click', function () {
-            copySentinel(slug).then(flashCopied);
+            copyCode(code).then(flashCopied);
         });
     }
 
@@ -105,7 +134,7 @@
                     show('r-notfound');
                     return;
                 }
-                renderReferral(slug, result.displayName);
+                renderReferral(slug, result.displayName, result.offerCode);
             })
             .catch(function () {
                 show('r-notfound');

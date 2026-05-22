@@ -50,6 +50,7 @@ We use collected information for the following purposes:
 *   **Proactive Insights:** Generating daily observations and suggestions based on patterns in your child's data.
 4.2. **Automated Decision-Making:** The App uses automated algorithms (including AI models and statistical methods) to generate sleep schedule recommendations, bedtime predictions, and wake window estimates. These outputs are informational only. No significant decisions affecting your legal rights are made solely through automated processing.
 4.3. **Human Oversight:** You may contact us at any time to request human review of any automated recommendation or to opt out of AI-powered features.
+4.4. **Consent to AI Processing:** Consent to AI-powered processing is included in your acceptance of the Terms of Use and Data Processing Consent during onboarding. The App does not request a separate in-app AI consent before each use of the assistant or voice input. Use of AI features is optional; you can avoid this processing by not using the AI assistant or voice input.
 
 5. DATA SHARING AND THIRD-PARTY PROCESSORS
 5.1. **We do not sell, rent, or trade your personal information.** We do not share data with advertisers.
@@ -180,6 +181,7 @@ If you have questions, concerns, or requests regarding this Privacy Policy or yo
 *   **Проактивные наблюдения:** Формирование ежедневных наблюдений и предложений на основе паттернов в данных вашего ребёнка.
 4.2. **Автоматизированное принятие решений:** Приложение использует автоматизированные алгоритмы (включая AI-модели и статистические методы) для формирования рекомендаций по режиму сна, прогнозирования времени укладывания и оценки «окон бодрствования». Эти результаты носят исключительно информационный характер. Никакие значимые решения, затрагивающие ваши законные права, не принимаются исключительно на основе автоматизированной обработки.
 4.3. **Человеческий контроль:** Вы можете в любое время обратиться к нам с просьбой о пересмотре человеком любой автоматизированной рекомендации или отказе от AI-функций.
+4.4. **Согласие на AI-обработку:** Согласие на обработку данных AI-функциями включено в ваше принятие Пользовательского соглашения и Согласия на обработку данных во время онбординга. Приложение не запрашивает отдельное in-app согласие перед каждым использованием ассистента или голосового ввода. Использование AI-функций необязательно; вы можете избежать такой обработки, не используя AI-ассистента или голосовой ввод.
 
 5. ПЕРЕДАЧА ДАННЫХ И СТОРОННИЕ ОБРАБОТЧИКИ
 5.1. **Мы не продаём, не сдаём в аренду и не обмениваем ваши персональные данные.** Мы не передаём данные рекламодателям.
@@ -310,6 +312,7 @@ If you have questions, concerns, or requests regarding this Privacy Policy or yo
 *   **Проактивті байқаулар:** Балаңыздың деректеріндегі заңдылықтарға негізделген күнделікті байқаулар мен ұсыныстарды қалыптастыру.
 4.2. **Автоматтандырылған шешім қабылдау:** Қосымша ұйқы режимі бойынша ұсынымдарды, ұйқыға жату уақытын болжауды және «ояу болу терезелерін» бағалауды қалыптастыру үшін автоматтандырылған алгоритмдерді (AI-модельдерді және статистикалық әдістерді қоса) пайдаланады. Бұл нәтижелер тек ақпараттық сипатта. Сіздің заңды құқықтарыңызға қатысты ешқандай маңызды шешімдер тек автоматтандырылған өңдеу негізінде қабылданбайды.
 4.3. **Адами бақылау:** Сіз кез келген уақытта кез келген автоматтандырылған ұсынымды адамның қарауын сұрау немесе AI-функциялардан бас тарту үшін бізге хабарласа аласыз.
+4.4. **AI-өңдеуге келісім:** AI-функциялар арқылы деректерді өңдеуге келісім Қосымшаны бастапқы баптау кезінде Пайдалану шарттары мен Деректерді өңдеуге келісімді қабылдауыңызға кіреді. Қосымша ассистентті немесе дауыстық енгізуді әр пайдаланған сайын бөлек in-app келісім сұрамайды. AI-функцияларды пайдалану міндетті емес; мұндай өңдеуден AI-ассистентті немесе дауыстық енгізуді пайдаланбау арқылы бас тарта аласыз.
 
 5. ДЕРЕКТЕРДІ БЕРУ ЖӘНЕ ҮШІНШІ ТАРАП ӨҢДЕУШІЛЕРІ
 5.1. **Біз сіздің дербес деректеріңізді сатпаймыз, жалға бермейміз және айырбастамаймыз.** Біз жарнама берушілерге деректер бермейміз.
@@ -653,6 +656,8 @@ I hereby grant my explicit consent to the collection, processing, and storage of
 2. LEGAL BASIS
 This consent is given pursuant to the Law of the Republic of Kazakhstan "On Personal Data and their Protection" and constitutes specific, informed, and unambiguous consent to the processing of personal data.
 
+This consent includes AI-powered processing by Google Gemini AI / Vertex AI for the AI assistant, voice transcription, and proactive insights. For these purposes, Lupibu may send conversation text, voice audio for real-time transcription, relevant child tracking data, and generated AI responses to Google Gemini AI / Vertex AI. Voice audio is processed in real time and is not stored after transcription. AI outputs are informational only and do not replace medical advice.
+
 3. CATEGORIES OF PERSONAL DATA
 I authorize the processing of the following categories of data:
 
@@ -736,6 +741,8 @@ Tapping the "I agree" button constitutes my **Simple Electronic Signature** and 
 2. ПРАВОВЫЕ ОСНОВАНИЯ
 Настоящее согласие дается в соответствии с Законом Республики Казахстан «О персональных данных и их защите» и является конкретным, информированным и сознательным согласием на обработку персональных данных.
 
+Настоящее согласие включает обработку данных AI-функциями через Google Gemini AI / Vertex AI для работы AI-ассистента, расшифровки голоса и проактивных наблюдений. Для этих целей Lupibu может передавать в Google Gemini AI / Vertex AI текст диалогов, голосовое аудио для обработки в реальном времени, релевантные данные отслеживания ребёнка и сгенерированные AI-ответы. Голосовое аудио обрабатывается в реальном времени и не сохраняется после расшифровки. Результаты AI носят информационный характер и не заменяют медицинскую консультацию.
+
 3. КАТЕГОРИИ ПЕРСОНАЛЬНЫХ ДАННЫХ
 Я разрешаю обработку следующих категорий данных:
 
@@ -818,6 +825,8 @@ Tapping the "I agree" button constitutes my **Simple Electronic Signature** and 
 
 2. ҚҰҚЫҚТЫҚ НЕГІЗДЕР
 Бұл келісім Қазақстан Республикасының «Дербес деректер және оларды қорғау туралы» Заңына сәйкес беріледі және дербес деректерді өңдеуге нақты, хабардар етілген және саналы келісім болып табылады.
+
+Бұл келісім AI-ассистенттің жұмысы, дауысты транскрипциялау және проактивті байқаулар үшін Google Gemini AI / Vertex AI арқылы AI-функциялармен деректерді өңдеуді қамтиды. Осы мақсаттар үшін Lupibu Google Gemini AI / Vertex AI-ға диалог мәтінін, нақты уақыт режимінде транскрипцияланатын дауыс аудиосын, бала туралы тиісті бақылау деректерін және жасалған AI-жауаптарды жібере алады. Дауыс аудиосы нақты уақытта өңделеді және транскрипциядан кейін сақталмайды. AI нәтижелері тек ақпараттық сипатта және медициналық кеңесті алмастырмайды.
 
 3. ДЕРБЕС ДЕРЕКТЕР САНАТТАРЫ
 Мен деректердің келесі санаттарын өңдеуге рұқсат беремін:
