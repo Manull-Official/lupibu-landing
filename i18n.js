@@ -72,7 +72,7 @@ const translations = {
         'pay.cta.pay': 'Pay with card',
         'pay.features.title': "What\'s in Lupibu Pro",
         // Service description (YooKassa requires this)
-        'pay.hero.subtitle': 'Subscription for access to the app.',
+        'pay.hero.subtitle': 'Lupibu is an iOS app for parents — track the baby\'s routine (sleep, feeds, notes), forecast the next sleep, and ask an AI assistant questions with the full history as context. The subscription unlocks full access to the app.',
         'pay.included': 'The subscription includes the full functionality of the app.',
         'pay.offer.consent': 'By paying, you agree to the',
         'pay.consent.link': 'Terms of Use',
@@ -197,7 +197,7 @@ const translations = {
         'pay.features.f6': 'Виджет iOS',
         'pay.cta.pay': 'Оплатить картой',
         // Описание услуги (требование ЮKassa)
-        'pay.hero.subtitle': 'Подписка на доступ к приложению.',
+        'pay.hero.subtitle': 'Lupibu — iOS-приложение для родителей: ведение режима малыша (сон, кормления, заметки), прогноз следующего сна и AI-помощник, отвечающий с учётом истории записей. Подписка открывает полный доступ к приложению.',
         'pay.included': 'В подписку входит весь функционал приложения.',
         'pay.offer.consent': 'Оплачивая, вы соглашаетесь с',
         'pay.consent.link': 'Условиями использования',
@@ -322,7 +322,7 @@ const translations = {
         'pay.features.f6': 'iOS виджеті',
         'pay.cta.pay': 'Картамен төлеу',
         // Қызмет сипаттамасы (ЮKassa талабы)
-        'pay.hero.subtitle': 'Қосымшаға қол жеткізу жазылымы.',
+        'pay.hero.subtitle': 'Lupibu — ата-аналарға арналған iOS-қосымша: сәбидің күн тәртібін жүргізу (ұйқы, тамақтандыру, жазбалар), келесі ұйқыны болжау және жазбалар тарихын ескеретін AI-көмекші. Жазылым қосымшаға толық қол жеткізуді ашады.',
         'pay.included': 'Жазылымға қосымшаның барлық функционалы кіреді.',
         'pay.offer.consent': 'Төлеу арқылы сіз қабылдайсыз —',
         'pay.consent.link': 'Қолдану шарттары',
