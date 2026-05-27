@@ -903,23 +903,6 @@ ul, ol { list-style: none; }
 }
 
 /* ========================================
-   ABOUT BLURB — short factual descriptor between testimonials and slogan
-   ======================================== */
-.about-blurb {
-    padding: var(--space-md) 0 0;
-    background: var(--white);
-    text-align: center;
-}
-
-.about-blurb-text {
-    margin: 0 auto;
-    max-width: 60ch;
-    font-size: var(--text-small);
-    color: var(--gray-500);
-    line-height: 1.55;
-}
-
-/* ========================================
    PRE-FOOTER SLOGAN
    ======================================== */
 .slogan-section {

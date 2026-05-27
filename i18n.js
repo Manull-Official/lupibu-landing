@@ -8,9 +8,6 @@ const translations = {
         // A11y
         'a11y.skipLink': 'Skip to content',
 
-        // About — short factual blurb (between testimonials and slogan)
-        'about.blurb': "Lupibu is an iOS app for parents — track the baby's routine (sleep, feeds, notes), forecast the next sleep, and an AI assistant that answers with the full history as context.",
-
         // Hero — ≤6 words title, ≤12 words subtitle
         'hero.title': "<span class=\"hero-title-lede\">Baby's rhythm</span><span class=\"hero-title-payoff\">Your day back</span>",
         'hero.subtitle': "Knows what's next",
@@ -146,7 +143,6 @@ const translations = {
     // ============================================
     ru: {
         'a11y.skipLink': 'К содержимому',
-        'about.blurb': 'Lupibu — iOS-приложение для родителей: ведение режима малыша (сон, кормления, заметки), прогноз следующего сна и AI-помощник, отвечающий с учётом истории записей.',
         'hero.title': '<span class="hero-title-lede">Ритм малыша</span><span class="hero-title-payoff">Ваш день</span>',
         'hero.subtitle': 'Знает, что дальше',
         'hero.proof': '7 дней бесплатно',
@@ -272,7 +268,6 @@ const translations = {
     // ============================================
     kk: {
         'a11y.skipLink': 'Мазмұнға өту',
-        'about.blurb': 'Lupibu — ата-аналарға арналған iOS-қосымша: сәбидің күн тәртібін жүргізу (ұйқы, тамақтандыру, жазбалар), келесі ұйқыны болжау және жазбалар тарихын ескеретін AI-көмекші.',
         'hero.title': '<span class="hero-title-lede">Сәбидің ырғағы</span><span class="hero-title-payoff">Сіздің күніңіз</span>',
         'hero.subtitle': 'Не боларын біледі',
         'hero.proof': '7 күн тегін',
