@@ -8,6 +8,9 @@ const translations = {
         // A11y
         'a11y.skipLink': 'Skip to content',
 
+        // About — short factual blurb (between testimonials and slogan)
+        'about.blurb': "Lupibu is an iOS app for parents — track the baby's routine (sleep, feeds, notes), forecast the next sleep, and an AI assistant that answers with the full history as context.",
+
         // Hero — ≤6 words title, ≤12 words subtitle
         'hero.title': "<span class=\"hero-title-lede\">Baby's rhythm</span><span class=\"hero-title-payoff\">Your day back</span>",
         'hero.subtitle': "Knows what's next",
@@ -72,7 +75,7 @@ const translations = {
         'pay.cta.pay': 'Pay with card',
         'pay.features.title': "What\'s in Lupibu Pro",
         // Service description (YooKassa requires this)
-        'pay.hero.subtitle': 'Lupibu is an iOS app for parents — track the baby\'s routine (sleep, feeds, notes), forecast the next sleep, and ask an AI assistant questions with the full history as context. The subscription unlocks full access to the app.',
+        'pay.hero.subtitle': 'Subscription for access to the app.',
         'pay.included': 'The subscription includes the full functionality of the app.',
         'pay.offer.consent': 'By paying, you agree to the',
         'pay.consent.link': 'Terms of Use',
@@ -143,6 +146,7 @@ const translations = {
     // ============================================
     ru: {
         'a11y.skipLink': 'К содержимому',
+        'about.blurb': 'Lupibu — iOS-приложение для родителей: ведение режима малыша (сон, кормления, заметки), прогноз следующего сна и AI-помощник, отвечающий с учётом истории записей.',
         'hero.title': '<span class="hero-title-lede">Ритм малыша</span><span class="hero-title-payoff">Ваш день</span>',
         'hero.subtitle': 'Знает, что дальше',
         'hero.proof': '7 дней бесплатно',
@@ -197,7 +201,7 @@ const translations = {
         'pay.features.f6': 'Виджет iOS',
         'pay.cta.pay': 'Оплатить картой',
         // Описание услуги (требование ЮKassa)
-        'pay.hero.subtitle': 'Lupibu — iOS-приложение для родителей: ведение режима малыша (сон, кормления, заметки), прогноз следующего сна и AI-помощник, отвечающий с учётом истории записей. Подписка открывает полный доступ к приложению.',
+        'pay.hero.subtitle': 'Подписка на доступ к приложению.',
         'pay.included': 'В подписку входит весь функционал приложения.',
         'pay.offer.consent': 'Оплачивая, вы соглашаетесь с',
         'pay.consent.link': 'Условиями использования',
@@ -268,6 +272,7 @@ const translations = {
     // ============================================
     kk: {
         'a11y.skipLink': 'Мазмұнға өту',
+        'about.blurb': 'Lupibu — ата-аналарға арналған iOS-қосымша: сәбидің күн тәртібін жүргізу (ұйқы, тамақтандыру, жазбалар), келесі ұйқыны болжау және жазбалар тарихын ескеретін AI-көмекші.',
         'hero.title': '<span class="hero-title-lede">Сәбидің ырғағы</span><span class="hero-title-payoff">Сіздің күніңіз</span>',
         'hero.subtitle': 'Не боларын біледі',
         'hero.proof': '7 күн тегін',
@@ -322,7 +327,7 @@ const translations = {
         'pay.features.f6': 'iOS виджеті',
         'pay.cta.pay': 'Картамен төлеу',
         // Қызмет сипаттамасы (ЮKassa талабы)
-        'pay.hero.subtitle': 'Lupibu — ата-аналарға арналған iOS-қосымша: сәбидің күн тәртібін жүргізу (ұйқы, тамақтандыру, жазбалар), келесі ұйқыны болжау және жазбалар тарихын ескеретін AI-көмекші. Жазылым қосымшаға толық қол жеткізуді ашады.',
+        'pay.hero.subtitle': 'Қосымшаға қол жеткізу жазылымы.',
         'pay.included': 'Жазылымға қосымшаның барлық функционалы кіреді.',
         'pay.offer.consent': 'Төлеу арқылы сіз қабылдайсыз —',
         'pay.consent.link': 'Қолдану шарттары',
