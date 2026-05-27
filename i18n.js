@@ -55,12 +55,12 @@ const translations = {
         'pay.tariff.monthly.label': 'Monthly',
         'pay.tariff.monthly.price': '599 ₽',
         'pay.tariff.monthly.period': 'per month',
-        'pay.tariff.monthly.note': 'First 7 days free, then 599 ₽/mo.',
+        'pay.tariff.monthly.note': 'Subscription with auto-renewal every 30 days.',
         'pay.tariff.yearly.label': 'Yearly',
         'pay.tariff.yearly.badge': '−44%',
         'pay.tariff.yearly.price': '3,999 ₽',
         'pay.tariff.yearly.period': 'per year · ≈ 333 ₽/mo',
-        'pay.tariff.yearly.note': 'First 7 days free, then 3,999 ₽/yr. Save 3,189 ₽.',
+        'pay.tariff.yearly.note': 'Subscription with auto-renewal every 365 days. Save 3,189 ₽.',
         'pay.cancel.notice': 'Cancel anytime.',
         'pay.intro.text': "A subscription unlocks Lupibu — the app that learns your baby's rhythm and tells you what's next.",
         'pay.features.f1': 'Sleep predictions',
@@ -71,8 +71,12 @@ const translations = {
         'pay.features.f6': 'iOS widget',
         'pay.cta.pay': 'Pay with card',
         'pay.features.title': "What\'s in Lupibu Pro",
+        // Service description (YooKassa requires this)
+        'pay.hero.subtitle': 'Subscription for access to the app.',
+        'pay.included': 'The subscription includes the full functionality of the app.',
         'pay.offer.consent': 'By paying, you agree to the',
         'pay.consent.link': 'Terms of Use',
+        'pay.offer.full': 'By paying, you agree to the <a href="legal.html?doc=terms">Terms of Use</a> and <a href="legal.html?doc=privacy">Privacy Policy</a>.',
         'pay.merchant.org': 'IP Sariev',
         'pay.merchant.inn_label': 'IIN',
         'pay.merchant.address_label': 'Address',
@@ -97,7 +101,41 @@ const translations = {
         'referral.disclaimer': '*new users only.',
         'notfound.title': 'Page not found',
         'notfound.text': 'The page you’re looking for doesn’t exist. Let’s get you home.',
-        'notfound.home': 'Back to Lupibu'
+        'notfound.home': 'Back to Lupibu',
+
+        // Nav + Footer Company group
+        'nav.about': 'About',
+        'footer.company.label': 'Company',
+        'footer.company.about': 'About',
+
+        // /about.html — narrative arc for Google review
+        'aboutPage.hero': 'Lupibu',
+        'aboutPage.sub': "An iOS app that learns each baby's sleep rhythm and predicts what's likely next.",
+        // 01 Problem
+        'aboutPage.s1.label': 'Problem',
+        'aboutPage.s1.body': "Tracking apps record everything but answer nothing. New parents end up with history they don't have time to read. Lupibu turns that history into a forecast — what's likely next — and an AI assistant that already knows the context.",
+        // 02 Product
+        'aboutPage.s2.label': 'Product',
+        'aboutPage.s2.body': "An iPhone app that learns each baby's rhythm and predicts when the next sleep window will open. The AI assistant answers parenting questions with full history as context.",
+        // 03 How it works
+        'aboutPage.s3.label': 'How it works',
+        'aboutPage.s3.heading': "What's inside the app",
+        'aboutPage.s3.body': 'Sleep-rhythm prediction, an iOS widget for the next nap, voice and AI-assisted logging, an AI assistant with full history, dark mode, and a paediatrician-ready PDF.',
+        // 04 Who it's for
+        'aboutPage.s4.label': "Who it's for",
+        'aboutPage.s4.body': "Parents tracking a baby's daily routine. Multilingual households are a core use case — voice input works in three languages from day one.",
+        // 05 Market
+        'aboutPage.s5.label': 'Market',
+        'aboutPage.s5.body': 'Consumer digital health and parenting tech — infant tracking, sleep guidance, AI-powered family assistants. The category is shifting from passive logs to prediction-driven products.',
+        // 06 Status
+        'aboutPage.s6.label': 'Status',
+        'aboutPage.s6.heading': 'Launched on the App Store',
+        'aboutPage.s6.body': 'Fully launched on the Apple App Store, with real public reviews from parents. 7-day free trial, then paid subscription.',
+        'aboutPage.s6.statCap': 'App Store rating',
+        // 07 Founder
+        'aboutPage.s7.label': 'Founder',
+        'aboutPage.s7.role': 'Founder · Almaty, Kazakhstan',
+        'aboutPage.s7.bio': 'Backend engineer, 12+ years across distributed teams in Europe and the US — shipping products at every scale, from banking systems to consumer iOS apps.'
     },
 
     // ============================================
@@ -143,12 +181,12 @@ const translations = {
         'pay.tariff.monthly.label': 'На месяц',
         'pay.tariff.monthly.price': '599 ₽',
         'pay.tariff.monthly.period': 'в месяц',
-        'pay.tariff.monthly.note': 'Первые 7 дней бесплатно. Далее 599 ₽/мес.',
+        'pay.tariff.monthly.note': 'Подписка с автопродлением каждые 30 дней.',
         'pay.tariff.yearly.label': 'На год',
         'pay.tariff.yearly.badge': '−44%',
         'pay.tariff.yearly.price': '3 999 ₽',
         'pay.tariff.yearly.period': 'в год · ≈ 333 ₽/мес',
-        'pay.tariff.yearly.note': 'Первые 7 дней бесплатно. Далее 3 999 ₽/год. Экономия 3 189 ₽.',
+        'pay.tariff.yearly.note': 'Подписка с автопродлением каждые 365 дней. Экономия 3 189 ₽.',
         'pay.cancel.notice': 'Отмена в любой момент.',
         'pay.intro.text': 'Подписка открывает доступ к Lupibu — приложению, которое учит ритм малыша и подсказывает, что дальше.',
         'pay.features.f1': 'Прогнозы сна',
@@ -158,8 +196,12 @@ const translations = {
         'pay.features.f5': 'До 4 детей',
         'pay.features.f6': 'Виджет iOS',
         'pay.cta.pay': 'Оплатить картой',
+        // Описание услуги (требование ЮKassa)
+        'pay.hero.subtitle': 'Подписка на доступ к приложению.',
+        'pay.included': 'В подписку входит весь функционал приложения.',
         'pay.offer.consent': 'Оплачивая, вы соглашаетесь с',
         'pay.consent.link': 'Условиями использования',
+        'pay.offer.full': 'Оплачивая, вы соглашаетесь с <a href="legal.html?doc=terms">Условиями использования</a> и <a href="legal.html?doc=privacy">Политикой конфиденциальности</a>.',
         'pay.merchant.org': 'ИП Сариев',
         'pay.merchant.inn_label': 'ИИН',
         'pay.merchant.address_label': 'Адрес',
@@ -184,7 +226,41 @@ const translations = {
         'referral.disclaimer': '*только для новых пользователей.',
         'notfound.title': 'Страница не найдена',
         'notfound.text': 'Такой страницы не существует. Вернёмся на главную.',
-        'notfound.home': 'На главную Lupibu'
+        'notfound.home': 'На главную Lupibu',
+
+        // Nav + Footer Company group
+        'nav.about': 'О проекте',
+        'footer.company.label': 'Компания',
+        'footer.company.about': 'О проекте',
+
+        // /about.html — narrative arc
+        'aboutPage.hero': 'Lupibu',
+        'aboutPage.sub': 'iOS-приложение, которое учит индивидуальный ритм сна малыша и подсказывает, что вероятно дальше.',
+        // 01 Problem
+        'aboutPage.s1.label': 'Проблема',
+        'aboutPage.s1.body': 'Трекеры записывают всё, но ничего не подсказывают. У молодых родителей накапливается история, которую читать некогда. Lupibu превращает её в прогноз — что вероятно дальше — и ИИ-ассистента, который уже знает контекст.',
+        // 02 Product
+        'aboutPage.s2.label': 'Продукт',
+        'aboutPage.s2.body': 'iPhone-приложение, которое учит индивидуальный ритм малыша и прогнозирует следующее окно сна. ИИ-ассистент отвечает на вопросы с полной историей в контексте.',
+        // 03 How it works
+        'aboutPage.s3.label': 'Как работает',
+        'aboutPage.s3.heading': 'Что внутри приложения',
+        'aboutPage.s3.body': 'Прогноз ритма сна, виджет iOS со следующим сном, голосовой и AI-ввод, ИИ-ассистент с полной историей, тёмная тема и PDF-отчёт для педиатра.',
+        // 04 Who it's for
+        'aboutPage.s4.label': 'Для кого',
+        'aboutPage.s4.body': 'Родители, ведущие распорядок малыша. Многоязычные семьи — ключевой сценарий: голосовой ввод работает на трёх языках с первого дня.',
+        // 05 Market
+        'aboutPage.s5.label': 'Рынок',
+        'aboutPage.s5.body': 'Потребительский digital health и parenting-tech — трекинг младенцев, поддержка сна, AI-ассистенты для семей. Категория сдвигается от пассивных журналов к предиктивным продуктам.',
+        // 06 Status
+        'aboutPage.s6.label': 'Статус',
+        'aboutPage.s6.heading': 'Запущено в App Store',
+        'aboutPage.s6.body': 'Полностью запущено в Apple App Store, с реальными публичными отзывами родителей. 7 дней бесплатно, затем платная подписка.',
+        'aboutPage.s6.statCap': 'Рейтинг в App Store',
+        // 07 Founder
+        'aboutPage.s7.label': 'Основатель',
+        'aboutPage.s7.role': 'Основатель · Алматы, Казахстан',
+        'aboutPage.s7.bio': 'Бэкенд-инженер, 12+ лет в распределённых командах в Европе и США — продукты разного масштаба, от банковских систем до consumer iOS-приложений.'
     },
 
     // ============================================
@@ -230,12 +306,12 @@ const translations = {
         'pay.tariff.monthly.label': 'Айлық',
         'pay.tariff.monthly.price': '599 ₽',
         'pay.tariff.monthly.period': 'айына',
-        'pay.tariff.monthly.note': 'Алғашқы 7 күн тегін. Содан кейін 599 ₽/ай.',
+        'pay.tariff.monthly.note': 'Әр 30 күн сайын автопродлениемен жазылым.',
         'pay.tariff.yearly.label': 'Жылдық',
         'pay.tariff.yearly.badge': '−44%',
         'pay.tariff.yearly.price': '3 999 ₽',
         'pay.tariff.yearly.period': 'жылына · ≈ 333 ₽/ай',
-        'pay.tariff.yearly.note': 'Алғашқы 7 күн тегін. Содан кейін 3 999 ₽/жыл. Үнем 3 189 ₽.',
+        'pay.tariff.yearly.note': 'Әр 365 күн сайын автопродлениемен жазылым. Үнем 3 189 ₽.',
         'pay.cancel.notice': 'Кез келген уақытта бас тартуға болады.',
         'pay.intro.text': 'Жазылым Lupibu қосымшасына қол жеткізуді ашады — ол сәбидің ырғағын үйренеді және не боларын алдын ала айтады.',
         'pay.features.f1': 'Ұйқы болжамдары',
@@ -245,8 +321,12 @@ const translations = {
         'pay.features.f5': '4 балаға дейін',
         'pay.features.f6': 'iOS виджеті',
         'pay.cta.pay': 'Картамен төлеу',
+        // Қызмет сипаттамасы (ЮKassa талабы)
+        'pay.hero.subtitle': 'Қосымшаға қол жеткізу жазылымы.',
+        'pay.included': 'Жазылымға қосымшаның барлық функционалы кіреді.',
         'pay.offer.consent': 'Төлеу арқылы сіз қабылдайсыз —',
         'pay.consent.link': 'Қолдану шарттары',
+        'pay.offer.full': 'Төлеу арқылы сіз <a href="legal.html?doc=terms">Қолдану шарттарын</a> және <a href="legal.html?doc=privacy">Құпиялылық саясатын</a> қабылдайсыз.',
         'pay.merchant.org': 'ЖК Сариев',
         'pay.merchant.inn_label': 'ЖСН',
         'pay.merchant.address_label': 'Мекенжай',
@@ -271,7 +351,41 @@ const translations = {
         'referral.disclaimer': '*тек жаңа пайдаланушылар үшін.',
         'notfound.title': 'Бет табылмады',
         'notfound.text': 'Мұндай бет жоқ. Басты бетке оралайық.',
-        'notfound.home': 'Lupibu басты бетіне'
+        'notfound.home': 'Lupibu басты бетіне',
+
+        // Nav + Footer Company group
+        'nav.about': 'Жоба туралы',
+        'footer.company.label': 'Компания',
+        'footer.company.about': 'Жоба туралы',
+
+        // /about.html — narrative arc
+        'aboutPage.hero': 'Lupibu',
+        'aboutPage.sub': 'Әр сәбидің ұйқы ырғағын үйреніп, не болатынын алдын ала айтатын iOS қосымшасы.',
+        // 01 Problem
+        'aboutPage.s1.label': 'Мәселе',
+        'aboutPage.s1.body': 'Трекерлер бәрін жазады, бірақ ештеңе айтпайды. Жас ата-аналарда оқуға уақыты жоқ тарих жиналады. Lupibu сол тарихты болжамға айналдырады — не болуы мүмкін — және контекстті білетін AI-көмекшіге.',
+        // 02 Product
+        'aboutPage.s2.label': 'Өнім',
+        'aboutPage.s2.body': 'iPhone-қосымша, ол әр сәбидің ырғағын үйренеді және келесі ұйқы терезесін болжайды. AI-көмекші ата-аналық сұрақтарға толық тарих контекстімен жауап береді.',
+        // 03 How it works
+        'aboutPage.s3.label': 'Қалай жұмыс істейді',
+        'aboutPage.s3.heading': 'Қосымшаның ішінде не бар',
+        'aboutPage.s3.body': 'Ұйқы ырғағы болжамы, келесі ұйқыны көрсететін iOS виджеті, дауыспен және AI-ден жазба қосу, толық тарихты білетін AI-көмекші, қара тақырып және педиатрге PDF-есеп.',
+        // 04 Who it's for
+        'aboutPage.s4.label': 'Кімге арналған',
+        'aboutPage.s4.body': 'Сәбидің күн тәртібін жүргізетін ата-аналар. Көптілді отбасылар — басты сценарий: дауыспен енгізу үш тілде бірінші күннен жұмыс істейді.',
+        // 05 Market
+        'aboutPage.s5.label': 'Нарық',
+        'aboutPage.s5.body': 'Тұтынушылық digital health пен parenting-tech — сәби трекингі, ұйқыға қолдау, отбасыларға арналған AI-көмекшілер. Категория пассивті журналдардан болжамды өнімдерге ауысуда.',
+        // 06 Status
+        'aboutPage.s6.label': 'Мәртебе',
+        'aboutPage.s6.heading': 'App Store-да іске қосылды',
+        'aboutPage.s6.body': 'Apple App Store-да толық іске қосылды, ата-аналардан шынайы ашық пікірлермен. 7 күн тегін, содан кейін ақылы жазылым.',
+        'aboutPage.s6.statCap': 'App Store рейтингі',
+        // 07 Founder
+        'aboutPage.s7.label': 'Негізін қалаушы',
+        'aboutPage.s7.role': 'Негізін қалаушы · Алматы, Қазақстан',
+        'aboutPage.s7.bio': 'Бэкенд инженер, Еуропа мен АҚШ-тағы бөлінген командаларда 12+ жыл — әртүрлі ауқымдағы өнімдер, банктік жүйелерден consumer iOS-қосымшаларына дейін.'
     }
 };
 

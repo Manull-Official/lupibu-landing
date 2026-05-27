@@ -1320,9 +1320,43 @@ ul, ol { list-style: none; }
     line-height: 1.3;
 }
 
+/* Detailed service description (YooKassa-compliant prose) */
+.pay-detail {
+    padding: 0 0 var(--space-xl);
+}
+
+.pay-detail .container {
+    max-width: 720px;
+}
+
+.pay-detail-intro,
+.pay-detail-features,
+.pay-detail-access {
+    margin: 0 0 var(--space-md);
+    font-size: var(--text-body);
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+
+.pay-detail-access {
+    margin-bottom: 0;
+    font-size: var(--text-small);
+    color: var(--gray-600);
+}
+
 /* Pricing grid */
 .pricing-section {
     padding: var(--space-md) 0 var(--space-lg);
+}
+
+.pricing-title {
+    margin: 0 0 var(--space-md);
+    text-align: center;
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
+    font-weight: 700;
+    color: var(--gray-900);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
 }
 
 .pricing-grid {
@@ -1433,6 +1467,16 @@ ul, ol { list-style: none; }
     line-height: 1.5;
     margin: var(--space-md) auto 0;
     max-width: 56ch;
+}
+
+/* Service description (YooKassa compliance) — small text under cards */
+.pay-included {
+    text-align: center;
+    font-size: var(--text-small);
+    color: var(--gray-600);
+    line-height: 1.55;
+    margin: var(--space-sm) auto 0;
+    max-width: 64ch;
 }
 
 /* Features list */
@@ -2424,5 +2468,427 @@ ul, ol { list-style: none; }
     .help-contact {
         margin-top: var(--space-lg);
         padding: var(--space-md) var(--space-lg);
+    }
+}
+
+/* ========================================
+   NAVBAR — About link
+   ======================================== */
+.nav-link {
+    font-size: var(--text-small);
+    font-weight: 500;
+    color: var(--gray-700);
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: color 0.15s ease;
+}
+
+.nav-link:hover {
+    color: var(--gray-900);
+}
+
+.nav-link-active {
+    color: var(--gray-900);
+    font-weight: 600;
+}
+
+
+/* ========================================================================
+   /about.html — 2026 redesign v3
+   Narrative arc: Problem → Product → How it works → Who it's for → Market
+                  → Status → Team → Company
+   Pattern: numbered eyebrows, paired columns, peach product band with
+   4-up phone row, asymmetric status split, centered team card,
+   company requisites tile. Standard dark footer (consistent with index).
+   ======================================================================== */
+
+.about-body {
+    /* design tokens */
+    --ab-fs-display:  clamp(56px, 8vw, 96px);
+    --ab-fs-h2:       clamp(26px, 2.5vw + 0.5rem, 36px);
+    --ab-fs-stat:     clamp(72px, 9vw, 128px);
+    --ab-fs-lead:     clamp(18px, 0.7vw + 14px, 22px);
+    --ab-fs-body:     17px;
+    --ab-fs-body-tile: 15px;
+    --ab-fs-eyebrow:  12px;
+    --ab-fs-mono:     13px;
+    --ab-lh-display:  1.0;
+    --ab-lh-body:     1.6;
+    --ab-tr-display:  -0.045em;
+    --ab-tr-eyebrow:  0.12em;
+
+    --ab-page:        #FDFCFA;
+    --ab-tile:        #FAF6F1;
+    --ab-band:        #FFF1E2;
+    --ab-ink:         #141414;
+    --ab-ink-2:       #3A3A3A;
+    --ab-ink-3:       #6B6B6B;
+    --ab-rule:        #ECECEC;
+
+    --ab-mono: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Code", monospace;
+
+    background: var(--ab-page);
+    color: var(--ab-ink);
+}
+
+.about-page {
+    padding-bottom: clamp(24px, 3vh, 40px);
+}
+
+.ab-shell {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 40px);
+}
+
+/* Eyebrow — mono uppercase, brand numeral */
+.eyebrow {
+    margin: 0 0 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font: 500 var(--ab-fs-eyebrow)/1 var(--ab-mono);
+    letter-spacing: var(--ab-tr-eyebrow);
+    text-transform: uppercase;
+    color: var(--ab-ink);
+}
+.eyebrow b {
+    color: var(--brand);
+    font-weight: 600;
+}
+
+/* Body type (shared) */
+.ab-body {
+    margin: 0;
+    font-size: var(--ab-fs-body);
+    color: var(--ab-ink-2);
+    line-height: var(--ab-lh-body);
+    max-width: 62ch;
+}
+
+.ab-h2 {
+    margin: 0 0 14px;
+    font-size: var(--ab-fs-h2);
+    font-weight: 600;
+    color: var(--ab-ink);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+}
+
+/* ----- HERO ----- */
+.ab-hero {
+    padding: calc(72px + clamp(24px, 4vh, 48px)) 0 clamp(16px, 2.5vh, 24px);
+}
+
+.ab-meta {
+    margin: 0 0 clamp(12px, 2vh, 18px);
+    font: 500 var(--ab-fs-eyebrow)/1 var(--ab-mono);
+    letter-spacing: var(--ab-tr-eyebrow);
+    text-transform: uppercase;
+    color: var(--ab-ink-3);
+}
+
+.ab-h1 {
+    margin: 0;
+    max-width: 22ch;
+    font-size: clamp(28px, 3.5vw + 0.5rem, 48px);
+    font-weight: 600;
+    color: var(--ab-ink);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+}
+
+.ab-rule {
+    border: 0;
+    border-top: 1px solid var(--ab-rule);
+    width: 40%;
+    margin: clamp(18px, 2.5vh, 28px) 0 0;
+}
+
+/* ----- 01 + 02 PAIR (white) ----- */
+.ab-pair {
+    padding: clamp(18px, 2.5vh, 28px) 0;
+}
+
+.ab-pair-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(28px, 5vw, 64px);
+}
+
+.ab-col {
+    min-width: 0;
+}
+
+/* ----- 03 HOW IT WORKS — peach band with 4-up phones ----- */
+.ab-band {
+    background: var(--ab-band);
+    padding: clamp(32px, 5vh, 64px) 0;
+    margin: clamp(14px, 2vh, 24px) 0;
+}
+
+.ab-band-copy {
+    max-width: 720px;
+    margin: 0 0 clamp(20px, 3vh, 32px);
+}
+
+.ab-appstore {
+    display: inline-block;
+    margin-top: clamp(14px, 2vh, 20px);
+}
+
+.ab-band-shots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(12px, 1.5vw, 20px);
+    align-items: start;
+}
+
+.shot {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    background: var(--ab-page);
+    box-shadow: 0 24px 48px -16px rgba(20, 20, 20, 0.18);
+}
+
+/* ----- 04 + 05 PAIRED TILES ----- */
+.ab-pair-tiles {
+    padding: clamp(18px, 2.5vh, 28px) 0;
+}
+
+.ab-tile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(12px, 1.5vw, 16px);
+}
+
+.tile {
+    background: var(--ab-tile);
+    border-radius: 24px;
+    padding: clamp(20px, 2.5vw, 28px);
+    min-width: 0;
+}
+
+.tile .ab-body {
+    font-size: var(--ab-fs-body-tile);
+    line-height: 1.55;
+    max-width: none;
+}
+
+/* ----- 06 STATUS — asymmetric stat split ----- */
+.ab-status {
+    padding: clamp(20px, 3vh, 36px) 0;
+}
+
+.ab-status-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(24px, 4vw, 56px);
+    align-items: center;
+    background: var(--ab-tile);
+    border-radius: 28px;
+    padding: clamp(22px, 3vw, 36px);
+}
+
+.ab-status-copy {
+    min-width: 0;
+}
+
+.ab-status-stat {
+    min-width: 0;
+}
+
+.stat-num {
+    margin: 0;
+    font-size: var(--ab-fs-stat);
+    font-weight: 600;
+    color: var(--brand);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.stat-star {
+    font-size: 0.55em;
+    color: var(--brand);
+    line-height: 1;
+}
+
+.stat-cap {
+    margin: 6px 0 12px;
+    font-size: 13px;
+    color: var(--ab-ink-3);
+    letter-spacing: 0.02em;
+}
+
+/* Momentum curve — abstract upward sparkline, no numbers */
+.momentum-curve {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: 56px;
+    margin: 0 0 16px;
+    color: var(--brand);
+}
+
+.chips {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chips li {
+    font: 500 var(--ab-fs-mono)/1.5 var(--ab-mono);
+    color: var(--ab-ink-2);
+    letter-spacing: 0.02em;
+}
+
+/* ----- 07 FOUNDER — compact horizontal card ----- */
+.ab-team {
+    padding: clamp(16px, 2.5vh, 24px) 0 clamp(8px, 1.5vh, 16px);
+}
+
+.ab-team-card {
+    max-width: 640px;
+    margin: 14px 0 0;
+    padding: clamp(16px, 2vw, 20px) clamp(18px, 2.2vw, 24px);
+    background: var(--ab-tile);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: clamp(14px, 2vw, 20px);
+    align-items: center;
+    text-align: left;
+}
+
+.ab-team-avatar {
+    width: 72px;
+    height: 72px;
+    margin: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ab-team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ab-team-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.ab-team-body {
+    min-width: 0;
+}
+
+.ab-team-name {
+    margin: 0 0 2px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ab-ink);
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+}
+
+.ab-team-role {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: var(--ab-ink-3);
+}
+
+.ab-team-bio {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--ab-ink-2);
+    line-height: 1.5;
+}
+
+.ab-team-links {
+    margin: 0;
+    font-size: 13px;
+    color: var(--ab-ink-3);
+}
+
+.ab-team-links a {
+    color: var(--ab-ink-2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ab-rule);
+    padding-bottom: 1px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.ab-team-links a:hover {
+    color: var(--brand);
+    border-bottom-color: var(--brand);
+}
+
+.ab-dot {
+    color: var(--ab-rule);
+    padding: 0 8px;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 880px) {
+    .ab-pair-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .ab-tile-grid {
+        grid-template-columns: 1fr;
+    }
+    .ab-band-shots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ab-status-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .ab-rule {
+        width: 60%;
+    }
+}
+
+@media (max-width: 560px) {
+    .ab-band-shots {
+        grid-template-columns: 1fr 1fr;
+    }
+    .ab-team-card {
+        grid-template-columns: 56px 1fr;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+    .ab-team-avatar {
+        width: 56px;
+        height: 56px;
+    }
+    .ab-team-initials {
+        font-size: 1.125rem;
+    }
+    .momentum-curve {
+        height: 44px;
+        max-width: 100%;
     }
 }

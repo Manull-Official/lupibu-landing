@@ -31,6 +31,35 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- About -->
+  <url>
+    <loc>https://lupibu.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/about.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/about.html?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/about.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/about.html?lang=ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/about.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/about.html?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/about.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lupibu.com/about.html?lang=kk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/about.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/about.html?lang=kk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/about.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Help Center -->
   <url>
     <loc>https://lupibu.com/help.html</loc>
