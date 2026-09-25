@@ -35,7 +35,7 @@ const translations = {
         // Before / After
 
         // Testimonials
-        'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 on the App Store · 30,000+ sleeps and feeds logged',
+        'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 on the App Store',
         'testimonials.source': 'App Store',
         'testimonials.t1.text': '"I use Lupibu every day to track sleep, feedings, and my baby\'s routine. The app is easy to use, with a clean design and helpful reminders. It really helps bring more structure and calm into daily parenting."',
         'testimonials.t1.author': 'Асиманариманова',
@@ -181,7 +181,7 @@ const translations = {
         'final.tagline': 'У малыша — ритм. У Вас — свой день.',
         'final.alt': 'Мама-медведица Lupibu обнимает медвежонка',
 
-        'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 в App Store · уже 30 000+ записей о снах и кормлениях',
+        'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 в App Store',
         'testimonials.source': 'App Store',
         'testimonials.t1.text': '«Пользуюсь Lupibu каждый день — записываю сон, кормления и распорядок малыша. Простое приложение, аккуратный дизайн, удобные напоминания. С ним повседневная жизнь с ребёнком стала спокойнее и понятнее.»',
         'testimonials.t1.author': 'Асиманариманова',
@@ -321,7 +321,7 @@ const translations = {
         'final.tagline': 'Сәбиде — ырғақ. Сізде — өз күніңіз.',
         'final.alt': 'Lupibu ана аюы қонжығын құшақтап отыр',
 
-        'testimonials.label': '⭐⭐⭐⭐⭐ App Store-да 5.0 · 30 000+ ұйқы мен тамақтандыру жазбасы',
+        'testimonials.label': '⭐⭐⭐⭐⭐ App Store-да 5.0',
         'testimonials.source': 'App Store',
         'testimonials.t1.text': '«Lupibu-ді күн сайын пайдаланамын — сәбидің ұйқысын, тамағын, күн тәртібін жазып отырамын. Қосымша қарапайым, дизайны таза, ескертулері ыңғайлы. Сәбимен өткен күндер реттелген әрі тыныш бола түсті.»',
         'testimonials.t1.author': 'Асиманариманова',
