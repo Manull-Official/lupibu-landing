@@ -272,7 +272,9 @@
         var urlLang = getParams().lang;
         var stored = null;
         try { stored = localStorage.getItem('lupibu-lang'); } catch (_) {}
-        var l = urlLang || stored || 'en';
+        // Same order as the landing (i18n.js): URL > saved choice > browser language.
+        var nav = (navigator.language || '').slice(0, 2).toLowerCase();
+        var l = urlLang || stored || nav || 'en';
         return VALID_LANGS.indexOf(l) !== -1 ? l : 'en';
     }
 
