@@ -8,10 +8,29 @@ const translations = {
         // A11y
         'a11y.skipLink': 'Skip to content',
 
-        // Hero — ≤6 words title, ≤12 words subtitle
-        'hero.title': "<span class=\"hero-title-lede\">Baby's rhythm</span><span class=\"hero-title-payoff\">Your day back</span>",
-        'hero.subtitle': "Knows what's next",
+        // Hero — funnel 2026-09: soft promise, mechanism in the subline
+        'hero.eyebrow': 'Baby sleep & routine tracker for iPhone',
+        'hero.title': "Your baby's next nap isn't a surprise.",
+        'hero.subtitle': "Lupibu shows the next nap ahead of time, from your baby's own rhythm.",
         'hero.proof': 'Free for 7 days',
+        'hero.micro': 'Free for 7 days, then a subscription. Cancel anytime in the App Store.',
+
+        // Single screenshot caption
+        'shot.caption': 'The next sleep time and the window to aim for — with the timer one tap away.',
+
+        // Single review (original was written in English)
+        'review.text': '"Lupibu makes tracking my baby\'s routine so much easier. The sleep insights and reminders are especially helpful. Clean design and very intuitive to use."',
+        'review.author': '-Айгулечка-',
+        'review.source': 'App Store',
+
+        // How it works — 3 lines
+        'how.t1': 'Say "nursed on the left for 15 minutes" — it\'s logged.',
+        'how.t2': "After about 5 logged sleeps, predictions tune to your baby's own rhythm.",
+        'how.t3': 'The next nap shows up on your Home and Lock Screen.',
+
+        // Final push
+        'final.tagline': 'A rhythm for your baby. A day for you.',
+        'final.alt': 'Lupibu mama bear hugging the baby bear',
 
         // Before / After
 
@@ -44,8 +63,8 @@ const translations = {
         'footer.connect.label': 'Connect',
         'footer.copyright': '© 2026 Lupibu. All rights reserved.',
         // Meta — utility-anchored for SEO
-        'meta.title': 'Lupibu — baby sleep tracker',
-        'meta.description': "Lupibu learns your baby's rhythm and tells you what's next. For mothers. Free for 7 days.",
+        'meta.title': "Lupibu — know when your baby's next nap is coming",
+        'meta.description': "Lupibu learns from your baby's own sleep log and shows when to put them down next. Log in one phrase, by voice or a tap. Free for 7 days on iPhone.",
 
         // Pay (ЮKassa landing for RU users)
         'pay.meta.title': 'Lupibu Pro — pay with card',
@@ -143,9 +162,24 @@ const translations = {
     // ============================================
     ru: {
         'a11y.skipLink': 'К содержимому',
-        'hero.title': '<span class="hero-title-lede">Ритм малыша</span><span class="hero-title-payoff">Ваш день</span>',
-        'hero.subtitle': 'Знает, что дальше',
+        'hero.eyebrow': 'Трекер сна и режима малыша для iPhone',
+        'hero.title': 'Следующий сон малыша — не сюрприз',
+        'hero.subtitle': 'Lupibu заранее показывает время укладывания — по ритму именно Вашего ребёнка.',
         'hero.proof': '7 дней бесплатно',
+        'hero.micro': '7 дней бесплатно, дальше — по подписке. Отмена в App Store в любой момент.',
+
+        'shot.caption': 'Время следующего сна и окно укладывания — на одном экране. Сон запускается одной кнопкой.',
+
+        'review.text': '«Интуитивно понятное и удобное приложение. Очень помогло разгрузить голову. Отдельное спасибо за ИИ-ассистента — выручает очень.»',
+        'review.author': 'kavinskyyn',
+        'review.source': 'App Store',
+
+        'how.t1': 'Скажите: «покормила левой 15 минут» — запись готова.',
+        'how.t2': 'После ~5 записанных снов прогноз настраивается под ритм именно Вашего малыша.',
+        'how.t3': 'Время следующего сна — на главном экране и на экране блокировки.',
+
+        'final.tagline': 'У малыша — ритм. У Вас — снова свой день.',
+        'final.alt': 'Мама-медведица Lupibu обнимает медвежонка',
 
         'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 в App Store',
         'testimonials.source': 'App Store',
@@ -170,8 +204,8 @@ const translations = {
         'footer.legal.dataConsent': 'Согласие на обработку данных',
         'footer.connect.label': 'Связь',
         'footer.copyright': '© 2026 Lupibu. Все права защищены.',
-        'meta.title': 'Lupibu — трекер сна малыша',
-        'meta.description': 'Lupibu учит ритм малыша и подсказывает, что дальше. Для мам. 7 дней бесплатно.',
+        'meta.title': 'Lupibu — приложение, которое знает, когда следующий сон',
+        'meta.description': 'Lupibu учится на снах Вашего ребёнка и подсказывает, когда укладывать. Записи одной фразой — голосом или текстом. 7 дней бесплатно. Для iPhone.',
 
         // Pay (ЮKassa landing for RU users)
         'pay.meta.title': 'Оплата Lupibu Pro',
@@ -268,9 +302,24 @@ const translations = {
     // ============================================
     kk: {
         'a11y.skipLink': 'Мазмұнға өту',
-        'hero.title': '<span class="hero-title-lede">Сәбидің ырғағы</span><span class="hero-title-payoff">Сіздің күніңіз</span>',
-        'hero.subtitle': 'Не боларын біледі',
+        'hero.eyebrow': 'iPhone-ға арналған сәби ұйқысы мен режим трекері',
+        'hero.title': 'Сәбидің келесі ұйқысы — тосын емес',
+        'hero.subtitle': 'Lupibu ұйықтату уақытын алдын ала көрсетеді — дәл Сіздің сәбиіңіздің ырғағы бойынша.',
         'hero.proof': '7 күн тегін',
+        'hero.micro': '7 күн тегін, кейін — жазылым. App Store-да кез келген сәтте бас тартуға болады.',
+
+        'shot.caption': 'Келесі ұйқы уақыты мен ұйықтату терезесі — бір экранда. Ұйқы бір түймемен басталады.',
+
+        'review.text': '«Интуитивті әрі ыңғайлы қосымша. Басымды босатуға көп көмектесті. AI-көмекшіге бөлек рахмет — шынымен құтқарады.»',
+        'review.author': 'kavinskyyn',
+        'review.source': 'App Store',
+
+        'how.t1': '«Сол жақтан 15 минут еміздіп, серуенге шықтық» деп айтыңыз — жазба дайын.',
+        'how.t2': 'Шамамен 5 жазылған ұйқыдан кейін болжам дәл Сіздің сәбиіңіздің ырғағына бейімделеді.',
+        'how.t3': 'Келесі ұйқы уақыты — басты экранда және құлып экранында.',
+
+        'final.tagline': 'Сәбиде — ырғақ. Сізде — қайтадан өз күніңіз.',
+        'final.alt': 'Lupibu ана аюы қонжығын құшақтап отыр',
 
         'testimonials.label': '⭐⭐⭐⭐⭐ App Store-да 5.0',
         'testimonials.source': 'App Store',
@@ -295,8 +344,8 @@ const translations = {
         'footer.legal.dataConsent': 'Деректерді өңдеуге келісім',
         'footer.connect.label': 'Байланыс',
         'footer.copyright': '© 2026 Lupibu. Барлық құқықтары қорғалған.',
-        'meta.title': 'Lupibu — сәби ұйқы трекері',
-        'meta.description': 'Lupibu сәбидің ырғағын үйреніп, не боларын айтады. Аналарға. 7 күн тегін.',
+        'meta.title': 'Lupibu — сәбидің келесі ұйқысы қашан екенін біледі',
+        'meta.description': 'Lupibu сәбиіңіздің ұйқыларынан үйреніп, қашан ұйықтату керегін көрсетеді. Жазбалар бір сөйлеммен — дауыспен немесе мәтінмен. 7 күн тегін. iPhone-ға.',
 
         // Pay (ЮKassa landing for RU users)
         'pay.meta.title': 'Lupibu Pro төлеуі',
@@ -390,7 +439,9 @@ const translations = {
 };
 
 const SUPPORTED_LANGS = ['en', 'ru', 'kk'];
-const DEFAULT_LANG = 'en';
+// Per-page default: index.html sets window.LUPIBU_DEFAULT_LANG = 'ru' (its static
+// HTML is Russian — that's who pays); every other page keeps English as the base.
+const DEFAULT_LANG = window.LUPIBU_DEFAULT_LANG || 'en';
 
 const langLabels = {
     en: 'EN',

@@ -1121,7 +1121,9 @@ ul, ol { list-style: none; }
     .hero-content { margin: 0 auto; }
     .hero-subtitle { margin-left: auto; margin-right: auto; }
     .hero-cta { justify-content: center; }
-    .hero-visual { order: -1; }
+    /* Funnel 2026-09: promise + CTA stay above the fold; the phone follows them.
+       (was `.hero-visual { order: -1; }` — it pushed the CTA below the fold in
+       Instagram/Threads webviews) */
 
     /* Moment 3's adjacent screenshot collapses to above-the-card on tablet */
     .moment.has-screen {
@@ -2480,6 +2482,7 @@ ul, ol { list-style: none; }
     font-weight: 500;
     color: var(--gray-700);
     text-decoration: none;
+    white-space: nowrap;
     padding: var(--space-xs) var(--space-sm);
     border-radius: var(--radius-sm);
     transition: color 0.15s ease;
@@ -2892,4 +2895,126 @@ ul, ol { list-style: none; }
         height: 44px;
         max-width: 100%;
     }
+}
+
+/* ========================================
+   FUNNEL 2026-09 — single-screen funnel sections
+   ======================================== */
+.hero-micro {
+    max-width: 34ch;
+}
+
+@media (max-width: 900px) {
+    .hero-micro { margin-left: auto; margin-right: auto; }
+}
+
+.phone-single {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.phone-single .phone-frame {
+    width: 280px;
+    height: 580px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+@media (max-width: 640px) {
+    .phone-single .phone-frame {
+        width: 240px;
+        height: 497px;
+        border-radius: 34px;
+        padding: 8px;
+    }
+}
+
+.shot-caption {
+    font-size: var(--text-small);
+    color: var(--gray-500);
+    text-align: center;
+    max-width: 34ch;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Single review */
+.review-single {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* How it works — 3 quiet rows */
+.how-section {
+    padding: var(--space-2xl) 0;
+}
+
+.how-list {
+    list-style: none;
+    counter-reset: how;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.how-row {
+    counter-increment: how;
+    position: relative;
+    padding-left: 52px;
+    font-size: 1.0625rem;
+    color: var(--gray-700);
+    line-height: 1.55;
+}
+
+.how-row::before {
+    content: counter(how);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--brand-tint);
+    color: var(--brand-dark);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Final push */
+.final-cta-section {
+    padding: var(--space-3xl) 0;
+    text-align: center;
+}
+
+.final-cta-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.final-mascot {
+    width: 180px;
+    height: auto;
+}
+
+.final-tagline {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--gray-900);
+    max-width: 18ch;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.final-cta {
+    justify-content: center;
 }

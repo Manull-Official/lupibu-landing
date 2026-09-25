@@ -36,7 +36,7 @@ function initSmoothScroll() {
  */
 function initScrollAnimations() {
     const elements = document.querySelectorAll(
-        '.moments-header, .moment, .moments-footer, .testimonial, .slogan-section'
+        '.moments-header, .moment, .moments-footer, .testimonial, .how-row, .final-cta-section'
     );
 
     elements.forEach(el => el.classList.add('fade-in'));
@@ -73,16 +73,26 @@ function initNavbarScroll() {
  */
 function initStickyCta() {
     const stickyCta = document.getElementById('stickyCta');
-    const hero = document.querySelector('.hero');
+    // Watch the hero CTA button, not the whole hero: the sticky button should
+    // appear the moment the primary button scrolls away, not ~750px later.
+    const hero = document.getElementById('heroCta') || document.querySelector('.hero');
     if (!stickyCta || !hero) return;
 
+    // Show the sticky button while neither the hero CTA nor the final CTA is on
+    // screen — it duplicates whichever badge the user can already see.
+    const finalCta = document.querySelector('.final-cta-section');
+    const inView = new Map();
+    const update = () => {
+        const anyCtaVisible = [...inView.values()].some(Boolean);
+        stickyCta.classList.toggle('visible', !anyCtaVisible);
+    };
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            stickyCta.classList.toggle('visible', !entry.isIntersecting);
-        });
+        entries.forEach(entry => inView.set(entry.target, entry.isIntersecting));
+        update();
     }, { threshold: 0 });
 
     observer.observe(hero);
+    if (finalCta) observer.observe(finalCta);
 }
 
 
