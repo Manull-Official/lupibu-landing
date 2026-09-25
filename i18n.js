@@ -511,7 +511,7 @@ function applyTranslations(lang) {
     // Update screenshots to match language
     document.querySelectorAll('[data-screenshot]').forEach(img => {
         const key = img.dataset.screenshot;
-        img.src = 'screenshots/' + lang + '_' + key + '.webp';
+        img.src = '/screenshots/' + lang + '_' + key + '.webp';
     });
 
     // Update meta
