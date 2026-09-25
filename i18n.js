@@ -473,7 +473,11 @@ function detectLanguage() {
 function updateCanonical(lang) {
     const canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) return;
-    const base = window.location.origin + window.location.pathname;
+    // Landing locales are path-based prerendered pages (/, /en/, /kk/) with
+    // static self-canonicals — leave those alone.
+    const path = window.location.pathname;
+    if (path === '/' || path === '/index.html' || /^\/(en|kk)\//.test(path)) return;
+    const base = window.location.origin + path;
     canonical.href = lang === DEFAULT_LANG ? base : base + '?lang=' + lang;
 }
 
