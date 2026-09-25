@@ -10,7 +10,7 @@ const translations = {
 
         // Hero — funnel 2026-09: soft promise, mechanism in the subline
         'hero.eyebrow': 'Baby sleep & routine tracker for iPhone',
-        'hero.title': "Your baby's next nap isn't a surprise.",
+        'hero.title': "The next nap isn't a surprise.",
         'hero.subtitle': "Lupibu shows the next nap ahead of time, from your baby's own rhythm.",
         'hero.proof': 'Free for 7 days',
         'hero.micro': 'Free for 7 days, then a subscription. Cancel anytime in the App Store.',
@@ -163,7 +163,7 @@ const translations = {
     ru: {
         'a11y.skipLink': 'К содержимому',
         'hero.eyebrow': 'Трекер сна и режима малыша для iPhone',
-        'hero.title': 'Следующий сон малыша — не сюрприз',
+        'hero.title': 'Сон малыша — не сюрприз',
         'hero.subtitle': 'Lupibu заранее показывает время укладывания — по ритму именно Вашего ребёнка.',
         'hero.proof': '7 дней бесплатно',
         'hero.micro': '7 дней бесплатно, дальше — по подписке. Отмена в App Store в любой момент.',
@@ -178,7 +178,7 @@ const translations = {
         'how.t2': 'После ~5 записанных снов прогноз настраивается под ритм именно Вашего малыша.',
         'how.t3': 'Время следующего сна — на главном экране и на экране блокировки.',
 
-        'final.tagline': 'У малыша — ритм. У Вас — снова свой день.',
+        'final.tagline': 'У малыша — ритм. У Вас — свой день.',
         'final.alt': 'Мама-медведица Lupibu обнимает медвежонка',
 
         'testimonials.label': '⭐⭐⭐⭐⭐ 5.0 в App Store',
@@ -303,7 +303,7 @@ const translations = {
     kk: {
         'a11y.skipLink': 'Мазмұнға өту',
         'hero.eyebrow': 'iPhone-ға арналған сәби ұйқысы мен режим трекері',
-        'hero.title': 'Сәбидің келесі ұйқысы — тосын емес',
+        'hero.title': 'Келесі ұйқы — тосын емес',
         'hero.subtitle': 'Lupibu ұйықтату уақытын алдын ала көрсетеді — дәл Сіздің сәбиіңіздің ырғағы бойынша.',
         'hero.proof': '7 күн тегін',
         'hero.micro': '7 күн тегін, кейін — жазылым. App Store-да кез келген сәтте бас тартуға болады.',
@@ -318,7 +318,7 @@ const translations = {
         'how.t2': 'Шамамен 5 жазылған ұйқыдан кейін болжам дәл Сіздің сәбиіңіздің ырғағына бейімделеді.',
         'how.t3': 'Келесі ұйқы уақыты — басты экранда және құлып экранында.',
 
-        'final.tagline': 'Сәбиде — ырғақ. Сізде — қайтадан өз күніңіз.',
+        'final.tagline': 'Сәбиде — ырғақ. Сізде — өз күніңіз.',
         'final.alt': 'Lupibu ана аюы қонжығын құшақтап отыр',
 
         'testimonials.label': '⭐⭐⭐⭐⭐ App Store-да 5.0',
