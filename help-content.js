@@ -17,8 +17,8 @@ var helpCategories = {
         { slug: 'logging',         title: 'Logging entries',     desc: '12 entry types, timers, edits',  icon: 'edit',     color: 'gray' },
         { slug: 'ai',              title: 'AI & voice',          desc: 'Voice logs, assistant, privacy', icon: 'mic',      color: 'teal' },
         { slug: 'family',          title: 'Children',   desc: 'Multiple kids',  icon: 'users',    color: 'purple' },
-        { slug: 'pro',             title: 'Lupibu Pro',          desc: 'Pro vs free, billing, cancel',   icon: 'star',     color: 'brand' },
-        { slug: 'privacy',         title: 'Data & privacy',      desc: 'Export, delete, your rights',    icon: 'shield',   color: 'gray' }
+        { slug: 'pro',             title: 'Lupibu Pro',          desc: 'Billing, trial, cancel',         icon: 'star',     color: 'brand' },
+        { slug: 'privacy',         title: 'Data & privacy',      desc: 'Deletion, your rights',          icon: 'shield',   color: 'gray' }
     ],
     ru: [
         { slug: 'getting-started', title: 'Начало работы',       desc: 'Первые шаги в Lupibu',            icon: 'sparkles', color: 'brand' },
@@ -26,8 +26,8 @@ var helpCategories = {
         { slug: 'logging',         title: 'Ведение дневника',    desc: '12 типов записей, таймеры',       icon: 'edit',     color: 'gray' },
         { slug: 'ai',              title: 'ИИ и голос',          desc: 'Голосовые записи, ассистент',     icon: 'mic',      color: 'teal' },
         { slug: 'family',          title: 'Дети',        desc: 'Несколько детей',   icon: 'users',    color: 'purple' },
-        { slug: 'pro',             title: 'Lupibu Pro',          desc: 'Подписка, пробный период',        icon: 'star',     color: 'brand' },
-        { slug: 'privacy',         title: 'Данные и приватность',desc: 'Экспорт, удаление, ваши права',   icon: 'shield',   color: 'gray' }
+        { slug: 'pro',             title: 'Lupibu Pro',          desc: 'Оплата, пробный период, отмена',  icon: 'star',     color: 'brand' },
+        { slug: 'privacy',         title: 'Данные и приватность',desc: 'Удаление, ваши права',            icon: 'shield',   color: 'gray' }
     ],
     kk: [
         { slug: 'getting-started', title: 'Бастау',                desc: 'Lupibu-дегі алғашқы қадамдар',  icon: 'sparkles', color: 'brand' },
@@ -35,8 +35,8 @@ var helpCategories = {
         { slug: 'logging',         title: 'Күнделік жүргізу',      desc: '12 жазба түрі, таймерлер',      icon: 'edit',     color: 'gray' },
         { slug: 'ai',              title: 'AI және дауыс',         desc: 'Дауыспен жазу, ассистент',      icon: 'mic',      color: 'teal' },
         { slug: 'family',          title: 'Балалар',    desc: 'Бірнеше бала',   icon: 'users',    color: 'purple' },
-        { slug: 'pro',             title: 'Lupibu Pro',            desc: 'Жазылым, сынама кезеңі',        icon: 'star',     color: 'brand' },
-        { slug: 'privacy',         title: 'Деректер мен құпиялылық', desc: 'Экспорт, жою, құқықтарыңыз',  icon: 'shield',   color: 'gray' }
+        { slug: 'pro',             title: 'Lupibu Pro',            desc: 'Төлем, сынама кезеңі, тоқтату', icon: 'star',     color: 'brand' },
+        { slug: 'privacy',         title: 'Деректер мен құпиялылық', desc: 'Жою, құқықтарыңыз',           icon: 'shield',   color: 'gray' }
     ]
 };
 
@@ -79,12 +79,13 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['начать', 'первый запуск', 'регистрация', 'ребёнок', 'новый аккаунт', 'onboarding'],
         related: ['log-events', 'timers', 'widget'],
-        tldr: 'Создайте профиль малыша за две минуты — и Lupibu уже готов записывать сон, кормления и остальные события. Чем больше данных, тем точнее прогнозы.',
+        tldr: 'Войдите через Apple, пройдите короткий онбординг с профилем малыша — и Lupibu готов записывать сон, кормления и остальные события. Чем больше данных, тем точнее прогнозы.',
         body:
             'Lupibu начинает работать сразу. Долгих настроек нет.\n\n' +
-            '## Первые две минуты\n' +
-            '- Войдите через Apple ID или создайте новый аккаунт.\n' +
-            '- Добавьте ребёнка: имя и дата рождения. Дата нужна, чтобы подбирать прогнозы под возраст.\n' +
+            '## Первые минуты\n' +
+            '- Войдите через Apple — это единственный способ входа, отдельной регистрации нет.\n' +
+            '- Пройдите онбординг: профиль ребёнка (имя и дата рождения — дата нужна, чтобы подбирать прогнозы под возраст), ваши цели и пара вопросов о режиме.\n' +
+            '- В конце онбординга — экран подписки с бесплатным пробным периодом на 7 дней. Скажем честно: после пробного периода подписка становится платной. Отменить можно в любой момент — см. «Как отменить подписку Pro».\n' +
             '- Готово — вы на главном экране.\n\n' +
             '## Что делать дальше\n' +
             'На главном экране — плитки для быстрого ввода: сон, кормление, подгузник, прогулка и другие события. Нажмите на любую, чтобы запустить таймер или добавить запись.\n\n' +
@@ -99,12 +100,13 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['start', 'first run', 'signup', 'child', 'new account', 'onboarding'],
         related: ['log-events', 'timers', 'widget'],
-        tldr: 'Set up your baby\'s profile in about two minutes — and Lupibu is ready to log sleep, feeds, and everything else. The more you log, the sharper the predictions get.',
+        tldr: 'Sign in with Apple, go through a short onboarding with your baby\'s profile — and Lupibu is ready to log sleep, feeds, and everything else. The more you log, the sharper the predictions get.',
         body:
             'Lupibu works from the first minute. There\'s no long setup.\n\n' +
-            '## The first two minutes\n' +
-            '- Sign in with Apple ID or create a new account.\n' +
-            '- Add your child: name and birthday. The date is how we match predictions to age.\n' +
+            '## The first minutes\n' +
+            '- Sign in with Apple — it\'s the only sign-in method; there\'s no separate account creation.\n' +
+            '- Go through onboarding: your child\'s profile (name and birthday — the date is how we match predictions to age), your goals, and a few questions about your routine.\n' +
+            '- Onboarding ends with a subscription screen offering a 7-day free trial. To be honest with you: after the trial the subscription becomes paid. You can cancel anytime — see "How to cancel Pro".\n' +
             '- Done — you\'re on the home screen.\n\n' +
             '## What to do next\n' +
             'The home screen has tiles for quick logging: sleep, feeds, diaper, walk, and the rest. Tap any tile to start a timer or add an entry.\n\n' +
@@ -119,12 +121,13 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['бастау', 'алғашқы қадамдар', 'тіркелу', 'бала', 'жаңа аккаунт', 'onboarding'],
         related: ['log-events', 'timers', 'widget'],
-        tldr: 'Балаңыздың профилін екі минутта жасаңыз — сосын Lupibu ұйқы, тамақтану және басқа оқиғаларды жазуға дайын. Деректер көбейген сайын болжам дәлірек болады.',
+        tldr: 'Apple арқылы кіріп, бала профилі бар қысқа онбордингтен өтіңіз — сосын Lupibu ұйқы, тамақтану және басқа оқиғаларды жазуға дайын. Деректер көбейген сайын болжам дәлірек болады.',
         body:
             'Lupibu алғашқы минуттан бастап жұмыс істейді. Ұзақ баптау қажет емес.\n\n' +
-            '## Алғашқы екі минут\n' +
-            '- Apple ID арқылы кіріңіз немесе жаңа аккаунт жасаңыз.\n' +
-            '- Баланы қосыңыз: аты мен туған күні. Күн жасқа сәйкес болжам жасау үшін қажет.\n' +
+            '## Алғашқы минуттар\n' +
+            '- Apple арқылы кіріңіз — бұл кірудің жалғыз жолы, бөлек тіркелу жоқ.\n' +
+            '- Онбордингтен өтіңіз: бала профилі (аты мен туған күні — күн жасқа сәйкес болжам жасау үшін қажет), мақсаттарыңыз және режим туралы бірнеше сұрақ.\n' +
+            '- Онбординг соңында — 7 күндік тегін сынама кезеңі бар жазылым экраны. Шынын айтайық: сынама кезеңі аяқталған соң жазылым ақылы болады. Кез келген уақытта тоқтатуға болады — «Pro жазылымын қалай тоқтату керек» мақаласын қараңыз.\n' +
             '- Дайын — басты экрандасыз.\n\n' +
             '## Әрі қарай не істеу керек\n' +
             'Басты экранда жылдам жазудың плиткалары: ұйқы, тамақ, жөргек, серуен және басқалары. Таймерді іске қосу немесе жазба қосу үшін кез келгеніне басыңыз.\n\n' +
@@ -268,7 +271,7 @@ var helpArticles = {
         readMinutes: 1,
         keywords: ['виджет', 'iphone', 'домашний экран', 'lock screen', 'быстрый доступ'],
         related: ['first-steps', 'prediction-accuracy'],
-        tldr: 'Добавьте виджет Lupibu, чтобы видеть время бодрствования и прогноз следующего сна без открытия приложения.',
+        tldr: 'Добавьте виджет Lupibu, чтобы видеть время бодрствования и прогноз следующего сна без открытия приложения. В маленьком и среднем виджете можно запускать и останавливать сон прямо с домашнего экрана.',
         body:
             'Виджет — самый быстрый способ знать, когда малыш захочет спать.\n\n' +
             '## Как добавить\n' +
@@ -279,7 +282,11 @@ var helpArticles = {
             '- Сколько времени малыш бодрствует\n' +
             '- Текущий сон (если идёт) — с таймером\n' +
             '- Прогноз следующего укладывания\n\n' +
-            'Данные обновляются автоматически в фоне. Если вам кажется, что виджет показывает устаревшую информацию — откройте приложение, и всё пересчитается.'
+            '## Кнопки прямо в виджете\n' +
+            'В маленьком и среднем виджете на домашнем экране есть кнопки «Начать сон» и «Остановить» — таймер запускается без открытия приложения. Работает на iOS 17 и новее.\n\n' +
+            '## Виджеты на экране блокировки\n' +
+            'Lupibu можно добавить и на экран блокировки — там виджет показывает только отсчёт до следующего сна, без кнопок.\n\n' +
+            'Во время сна виджет обновляется каждую минуту. Если вам кажется, что виджет показывает устаревшую информацию — откройте приложение, и всё пересчитается.'
     },
     'widget_en': {
         slug: 'widget',
@@ -288,7 +295,7 @@ var helpArticles = {
         readMinutes: 1,
         keywords: ['widget', 'iphone', 'home screen', 'lock screen', 'quick access'],
         related: ['first-steps', 'prediction-accuracy'],
-        tldr: 'Add the Lupibu widget to see wake time and next-sleep prediction without opening the app.',
+        tldr: 'Add the Lupibu widget to see wake time and next-sleep prediction without opening the app. Small and medium widgets let you start and stop sleep right from the home screen.',
         body:
             'The widget is the fastest way to know when your baby will want to sleep.\n\n' +
             '## How to add it\n' +
@@ -299,7 +306,11 @@ var helpArticles = {
             '- How long your baby has been awake\n' +
             '- Current sleep (if in progress) — with a live timer\n' +
             '- Next sleep prediction\n\n' +
-            'Data updates automatically in the background. If something looks stale, open the app and it will recalculate.'
+            '## Buttons right in the widget\n' +
+            'The small and medium home-screen widgets have Start sleep / Stop buttons — the timer starts without opening the app. Requires iOS 17 or later.\n\n' +
+            '## Lock Screen widgets\n' +
+            'You can also add Lupibu to the Lock Screen — there the widget shows the countdown to the next sleep only, no buttons.\n\n' +
+            'During sleep the widget updates every minute. If something looks stale, open the app and it will recalculate.'
     },
     'widget_kk': {
         slug: 'widget',
@@ -308,7 +319,7 @@ var helpArticles = {
         readMinutes: 1,
         keywords: ['виджет', 'iphone', 'үй экраны', 'lock screen', 'жылдам қатынас'],
         related: ['first-steps', 'prediction-accuracy'],
-        tldr: 'Lupibu виджетін қосыңыз — қолданбаны ашпай-ақ ояу уақыты мен келесі ұйқы болжамын көре аласыз.',
+        tldr: 'Lupibu виджетін қосыңыз — қолданбаны ашпай-ақ ояу уақыты мен келесі ұйқы болжамын көре аласыз. Кіші және орташа виджетте ұйқыны үй экранынан бастап, тоқтатуға болады.',
         body:
             'Виджет — балаңыздың қашан ұйықтайтынын білудің ең жылдам жолы.\n\n' +
             '## Қалай қосу керек\n' +
@@ -319,7 +330,11 @@ var helpArticles = {
             '- Баланың қанша уақыт ояу жүргенін.\n' +
             '- Ағымдағы ұйқыны — жүріп жатса, таймермен.\n' +
             '- Келесі ұйықтау уақытының болжамын.\n\n' +
-            'Деректер фонда автоматты жаңарады. Виджет ескі ақпарат көрсетіп тұрғандай болса, қолданбаны ашыңыз — бәрі қайта есептеледі.'
+            '## Виджеттегі батырмалар\n' +
+            'Үй экранындағы кіші және орташа виджетте «Ұйқыны бастау» / «Тоқтату» батырмалары бар — таймер қолданбаны ашпай-ақ іске қосылады. iOS 17 және одан жаңа нұсқада жұмыс істейді.\n\n' +
+            '## Құлыптау экранындағы виджеттер\n' +
+            'Lupibu-ды құлыптау экранына да қосуға болады — онда виджет тек келесі ұйқыға дейінгі кері санақты көрсетеді, батырмалар жоқ.\n\n' +
+            'Ұйқы кезінде виджет әр минут сайын жаңарады. Виджет ескі ақпарат көрсетіп тұрғандай болса, қолданбаны ашыңыз — бәрі қайта есептеледі.'
     },
 
     'backfill_ru': {
@@ -402,18 +417,17 @@ var helpArticles = {
             'Прогноз не совпал с реальностью — это не баг, а часть нормальной работы алгоритма. Разберём, почему так бывает и что с этим делать.\n\n' +
             '## Как работает прогноз\n' +
             'Lupibu опирается на три источника:\n' +
-            '- Возраст ребёнка — общие нормы ВОЗ как стартовая точка.\n' +
+            '- Возраст ребёнка — педиатрические нормы сна как стартовая точка.\n' +
             '- Ваши последние записи сна и бодрствования.\n' +
             '- Паттерны — как именно ваш ребёнок обычно засыпает в это время суток.\n\n' +
             'По мере накопления данных общие нормы отходят на второй план, а персональные паттерны выходят вперёд.\n\n' +
             '## Почему бывают промахи\n' +
             '- **Первая неделя.** Данных мало, и прогноз опирается больше на возрастные нормы.\n' +
             '- **Скачок роста или sleep regression.** Ребёнок временно меняет режим. Прогноз отстаёт на 2–3 дня и затем подстраивается.\n' +
-            '- **Вакцинация, прорезывание зубов, болезнь.** Приложение не видит этих событий, пока вы их не запишете. Отметьте в истории — прогноз их учтёт.\n' +
+            '- **Вакцинация, прорезывание зубов, болезнь.** Прогноз строится только на записях сна и не знает о таких событиях. Записывать симптомы всё равно полезно — их видит ИИ-ассистент, и это готовый контекст для разговора с педиатром.\n' +
             '- **Пропущенные записи.** Если вы не отметили предыдущий сон, прогноз считается от последнего известного.\n\n' +
             '## Что можно сделать\n' +
             '- Продолжайте записывать сны. За 5–7 дней регулярных записей точность заметно растёт.\n' +
-            '- Отмечайте болезни, прививки, симптомы — это важный контекст для алгоритма.\n' +
             '- Если малыш проснулся раньше или позже прогноза, просто запишите реальный сон. Приложение скорректируется само.\n\n' +
             'Lupibu не навязывает режим — он показывает наиболее вероятное окно. Решение всегда за вами: сигналы ребёнка важнее любого прогноза.'
     },
@@ -429,18 +443,17 @@ var helpArticles = {
             'If a prediction missed, that\'s not a bug — it\'s how the model is supposed to work. Here\'s why and what to do.\n\n' +
             '## How predictions work\n' +
             'Lupibu looks at three things:\n' +
-            '- Your child\'s age (WHO norms as a starting point)\n' +
+            '- Your child\'s age (pediatric sleep research as a starting point)\n' +
             '- Your most recent sleep and wake entries\n' +
             '- Patterns — how your specific child usually falls asleep at this time of day\n\n' +
             'As data accumulates, the age norms fade and personal patterns take over.\n\n' +
             '## Why it misses sometimes\n' +
             '- **First week** — limited data, predictions lean on age norms.\n' +
             '- **Growth spurt or sleep regression** — routine shifts temporarily. Predictions lag 2–3 days, then adjust.\n' +
-            '- **Vaccination, teething, illness** — the app doesn\'t see these unless you log them. Mark them in history — predictions will account for it.\n' +
+            '- **Vaccination, teething, illness** — predictions are built from sleep entries only, so they don\'t know about these events. Logging symptoms is still useful: the AI assistant sees them, and it\'s ready-made context for your pediatrician.\n' +
             '- **Missed entries** — if you didn\'t log the last sleep, predictions count from the most recent known one.\n\n' +
             '## What you can do\n' +
             '- Keep logging sleeps — after 5–7 regular days accuracy improves visibly.\n' +
-            '- Log illness, vaccinations, symptoms — that\'s valuable context.\n' +
             '- If your baby wakes early or late, just log the real sleep. The app self-corrects.\n\n' +
             'Lupibu doesn\'t push a schedule — it shows the most likely window. Your baby\'s signals always beat a prediction.'
     },
@@ -456,18 +469,17 @@ var helpArticles = {
             'Болжам шындықпен сәйкес келмесе — бұл қате емес, алгоритмнің қалыпты жұмысы. Қашан және неге олай болатынын қарастырайық.\n\n' +
             '## Болжам қалай жұмыс істейді\n' +
             'Lupibu үш нәрсеге сүйенеді:\n' +
-            '- Баланың жасы — ДДҰ нормалары бастапқы нүкте ретінде.\n' +
+            '- Баланың жасы — педиатриялық ұйқы нормалары бастапқы нүкте ретінде.\n' +
             '- Соңғы ұйқы мен ояу жазбалары.\n' +
             '- Үлгілер — сіздің балаңыз тәуліктің осы уақытында әдетте қалай ұйықтайды.\n\n' +
             'Деректер жинала келе жалпы нормалар фонда қалады да, сіздің жеке үлгіңіз алға шығады.\n\n' +
             '## Неге кейде қателеседі\n' +
             '- **Алғашқы апта.** Деректер аз, сондықтан болжам көбірек жас нормаларына сүйенеді.\n' +
             '- **Өсу секірісі немесе ұйқы регрессиясы.** Режим уақытша өзгереді — болжам 2–3 күнге кешігіп, содан кейін бейімделеді.\n' +
-            '- **Вакцина, тіс шығу, ауру.** Жазбасаңыз, қолданба оларды көрмейді. Тарихта белгілесеңіз, болжам есепке алады.\n' +
+            '- **Вакцина, тіс шығу, ауру.** Болжам тек ұйқы жазбаларына құрылады, мұндай оқиғаларды білмейді. Симптомдарды жазу бәрібір пайдалы: оларды AI-ассистент көреді, әрі бұл педиатрмен сөйлесуге дайын контекст.\n' +
             '- **Өткізіп алынған жазбалар.** Алдыңғы ұйқы жазылмаса, болжам соңғы белгілі жазбадан есептеледі.\n\n' +
             '## Не істеуге болады\n' +
             '- Ұйқыларды жазуды жалғастырыңыз — 5–7 күн тұрақты жазба дәлдікті көтереді.\n' +
-            '- Ауру, вакцина, симптомдарды белгілеңіз.\n' +
             '- Бала болжамнан ерте не кеш оянса, нақты ұйқыны жай ғана жазып қойыңыз — қолданба өзі түзетеді.\n\n' +
             'Lupibu режим таңбайды — ол ықтимал терезені ғана көрсетеді. Шешім әрдайым сізде: баланың сигналы болжамнан маңыздырақ.'
     },
@@ -555,16 +567,16 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['дневной', 'ночной', 'nap', 'ночь', 'классификация', 'нап'],
         related: ['wake-windows', 'prediction-accuracy'],
-        tldr: 'Автоматически — по времени суток и длительности. Если классификация неверна, её можно поменять вручную в записи.',
+        tldr: 'Автоматически, по времени: сон, начавшийся в ночные часы или по большей части пересекающийся с ночью, считается ночным. Ручного переключателя нет — если тип неверный, поправьте время записи, и она переклассифицируется.',
         body:
             'Разница между напом и ночным сном важна для прогнозов — ночь «сбрасывает» усталость, нап нет.\n\n' +
             '## Как классификация работает\n' +
-            'Lupibu смотрит на:\n' +
-            '- **Время начала сна** — позже обычного времени отхода ко сну = ночной\n' +
-            '- **Длительность** — очень длинный сон вечером = скорее всего ночной\n' +
-            '- **Возраст ребёнка** — младенцам характерны короткие частые сны\n\n' +
-            '## Если классификация неверна\n' +
-            'Откройте запись и измените тип вручную — ваша правка имеет приоритет над автоматикой.\n\n' +
+            'Тип определяется автоматически, по двум правилам:\n' +
+            '- **Время начала.** Сон, начавшийся в ночные часы (вечером после обычного отбоя или под утро), считается ночным.\n' +
+            '- **Пересечение с ночью.** Завершённый сон, который на 60% и больше своей длительности попадает в ночное окно, тоже считается ночным.\n\n' +
+            'Всё остальное — дневной сон.\n\n' +
+            '## Если тип определился неверно\n' +
+            'Отдельного переключателя «дневной/ночной» в записи нет — тип зависит только от времени. Откройте запись и поправьте время начала или окончания: классификация пересчитается автоматически.\n\n' +
             '## На что это влияет\n' +
             '- Прогноз следующего сна\n' +
             '- Еженедельная статистика (отдельно дневной и ночной)\n' +
@@ -577,16 +589,16 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['nap', 'night', 'sleep type', 'classification'],
         related: ['wake-windows', 'prediction-accuracy'],
-        tldr: 'Automatically — by time of day and duration. If it\'s wrong, you can change it manually in the entry.',
+        tldr: 'Automatically, by time: a sleep that starts in night hours or mostly overlaps the night counts as night sleep. There\'s no manual switch — if the type is wrong, adjust the entry\'s times and it reclassifies.',
         body:
             'Nap vs night matters for predictions — night resets tiredness, naps don\'t.\n\n' +
             '## How classification works\n' +
-            'Lupibu looks at:\n' +
-            '- **Start time** — later than usual bedtime = night\n' +
-            '- **Duration** — a very long evening sleep = probably night\n' +
-            '- **Age** — infants have many short naps\n\n' +
-            '## If it\'s wrong\n' +
-            'Open the entry and change the type — your edit wins over automation.\n\n' +
+            'The type is set automatically, by two rules:\n' +
+            '- **Start time.** A sleep that starts in night hours (in the evening after the usual bedtime, or before morning) counts as night.\n' +
+            '- **Night overlap.** A finished sleep whose duration overlaps the night window by 60% or more also counts as night.\n\n' +
+            'Everything else is a nap.\n\n' +
+            '## If the type came out wrong\n' +
+            'There\'s no nap/night toggle in the entry — the type depends only on the times. Open the entry and fix the start or end time: classification recalculates automatically.\n\n' +
             '## What it affects\n' +
             '- Next-sleep prediction\n' +
             '- Weekly stats (naps and night separately)\n' +
@@ -599,16 +611,16 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['күндізгі', 'түнгі', 'нап', 'жіктеу', 'түрі'],
         related: ['wake-windows', 'prediction-accuracy'],
-        tldr: 'Автоматты түрде — тәуліктің уақыты мен ұзақтық бойынша. Жіктеу қате болса, жазбада қолмен өзгертуге болады.',
+        tldr: 'Автоматты түрде, уақыт бойынша: түнгі сағаттарда басталған немесе көбіне түнмен қабаттасатын ұйқы түнгі болып саналады. Қолмен ауыстырғыш жоқ — түрі қате болса, жазбаның уақытын түзетіңіз, ол қайта жіктеледі.',
         body:
             'Күндізгі және түнгі ұйқының айырмасы болжам үшін маңызды: түн шаршауды «нөлдейді», ал нап — жоқ.\n\n' +
             '## Жіктеу қалай жұмыс істейді\n' +
-            'Lupibu үш нәрсеге қарайды:\n' +
-            '- **Басталу уақыты** — әдеттегі ұйықтау уақытынан кешірек болса, түнгі деп есептеледі.\n' +
-            '- **Ұзақтығы** — кешке басталған ұзақ ұйқы, әдетте, түнгі.\n' +
-            '- **Баланың жасы** — сәбилерде жиі қысқа ұйқылар болады.\n\n' +
-            '## Жіктеу қате болса\n' +
-            'Жазбаны ашып, түрін қолмен өзгертіңіз — сіздің түзетуіңіз автоматикадан басым.\n\n' +
+            'Түрі автоматты түрде, екі ережемен анықталады:\n' +
+            '- **Басталу уақыты.** Түнгі сағаттарда (кешке әдеттегі жату уақытынан кейін немесе таң алдында) басталған ұйқы түнгі болып саналады.\n' +
+            '- **Түнмен қабаттасу.** Ұзақтығының 60% немесе одан көбі түнгі терезеге түсетін аяқталған ұйқы да түнгі болып саналады.\n\n' +
+            'Қалғанының бәрі — күндізгі ұйқы.\n\n' +
+            '## Түрі қате анықталса\n' +
+            'Жазбада «күндізгі/түнгі» ауыстырғышы жоқ — түрі тек уақытқа байланысты. Жазбаны ашып, басталу немесе аяқталу уақытын түзетіңіз: жіктеу автоматты түрде қайта есептеледі.\n\n' +
             '## Неге әсер етеді\n' +
             '- Келесі ұйқы болжамына.\n' +
             '- Апталық статистикаға (күндізгі мен түнгі бөлек есептеледі).\n' +
@@ -626,7 +638,7 @@ var helpArticles = {
         body:
             'В рекомендации написано «12 часов сна в сутки», а ваш малыш спит 10 — и вот уже тревожно. Разберём, на что смотреть по-настоящему.\n\n' +
             '## Что такое «норма»\n' +
-            'Это статистическая медиана — половина детей спит больше, половина меньше. Нормы ВОЗ задают широкий диапазон (например, 0–3 месяца: 14–17 часов). Если ребёнок попадает в диапазон, всё в порядке.\n\n' +
+            'Это статистическая медиана — половина детей спит больше, половина меньше. Педиатрические исследования сна задают широкий диапазон (например, 0–3 месяца: 14–17 часов). Если ребёнок попадает в диапазон, всё в порядке.\n\n' +
             '## Когда стоит обратить внимание\n' +
             '- Малыш постоянно выглядит вялым или, наоборот, перевозбуждённым.\n' +
             '- Не набирает вес.\n' +
@@ -648,7 +660,7 @@ var helpArticles = {
         body:
             'Seeing "12 hours of sleep a day" in a recommendation while yours sleeps 10 is stressful. Here\'s what actually matters.\n\n' +
             '## What "norm" means\n' +
-            'It\'s a statistical median — half of babies sleep more, half less. WHO norms give a wide range (e.g. 0–3 months: 14–17 hours). If your baby is inside the range, you\'re fine.\n\n' +
+            'It\'s a statistical median — half of babies sleep more, half less. Pediatric sleep research gives a wide range (e.g. 0–3 months: 14–17 hours). If your baby is inside the range, you\'re fine.\n\n' +
             '## When to pay attention\n' +
             '- Persistent lethargy or hyperarousal\n' +
             '- Weight not tracking\n' +
@@ -670,7 +682,7 @@ var helpArticles = {
         body:
             'Ұсыныста «тәулігіне 12 сағат ұйқы» деп жазылған, ал балаңыз 10 сағат ұйықтайды — және ойға алаңдау кіреді. Шын мәнінде неге қарау керектігін қарастырайық.\n\n' +
             '## «Норма» дегеніміз не\n' +
-            'Бұл — статистикалық медиана: балалардың жартысы одан көп, жартысы аз ұйықтайды. ДДҰ нормалары кең диапазон береді (мысалы, 0–3 ай: 14–17 сағат). Балаңыз диапазонға кіретін болса, бәрі жақсы.\n\n' +
+            'Бұл — статистикалық медиана: балалардың жартысы одан көп, жартысы аз ұйықтайды. Педиатриялық ұйқы зерттеулері кең диапазон береді (мысалы, 0–3 ай: 14–17 сағат). Балаңыз диапазонға кіретін болса, бәрі жақсы.\n\n' +
             '## Қашан назар аудару керек\n' +
             '- Бала тұрақты түрде әлсіреген немесе керісінше, тым қозған.\n' +
             '- Салмақ қоспай жатыр.\n' +
@@ -907,21 +919,23 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['голос', 'микрофон', 'надиктовать', 'ии', 'ai', 'ассистент', 'voice'],
         related: ['ai-capabilities', 'voice-privacy'],
-        tldr: 'Нажмите микрофон в чате или на главном экране и скажите обычными словами: «уснул в 14:20», «вчера у врача в 11», «покормила 10 минут». AI разберёт фразу и создаст запись.',
+        tldr: 'Нажмите микрофон на вкладке «Помощник» и скажите обычными словами: «уснул в 14:20», «вчера у врача в 11», «покормила 10 минут». AI разберёт фразу и сразу создаст запись.',
         body:
             'Голосовой ввод — самый быстрый способ записать событие, особенно когда руки заняты.\n\n' +
             '## Где найти\n' +
-            '- Кнопка микрофона в ИИ-чате (значок малыша в шапке главного экрана)\n' +
-            '- Микрофон в форме создания записи — для большинства типов событий\n\n' +
+            'Кнопка микрофона — в чате с ассистентом: вкладка **«Помощник»** в нижней панели. В форме создания записи микрофона нет — голосовой ввод живёт только в чате.\n\n' +
             '## Что можно сказать\n' +
             '- **В реальном времени:** «уснул», «проснулся», «поменяла подгузник»\n' +
             '- **Задним числом:** «вчера уснул в 14:20, проснулся в 15:30»\n' +
             '- **С деталями:** «дала бутылочку 120 мл в 9 утра»\n' +
             '- **Медицина:** «были у педиатра в 11:00, назначили нурофен»\n\n' +
+            '## Как устроена запись\n' +
+            '- Одна голосовая заметка — до 15 секунд, дальше запись останавливается и уходит на обработку сама.\n' +
+            '- Если вы замолчали, запись тоже останавливается автоматически — ничего нажимать не нужно.\n\n' +
             '## Языки\n' +
             'Распознавание работает на трёх языках: русском, английском и казахском. Язык распознавания совпадает с языком приложения — поменять его можно в настройках.\n\n' +
             '## Если ИИ расслышал неверно\n' +
-            'До сохранения ИИ показывает черновик записи. Любое поле можно поправить перед подтверждением.\n\n' +
+            'Черновика нет — запись создаётся сразу, вы увидите подтверждение «Событие записано». Ошиблось время или детали? Откройте запись в истории и поправьте любое поле.\n\n' +
             'Говорить «командами» не нужно — обычная речь работает лучше.'
     },
     'voice-logging_en': {
@@ -931,21 +945,23 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['voice', 'microphone', 'dictate', 'ai', 'assistant'],
         related: ['ai-capabilities', 'voice-privacy'],
-        tldr: 'Tap the mic in chat or on home and speak naturally: "fell asleep at 2:20", "doctor visit yesterday at 11", "fed for 10 minutes". The AI parses it.',
+        tldr: 'Tap the mic on the Assistant tab and speak naturally: "fell asleep at 2:20", "doctor visit yesterday at 11", "fed for 10 minutes". The AI parses it and creates the entry right away.',
         body:
             'Voice is the fastest way to log something — especially hands-free.\n\n' +
             '## Where to find it\n' +
-            '- Mic button in the AI chat (baby face icon in header)\n' +
-            '- Mic in the entry form (for many types)\n\n' +
+            'The mic button lives in the assistant chat — the **Assistant** tab in the bottom bar. There is no mic in the entry form; voice lives in the chat only.\n\n' +
             '## What you can say\n' +
             '- **Live:** "Fell asleep", "Woke up", "Changed diaper"\n' +
             '- **After the fact:** "Last night he fell asleep at 8 and woke at 6"\n' +
             '- **With details:** "Bottle, 4 ounces, at 9 am"\n' +
             '- **Medical:** "Saw the pediatrician at 11, prescribed ibuprofen"\n\n' +
+            '## How recording works\n' +
+            '- One voice note is up to 15 seconds — after that, recording stops and goes to processing on its own.\n' +
+            '- If you go quiet, recording also stops automatically — nothing to press.\n\n' +
             '## Languages\n' +
             'Works in English, Russian, Kazakh. The recognition language follows the app language.\n\n' +
             '## If the AI misheard\n' +
-            'After recognition, the AI shows a draft before saving. Edit any field before confirming.\n\n' +
+            'There\'s no draft step — the entry is created immediately and you\'ll see a "Recorded" confirmation. Wrong time or details? Open the entry in history and fix any field.\n\n' +
             'You don\'t need robot commands — natural speech works better.'
     },
     'voice-logging_kk': {
@@ -955,21 +971,23 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['дауыс', 'микрофон', 'ии', 'ассистент'],
         related: ['ai-capabilities', 'voice-privacy'],
-        tldr: 'Микрофонды басып, әдеттегі сөздермен айтыңыз: «14:20-да ұйықтады», «кеше 11-де дәрігерде болдық». AI фразаны түсініп, жазба жасайды.',
+        tldr: '«Көмекші» қойындысындағы микрофонды басып, әдеттегі сөздермен айтыңыз: «14:20-да ұйықтады», «кеше 11-де дәрігерде болдық». AI фразаны түсініп, жазбаны бірден жасайды.',
         body:
             'Дауыспен енгізу — әсіресе қолыңыз бос болмағанда, оқиғаны жазудың ең жылдам жолы.\n\n' +
             '## Қайдан табу керек\n' +
-            '- Басты экран шапкасындағы AI-чаттың микрофоны\n' +
-            '- Көптеген оқиға түрлерінің жазу формасындағы микрофон\n\n' +
+            'Микрофон батырмасы — ассистент чатында: төменгі панельдегі **«Көмекші»** қойындысы. Жазба жасау формасында микрофон жоқ — дауыс тек чатта.\n\n' +
             '## Не айтуға болады\n' +
             '- **Нақты уақытта:** «ұйықтады», «оянды», «жөргегін ауыстырдым»\n' +
             '- **Кейін:** «кеше 20:00-де ұйықтап, 06:00-да оянды»\n' +
             '- **Егжей-тегжейімен:** «бөтелке 120 мл, таңғы 9-да»\n' +
             '- **Медицина:** «бүгін 11:00-де педиатрда болдық, нурофен жазды»\n\n' +
+            '## Жазу қалай жұмыс істейді\n' +
+            '- Бір дауыстық жазба — 15 секундқа дейін, одан кейін жазу өздігінен тоқтап, өңдеуге кетеді.\n' +
+            '- Сөйлемей қалсаңыз, жазу да автоматты түрде тоқтайды — ештеңе басудың қажеті жоқ.\n\n' +
             '## Тілдер\n' +
             'Үш тілде жұмыс істейді: қазақ, орыс, ағылшын. Тану тілі қолданба тіліне сәйкес келеді — қаласаңыз, баптаулардан ауыстырыңыз.\n\n' +
             '## Қате түсінсе\n' +
-            'AI сақтамас бұрын жоба көрсетеді. Растар алдында кез келген өрісті өзгертуге болады.\n\n' +
+            'Жоба қадамы жоқ — жазба бірден жасалады, «Оқиға жазылды» деген растау көресіз. Уақыты не детальдары қате болса, жазбаны тарихтан ашып, кез келген өрісті түзетіңіз.\n\n' +
             '«Бұйрықтармен» сөйлеудің қажеті жоқ — қарапайым сөйлем жақсырақ жұмыс істейді.'
     },
 
@@ -1070,7 +1088,7 @@ var helpArticles = {
             'Приватность — одно из ключевых обещаний Lupibu. Вот честно, как устроено голосовое распознавание.\n\n' +
             '## Что происходит с вашим голосом\n' +
             '- Аудио отправляется на защищённый сервер по шифрованному каналу.\n' +
-            '- Gemini 2.0 Flash (Google Vertex ИИ) распознаёт речь и извлекает данные.\n' +
+            '- Аудио уходит напрямую в модель (семейство Gemini Flash, Google Vertex AI) — отдельного шага расшифровки нет, модель сама извлекает данные из звука.\n' +
             '- На выходе — структурированная запись: тип события, время, детали.\n' +
             '- Исходное аудио **не хранится** после обработки.\n\n' +
             '## Что остаётся\n' +
@@ -1081,7 +1099,7 @@ var helpArticles = {
             '- Не используем ваши записи для обучения публичных моделей.\n' +
             '- Не передаём третьим сторонам без вашего согласия.\n\n' +
             '## Полный контроль\n' +
-            'Вы можете экспортировать свои данные или полностью удалить аккаунт в любой момент — прямо в настройках приложения.\n\n' +
+            'Удалить аккаунт — и вместе с ним все данные — можно в любой момент прямо в приложении. Единственный экспорт на сегодня — PDF-отчёт о сне (см. «Выгрузка данных и удаление аккаунта»).\n\n' +
             'Подробности — в [Политике конфиденциальности](legal.html?doc=privacy).'
     },
     'voice-privacy_en': {
@@ -1095,8 +1113,8 @@ var helpArticles = {
         body:
             'Privacy is one of Lupibu\'s core promises. Here\'s honestly how voice works.\n\n' +
             '## What happens with your voice\n' +
-            '- Audio goes to a secure server\n' +
-            '- Gemini 2.0 Flash (Google Vertex AI) transcribes and extracts data\n' +
+            '- Audio goes to a secure server over an encrypted channel\n' +
+            '- The audio goes straight to the model (Gemini Flash family, Google Vertex AI) — there\'s no separate transcription step; the model extracts the data from the sound itself\n' +
             '- The output is a structured entry (type, time, details)\n' +
             '- The raw audio **is not stored** after processing\n\n' +
             '## What we keep\n' +
@@ -1107,7 +1125,7 @@ var helpArticles = {
             '- No using your entries to train public models\n' +
             '- No sharing with third parties without your consent\n\n' +
             '## Full control\n' +
-            'Export all your data or fully delete your account anytime — from app settings.\n\n' +
+            'Delete your account — and all data with it — anytime, right in the app. The only export today is the sleep PDF report (see "Exporting data and deleting your account").\n\n' +
             'Details in the [Privacy Policy](legal.html?doc=privacy).'
     },
     'voice-privacy_kk': {
@@ -1122,7 +1140,7 @@ var helpArticles = {
             'Құпиялылық — Lupibu-дің негізгі уәделерінің бірі. Дауысты тану шынында қалай жұмыс істейтінін шынайы түрде түсіндіреміз.\n\n' +
             '## Дауысыңызбен не болады\n' +
             '- Аудио шифрланған канал арқылы қауіпсіз серверге жіберіледі.\n' +
-            '- Gemini 2.0 Flash (Google Vertex AI) сөзді танып, дерек шығарады.\n' +
+            '- Аудио тікелей модельге барады (Gemini Flash тобы, Google Vertex AI) — бөлек транскрипция қадамы жоқ, модель деректерді дыбыстың өзінен шығарады.\n' +
             '- Нәтиже — құрылымдалған жазба: оқиға түрі, уақыты, егжей-тегжейі.\n' +
             '- Бастапқы аудио өңдеуден кейін **сақталмайды**.\n\n' +
             '## Не сақталады\n' +
@@ -1133,7 +1151,7 @@ var helpArticles = {
             '- Жазбаларыңызды жалпыға ортақ модельдерді үйрету үшін қолданбаймыз.\n' +
             '- Келісіміңізсіз үшінші тараптарға бермейміз.\n\n' +
             '## Толық бақылау\n' +
-            'Деректеріңізді экспорттауды немесе аккаунтты толығымен жоюды кез келген уақытта қолданба баптауларынан істей аласыз.\n\n' +
+            'Аккаунтты — және онымен бірге барлық деректерді — кез келген уақытта тікелей қолданбадан жоя аласыз. Бүгінгі жалғыз экспорт — ұйқы туралы PDF-есеп («Деректерді шығару және аккаунтты жою» мақаласын қараңыз).\n\n' +
             'Толығырақ — [Құпиялық саясатында](legal.html?doc=privacy).'
     },
 
@@ -1230,7 +1248,7 @@ var helpArticles = {
             '- Автопродление выключится\n' +
             '- Все ваши данные сохранятся — можно вернуться к Pro в любой момент\n\n' +
             '## Если отменили в пробный период\n' +
-            'Ничего не спишется. Доступ к Pro сохранится до окончания 7 дней.\n\n' +
+            'Ничего не спишется. Доступ к Pro сохранится до конца пробного периода — 7 или 14 дней, в зависимости от того, какое предложение вы приняли.\n\n' +
             '## Возврат денег\n' +
             'Возвраты обрабатывает Apple. Запросить возврат можно через [reportaproblem.apple.com](https://reportaproblem.apple.com) — обычно одобряют, если с момента оплаты прошло немного времени.'
     },
@@ -1253,7 +1271,7 @@ var helpArticles = {
             '- Auto-renew turns off\n' +
             '- All your data stays — come back to Pro anytime\n\n' +
             '## Canceling during the trial\n' +
-            'Nothing charged. Pro stays until the 7-day trial ends.\n\n' +
+            'Nothing charged. Pro stays until the trial ends — 7 or 14 days, depending on which offer you accepted.\n\n' +
             '## Refunds\n' +
             'Apple handles refunds. Request via [reportaproblem.apple.com](https://reportaproblem.apple.com) — usually approved if not too much time has passed.'
     },
@@ -1276,7 +1294,7 @@ var helpArticles = {
             '- Автоматты жаңарту өшеді.\n' +
             '- Деректеріңіз сақталады — Pro-ға кез келген уақытта қайта оралуыңызға болады.\n\n' +
             '## Сынама кезеңінде бас тартсаңыз\n' +
-            'Ешнәрсе алынбайды. Pro 7 күндік сынамаңыздың соңына дейін сақталады.\n\n' +
+            'Ешнәрсе алынбайды. Pro сынама кезеңінің соңына дейін сақталады — қабылдаған ұсынысыңызға қарай 7 немесе 14 күн.\n\n' +
             '## Ақшаны қайтару\n' +
             'Қайтаруды Apple өңдейді. Өтінішті [reportaproblem.apple.com](https://reportaproblem.apple.com) арқылы жіберуге болады — төлем жасалғаннан көп уақыт өтпесе, әдетте мақұлданады.'
     },
@@ -1292,11 +1310,11 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['экспорт', 'удалить', 'данные', 'аккаунт', 'отчёт', 'gdpr', 'право'],
         related: ['delete-account', 'voice-privacy', 'sleep-stats-report'],
-        tldr: 'Отчёт о сне выгружается в PDF из вкладки «Статистика». Полной выгрузки всей истории в CSV или JSON пока нет. Удалить аккаунт можно в «Профиле» — в два шага.',
+        tldr: 'Отчёт о сне выгружается в PDF из вкладки «Ритм». Полной выгрузки всей истории в CSV или JSON пока нет. Удалить аккаунт можно в «Профиле» — в два шага.',
         body:
             'Говорим честно — без маркетинговых оборотов.\n\n' +
             '## Что можно выгрузить сейчас\n' +
-            '- **PDF-отчёт о сне за 7 дней** — вкладка **Статистика** → кнопка **«Поделиться отчётом»**. В отчёте: таймлайн каждого дня, средние показатели, нормы по возрасту.\n' +
+            '- **PDF-отчёт о сне за 10 дней** — вкладка **«Ритм»** → кнопка **«Скачать PDF-отчёт»**. В отчёте: таймлайн каждого дня, средние показатели, нормы по возрасту, кормления.\n' +
             '- Отчёт отправляется через стандартное окно iOS — в почту, AirDrop, мессенджер.\n\n' +
             '## Чего пока нет\n' +
             'Кнопки «выгрузить всё в CSV или JSON» в приложении нет. Если вам нужна полная выгрузка записей — например, для GDPR-запроса — напишите на [contact@lupibu.com](mailto:contact@lupibu.com). Мы подготовим её вручную в разумный срок.\n\n' +
@@ -1313,11 +1331,11 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['export', 'delete', 'data', 'account', 'report', 'gdpr', 'right'],
         related: ['delete-account', 'voice-privacy', 'sleep-stats-report'],
-        tldr: 'Sleep report exports as PDF from the Insights tab. A full CSV history export isn\'t in the app yet. Deleting the account is a 2-step flow in Profile.',
+        tldr: 'Sleep report exports as PDF from the Rhythm tab. A full CSV history export isn\'t in the app yet. Deleting the account is a 2-step flow in Profile.',
         body:
             'Straight talk, no marketing.\n\n' +
             '## What you can export today\n' +
-            '- **7-day sleep PDF report** — **Insights** tab → **"Share report"** button. Includes: day-by-day timeline, averages, age-range norms.\n' +
+            '- **10-day sleep PDF report** — **Rhythm** tab → **"Download PDF report"** button. Includes: day-by-day timeline, averages, age-range norms, feeds.\n' +
             '- It goes through the iOS share sheet — mail, AirDrop, messenger.\n\n' +
             '## What\'s not there yet\n' +
             'There is no "export everything as CSV/JSON" button inside the app. If you need a full dump for a GDPR request, email [contact@lupibu.com](mailto:contact@lupibu.com) — we\'ll prepare one manually in a reasonable time.\n\n' +
@@ -1334,11 +1352,11 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['экспорт', 'жою', 'деректер', 'аккаунт', 'есеп', 'gdpr'],
         related: ['delete-account', 'voice-privacy', 'sleep-stats-report'],
-        tldr: 'Ұйқы есебі «Статистика» қойындысынан PDF түрінде шығарылады. Барлық тарихты толық CSV-ге шығару әзірге жоқ. Аккаунтты жою — «Профильде», екі қадамда.',
+        tldr: 'Ұйқы есебі «Ырғақ» қойындысынан PDF түрінде шығарылады. Барлық тарихты толық CSV-ге шығару әзірге жоқ. Аккаунтты жою — «Профильде», екі қадамда.',
         body:
             'Маркетингсіз, тікелей сөз.\n\n' +
             '## Қазір нені шығаруға болады\n' +
-            '- **7 күндік ұйқы PDF есебі** — **Статистика** қойындысы → **«Есеппен бөлісу»** батырмасы. Есепте: күн сайынғы таймлайн, орташа көрсеткіштер, жасқа қарай норма диапазоны.\n' +
+            '- **10 күндік ұйқы PDF есебі** — **«Ырғақ»** қойындысы → **«PDF-есепті жүктеу»** батырмасы. Есепте: күн сайынғы таймлайн, орташа көрсеткіштер, жасқа қарай норма диапазоны, тамақтану.\n' +
             '- iOS стандартты «Бөлісу» терезесі арқылы — поштаға, AirDrop-қа, мессенджерге.\n\n' +
             '## Қазір жоқ нәрсе\n' +
             'Қолданбада «бәрін CSV немесе JSON-ға шығару» батырмасы жоқ. Толық көшірме керек болса (мысалы, GDPR сұрауы үшін), [contact@lupibu.com](mailto:contact@lupibu.com) мекенжайына жазыңыз — қисынды уақытта қолмен дайындаймыз.\n\n' +
@@ -1350,7 +1368,7 @@ var helpArticles = {
     },
 
     /* ======================================== */
-    /*  SLEEP STATS & REPORT (Insights tab)     */
+    /*  SLEEP STATS & REPORT (Rhythm tab)       */
     /* ======================================== */
 
     'sleep-stats-report_ru': {
@@ -1358,21 +1376,21 @@ var helpArticles = {
         category: 'sleep',
         title: 'Как посмотреть статистику сна и отправить PDF-отчёт',
         readMinutes: 2,
-        keywords: ['статистика', 'отчёт', 'pdf', 'график', 'insights', 'сон', 'экспорт', 'share report'],
+        keywords: ['статистика', 'отчёт', 'pdf', 'график', 'ритм', 'сон', 'экспорт', 'скачать отчёт'],
         related: ['prediction-accuracy', 'data-export-delete'],
-        tldr: 'Вкладка «Статистика» показывает таймлайн сна за 7 дней и средние показатели. Кнопка «Поделиться отчётом» собирает PDF и отправляет его через стандартное окно iOS.',
+        tldr: 'Вкладка «Ритм» показывает карточки сна за 7 дней и средние показатели. Кнопка «Скачать PDF-отчёт» собирает PDF за 10 дней и отправляет его через стандартное окно iOS.',
         body:
-            'Вся аналитика сна собрана на вкладке **Статистика** — это вторая иконка в нижней панели (значок графика).\n\n' +
+            'Вся аналитика сна собрана на вкладке **«Ритм»** в нижней панели.\n\n' +
             '## Что показывается\n' +
-            '- **Таймлайн за последние 7 дней** — каждый день как горизонтальная полоса на 24 часа; сны окрашены по качеству.\n' +
-            '- **Средние показатели:** общий сон за сутки, длительность дневного сна, количество напов, ночной сон.\n' +
-            '- **Отклонение от нормы** — как ваш ребёнок спит относительно возрастной нормы для его пола.\n' +
-            '- **Кормления** — количество и разбивка (грудь / бутылочка / прикорм) ниже на экране.\n\n' +
+            '- **Карточки последних 7 дней** — каждый день как горизонтальная полоса на 24 часа со всеми снами.\n' +
+            '- **Средние показатели:** подъём и отбой, бодрствование, общий сон, дневной и ночной сон.\n' +
+            '- **Сравнение с нормой** — как ваш ребёнок спит относительно возрастной нормы.\n\n' +
+            'Кормлений на этом экране нет — они попадают только в PDF-отчёт.\n\n' +
             '## Ограничения периода\n' +
-            'Пока статистика фиксирована на последние 7 дней — выбора произвольного диапазона нет.\n\n' +
-            '## Как отправить PDF-отчёт\n' +
-            '- Прокрутите вниз до кнопки **«Поделиться отчётом»**.\n' +
-            '- Сгенерируется PDF: имя ребёнка, период, таймлайн по дням и средние показатели.\n' +
+            'На экране — последние 7 дней, в PDF-отчёте — 10. Произвольный диапазон выбрать нельзя.\n\n' +
+            '## Как скачать PDF-отчёт\n' +
+            '- Нажмите кнопку **«Скачать PDF-отчёт»**.\n' +
+            '- Сгенерируется PDF за 10 дней: имя ребёнка, таймлайн по дням, средние показатели против нормы и кормления.\n' +
             '- Откроется стандартное iOS-окно «Поделиться» — можно отправить в почту, AirDrop или мессенджер.\n\n'
     },
     'sleep-stats-report_en': {
@@ -1380,21 +1398,21 @@ var helpArticles = {
         category: 'sleep',
         title: 'How to view sleep stats and share a report',
         readMinutes: 2,
-        keywords: ['stats', 'report', 'pdf', 'chart', 'insights', 'sleep', 'export', 'share report'],
+        keywords: ['stats', 'report', 'pdf', 'chart', 'rhythm', 'sleep', 'export', 'download report'],
         related: ['prediction-accuracy', 'data-export-delete'],
-        tldr: 'The Insights tab shows a 7-day sleep timeline and averages. "Share report" generates a PDF and sends it through the iOS share sheet.',
+        tldr: 'The Rhythm tab shows 7-day sleep cards and averages. "Download PDF report" generates a 10-day PDF and sends it through the iOS share sheet.',
         body:
-            'All sleep analytics live on the **Insights** tab — the second icon at the bottom (chart).\n\n' +
+            'All sleep analytics live on the **Rhythm** tab in the bottom bar.\n\n' +
             '## What it shows\n' +
-            '- **7-day timeline** — each day as a 24-hour horizontal bar; naps colored by quality.\n' +
-            '- **Averages:** total sleep per day, nap duration, nap count, night sleep.\n' +
-            '- **Delta from norm** — how much your baby sleeps relative to the age+gender range.\n' +
-            '- **Feeds** — count and breakdown (breast / bottle / food) further down.\n\n' +
+            '- **Cards for the last 7 days** — each day as a 24-hour horizontal bar with all sleeps.\n' +
+            '- **Averages:** wake and bedtime, awake window, total sleep, naps and night sleep.\n' +
+            '- **Comparison with the norm** — how your baby sleeps relative to the age range.\n\n' +
+            'Feeds are not on this screen — they only appear in the PDF report.\n\n' +
             '## Time range\n' +
-            'Stats are fixed to the last 7 days — no custom range picker yet.\n\n' +
-            '## Sharing the PDF report\n' +
-            '- Scroll to the **"Share report"** button\n' +
-            '- A PDF is generated: child name, period, day-by-day timeline, averages\n' +
+            'The screen covers the last 7 days; the PDF report covers 10. There is no custom range picker.\n\n' +
+            '## Downloading the PDF report\n' +
+            '- Tap the **"Download PDF report"** button\n' +
+            '- A 10-day PDF is generated: child name, day-by-day timeline, averages vs the norm, and feeds\n' +
             '- The iOS share sheet opens — send via mail, AirDrop, messenger\n\n'
     },
     'sleep-stats-report_kk': {
@@ -1402,21 +1420,21 @@ var helpArticles = {
         category: 'sleep',
         title: 'Ұйқы статистикасын қалай көру және есеп жасау',
         readMinutes: 2,
-        keywords: ['статистика', 'есеп', 'pdf', 'график', 'insights', 'ұйқы', 'экспорт'],
+        keywords: ['статистика', 'есеп', 'pdf', 'график', 'ырғақ', 'ұйқы', 'экспорт'],
         related: ['prediction-accuracy', 'data-export-delete'],
-        tldr: 'Статистика қойындысы 7 күндік ұйқы таймлайнін және орташа көрсеткіштерді көрсетеді. «Есеппен бөлісу» батырмасы PDF жасап, iOS share sheet арқылы жібереді.',
+        tldr: '«Ырғақ» қойындысы 7 күндік ұйқы карточкалары мен орташа көрсеткіштерді көрсетеді. «PDF-есепті жүктеу» батырмасы 10 күндік PDF жасап, iOS share sheet арқылы жібереді.',
         body:
-            'Барлық ұйқы аналитикасы **Статистика** қойындысында — төменгі панельдегі екінші белгіше (график).\n\n' +
+            'Барлық ұйқы аналитикасы төменгі панельдегі **«Ырғақ»** қойындысында.\n\n' +
             '## Не көрсетіледі\n' +
-            '- **Соңғы 7 күндік таймлайн** — әр күн 24 сағаттық көлденең жолақ; ұйқылар сапа бойынша боялған.\n' +
-            '- **Орташа көрсеткіштер:** тәулігіне жалпы ұйқы, нап ұзақтығы, нап саны, түнгі ұйқы.\n' +
-            '- **Нормадан ауытқу** — балаңыз жасына мен жынысына сәйкес нормамен салыстырғанда қанша ұйықтайды.\n' +
-            '- **Тамақ** — саны және бөлінісі (ГС / бөтелке / тамақ) төменде.\n\n' +
+            '- **Соңғы 7 күннің карточкалары** — әр күн барлық ұйқылары бар 24 сағаттық көлденең жолақ.\n' +
+            '- **Орташа көрсеткіштер:** тұру мен жату уақыты, ояу терезесі, жалпы ұйқы, күндізгі мен түнгі ұйқы.\n' +
+            '- **Нормамен салыстыру** — балаңыз жас нормасымен салыстырғанда қалай ұйықтайды.\n\n' +
+            'Тамақтану бұл экранда жоқ — ол тек PDF-есепке кіреді.\n\n' +
             '## Кезең шектеуі\n' +
-            'Статистика соңғы 7 күнге белгіленген — диапазонды таңдау әзірге жоқ.\n\n' +
-            '## PDF есепті қалай жіберу\n' +
-            '- **«Есеппен бөлісу»** батырмасына дейін жылжыңыз\n' +
-            '- PDF жасалады: бала аты, кезең, күн сайынғы таймлайн, орташалар\n' +
+            'Экранда — соңғы 7 күн, PDF-есепте — 10 күн. Кез келген диапазонды таңдау мүмкін емес.\n\n' +
+            '## PDF есепті қалай жүктеу\n' +
+            '- **«PDF-есепті жүктеу»** батырмасын басыңыз\n' +
+            '- 10 күндік PDF жасалады: бала аты, күн сайынғы таймлайн, нормамен салыстырылған орташалар және тамақтану\n' +
             '- iOS «Бөлісу» терезесі ашылады — поштаға, AirDrop-қа, мессенджерге жіберіңіз\n\n'
     },
 
@@ -1431,20 +1449,22 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['история', 'фильтр', 'период', 'дата', 'редактировать', 'удалить запись', 'все записи'],
         related: ['edit-delete', 'entry-types', 'backfill'],
-        tldr: 'История открывается из блока «Последние события» на главной. Есть два режима периода (24 часа или произвольный), фильтр по типу и редактирование/удаление по долгому нажатию.',
+        tldr: 'История открывается кнопкой «История» на главной. Четыре пресета периода (24 часа, вчера, 7 дней, свой диапазон — до месяца), фильтр по типу; тап по записи открывает детали с редактированием и удалением.',
         body:
-            'Полная история записей — не вкладка, а отдельный экран. Открывается кнопкой **«Смотреть все»** в блоке «Последние события» на главной.\n\n' +
+            'Полная история записей — не вкладка, а отдельный экран. Открывается кнопкой **«История»** в блоке последних событий на главной.\n\n' +
             '## Выбор периода\n' +
-            'Вверху экрана — переключатель режимов:\n' +
-            '- **«Последние 24 часа»** — быстрый пресет, ничего настраивать не нужно\n' +
-            '- **«Произвольный период»** — открывается календарь; выберите две даты, чтобы задать диапазон\n\n' +
+            'Вверху экрана — пресеты:\n' +
+            '- **«24 часа»** — быстрый пресет, ничего настраивать не нужно\n' +
+            '- **«Вчера»** — весь вчерашний день\n' +
+            '- **«7 дней»** — последняя неделя\n' +
+            '- **Свой период** — открывается календарь; выберите две даты. Максимум — один месяц\n\n' +
             '## Фильтр по типу\n' +
-            'Рядом — выпадающий фильтр: «Все типы» или один конкретный (сон, кормление, подгузник и т.д.). Фильтр применяется мгновенно.\n\n' +
+            'Рядом — фильтр: «Все» или один конкретный тип (сон, кормление, подгузник и т.д.). Применяется мгновенно.\n\n' +
             '## Группировка\n' +
             'Записи группируются по дням с заголовками «Сегодня», «Вчера», «Сб, 29 марта» и т.д. Внутри дня — в обратном хронологическом порядке (последние сверху).\n\n' +
             '## Редактировать или удалить\n' +
-            '- **Тап по записи** открывает детали\n' +
-            '- **Долгое нажатие** — контекстное меню: «Редактировать» или «Удалить»\n' +
+            '- **Тап по записи** открывает окно с деталями\n' +
+            '- В нём же — кнопки **«Редактировать»** и **«Удалить»**\n' +
             '- Редактирование открывает ту же форму, что и при создании — изменения сохраняются сразу\n\n' +
             '## Запись задним числом\n' +
             'Добавить событие в прошлом можно и отсюда, и с главной — подробнее в статье «Как записать сон задним числом».'
@@ -1456,20 +1476,22 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['history', 'filter', 'period', 'date', 'edit', 'delete entry', 'all entries'],
         related: ['edit-delete', 'entry-types', 'backfill'],
-        tldr: 'History opens from the "Recent events" block on home. Two period modes (last 24h or custom), a type filter, and long-press to edit or delete.',
+        tldr: 'History opens via the "View history" button on home. Four period presets (24 hours, yesterday, 7 days, custom range — up to a month), a type filter; tapping an entry opens details with edit and delete.',
         body:
-            'Full entry history isn\'t a tab — it\'s a dedicated screen. Open via **"See all"** in the "Recent events" block on home.\n\n' +
+            'Full entry history isn\'t a tab — it\'s a dedicated screen. Open via the **"View history"** button in the recent events block on home.\n\n' +
             '## Period selection\n' +
-            'Top of the screen — a mode switch:\n' +
-            '- **"Last 24 hours"** — quick preset, no setup\n' +
-            '- **"Custom range"** — opens a calendar; pick two dates to define the range\n\n' +
+            'Top of the screen — presets:\n' +
+            '- **"24 hours"** — quick preset, no setup\n' +
+            '- **"Yesterday"** — the whole previous day\n' +
+            '- **"7 days"** — the last week\n' +
+            '- **Custom range** — opens a calendar; pick two dates. One month maximum\n\n' +
             '## Type filter\n' +
-            'Next to it — a dropdown: "All types" or a single type (sleep, feed, diaper, etc.). Applies instantly.\n\n' +
+            'Next to it — a filter: "All" or a single type (sleep, feed, diaper, etc.). Applies instantly.\n\n' +
             '## Grouping\n' +
             'Entries group by day with headers like "Today", "Yesterday", "Sat, Mar 29". Inside a day: newest at the top.\n\n' +
             '## Edit or delete\n' +
-            '- **Tap** an entry to see details\n' +
-            '- **Long-press** — context menu: "Edit" or "Delete"\n' +
+            '- **Tap** an entry to open a details view\n' +
+            '- It has the **"Edit"** and **"Delete"** buttons right there\n' +
             '- Editing opens the same form used for creation — changes save immediately\n\n' +
             '## Back-dating an entry\n' +
             'You can add something in the past from here or from home — see "Logging after the fact".'
@@ -1481,20 +1503,22 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['тарих', 'сүзгі', 'кезең', 'күн', 'өңдеу', 'жазбаны жою'],
         related: ['edit-delete', 'entry-types', 'backfill'],
-        tldr: 'Тарих басты экрандағы «Соңғы оқиғалар» блогынан ашылады. Екі кезең режимі (24 сағат немесе кез келген), түр бойынша сүзгі, ұзақ басу арқылы өңдеу/жою.',
+        tldr: 'Тарих басты экрандағы «Тарих» батырмасы арқылы ашылады. Төрт кезең пресеті (24 сағат, кеше, 7 күн, өз диапазоныңыз — бір айға дейін), түр бойынша сүзгі; жазбаны бассаңыз, өңдеу мен жою бар детальдар ашылады.',
         body:
-            'Жазбалардың толық тарихы — қойынды емес, жеке экран. Басты экрандағы «Соңғы оқиғалар» блогындағы **«Барлығын көру»** арқылы ашылады.\n\n' +
+            'Жазбалардың толық тарихы — қойынды емес, жеке экран. Басты экрандағы соңғы оқиғалар блогындағы **«Тарих»** батырмасы арқылы ашылады.\n\n' +
             '## Кезеңді таңдау\n' +
-            'Экранның жоғарғы жағында — режим ауыстырғышы:\n' +
-            '- **«Соңғы 24 сағат»** — жылдам пресет, баптау қажет емес\n' +
-            '- **«Кез келген кезең»** — күнтізбе ашылады; диапазонды анықтау үшін екі күнді таңдаңыз\n\n' +
+            'Экранның жоғарғы жағында — пресеттер:\n' +
+            '- **«24 сағат»** — жылдам пресет, баптау қажет емес\n' +
+            '- **«Кеше»** — кешегі күн толығымен\n' +
+            '- **«7 күн»** — соңғы апта\n' +
+            '- **Өз кезеңіңіз** — күнтізбе ашылады; екі күнді таңдаңыз. Ең көбі — бір ай\n\n' +
             '## Түр бойынша сүзгі\n' +
-            'Жанында — ашылмалы сүзгі: «Барлық түрлер» немесе біреуі (ұйқы, тамақ, жөргек т.с.с.). Бірден қолданылады.\n\n' +
+            'Жанында — сүзгі: «Бәрі» немесе бір нақты түр (ұйқы, тамақ, жөргек т.с.с.). Бірден қолданылады.\n\n' +
             '## Топтастыру\n' +
             'Жазбалар «Бүгін», «Кеше», «Сб, 29 наурыз» сияқты күндер бойынша топталады. Күн ішінде — жаңалары жоғарыда.\n\n' +
             '## Өңдеу немесе жою\n' +
-            '- Жазбаны **басу** — толық ашады\n' +
-            '- **Ұзақ басу** — мәзір: «Өңдеу» немесе «Жою»\n' +
+            '- Жазбаны **басу** — детальдар терезесін ашады\n' +
+            '- Сол терезеде — **«Өңдеу»** және **«Жою»** батырмалары\n' +
             '- Өңдеу жасау формасын ашады — өзгерістер бірден сақталады\n\n' +
             '## Өткенге жазу\n' +
             'Өткен оқиғаны осы жерден де, басты экраннан да қосуға болады — «Кейін жазу» мақаласын қараңыз.'
@@ -1511,15 +1535,15 @@ var helpArticles = {
         readMinutes: 1,
         keywords: ['переключить', 'ребёнок', 'близнецы', 'несколько детей', 'активный'],
         related: ['add-child'],
-        tldr: 'В шапке главного экрана — плашка с именем ребёнка. Нажмите на неё, чтобы выбрать другого. Приложение запоминает выбор между запусками.',
+        tldr: 'Справа в шапке главного экрана — плашка с именем ребёнка. Тап по ней открывает список, тап по выглядывающей аватарке соседнего ребёнка переключает на следующего. Выбор запоминается между запусками.',
         body:
             'Если у вас больше одного ребёнка, в Lupibu есть быстрый переключатель.\n\n' +
             '## Где он\n' +
-            'Сверху главного экрана — плашка с именем и фото ребёнка (между иконкой меню слева и значком ИИ-ассистента справа). Нажмите на неё, чтобы открыть список.\n\n' +
+            'В правой части шапки главного экрана — плашка с именем и фото активного ребёнка. Когда детей несколько, за плашкой выглядывает аватарка следующего.\n\n' +
             '## Как выбрать другого\n' +
-            '- Откроется список всех ваших детей\n' +
-            '- Нажмите на нужного\n' +
-            '- Все экраны — главный, статистика, история, ИИ-чат — сразу показывают его данные\n\n' +
+            '- **Тап по выглядывающей аватарке** — мгновенно переключает на следующего ребёнка, по кругу\n' +
+            '- **Тап по самой плашке** — открывает список всех детей; нажмите на нужного\n' +
+            '- Все экраны — главный, ритм, история, чат с ассистентом — сразу показывают его данные\n\n' +
             '## Что запоминается\n' +
             'Активный ребёнок сохраняется — после закрытия приложения вы вернётесь к тому же. Переключение не меняет данные других детей.\n\n' +
             '## Если ребёнок один\n' +
@@ -1532,15 +1556,15 @@ var helpArticles = {
         readMinutes: 1,
         keywords: ['switch', 'child', 'twins', 'multiple kids', 'active'],
         related: ['add-child'],
-        tldr: 'Tap the name pill in the home header to pick a different child. The app remembers your choice across launches.',
+        tldr: 'The name pill sits on the right side of the home header. Tap the pill to open the list; tap the peeking avatar next to it to cycle to the next child. Your choice persists across launches.',
         body:
             'With more than one child, Lupibu gives you a fast switcher.\n\n' +
             '## Where it is\n' +
-            'At the top of the home screen — a pill with the child\'s name and photo (between the menu icon on the left and the AI icon on the right). Tap to open the list.\n\n' +
+            'On the right side of the home header — a pill with the active child\'s name and photo. With several children, the next child\'s avatar peeks out from behind the pill.\n\n' +
             '## How to switch\n' +
-            '- The list shows all your children\n' +
-            '- Tap the one you want\n' +
-            '- Every screen — home, insights, history, AI chat — immediately shows that child\'s data\n\n' +
+            '- **Tap the peeking avatar** — instantly cycles to the next child, round-robin\n' +
+            '- **Tap the pill itself** — opens the list of all children; tap the one you want\n' +
+            '- Every screen — home, rhythm, history, assistant chat — immediately shows that child\'s data\n\n' +
             '## What\'s remembered\n' +
             'The active child persists between app launches. Switching does nothing to the other children\'s data.\n\n' +
             '## With only one child\n' +
@@ -1553,15 +1577,15 @@ var helpArticles = {
         readMinutes: 1,
         keywords: ['ауыстыру', 'бала', 'бірнеше бала', 'белсенді'],
         related: ['add-child'],
-        tldr: 'Басты экран шапкасындағы бала аты жазылған плиткаға басыңыз. Қолданба таңдауыңызды келесі іске қосуларға дейін сақтайды.',
+        tldr: 'Бала аты жазылған плитка — басты экран шапкасының оң жағында. Плитканы бассаңыз, тізім ашылады; жанынан сығалап тұрған аватарды бассаңыз, келесі балаға ауысады. Таңдау келесі іске қосуларға дейін сақталады.',
         body:
             'Бірден көп бала болса, Lupibu-де жылдам ауыстырғыш бар.\n\n' +
             '## Ол қайда\n' +
-            'Басты экранның жоғарғы жағында — бала аты мен фотосы жазылған плитка (сол жақтағы мәзір мен оң жақтағы AI-ассистент белгішесінің арасында). Тізімді ашу үшін басыңыз.\n\n' +
+            'Басты экран шапкасының оң жағында — белсенді баланың аты мен фотосы жазылған плитка. Бірнеше бала болса, плитканың артынан келесі баланың аватары сығалап тұрады.\n\n' +
             '## Қалай ауыстыру\n' +
-            '- Тізімде барлық балаларыңыз көрінеді\n' +
-            '- Керегін басыңыз\n' +
-            '- Барлық экран — басты, статистика, тарих, AI-чат — бірден сол баланың деректерін көрсетеді\n\n' +
+            '- **Сығалап тұрған аватарды басу** — бірден келесі балаға ауыстырады, кезекпен\n' +
+            '- **Плитканың өзін басу** — барлық балалардың тізімін ашады; керегін басыңыз\n' +
+            '- Барлық экран — басты, ырғақ, тарих, ассистент чаты — бірден сол баланың деректерін көрсетеді\n\n' +
             '## Не есте сақталады\n' +
             'Белсенді бала қосымшаны жапқанда да сақталады. Ауыстыру басқа балалардың деректеріне әсер етпейді.\n\n' +
             '## Бір ғана бала болса\n' +
@@ -1579,20 +1603,21 @@ var helpArticles = {
         readMinutes: 3,
         keywords: ['профиль', 'настройки', 'имя', 'язык', 'уведомления', 'единицы', 'выйти', 'logout'],
         related: ['notifications', 'delete-account', 'switch-children'],
-        tldr: 'Всё управление аккаунтом — в одном экране «Профиль» (иконка меню в шапке). Там: имя, язык, уведомления, единицы измерения, дети, Pro и удаление аккаунта.',
+        tldr: 'Всё управление аккаунтом — в одном экране «Профиль» (иконка меню в шапке). Там: имя, язык, тема, уведомления, аналитика, дети, Pro и удаление аккаунта.',
         body:
             'В Lupibu нет отдельного меню настроек — всё собрано в одном экране **«Профиль»**. Открывается иконкой меню слева в шапке главного.\n\n' +
             '## Что там сверху\n' +
             '- **Имя** — редактируется на месте: нажмите на карандаш, введите, сохраните\n' +
             '- **Метод входа** — Apple Sign In (только он). Email в интерфейсе не показываем — только Firebase-идентификатор внутри\n\n' +
             '## Дети\n' +
-            '- Список ваших детей (до 4 на Pro)\n' +
+            '- Список ваших детей (до 4 детей)\n' +
             '- **«Добавить ребёнка»** внизу списка\n' +
             '- Тап по карточке — редактировать\n\n' +
             '## Настройки приложения\n' +
             '- **Язык** — English, Русский, Қазақша. Изменение синхронизируется в облако и применяется сразу\n' +
-            '- **Единицы объёма** — мл или oz (для кормлений)\n' +
-            '- **Уведомления** — тумблер; если iOS не разрешены, появится подсказка и кнопка «Открыть настройки»\n\n' +
+            '- **Тема** — светлая, тёмная или как в системе\n' +
+            '- **Уведомления** — тумблер; если iOS не разрешены, появится подсказка и кнопка «Открыть настройки»\n' +
+            '- **Аналитика** — тумблер; выключите, и мы сразу перестанем собирать данные об использовании. Приложение продолжит работать так же\n\n' +
             '## Поддержка и документы\n' +
             '- **Справочный центр** — эта страница\n' +
             '- **Обратная связь** — форма внутри приложения, пишем ответ на тот же аккаунт\n' +
@@ -1608,20 +1633,21 @@ var helpArticles = {
         readMinutes: 3,
         keywords: ['profile', 'settings', 'name', 'language', 'notifications', 'units', 'logout'],
         related: ['notifications', 'delete-account', 'switch-children'],
-        tldr: 'Everything account-related lives on one **Profile** screen (menu icon in the header): name, language, notifications, units, kids, Pro, and account deletion.',
+        tldr: 'Everything account-related lives on one **Profile** screen (menu icon in the header): name, language, theme, notifications, analytics, kids, Pro, and account deletion.',
         body:
             'Lupibu doesn\'t have a separate settings menu — it\'s all on one **Profile** screen. Open it via the menu icon on the left of the home header.\n\n' +
             '## At the top\n' +
             '- **Display name** — edit inline: tap the pencil, type, save\n' +
             '- **Sign-in method** — Apple Sign In only. Email is not shown in the UI; only a Firebase ID is used internally\n\n' +
             '## Children\n' +
-            '- List of your kids (up to 4 on Pro)\n' +
+            '- List of your kids (up to 4 children)\n' +
             '- **"Add child"** at the bottom of the list\n' +
             '- Tap a card to edit\n\n' +
             '## App settings\n' +
             '- **Language** — English, Русский, Қазақша. Change syncs to cloud and applies instantly\n' +
-            '- **Volume units** — ml or oz (for feeds)\n' +
-            '- **Notifications** — toggle; if iOS permission is off, a hint + "Open Settings" shortcut appears\n\n' +
+            '- **Theme** — light, dark, or follow the system\n' +
+            '- **Notifications** — toggle; if iOS permission is off, a hint + "Open Settings" shortcut appears\n' +
+            '- **Analytics** — toggle; turn it off and we stop collecting usage data right away. The app keeps working exactly the same\n\n' +
             '## Support & legal\n' +
             '- **Help Center** — this page\n' +
             '- **Feedback** — in-app form; replies go to the same account\n' +
@@ -1637,20 +1663,21 @@ var helpArticles = {
         readMinutes: 3,
         keywords: ['профиль', 'баптаулар', 'ат', 'тіл', 'хабарламалар', 'бірлік', 'шығу'],
         related: ['notifications', 'delete-account', 'switch-children'],
-        tldr: 'Аккаунтқа қатысты бәрі бір **Профиль** экранында (шапкадағы мәзір белгішесі): ат, тіл, хабарламалар, бірліктер, балалар, Pro және аккаунтты жою.',
+        tldr: 'Аккаунтқа қатысты бәрі бір **Профиль** экранында (шапкадағы мәзір белгішесі): ат, тіл, тақырып, хабарламалар, аналитика, балалар, Pro және аккаунтты жою.',
         body:
             'Lupibu-де жеке баптаулар мәзірі жоқ — барлығы бір **Профиль** экранында. Басты экран шапкасының сол жағындағы мәзір белгішесі арқылы ашылады.\n\n' +
             '## Жоғарғы жағында\n' +
             '- **Көрсетілетін ат** — орнында өңделеді: қарандашты басып, жазып, сақтаңыз\n' +
             '- **Кіру әдісі** — тек Apple Sign In. Email интерфейсте көрсетілмейді; ішінде тек Firebase ID қолданылады\n\n' +
             '## Балалар\n' +
-            '- Балаларыңыздың тізімі (Pro-да 4-ке дейін)\n' +
+            '- Балаларыңыздың тізімі (4 балаға дейін)\n' +
             '- Тізімнің төменгі жағында **«Бала қосу»**\n' +
             '- Картаны басу — өңдеу\n\n' +
             '## Қолданба баптаулары\n' +
             '- **Тіл** — English, Русский, Қазақша. Өзгеріс бұлтқа синхрондалып, бірден қолданылады\n' +
-            '- **Көлем бірлігі** — мл немесе oz (тамақтандыру үшін)\n' +
-            '- **Хабарламалар** — ауыстырғыш; iOS рұқсаты болмаса, кеңес пен «Баптауларды ашу» шолғышы пайда болады\n\n' +
+            '- **Тақырып** — ашық, қараңғы немесе жүйедегідей\n' +
+            '- **Хабарламалар** — ауыстырғыш; iOS рұқсаты болмаса, кеңес пен «Баптауларды ашу» шолғышы пайда болады\n' +
+            '- **Аналитика** — ауыстырғыш; өшірсеңіз, қолданыс деректерін жинауды бірден тоқтатамыз. Қолданба бұрынғыдай жұмыс істей береді\n\n' +
             '## Қолдау мен құжаттар\n' +
             '- **Анықтама орталығы** — осы бет\n' +
             '- **Кері байланыс** — қолданба ішіндегі форма; жауап дәл сол аккаунтқа келеді\n' +
@@ -1671,18 +1698,23 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['уведомления', 'пуши', 'сон', 'разрешение', 'ios', 'утреннее'],
         related: ['profile-settings', 'prediction-accuracy'],
-        tldr: 'Lupibu присылает пуш о предполагаемом пробуждении (если Pro и идёт сон) и одно утреннее сообщение с инсайтом. Тумблер — в Профиле; iOS-разрешение — системное.',
+        tldr: 'Lupibu присылает пуш «Скоро укладывать» примерно за 15 минут до прогнозируемого времени укладывания и одно утреннее сообщение с инсайтом. Пуши включаются по желанию; ночью (21:00–07:00) ничего не приходит.',
         body:
             'Мы сознательно присылаем мало пушей — только когда есть что сказать по делу.\n\n' +
             '## Какие пуши бывают\n' +
-            '- **Окно пробуждения** — за 15 минут до прогнозируемого конца сна, если сон сейчас идёт. Только для Pro с персональным прогнозом.\n' +
+            '- **«Скоро укладывать»** — примерно за 15 минут до прогнозируемого времени следующего укладывания, чтобы вы успели начать ритуал до переутомления.\n' +
             '- **Утренний инсайт** — один раз в день, короткий вывод по ритму ребёнка, собранный ИИ-ассистентом по вашим данным. Открывается в чате.\n\n' +
+            '## Когда пуш точно не придёт\n' +
+            '- **Ночью** — с 21:00 до 07:00 действуют тихие часы, ничего не приходит.\n' +
+            '- **Пока идёт таймер сна** — если сон уже записывается, напоминать не о чем.\n' +
+            '- **При ночном пробуждении** — Lupibu не будет предлагать «укладывать» посреди ночи.\n\n' +
             '## Как включить\n' +
+            'Пуши выключены по умолчанию — это ваш выбор, а не наш.\n' +
             '- **Профиль → «Уведомления»** — тумблер\n' +
             '- Впервые включите — iOS спросит системное разрешение\n' +
             '- Если разрешение заблокировано, появится кнопка **«Открыть настройки»** → iOS Настройки → Lupibu → Уведомления\n\n' +
             '## Когда приходит запрос на разрешение\n' +
-            'iOS-разрешение запрашивается не сразу при старте, а **после первого записанного сна** — чтобы вы уже понимали, зачем оно. Можно отклонить и включить потом вручную.\n\n' +
+            'Впервые Lupibu предлагает включить напоминания на одном из последних шагов онбординга — с объяснением, зачем они. «Не сейчас» ничего не блокирует: включить можно в любой момент в Профиле.\n\n' +
             '## Почему пуш пришёл «невовремя»\n' +
             'Прогноз не идеален — особенно в первые дни и при сменах режима. В статье «Почему прогноз неточный» разобрано, что влияет на точность.'
     },
@@ -1693,18 +1725,23 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['notifications', 'push', 'sleep', 'permission', 'ios', 'morning'],
         related: ['profile-settings', 'prediction-accuracy'],
-        tldr: 'Lupibu sends a push near the predicted wake-up (Pro-only, while sleeping) and one morning insight. Toggle lives in Profile; iOS permission is system-level.',
+        tldr: 'Lupibu sends a "Time to wind down" push about 15 minutes before the predicted put-down time, plus one morning insight a day. Pushes are opt-in; nothing arrives at night (21:00–07:00).',
         body:
             'We deliberately keep pushes rare — only when there\'s something worth saying.\n\n' +
             '## What pushes exist\n' +
-            '- **Wake-window alert** — 15 minutes before the predicted end of an ongoing sleep. Pro only, with personalized predictions.\n' +
+            '- **"Time to wind down"** — about 15 minutes before the predicted time of the next put-down, so you can start the routine before overtiredness.\n' +
             '- **Morning insight** — once a day, a short AI-generated note about your baby\'s rhythm. Opens in chat.\n\n' +
+            '## When a push will NOT arrive\n' +
+            '- **At night** — quiet hours run 21:00–07:00; nothing comes through.\n' +
+            '- **While a sleep timer is running** — if sleep is already being logged, there\'s nothing to remind you about.\n' +
+            '- **During a night waking** — Lupibu won\'t suggest "winding down" in the middle of the night.\n\n' +
             '## Turning it on\n' +
+            'Pushes are off by default — they\'re your choice, not ours.\n' +
             '- **Profile → "Notifications"** — toggle\n' +
             '- First time you flip it on, iOS asks for system permission\n' +
             '- If permission is blocked, you\'ll see an **"Open Settings"** shortcut → iOS Settings → Lupibu → Notifications\n\n' +
             '## When the permission prompt appears\n' +
-            'iOS permission isn\'t requested at launch — it\'s shown **after your first logged sleep**, so you already understand the value. You can decline and enable later.\n\n' +
+            'Lupibu first offers to enable reminders on one of the last onboarding steps — with an explanation of what they\'re for. "Not now" blocks nothing: you can enable them anytime in Profile.\n\n' +
             '## Why a push arrived "at the wrong time"\n' +
             'Predictions aren\'t perfect — especially in the first days or during schedule shifts. "Why is my prediction off?" explains what affects accuracy.'
     },
@@ -1715,18 +1752,23 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['хабарламалар', 'push', 'ұйқы', 'рұқсат', 'ios', 'таңғы'],
         related: ['profile-settings', 'prediction-accuracy'],
-        tldr: 'Lupibu болжамды оянуға жақын push және күніне бір таңғы хабарлама жібереді. Ауыстырғыш — Профильде; iOS рұқсаты — жүйелік.',
+        tldr: 'Lupibu «Жатқызу уақыты жақын» push-ын болжамды жатқызу уақытынан шамамен 15 минут бұрын және күніне бір таңғы инсайт жібереді. Push-тар қалауыңыз бойынша қосылады; түнде (21:00–07:00) ештеңе келмейді.',
         body:
             'Біз әдейі аз хабарлама жібереміз — тек айтуға тұрарлық нәрсе болғанда.\n\n' +
             '## Қандай push бар\n' +
-            '- **Ояу терезесі ескертуі** — жалғасып жатқан ұйқының болжамды аяқталуынан 15 минут бұрын. Тек Pro-да, жеке болжаммен.\n' +
+            '- **«Жатқызу уақыты жақын»** — келесі жатқызудың болжамды уақытынан шамамен 15 минут бұрын, бала шаршап кетпей тұрып ритуалды бастап үлгеруіңіз үшін.\n' +
             '- **Таңғы инсайт** — күніне бір рет, балаңыздың ырғағы туралы AI-ассистент жазған қысқа қорытынды. Чатта ашылады.\n\n' +
+            '## Push қашан келмейді\n' +
+            '- **Түнде** — 21:00-ден 07:00-ге дейін тыныш сағаттар, ештеңе келмейді.\n' +
+            '- **Ұйқы таймері жүріп тұрғанда** — ұйқы жазылып жатса, ескертетін ештеңе жоқ.\n' +
+            '- **Түнгі оянуда** — Lupibu түн ортасында «жатқызуды» ұсынбайды.\n\n' +
             '## Қалай қосу\n' +
+            'Push-тар әдепкіде өшірулі — бұл сіздің таңдауыңыз.\n' +
             '- **Профиль → «Хабарламалар»** — ауыстырғыш\n' +
             '- Алғаш қосқанда, iOS жүйелік рұқсат сұрайды\n' +
             '- Рұқсат бұғатталса, **«Баптауларды ашу»** батырмасы көрінеді → iOS Баптаулары → Lupibu → Хабарламалар\n\n' +
             '## Рұқсат сұрағы қашан шығады\n' +
-            'iOS рұқсаты іске қосуда сұралмайды — **алғашқы ұйқыны жазғаннан кейін** көрінеді, сонда сіз пайданы түсініп үлгересіз. Қабылдамай, кейін қосуға болады.\n\n' +
+            'Lupibu еске салуларды қосуды алғаш рет онбордингтің соңғы қадамдарының бірінде ұсынады — не үшін керегін түсіндіріп. «Қазір емес» ештеңені бұғаттамайды: кез келген уақытта Профильден қоса аласыз.\n\n' +
             '## Push неге «уақытынан тыс» келді\n' +
             'Болжам мінсіз емес — әсіресе алғашқы күндерде және режим өзгергенде. «Болжам неге дәл емес» мақаласын қараңыз.'
     },
@@ -1742,14 +1784,13 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['удалить аккаунт', 'удалить ребёнка', 'закрыть аккаунт', 'забыть меня', 'gdpr'],
         related: ['data-export-delete', 'cancel-subscription'],
-        tldr: 'Удалить ребёнка: Профиль → карточка ребёнка → Удалить (только владелец). Удалить аккаунт: красная кнопка внизу Профиля → два подтверждения. Данные стираются сразу.',
+        tldr: 'Удалить ребёнка: Профиль → карточка ребёнка → Удалить. Удалить аккаунт: красная кнопка внизу Профиля → два подтверждения. Данные стираются сразу.',
         body:
             'Lupibu не прячет удаление. Всё делается в два касания, без писем в поддержку.\n\n' +
             '## Удалить ребёнка\n' +
             '- Откройте **Профиль** → нажмите на карточку ребёнка.\n' +
             '- На экране редактирования внизу — **«Удалить ребёнка»** (красная).\n' +
             '- Подтвердите.\n\n' +
-            'Удалять ребёнка может только **владелец аккаунта**.\n\n' +
             '## Удалить аккаунт\n' +
             '- **Профиль** → прокрутите вниз → красная кнопка **«Удалить аккаунт»**.\n' +
             '- Появится экран с опциями — если у вас Pro, сначала предложат управлять подпиской.\n' +
@@ -1769,17 +1810,16 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['delete account', 'delete child', 'close account', 'forget me', 'gdpr'],
         related: ['data-export-delete', 'cancel-subscription'],
-        tldr: 'Delete a child: Profile → child card → Delete (owner only). Delete account: red button at the bottom of Profile → two confirmations, data is wiped immediately.',
+        tldr: 'Delete a child: Profile → child card → Delete. Delete account: red button at the bottom of Profile → two confirmations, data is wiped immediately.',
         body:
             'Lupibu doesn\'t hide deletion — it\'s two taps, no support tickets.\n\n' +
             '## Delete a child\n' +
             '- Open **Profile** → tap the child card\n' +
             '- On the edit screen, at the bottom — **"Delete child"** (red)\n' +
             '- Confirm\n\n' +
-            'Only the **account owner** can delete a child.\n\n' +
             '## Delete account\n' +
             '- **Profile** → scroll to the bottom → red **"Delete account"** button\n' +
-            '- A sheet appears with options (if you\'re on Pro, it nudges you to manage the subscription first)\n' +
+            '- A sheet appears with options (it may nudge you to manage the subscription first)\n' +
             '- **Second confirmation** — "Really delete?" with a warning\n' +
             '- After confirming: local data is cleared immediately (MMKV + AsyncStorage + RevenueCat), the account is deleted on the server\n\n' +
             '## What\'s gone\n' +
@@ -1796,14 +1836,13 @@ var helpArticles = {
         readMinutes: 2,
         keywords: ['аккаунтты жою', 'баланы жою', 'аккаунт жабу', 'мені ұмыт', 'gdpr'],
         related: ['data-export-delete', 'cancel-subscription'],
-        tldr: 'Баланы жою: Профиль → бала картасы → Жою (тек иесі). Аккаунтты жою: Профильдің төменгі жағындағы қызыл батырма → екі растау. Деректер бірден жойылады.',
+        tldr: 'Баланы жою: Профиль → бала картасы → Жою. Аккаунтты жою: Профильдің төменгі жағындағы қызыл батырма → екі растау. Деректер бірден жойылады.',
         body:
             'Lupibu жоюды жасырмайды. Барлығы екі басумен істеледі, қолдауға хат жазудың қажеті жоқ.\n\n' +
             '## Баланы жою\n' +
             '- **Профильді** ашыңыз → бала картасын басыңыз.\n' +
             '- Өңдеу экранының төменгі жағында — **«Баланы жою»** (қызыл).\n' +
             '- Растаңыз.\n\n' +
-            'Баланы **тек аккаунт иесі** жоя алады.\n\n' +
             '## Аккаунтты жою\n' +
             '- **Профиль** → төменге жылжыңыз → қызыл **«Аккаунтты жою»** батырмасы.\n' +
             '- Опциялары бар терезе ашылады — Pro болсаңыз, алдымен жазылымды басқаруды ұсынады.\n' +
