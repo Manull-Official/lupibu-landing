@@ -951,6 +951,7 @@ ul, ol { list-style: none; }
 }
 
 .footer-logo {
+    align-self: flex-start;
     height: 28px;
     width: auto;
     filter: brightness(0) invert(1);
