@@ -1,6 +1,6 @@
 
 PRIVACY POLICY
-Version 1.0 dated 17.04.2026
+Version 1.1 dated 15.10.2026
 
 1. INTRODUCTION
 1.1. Lupibu ("We", "Us", "Our") respects your privacy. This Privacy Policy explains how we collect, use, store, share, and protect your personal information when you use the Lupibu mobile application (the "App").
@@ -12,22 +12,24 @@ Version 1.0 dated 17.04.2026
 We collect personal information only to the extent necessary for the App to function and to improve your experience.
 
 2.1. **Information You Provide Directly:**
-*   **Account Data:** Your name and email address, as provided through Apple Sign-In during registration. If you chose "Hide My Email" in Apple Sign-In, we receive only a private Apple relay address (e.g. `xxx@privaterelay.appleid.com`), not your real email. The email is used for essential service communications (account recovery, legal notices) only; we do not send marketing emails.
+*   **Account Data:** Your name and email address, as provided through Apple Sign-In during registration. If you chose "Hide My Email" in Apple Sign-In, we receive only a private Apple relay address (e.g. `xxx@privaterelay.appleid.com`), not your real email. The email is used for essential service communications (account recovery, legal notices) and a few emails about your subscription: a welcome when your free trial starts, a question after you cancel, and an invitation to tell us about your experience with the App. These emails contain no advertising, and each has an unsubscribe link. We do not send marketing emails.
 *   **Child Data:** Name, gender, and date of birth of your child. **By providing this data, you confirm that you are the parent or legal guardian of the child and have full authority to provide this information.**
 *   **Entries and Logs:** Sleep records (start time, end time, quality rating), feeding records (breast/bottle/food, timestamps), and other daily tracking entries (diaper, walk, doctor visit, medication, vaccination, symptoms, massage, custom entries).
 *   **Photos:** Photos you attach to entries. A single photo can be attached to any entry. Photos are uploaded to and stored in Google Cloud Storage.
 *   **AI Assistant Conversations:** Text messages you send to the built-in AI assistant.
 *   **Voice Input:** Audio recordings you make through the App's voice input feature. Voice recordings are transmitted to Google Gemini AI for transcription and are **not stored** by Us or by Google after processing. Only the resulting text is saved as an entry.
+*   **Feedback Contact (optional):** A WhatsApp or Viber number or a Telegram username that you enter on the "What did you use before?" screen during sign-up or in the feedback form. By entering it, you agree that we may contact you there about Lupibu; we never send advertising. To have it deleted, email contact@lupibu.com.
+*   **Sign-up Answers:** Your answers to questions when you start using the App (for example, your goals and what you used before). Used to improve the App.
 
 2.2. **Information Collected Automatically:**
 *   **Device Information:** Device type, operating system version.
 *   **Usage Analytics:** App usage patterns and feature interactions, collected via Firebase Analytics and PostHog.
 *   **Crash Reports:** Technical error data, device state, and stack traces, collected via Sentry to diagnose and fix bugs.
 *   **Session Replay (sampled):** Sentry records anonymized replays of app sessions for approximately 10% of users (100% of sessions where an error occurs). Replays capture screen navigation, taps, and scroll events. **All text inputs and images are masked by default**, so typed content, child names, and photos are not visible in the recording. You can disable crash and replay collection in the device's system diagnostics settings (iOS: Settings → Privacy & Security → Analytics & Improvements).
-*   **Push Notification Tokens:** Device tokens used to deliver push notifications (sleep reminders, daily tips).
+*   **Push Notification Tokens:** Device tokens used to deliver push notifications (sleep reminders, daily tips, a request for feedback).
 
 2.3. **Information We Do NOT Collect:**
-*   We do not collect your phone number or location data.
+*   We do not collect location data. We receive a phone number only if you enter it yourself as a feedback contact (Section 2.1).
 *   We do not collect biometric data.
 *   We do not collect payment or financial information.
 *   We do not serve ads or collect data for advertising purposes.
@@ -36,9 +38,10 @@ We collect personal information only to the extent necessary for the App to func
 We use collected information for the following purposes:
 *   **Core Functionality:** To provide sleep tracking, feeding logs, daily routines, and personalized schedule recommendations.
 *   **AI-Powered Features:** To power the AI assistant (answering questions, generating tips) and to transcribe voice input into structured entries. AI features use automated decision-making to generate personalized recommendations based on your child's data. These recommendations are informational only and are not a substitute for medical advice.
-*   **Push Notifications:** To send you sleep reminders, daily tips, and important updates. You can disable notifications at any time through your device settings.
+*   **Push Notifications:** To send you sleep reminders, daily tips, one request for feedback in the first days of your free trial, and important updates. You can disable notifications at any time through your device settings.
 *   **Analytics and Improvement:** To understand how the App is used and to improve its features, stability, and performance.
 *   **Technical Support:** To diagnose crashes and resolve technical issues.
+*   **Contacting You:** Subscription emails and messages to the contact you provided (Section 2.1), to learn what to improve in the App.
 *   **Legal Compliance:** To comply with legal obligations and respond to lawful requests from authorities.
 
 4. AI AND AUTOMATED PROCESSING DISCLOSURE
@@ -62,7 +65,8 @@ We use collected information for the following purposes:
 | PostHog | Product analytics | Anonymous usage events, device info | EU (Frankfurt, Germany) |
 | Sentry | Crash reporting, sampled session replay (masked text and images) | Error logs, device state, stack traces, anonymized session recordings | United States |
 | Google Gemini AI / Vertex AI | Voice transcription, AI assistant | Voice audio (real-time, not stored), conversation text, child tracking data | United States |
-| Telegram Bot API | Feedback delivery to our support team | Feedback message text, attached screenshots, technical logs (when you submit feedback in-app) | Global (routed through Telegram infrastructure) |
+| Telegram Bot API | Feedback delivery to our support team | Feedback message text, contact (if you provided one), attached screenshots, technical logs (when you submit feedback in-app) | Global (routed through Telegram infrastructure) |
+| Google Workspace (Gmail) | Sending emails from contact@lupibu.com | Email address, name | Global (Google infrastructure) |
 
 5.3. Each subprocessor is bound by data processing agreements that require them to protect your data in accordance with applicable laws.
 5.4. **Legal Disclosure:** We may disclose your information if required to do so by law, court order, or a valid request from a government authority of the Republic of Kazakhstan.
@@ -85,6 +89,7 @@ We retain your data for specific periods depending on its category:
 | Analytics data (Firebase, PostHog) | 14 months (Firebase default), 12 months (PostHog) |
 | Crash reports (Sentry) | 90 days |
 | Push notification tokens | While your account is active; removed on account deletion |
+| Feedback contact | Until you ask us to delete it or while your account is active; removed on account deletion |
 
 7.1. After the retention period expires, data is permanently deleted or irreversibly anonymized.
 7.2. We may retain certain data longer if required by applicable law (e.g., for dispute resolution or tax obligations), but no longer than 3 years after account deletion.
