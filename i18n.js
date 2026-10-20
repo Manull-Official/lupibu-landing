@@ -11,7 +11,7 @@ const translations = {
         // Hero — funnel 2026-09: soft promise, mechanism in the subline
         'hero.eyebrow': 'Baby sleep & routine tracker for iPhone',
         'hero.title': "Your baby's next nap isn't a surprise.",
-        'hero.subtitle': "Lupibu shows the next nap ahead of time, from your baby's own rhythm.",
+        'hero.subtitle': "A smart baby sleep tracker: it shows the next nap ahead of time, from your baby's own rhythm.",
         'hero.proof': 'Free for 7 days',
         'hero.micro': 'Free for 7 days, then a subscription. Cancel anytime in the App Store.',
 
@@ -74,7 +74,7 @@ const translations = {
         'footer.connect.label': 'Connect',
         'footer.copyright': '© 2026 Lupibu. All rights reserved.',
         // Meta — utility-anchored for SEO
-        'meta.title': "Lupibu — know when your baby's next nap is coming",
+        'meta.title': "Lupibu — smart baby sleep tracker: know when the next nap is coming",
         'meta.description': "Lupibu learns from your baby's own sleep log and shows when to put them down next. Log in one phrase, by voice or a tap. Free for 7 days on iPhone.",
 
         // Pay (ЮKassa landing for RU users)
@@ -175,7 +175,7 @@ const translations = {
         'a11y.skipLink': 'К содержимому',
         'hero.eyebrow': 'Трекер сна и режима малыша для iPhone',
         'hero.title': 'Следующий сон малыша — не сюрприз',
-        'hero.subtitle': 'Lupibu заранее показывает время укладывания — по ритму именно Вашего ребёнка.',
+        'hero.subtitle': 'Умный трекер сна малыша: заранее показывает, когда укладывать, — по ритму именно Вашего ребёнка.',
         'hero.proof': '7 дней бесплатно',
         'hero.micro': '7 дней бесплатно, дальше — по подписке. Отмена в App Store в любой момент.',
 
@@ -225,7 +225,7 @@ const translations = {
         'footer.legal.dataConsent': 'Согласие на обработку данных',
         'footer.connect.label': 'Связь',
         'footer.copyright': '© 2026 Lupibu. Все права защищены.',
-        'meta.title': 'Lupibu — приложение, которое знает, когда следующий сон',
+        'meta.title': 'Lupibu — умный трекер сна малыша: знает, когда следующий сон',
         'meta.description': 'Lupibu учится на снах Вашего ребёнка и подсказывает, когда укладывать. Записи одной фразой — голосом или текстом. 7 дней бесплатно. Для iPhone.',
 
         // Pay (ЮKassa landing for RU users)
@@ -325,7 +325,7 @@ const translations = {
         'a11y.skipLink': 'Мазмұнға өту',
         'hero.eyebrow': 'iPhone-ға арналған сәби ұйқысы мен режим трекері',
         'hero.title': 'Сәбидің келесі ұйқысы — тосын емес',
-        'hero.subtitle': 'Lupibu ұйықтату уақытын алдын ала көрсетеді — дәл Сіздің сәбиіңіздің ырғағы бойынша.',
+        'hero.subtitle': 'Сәби ұйқысының ақылды трекері: ұйықтату уақытын алдын ала көрсетеді — дәл Сіздің сәбиіңіздің ырғағы бойынша.',
         'hero.proof': '7 күн тегін',
         'hero.micro': '7 күн тегін, кейін — жазылым. App Store-да кез келген сәтте бас тартуға болады.',
 
