@@ -22,7 +22,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://lupibu.com';
 const TODAY = new Date().toISOString().slice(0, 10);
-const LANGS = ['ru', 'en', 'kk'];
+const LANGS = ['ru', 'en']; // Kazakh dropped from the site 2026-10-21
 const LANG_LABEL = { en: 'EN', ru: 'RU', kk: 'KZ' };
 
 const read = (p) => readFileSync(join(ROOT, p), 'utf8');
@@ -48,7 +48,6 @@ const help = new Function(
    ============================================================ */
 const HREFLANG_BLOCK = `    <link rel="alternate" hreflang="ru" href="${SITE}/">
     <link rel="alternate" hreflang="en" href="${SITE}/en/">
-    <link rel="alternate" hreflang="kk" href="${SITE}/kk/">
     <link rel="alternate" hreflang="x-default" href="${SITE}/en/">`;
 
 function localizeLanding(lang) {
@@ -77,13 +76,12 @@ function localizeLanding(lang) {
         `<link rel="canonical" href="${SITE}/${lang}/">`
     );
     s = s.replace(
-        /<link rel="alternate" hreflang="ru"[^>]*>\n.*hreflang="en"[^>]*>\n.*hreflang="kk"[^>]*>\n.*hreflang="x-default"[^>]*>/,
+        /<link rel="alternate" hreflang="ru"[^>]*>\n.*hreflang="en"[^>]*>\n.*hreflang="x-default"[^>]*>/,
         HREFLANG_BLOCK.trim()
     );
 
     // Per-language screenshot + preload (kk falls back to ru capture).
-    const shot = lang === 'en' ? 'en_home' : 'ru_home';
-    s = s.replaceAll('screenshots/ru_home.webp', `screenshots/${shot}.webp`);
+    for (const k of ['home', 'lock', 'rhythm']) s = s.replaceAll(`screenshots/ru_${k}.webp`, `screenshots/${lang}_${k}.webp`);
 
     // Static language switcher state.
     s = s.replace('<span class="lang-current">RU</span>', `<span class="lang-current">${LANG_LABEL[lang]}</span>`);
@@ -254,7 +252,6 @@ function sitemap(urls) {
 
 /* ---- run ---- */
 localizeLanding('en');
-localizeLanding('kk');
 
 const bySlug = {};
 for (const key of Object.keys(help.helpArticles)) {
@@ -270,7 +267,6 @@ const landingAlt = (l) => (l === 'ru' ? '/' : `/${l}/`);
 sitemap([
     { loc: '/', alternates: landingAlt },
     { loc: '/en/', alternates: landingAlt },
-    { loc: '/kk/', alternates: landingAlt },
     ...LANGS.map((l) => ({ loc: `/help/${l}/`, alternates: (x) => `/help/${x}/` })),
     ...LANGS.flatMap((l) =>
         (bySlug[l] || []).map((a) => ({

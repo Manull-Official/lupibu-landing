@@ -10,7 +10,7 @@ const translations = {
 
         // Hero — funnel 2026-09: soft promise, mechanism in the subline
         'hero.eyebrow': 'Baby sleep & routine tracker for iPhone',
-        'hero.title': "The next nap isn't a surprise.",
+        'hero.title': "Your baby's next nap isn't a surprise.",
         'hero.subtitle': "Lupibu shows the next nap ahead of time, from your baby's own rhythm.",
         'hero.proof': 'Free for 7 days',
         'hero.micro': 'Free for 7 days, then a subscription. Cancel anytime in the App Store.',
@@ -27,6 +27,17 @@ const translations = {
         'how.t1': 'Say "nursed on the left for 15 minutes" — it\'s logged.',
         'how.t2': "After about 5 logged sleeps, predictions tune to your baby's own rhythm.",
         'how.t3': 'The next nap shows up on your Home and Lock Screen.',
+
+
+        // Feature accents (mirror App Store v9 frames 2 / 6 / 4)
+        'feat.live.title': 'Breastfeeding timer on your Lock Screen',
+        'feat.live.text': 'A Live Activity shows the side and the time without unlocking the phone. Pause and stop right there.',
+        'feat.rhythm.title': "Baby's sleep week on one chart",
+        'feat.rhythm.text': 'Wake-up, awake windows and naps, day by day. A PDF report for the pediatrician in one tap.',
+        'feat.ai.title': "Ask AI why your baby won't sleep",
+        'feat.ai.text': "Answers come from your own baby's log — not from articles on the internet.",
+        'feat.ai.q': 'Why did Olivia wake up at 1 am?',
+        'feat.ai.a': 'She woke once, at 12:54 AM, fed for 17 minutes and slept through to 6:49 AM. One night feed at 3 months is normal. Her last two naps yesterday were short, 39 and 34 minutes against her usual 54, so she likely went to bed a little overtired. Try bedtime a little earlier tonight, around 7:45 PM.',
 
         // Final push
         'final.tagline': 'A rhythm for your baby. A day for you.',
@@ -163,7 +174,7 @@ const translations = {
     ru: {
         'a11y.skipLink': 'К содержимому',
         'hero.eyebrow': 'Трекер сна и режима малыша для iPhone',
-        'hero.title': 'Сон малыша — не сюрприз',
+        'hero.title': 'Следующий сон малыша — не сюрприз',
         'hero.subtitle': 'Lupibu заранее показывает время укладывания — по ритму именно Вашего ребёнка.',
         'hero.proof': '7 дней бесплатно',
         'hero.micro': '7 дней бесплатно, дальше — по подписке. Отмена в App Store в любой момент.',
@@ -177,6 +188,16 @@ const translations = {
         'how.t1': 'Скажите: «покормила левой 15 минут» — запись готова.',
         'how.t2': 'После ~5 записанных снов прогноз настраивается под ритм именно Вашего малыша.',
         'how.t3': 'Время следующего сна — на главном экране и на экране блокировки.',
+
+
+        'feat.live.title': 'Таймер кормления грудью — на экране блокировки',
+        'feat.live.text': 'Live Activity показывает сторону и время, не разблокируя телефон. Пауза и стоп — тут же.',
+        'feat.rhythm.title': 'Режим сна за неделю',
+        'feat.rhythm.text': 'Подъём, окна бодрствования и сны — день за днём. PDF-отчёт для педиатра в один тап.',
+        'feat.ai.title': 'Спросите ИИ, почему малыш не спит',
+        'feat.ai.text': 'Ответ строится по записям именно Вашего малыша — не по статьям из интернета.',
+        'feat.ai.q': 'Почему Оливия проснулась в час ночи?',
+        'feat.ai.a': 'Она проснулась один раз, в 00:54, поела 17 минут и спала до 06:49. Одно ночное кормление в 3 месяца — это норма. Два последних дневных сна вчера были короткими, 39 и 34 минуты вместо обычных 54, поэтому, скорее всего, она легла немного переутомлённой. Сегодня лучше уложить чуть раньше, около 19:45.',
 
         'final.tagline': 'У малыша — ритм. У Вас — свой день.',
         'final.alt': 'Мама-медведица Lupibu обнимает медвежонка',
@@ -438,7 +459,9 @@ const translations = {
     }
 };
 
-const SUPPORTED_LANGS = ['en', 'ru', 'kk'];
+// index.html narrows this to ru/en via window.LUPIBU_LANGS (Kazakh was dropped from
+// the landing on 2026-10-21; other pages keep all three dictionaries).
+const SUPPORTED_LANGS = window.LUPIBU_LANGS || ['en', 'ru', 'kk'];
 // Per-page default: index.html sets window.LUPIBU_DEFAULT_LANG = 'ru' (its static
 // HTML is Russian — that's who pays); every other page keeps English as the base.
 const DEFAULT_LANG = window.LUPIBU_DEFAULT_LANG || 'en';

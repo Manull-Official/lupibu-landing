@@ -36,7 +36,7 @@ function initSmoothScroll() {
  */
 function initScrollAnimations() {
     const elements = document.querySelectorAll(
-        '.moments-header, .moment, .moments-footer, .testimonial, .how-row, .final-cta-section'
+        '.moments-header, .moment, .moments-footer, .testimonial, .feature-row, .final-cta-section'
     );
 
     elements.forEach(el => el.classList.add('fade-in'));
