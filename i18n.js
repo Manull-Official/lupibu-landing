@@ -30,8 +30,8 @@ const translations = {
 
 
         // Feature accents (mirror App Store v9 frames 2 / 6 / 4)
-        'feat.live.title': 'Breastfeeding timer on your Lock Screen',
-        'feat.live.text': 'A Live Activity shows the side and the time without unlocking the phone. Pause and stop right there.',
+        'feat.live.title': 'A handy breastfeeding timer',
+        'feat.live.text': 'Live Activity lets you control the timer right from the Lock Screen.',
         'feat.rhythm.title': "Baby's sleep week on one chart",
         'feat.rhythm.text': 'Wake-up, awake windows and naps, day by day. A PDF report for the pediatrician in one tap.',
         'feat.ai.title': "Ask AI why your baby won't sleep",
@@ -190,8 +190,8 @@ const translations = {
         'how.t3': 'Время следующего сна — на главном экране и на экране блокировки.',
 
 
-        'feat.live.title': 'Таймер кормления грудью — на экране блокировки',
-        'feat.live.text': 'Live Activity показывает сторону и время, не разблокируя телефон. Пауза и стоп — тут же.',
+        'feat.live.title': 'Удобный таймер кормления',
+        'feat.live.text': 'Live Activity помогает легко управлять таймером — прямо с экрана блокировки.',
         'feat.rhythm.title': 'Режим сна за неделю',
         'feat.rhythm.text': 'Подъём, окна бодрствования и сны — день за днём. PDF-отчёт для педиатра в один тап.',
         'feat.ai.title': 'Спросите ИИ, почему малыш не спит',
@@ -340,8 +340,8 @@ const translations = {
         'how.t3': 'Келесі ұйқы уақыты — басты экранда және құлып экранында.',
 
 
-        'feat.live.title': 'Емізу таймері — құлып экранында',
-        'feat.live.text': 'Live Activity телефонды ашпай-ақ жағы мен уақытын көрсетеді. Кідірту мен тоқтату — сол жерде.',
+        'feat.live.title': 'Ыңғайлы емізу таймері',
+        'feat.live.text': 'Live Activity таймерді құлып экранынан оңай басқаруға көмектеседі.',
         'feat.rhythm.title': 'Бір аптадағы ұйқы режимі',
         'feat.rhythm.text': 'Ояну, сергек терезелер мен ұйқылар — күн сайын. Педиатрға PDF-есеп бір түртумен.',
         'feat.ai.title': 'AI-дан сұраңыз: сәби неге ұйықтамайды',
