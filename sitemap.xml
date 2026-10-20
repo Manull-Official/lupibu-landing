@@ -5,6 +5,7 @@
     <loc>https://lupibu.com/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/kk/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/en/"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -12,6 +13,15 @@
     <loc>https://lupibu.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/kk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/en/"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/kk/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/kk/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/en/"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -19,6 +29,7 @@
     <loc>https://lupibu.com/help/ru/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -26,6 +37,15 @@
     <loc>https://lupibu.com/help/en/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -33,6 +53,7 @@
     <loc>https://lupibu.com/help/ru/first-steps.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/first-steps.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/first-steps.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/first-steps.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/first-steps.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -40,6 +61,7 @@
     <loc>https://lupibu.com/help/ru/log-events.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/log-events.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/log-events.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/log-events.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/log-events.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -47,6 +69,7 @@
     <loc>https://lupibu.com/help/ru/timers.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/timers.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/timers.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/timers.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/timers.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -54,6 +77,7 @@
     <loc>https://lupibu.com/help/ru/widget.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/widget.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/widget.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/widget.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/widget.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -61,6 +85,7 @@
     <loc>https://lupibu.com/help/ru/backfill.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/backfill.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/backfill.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/backfill.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/backfill.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -68,6 +93,7 @@
     <loc>https://lupibu.com/help/ru/prediction-accuracy.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/prediction-accuracy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/prediction-accuracy.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/prediction-accuracy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/prediction-accuracy.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -75,6 +101,7 @@
     <loc>https://lupibu.com/help/ru/wake-windows.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/wake-windows.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/wake-windows.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/wake-windows.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/wake-windows.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -82,6 +109,7 @@
     <loc>https://lupibu.com/help/ru/nap-vs-night.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/nap-vs-night.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/nap-vs-night.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/nap-vs-night.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/nap-vs-night.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -89,6 +117,7 @@
     <loc>https://lupibu.com/help/ru/norms.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/norms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/norms.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/norms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/norms.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -96,6 +125,7 @@
     <loc>https://lupibu.com/help/ru/ready-not-tired.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/ready-not-tired.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/ready-not-tired.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/ready-not-tired.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/ready-not-tired.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -103,6 +133,7 @@
     <loc>https://lupibu.com/help/ru/entry-types.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/entry-types.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/entry-types.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/entry-types.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/entry-types.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -110,6 +141,7 @@
     <loc>https://lupibu.com/help/ru/edit-delete.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/edit-delete.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/edit-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/edit-delete.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/edit-delete.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -117,6 +149,7 @@
     <loc>https://lupibu.com/help/ru/voice-logging.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/voice-logging.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/voice-logging.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/voice-logging.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/voice-logging.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -124,6 +157,7 @@
     <loc>https://lupibu.com/help/ru/ai-capabilities.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/ai-capabilities.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/ai-capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/ai-capabilities.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/ai-capabilities.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -131,6 +165,7 @@
     <loc>https://lupibu.com/help/ru/voice-privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/voice-privacy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/voice-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/voice-privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/voice-privacy.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -138,6 +173,7 @@
     <loc>https://lupibu.com/help/ru/add-child.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/add-child.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/add-child.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/add-child.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/add-child.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -145,6 +181,7 @@
     <loc>https://lupibu.com/help/ru/cancel-subscription.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/cancel-subscription.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/cancel-subscription.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/cancel-subscription.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/cancel-subscription.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -152,6 +189,7 @@
     <loc>https://lupibu.com/help/ru/data-export-delete.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/data-export-delete.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/data-export-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/data-export-delete.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/data-export-delete.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -159,6 +197,7 @@
     <loc>https://lupibu.com/help/ru/sleep-stats-report.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/sleep-stats-report.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/sleep-stats-report.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/sleep-stats-report.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/sleep-stats-report.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -166,6 +205,7 @@
     <loc>https://lupibu.com/help/ru/history-screen.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/history-screen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/history-screen.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/history-screen.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/history-screen.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -173,6 +213,7 @@
     <loc>https://lupibu.com/help/ru/switch-children.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/switch-children.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/switch-children.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/switch-children.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/switch-children.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -180,6 +221,7 @@
     <loc>https://lupibu.com/help/ru/profile-settings.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/profile-settings.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/profile-settings.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/profile-settings.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/profile-settings.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -187,6 +229,7 @@
     <loc>https://lupibu.com/help/ru/notifications.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/notifications.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/notifications.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/notifications.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/notifications.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -194,6 +237,7 @@
     <loc>https://lupibu.com/help/ru/delete-account.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/delete-account.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/delete-account.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/delete-account.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/delete-account.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -201,6 +245,7 @@
     <loc>https://lupibu.com/help/en/first-steps.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/first-steps.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/first-steps.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/first-steps.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/first-steps.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -208,6 +253,7 @@
     <loc>https://lupibu.com/help/en/log-events.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/log-events.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/log-events.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/log-events.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/log-events.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -215,6 +261,7 @@
     <loc>https://lupibu.com/help/en/timers.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/timers.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/timers.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/timers.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/timers.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -222,6 +269,7 @@
     <loc>https://lupibu.com/help/en/widget.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/widget.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/widget.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/widget.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/widget.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -229,6 +277,7 @@
     <loc>https://lupibu.com/help/en/backfill.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/backfill.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/backfill.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/backfill.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/backfill.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -236,6 +285,7 @@
     <loc>https://lupibu.com/help/en/prediction-accuracy.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/prediction-accuracy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/prediction-accuracy.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/prediction-accuracy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/prediction-accuracy.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -243,6 +293,7 @@
     <loc>https://lupibu.com/help/en/wake-windows.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/wake-windows.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/wake-windows.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/wake-windows.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/wake-windows.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -250,6 +301,7 @@
     <loc>https://lupibu.com/help/en/nap-vs-night.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/nap-vs-night.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/nap-vs-night.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/nap-vs-night.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/nap-vs-night.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -257,6 +309,7 @@
     <loc>https://lupibu.com/help/en/norms.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/norms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/norms.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/norms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/norms.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -264,6 +317,7 @@
     <loc>https://lupibu.com/help/en/ready-not-tired.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/ready-not-tired.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/ready-not-tired.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/ready-not-tired.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/ready-not-tired.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -271,6 +325,7 @@
     <loc>https://lupibu.com/help/en/entry-types.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/entry-types.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/entry-types.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/entry-types.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/entry-types.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -278,6 +333,7 @@
     <loc>https://lupibu.com/help/en/edit-delete.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/edit-delete.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/edit-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/edit-delete.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/edit-delete.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -285,6 +341,7 @@
     <loc>https://lupibu.com/help/en/voice-logging.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/voice-logging.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/voice-logging.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/voice-logging.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/voice-logging.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -292,6 +349,7 @@
     <loc>https://lupibu.com/help/en/ai-capabilities.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/ai-capabilities.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/ai-capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/ai-capabilities.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/ai-capabilities.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -299,6 +357,7 @@
     <loc>https://lupibu.com/help/en/voice-privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/voice-privacy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/voice-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/voice-privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/voice-privacy.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -306,6 +365,7 @@
     <loc>https://lupibu.com/help/en/add-child.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/add-child.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/add-child.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/add-child.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/add-child.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -313,6 +373,7 @@
     <loc>https://lupibu.com/help/en/cancel-subscription.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/cancel-subscription.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/cancel-subscription.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/cancel-subscription.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/cancel-subscription.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -320,6 +381,7 @@
     <loc>https://lupibu.com/help/en/data-export-delete.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/data-export-delete.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/data-export-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/data-export-delete.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/data-export-delete.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -327,6 +389,7 @@
     <loc>https://lupibu.com/help/en/sleep-stats-report.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/sleep-stats-report.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/sleep-stats-report.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/sleep-stats-report.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/sleep-stats-report.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -334,6 +397,7 @@
     <loc>https://lupibu.com/help/en/history-screen.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/history-screen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/history-screen.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/history-screen.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/history-screen.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -341,6 +405,7 @@
     <loc>https://lupibu.com/help/en/switch-children.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/switch-children.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/switch-children.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/switch-children.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/switch-children.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -348,6 +413,7 @@
     <loc>https://lupibu.com/help/en/profile-settings.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/profile-settings.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/profile-settings.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/profile-settings.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/profile-settings.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -355,6 +421,7 @@
     <loc>https://lupibu.com/help/en/notifications.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/notifications.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/notifications.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/notifications.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/notifications.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>
@@ -362,6 +429,199 @@
     <loc>https://lupibu.com/help/en/delete-account.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/delete-account.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/delete-account.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/delete-account.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/delete-account.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/first-steps.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/first-steps.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/first-steps.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/first-steps.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/first-steps.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/log-events.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/log-events.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/log-events.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/log-events.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/log-events.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/timers.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/timers.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/timers.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/timers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/timers.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/widget.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/widget.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/widget.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/widget.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/widget.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/backfill.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/backfill.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/backfill.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/backfill.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/backfill.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/prediction-accuracy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/prediction-accuracy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/prediction-accuracy.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/prediction-accuracy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/prediction-accuracy.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/wake-windows.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/wake-windows.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/wake-windows.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/wake-windows.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/wake-windows.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/nap-vs-night.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/nap-vs-night.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/nap-vs-night.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/nap-vs-night.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/nap-vs-night.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/norms.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/norms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/norms.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/norms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/norms.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/ready-not-tired.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/ready-not-tired.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/ready-not-tired.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/ready-not-tired.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/ready-not-tired.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/entry-types.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/entry-types.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/entry-types.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/entry-types.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/entry-types.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/edit-delete.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/edit-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/edit-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/edit-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/edit-delete.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/voice-logging.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/voice-logging.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/voice-logging.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/voice-logging.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/voice-logging.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/ai-capabilities.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/ai-capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/ai-capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/ai-capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/ai-capabilities.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/voice-privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/voice-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/voice-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/voice-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/voice-privacy.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/add-child.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/add-child.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/add-child.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/add-child.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/add-child.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/cancel-subscription.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/cancel-subscription.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/cancel-subscription.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/cancel-subscription.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/cancel-subscription.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/data-export-delete.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/data-export-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/data-export-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/data-export-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/data-export-delete.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/sleep-stats-report.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/sleep-stats-report.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/sleep-stats-report.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/sleep-stats-report.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/sleep-stats-report.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/history-screen.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/history-screen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/history-screen.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/history-screen.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/history-screen.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/switch-children.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/switch-children.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/switch-children.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/switch-children.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/switch-children.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/profile-settings.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/profile-settings.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/profile-settings.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/profile-settings.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/profile-settings.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/notifications.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/notifications.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/notifications.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/notifications.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/notifications.html"/>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/help/kk/delete-account.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/delete-account.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/delete-account.html"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/help/kk/delete-account.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/help/en/delete-account.html"/>
     <lastmod>2026-10-20</lastmod>
   </url>

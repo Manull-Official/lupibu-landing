@@ -324,7 +324,7 @@ const translations = {
     kk: {
         'a11y.skipLink': 'Мазмұнға өту',
         'hero.eyebrow': 'iPhone-ға арналған сәби ұйқысы мен режим трекері',
-        'hero.title': 'Келесі ұйқы — тосын емес',
+        'hero.title': 'Сәбидің келесі ұйқысы — тосын емес',
         'hero.subtitle': 'Lupibu ұйықтату уақытын алдын ала көрсетеді — дәл Сіздің сәбиіңіздің ырғағы бойынша.',
         'hero.proof': '7 күн тегін',
         'hero.micro': '7 күн тегін, кейін — жазылым. App Store-да кез келген сәтте бас тартуға болады.',
@@ -338,6 +338,16 @@ const translations = {
         'how.t1': '«Сол жақтан 15 минут еміздіп, серуенге шықтық» деп айтыңыз — жазба дайын.',
         'how.t2': 'Шамамен 5 жазылған ұйқыдан кейін болжам дәл Сіздің сәбиіңіздің ырғағына бейімделеді.',
         'how.t3': 'Келесі ұйқы уақыты — басты экранда және құлып экранында.',
+
+
+        'feat.live.title': 'Емізу таймері — құлып экранында',
+        'feat.live.text': 'Live Activity телефонды ашпай-ақ жағы мен уақытын көрсетеді. Кідірту мен тоқтату — сол жерде.',
+        'feat.rhythm.title': 'Бір аптадағы ұйқы режимі',
+        'feat.rhythm.text': 'Ояну, сергек терезелер мен ұйқылар — күн сайын. Педиатрға PDF-есеп бір түртумен.',
+        'feat.ai.title': 'AI-дан сұраңыз: сәби неге ұйықтамайды',
+        'feat.ai.text': 'Жауап дәл Сіздің сәбиіңіздің жазбаларынан құрылады — интернеттегі мақалалардан емес.',
+        'feat.ai.q': 'Оливия неге түнгі бірде оянды?',
+        'feat.ai.a': 'Ол бір рет, 00:54-те оянды, 17 минут емді де 06:49-ға дейін ұйықтады. 3 айда бір түнгі тамақтандыру — қалыпты жағдай. Кеше соңғы екі күндізгі ұйқы қысқа болды: әдеттегі 54-тің орнына 39 және 34 минут, сондықтан ол сәл шаршап жатқан болуы мүмкін. Бүгін сәл ертерек, шамамен 19:45-те жатқызған жөн.',
 
         'final.tagline': 'Сәбиде — ырғақ. Сізде — өз күніңіз.',
         'final.alt': 'Lupibu ана аюы қонжығын құшақтап отыр',
@@ -459,8 +469,7 @@ const translations = {
     }
 };
 
-// index.html narrows this to ru/en via window.LUPIBU_LANGS (Kazakh was dropped from
-// the landing on 2026-10-21; other pages keep all three dictionaries).
+// A page may narrow this via window.LUPIBU_LANGS.
 const SUPPORTED_LANGS = window.LUPIBU_LANGS || ['en', 'ru', 'kk'];
 // Per-page default: index.html sets window.LUPIBU_DEFAULT_LANG = 'ru' (its static
 // HTML is Russian — that's who pays); every other page keeps English as the base.
