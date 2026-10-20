@@ -40,7 +40,7 @@
 
     <link rel="preload" as="image" type="image/webp" href="/screenshots/kk_home.webp">
 
-    <link rel="stylesheet" href="/styles.css?v=20261021c">
+    <link rel="stylesheet" href="/styles.css?v=20261021d">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
 
     <script type="application/ld+json">
@@ -177,6 +177,8 @@
                                     class="screen-img">
                             </div>
                         </div>
+                        <img src="/screenshots/kk_forecast.webp" alt="Прогноз следующего сна крупно: время и окно бодрствования"
+                            data-screenshot="forecast" loading="eager" class="zoom-card" width="900" height="440">
                     </div>
                 </div>
             </div>
@@ -218,8 +220,24 @@
                 </div>
                 <div class="feature-visual">
                     <div class="chat-demo" role="figure" aria-label="Пример диалога с ИИ-помощником">
-                        <p class="chat-q" data-i18n="feat.ai.q">Оливия неге түнгі бірде оянды?</p>
-                        <p class="chat-a" data-i18n="feat.ai.a">Ол бір рет, 00:54-те оянды, 17 минут емді де 06:49-ға дейін ұйықтады. 3 айда бір түнгі тамақтандыру — қалыпты жағдай. Кеше соңғы екі күндізгі ұйқы қысқа болды: әдеттегі 54-тің орнына 39 және 34 минут, сондықтан ол сәл шаршап жатқан болуы мүмкін. Бүгін сәл ертерек, шамамен 19:45-те жатқызған жөн.</p>
+                        <div class="chat-head">
+                            <img src="/assets/favicon.png" alt="" class="chat-avatar">
+                            <div class="chat-head-text">
+                                <strong data-i18n="feat.ai.name">Lupibu көмекшісі</strong>
+                                <span data-i18n="feat.ai.status">сәби жазбалары бойынша жауап береді</span>
+                            </div>
+                        </div>
+                        <div class="chat-body">
+                            <p class="chat-q" data-i18n="feat.ai.q">Оливия неге түнгі бірде оянды?</p>
+                            <div class="chat-row">
+                                <img src="/assets/favicon.png" alt="" class="chat-avatar chat-avatar-sm">
+                                <p class="chat-a" data-i18n="feat.ai.a">Ол бір рет, 00:54-те оянды, 17 минут емді де 06:49-ға дейін ұйықтады. 3 айда бір түнгі тамақтандыру — қалыпты жағдай. Кеше соңғы екі күндізгі ұйқы қысқа болды: әдеттегі 54-тің орнына 39 және 34 минут, сондықтан ол сәл шаршап жатқан болуы мүмкін. Бүгін сәл ертерек, шамамен 19:45-те жатқызған жөн.</p>
+                            </div>
+                        </div>
+                        <div class="chat-input" aria-hidden="true">
+                            <span data-i18n="feat.ai.placeholder">Сұраңыз немесе дауыспен айтыңыз…</span>
+                            <span class="chat-mic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+                        </div>
                     </div>
                 </div>
             </div>

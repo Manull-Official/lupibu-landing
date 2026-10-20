@@ -82,7 +82,7 @@ function localizeLanding(lang) {
     );
 
     // Per-language screenshot + preload (kk falls back to ru capture).
-    for (const k of ['home', 'live', 'rhythm']) s = s.replaceAll(`screenshots/ru_${k}.webp`, `screenshots/${lang}_${k}.webp`);
+    for (const k of ['home', 'forecast', 'live', 'rhythm']) s = s.replaceAll(`screenshots/ru_${k}.webp`, `screenshots/${lang}_${k}.webp`);
 
     // Static language switcher state.
     s = s.replace('<span class="lang-current">RU</span>', `<span class="lang-current">${LANG_LABEL[lang]}</span>`);
