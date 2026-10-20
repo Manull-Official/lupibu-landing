@@ -3144,3 +3144,11 @@ ul, ol { list-style: none; }
     }
     .chat-demo { text-align: left; }
 }
+
+/* Live Activity shown as the card itself, not a whole lock screen */
+.live-card {
+    width: min(100%, 440px);
+    height: auto;
+    border-radius: 28px;
+    box-shadow: 0 18px 50px rgba(28, 25, 23, 0.14);
+}
