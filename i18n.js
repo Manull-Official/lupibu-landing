@@ -60,7 +60,7 @@ const translations = {
 
         // Sticky CTA
         'sticky.cta': 'Start free',
-        'sticky.sub': 'Free for 7 days',
+        'sticky.sub': 'First 7 days',
         'qr.hint': 'Hover to enlarge',
 
         // Footer
@@ -214,7 +214,7 @@ const translations = {
         'slogan.tagline': 'Меньше догадок. Спокойнее дни и ночи.',
 
         'sticky.cta': 'Попробовать бесплатно',
-        'sticky.sub': '7 дней бесплатно',
+        'sticky.sub': 'Первые 7 дней',
         'qr.hint': 'Наведите для увеличения',
         'footer.help.label': 'Помощь',
         'footer.help.link': 'Справочный центр',
@@ -364,7 +364,7 @@ const translations = {
         'slogan.tagline': 'Болжам аз. Тыныш күн мен түн көп.',
 
         'sticky.cta': 'Тегін бастау',
-        'sticky.sub': '7 күн тегін',
+        'sticky.sub': 'Алғашқы 7 күн',
         'qr.hint': 'Үлкейту үшін меңзеңіз',
         'footer.help.label': 'Көмек',
         'footer.help.link': 'Анықтама орталығы',
