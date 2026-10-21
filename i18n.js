@@ -10,8 +10,8 @@ const translations = {
 
         // Hero — funnel 2026-09: soft promise, mechanism in the subline
         'hero.eyebrow': 'Baby sleep & routine tracker for iPhone',
-        'hero.title': "Your baby's next nap isn't a surprise.",
-        'hero.subtitle': "A smart baby sleep tracker: it shows the next nap ahead of time, from your baby's own rhythm.",
+        'hero.title': "Your baby's next nap is never a surprise.",
+        'hero.subtitle': "Lupibu is a smart baby sleep tracker that learns your baby's own rhythm and shows you when to put them down.",
         'hero.proof': 'Free for 7 days',
         'hero.micro': 'Free for 7 days, then a subscription. Cancel anytime in the App Store.',
 
@@ -177,8 +177,8 @@ const translations = {
     ru: {
         'a11y.skipLink': 'К содержимому',
         'hero.eyebrow': 'Трекер сна и режима малыша для iPhone',
-        'hero.title': 'Следующий сон малыша. Без сюрпризов.',
-        'hero.subtitle': 'Умный трекер сна малыша. Показывает заранее, когда укладывать, по ритму именно Вашего ребёнка.',
+        'hero.title': 'Следующий сон малыша известен заранее',
+        'hero.subtitle': 'Умный трекер сна Lupibu учится на ритме именно Вашего ребёнка и показывает, когда укладывать.',
         'hero.proof': '7 дней бесплатно',
         'hero.micro': '7 дней бесплатно, дальше — по подписке. Отмена в App Store в любой момент.',
 
@@ -330,8 +330,8 @@ const translations = {
     kk: {
         'a11y.skipLink': 'Мазмұнға өту',
         'hero.eyebrow': 'iPhone-ға арналған сәби ұйқысы мен режим трекері',
-        'hero.title': 'Сәбидің келесі ұйқысы. Тосынсыз.',
-        'hero.subtitle': 'Сәби ұйқысының ақылды трекері. Ұйықтату уақытын дәл Сіздің сәбиіңіздің ырғағы бойынша алдын ала көрсетеді.',
+        'hero.title': 'Сәбидің келесі ұйқысы алдын ала белгілі',
+        'hero.subtitle': 'Lupibu ақылды ұйқы трекері дәл Сіздің сәбиіңіздің ырғағын үйреніп, қашан ұйықтату керегін көрсетеді.',
         'hero.proof': '7 күн тегін',
         'hero.micro': '7 күн тегін, кейін — жазылым. App Store-да кез келген сәтте бас тартуға болады.',
 
