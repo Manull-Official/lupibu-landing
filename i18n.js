@@ -31,11 +31,11 @@ const translations = {
 
         // Feature accents (mirror App Store v9 frames 2 / 6 / 4)
         'feat.live.title': 'A handy breastfeeding timer',
-        'feat.live.text': 'Live Activity lets you control the timer right from the Lock Screen.',
+        'feat.live.text': 'Live Activity lets you control the timer right from the Lock Screen',
         'feat.rhythm.title': "Baby's sleep week on one chart",
-        'feat.rhythm.text': 'Wake-up, awake windows and naps, day by day. A PDF report for the pediatrician in one tap.',
+        'feat.rhythm.text': 'Wake-up, awake windows and naps, day by day. A PDF report for the pediatrician in one tap',
         'feat.ai.title': "Ask AI why your baby won't sleep",
-        'feat.ai.text': "Answers come from your own baby's log, not from articles on the internet.",
+        'feat.ai.text': "Answers come from your own baby's log, not from articles on the internet",
         'feat.ai.name': 'Lupibu Assistant',
         'feat.ai.status': "answers from your baby's log",
         'feat.ai.placeholder': 'Ask, or just say it…',
@@ -43,7 +43,7 @@ const translations = {
         'feat.ai.a': 'She woke once, at 12:54 AM, fed for 17 minutes and slept through to 6:49 AM. One night feed at 3 months is normal. Her last two naps yesterday were short, 39 and 34 minutes against her usual 54, so she likely went to bed a little overtired. Try bedtime a little earlier tonight, around 7:45 PM.',
 
         // Final push
-        'final.tagline': 'A rhythm for your baby. A day for you.',
+        'final.tagline': 'A rhythm for your baby. A day for you',
         'final.alt': 'Lupibu mama bear hugging the baby bear',
 
         // Before / After
@@ -194,18 +194,18 @@ const translations = {
 
 
         'feat.live.title': 'Удобный таймер кормления',
-        'feat.live.text': 'Live Activity помогает легко управлять таймером прямо с экрана блокировки.',
+        'feat.live.text': 'Live Activity помогает легко управлять таймером прямо с экрана блокировки',
         'feat.rhythm.title': 'Режим сна за неделю',
-        'feat.rhythm.text': 'Подъём, окна бодрствования и сны день за днём. PDF-отчёт для педиатра в один тап.',
+        'feat.rhythm.text': 'Подъём, окна бодрствования и сны день за днём. PDF-отчёт для педиатра в один тап',
         'feat.ai.title': 'Спросите ИИ, почему малыш не спит',
-        'feat.ai.text': 'Ответ строится по записям именно Вашего малыша, а не по статьям из интернета.',
+        'feat.ai.text': 'Ответ строится по записям именно Вашего малыша, а не по статьям из интернета',
         'feat.ai.name': 'Помощник Lupibu',
         'feat.ai.status': 'отвечает по записям малыша',
         'feat.ai.placeholder': 'Спросите или скажите голосом…',
         'feat.ai.q': 'Почему Оливия проснулась в час ночи?',
         'feat.ai.a': 'Она проснулась один раз, в 00:54, поела 17 минут и спала до 06:49. Одно ночное кормление в 3 месяца — это норма. Два последних дневных сна вчера были короткими, 39 и 34 минуты вместо обычных 54, поэтому, скорее всего, она легла немного переутомлённой. Сегодня лучше уложить чуть раньше, около 19:45.',
 
-        'final.tagline': 'У малыша ритм. У Вас свой день.',
+        'final.tagline': 'У малыша ритм. У Вас свой день',
         'final.alt': 'Мама-медведица Lupibu обнимает медвежонка',
 
         'testimonials.label': 'в App Store',
@@ -347,18 +347,18 @@ const translations = {
 
 
         'feat.live.title': 'Ыңғайлы емізу таймері',
-        'feat.live.text': 'Live Activity таймерді құлып экранынан оңай басқаруға көмектеседі.',
+        'feat.live.text': 'Live Activity таймерді құлып экранынан оңай басқаруға көмектеседі',
         'feat.rhythm.title': 'Бір аптадағы ұйқы режимі',
-        'feat.rhythm.text': 'Ояну, сергек терезелер мен ұйқылар күн сайын. Педиатрға PDF-есеп бір түртумен.',
+        'feat.rhythm.text': 'Ояну, сергек терезелер мен ұйқылар күн сайын. Педиатрға PDF-есеп бір түртумен',
         'feat.ai.title': 'AI-дан сұраңыз: сәби неге ұйықтамайды',
-        'feat.ai.text': 'Жауап интернеттегі мақалалардан емес, дәл Сіздің сәбиіңіздің жазбаларынан құрылады.',
+        'feat.ai.text': 'Жауап интернеттегі мақалалардан емес, дәл Сіздің сәбиіңіздің жазбаларынан құрылады',
         'feat.ai.name': 'Lupibu көмекшісі',
         'feat.ai.status': 'сәби жазбалары бойынша жауап береді',
         'feat.ai.placeholder': 'Сұраңыз немесе дауыспен айтыңыз…',
         'feat.ai.q': 'Оливия неге түнгі бірде оянды?',
         'feat.ai.a': 'Ол бір рет, 00:54-те оянды, 17 минут емді де 06:49-ға дейін ұйықтады. 3 айда бір түнгі тамақтандыру — қалыпты жағдай. Кеше соңғы екі күндізгі ұйқы қысқа болды: әдеттегі 54-тің орнына 39 және 34 минут, сондықтан ол сәл шаршап жатқан болуы мүмкін. Бүгін сәл ертерек, шамамен 19:45-те жатқызған жөн.',
 
-        'final.tagline': 'Сәбиде ырғақ. Сізде өз күніңіз.',
+        'final.tagline': 'Сәбиде ырғақ. Сізде өз күніңіз',
         'final.alt': 'Lupibu ана аюы қонжығын құшақтап отыр',
 
         'testimonials.label': 'App Store-да',
