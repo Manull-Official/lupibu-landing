@@ -3159,7 +3159,7 @@ ul, ol { list-style: none; }
 .phone-single { position: relative; }
 .zoom-card {
     position: absolute;
-    top: 12.5%;           /* the block starts at ~14% of the screen — sit just above it */
+    top: 14%;             /* 2.4 Home: the forecast block starts at ~15% of the screen */
     left: 50%;
     transform: translateX(-50%);
     width: 122%;
