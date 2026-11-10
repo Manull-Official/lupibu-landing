@@ -2,13 +2,16 @@
  *
  * Same project as the app (public client token). Deliberately minimal:
  * memory persistence (no cookies → no consent banner), no autocapture,
- * no session recording. Three events only:
+ * no session recording. Four events only:
  *   landing_viewed      { lang, path, referrer_domain, utm_* }
  *   store_cta_clicked   { position: hero|sticky|final, lang }
  *   lang_switched       { to, lang }
+ *   tool_used           { lang } once a visit, when she changes the age or the
+ *                       wake-up time. The values she enters never leave the page.
  */
 (function (t, e) {
-    if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return;
+    // Not on a developer's machine: by name, or by its address on the home network (a phone opening the local preview).
+    if (/^(localhost|127\.0\.0\.1|10(\.\d+){3}|192\.168(\.\d+){2}|172\.(1[6-9]|2\d|3[01])(\.\d+){2})$/.test(location.hostname)) return;
 
     /* Official PostHog stub (slimmed): queues calls until array.js loads. */
     if (!e.__SV) {
@@ -79,6 +82,17 @@
             if (opt && opt.dataset.lang) {
                 posthog.capture('lang_switched', { to: opt.dataset.lang, lang: lang() });
             }
+        },
+        true
+    );
+
+    var toolUsed = false;
+    document.addEventListener(
+        'change',
+        function (ev) {
+            if (toolUsed || !ev.target.closest || !ev.target.closest('#tool')) return;
+            toolUsed = true;
+            posthog.capture('tool_used', { lang: lang() });
         },
         true
     );

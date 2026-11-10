@@ -1,0 +1,730 @@
+/* ========================================
+   LUPIBU HOME: a funnel of four screens, one thought each
+   (hook → relief → try → start), drawn as one day: a morning sky at the top, a night one at the bottom.
+   The plush world comes from the App Store header. Other pages keep styles.css.
+   ======================================== */
+:root {
+    --ink: #3A3150;
+    --ink-2: #5A5175;
+    /* the name in running text on a light ground: the app's orangeDark (3.6:1 on cream; the bright orange gives 2.5:1) */
+    --brand: #D95D39;
+    --cream: #FFF8F2;
+    --lilac: #F0EAFB;
+    --pill: #F2EDFB;
+    --line: rgba(58, 49, 80, 0.08);
+    --night: #262A52;
+    --night-2: #1E2146;
+    --cta: #FA7C50;
+    --display: 'Nunito', 'Nunito Sans', -apple-system, system-ui, sans-serif;
+    /* the rhythm: one gap between screens, one between a heading and what it heads (they were 44/70/94 and 24/32) */
+    --gap: 60px;
+    --head: 22px;
+    --badge: 54px;
+}
+
+* { box-sizing: border-box; }
+/* iOS Safari enlarges the text of some blocks on its own (it did so to the table's left column and heads);
+   every size on this page is set on purpose, so it is told to leave them alone */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', -apple-system, system-ui, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+img { max-width: 100%; height: auto; }
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    z-index: 100;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ink);
+    font-weight: 700;
+}
+.skip-link:focus { left: 8px; }
+
+/* ---------- navigation: the logo and the language, nothing else leads away ---------- */
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: env(safe-area-inset-left);
+    right: env(safe-area-inset-right);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.logo { display: inline-flex; align-items: center; min-height: 44px; }
+.logo-img { display: block; height: 34px; width: auto; }
+.lang-switcher { position: relative; }
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.6);
+    font: 700 13px/1 'Nunito Sans', sans-serif;
+    color: var(--ink);
+    cursor: pointer;
+}
+.lang-icon { width: 15px; height: 15px; }
+.lang-chevron { width: 12px; height: 12px; transition: transform 0.2s; }
+.lang-switcher.open .lang-chevron { transform: rotate(180deg); }
+.lang-dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    min-width: 168px;
+    padding: 6px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 18px 40px -18px rgba(58, 49, 80, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: opacity 0.15s, transform 0.15s, visibility 0.15s;
+}
+.lang-switcher.open .lang-dropdown { opacity: 1; visibility: visible; transform: none; }
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 44px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 12px;
+    background: none;
+    font: inherit;
+    font-size: 0.9375rem;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+}
+.lang-option:hover, .lang-option.active { background: var(--pill); }
+.lang-option-code { width: 24px; font-weight: 800; }
+.lang-option-name { color: var(--ink-2); }
+.lang-toggle:focus-visible, .lang-option:focus-visible, .badge:focus-visible, .sticky-cta-btn:focus-visible, .footer a:focus-visible {
+    outline: 3px solid var(--cta);
+    outline-offset: 2px;
+}
+
+/* ---------- felt toys on threads, as in the store header ---------- */
+.hang {
+    position: absolute;
+    top: 0;
+    left: var(--x);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-origin: 50% 0;
+    animation: sway 7s ease-in-out var(--d, 0s) infinite alternate;
+    pointer-events: none;
+}
+.hang i { display: block; width: 1.5px; height: var(--l); background: rgba(120, 86, 60, 0.32); }
+.hang img { display: block; margin-top: -2px; filter: drop-shadow(0 6px 8px rgba(120, 70, 40, 0.16)); }
+@keyframes sway {
+    from { transform: rotate(-2deg); }
+    to { transform: rotate(2deg); }
+}
+
+/* ---------- one voice: every heading is the same size, every lead the same ---------- */
+h1, h2 {
+    margin: 0 auto;
+    text-align: center;
+    font: 800 clamp(2rem, 7.6vw, 3rem)/1.08 var(--display);
+    letter-spacing: -0.017em;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+}
+.lead { margin: 12px auto 0; max-width: 30ch; font-size: 1.125rem; line-height: 1.45; color: var(--ink-2); text-wrap: balance; }
+/* the name is orange wherever the page writes it (home.js wraps it) */
+.brand { color: var(--brand); font-weight: 700; }
+.cmp th .brand { font-weight: inherit; }
+.start .brand { color: var(--cta); }
+.cta { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 26px; }
+.badge { display: inline-block; border-radius: 12px; }
+.badge img { display: block; height: var(--badge); width: auto; }
+.qr { display: none; width: calc(var(--badge) + 10px); height: calc(var(--badge) + 10px); padding: 5px; border-radius: 12px; background: #fff; }
+
+/* ---------- 1. Hook: her own questions, then the answer ---------- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 132px 20px 56px;
+    text-align: center;
+    background: linear-gradient(180deg, #FBF2E8 0%, #FCE8D9 55%, #FCDCC6 100%);
+}
+.hero-text { position: relative; z-index: 2; }
+.bubbles { display: flex; flex-direction: column; gap: 10px; width: min(100%, 290px); margin: 0 auto 26px; }
+.bubbles span {
+    padding: 9px 17px;
+    border-radius: 22px;
+    background: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--ink-2);
+    box-shadow: 0 12px 26px -16px rgba(110, 60, 30, 0.5);
+    /* each thought pops in, then keeps drifting a few pixels, every one at its own pace */
+    animation: bubble 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.25) both, bob 5.6s ease-in-out infinite alternate;
+}
+.bubbles span:nth-child(1) { align-self: flex-start; rotate: -2deg; animation-delay: 0.2s, 1.4s; }
+.bubbles span:nth-child(2) { align-self: flex-end; rotate: 1.5deg; animation-delay: 0.55s, 2.2s; animation-duration: 0.55s, 6.6s; }
+.bubbles span:nth-child(3) { align-self: center; rotate: -1deg; animation-delay: 0.9s, 3s; animation-duration: 0.55s, 4.9s; }
+@keyframes bubble {
+    from { opacity: 0; translate: 0 10px; scale: 0.92; }
+    to { opacity: 1; translate: 0 0; scale: 1; }
+}
+@keyframes bob {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+.hero-bears { position: relative; z-index: 2; display: block; width: min(100%, 640px); margin: 18px auto 0; }
+.edge { position: absolute; left: 0; bottom: -1px; z-index: 3; display: block; width: 100%; height: max(64px, 6.25vw); }
+
+/* ---------- 2. Relief: one table, her day without and with ---------- */
+.compare { padding: calc(var(--gap) - 16px) 16px 0; background: var(--cream); }
+.cmp {
+    width: 100%;
+    max-width: 720px;
+    margin: var(--head) auto 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 24px 48px -30px rgba(110, 60, 30, 0.45);
+}
+.cmp th, .cmp td {
+    position: relative;
+    width: 50%;
+    padding: 14px 10px 14px 36px;
+    text-align: left;
+    vertical-align: top;
+    /* 15 px: at 16 two of the six Russian cells take a third line (measured 10.11) */
+    font-size: 0.9375rem;
+    line-height: 1.35;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+}
+.cmp th { padding: 12px 12px 10px; vertical-align: bottom; font: 800 1rem/1.3 var(--display); }
+.cmp th img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 10px; border-radius: 18px; }
+/* the «without» side is quieter by its ground, its hollow circles and its weight, never by faint letters */
+.cmp th:first-child, .cmp td:first-child { background: #F6F0EA; }
+.cmp td:last-child { font-weight: 700; }
+.cmp tbody tr + tr td { border-top: 1px solid var(--line); }
+.cmp tbody tr:last-child td { padding-bottom: 20px; }
+.cmp td::before { content: ""; position: absolute; left: 11px; top: 15px; width: 18px; height: 18px; box-sizing: border-box; border-radius: 50%; }
+.cmp td:first-child::before { border: 2px solid #D9CFC6; }
+.cmp td:last-child::before { background: var(--ink); }
+.cmp td:last-child::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    width: 7px;
+    height: 3.5px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+/* the three checks tick in one after another when the table comes into view (home.js marks it) */
+.cmp.wait td:last-child::before, .cmp.wait td:last-child::after { opacity: 0; scale: 0.3; }
+.cmp.in td:last-child::before, .cmp.in td:last-child::after { opacity: 1; scale: 1; transition: opacity 0.25s, scale 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.5); }
+.cmp.in tr:nth-child(2) td:last-child::before, .cmp.in tr:nth-child(2) td:last-child::after { transition-delay: 0.22s; }
+.cmp.in tr:nth-child(3) td:last-child::before, .cmp.in tr:nth-child(3) td:last-child::after { transition-delay: 0.44s; }
+
+/* ---------- 3. Try: the app's own first forecast, evening turning into night ---------- */
+.tool {
+    position: relative;
+    overflow: hidden;
+    padding: var(--gap) 16px var(--gap);
+    text-align: center;
+    background: linear-gradient(180deg, var(--cream) 0%, var(--lilac) 16%, #E4DBF8 34%, #ABA1DC 58%, #565392 82%, var(--night) 98%);
+}
+.tool-card {
+    position: relative;
+    z-index: 2;
+    max-width: 440px;
+    margin: var(--head) auto 0;
+    padding: 14px 14px 22px;
+    border-radius: 30px;
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 22px 44px -26px rgba(38, 30, 90, 0.5);
+}
+/* Each row is one big button: a tinted tile with the value and a round arrow, pressed as a whole.
+   As white rows with hairlines between them they read as a table of facts, not as something to tap. */
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 58px;
+    padding: 0 10px 0 16px;
+    border-radius: 18px;
+    background: var(--pill);
+    color: var(--ink-2);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: scale 0.15s, background-color 0.15s;
+}
+.field + .field { margin-top: 8px; }
+.field:hover { background: #EBE4FA; }
+.field:active { scale: 0.98; background: #E4DBF8; }
+.field:focus-within { outline: 3px solid var(--cta); outline-offset: 2px; }
+/* when the card comes into view the two rows nod one after the other: these are the things to press */
+.tool-card.in .field { animation: nod 0.6s cubic-bezier(0.3, 0.7, 0.3, 1) 0.3s both; }
+.tool-card.in .field + .field { animation-delay: 0.55s; }
+@keyframes nod {
+    0% { scale: 1; }
+    35% { scale: 0.955; }
+    70% { scale: 1.02; }
+    100% { scale: 1; }
+}
+.pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+/* The arrow is a small dark round button, and it keeps signalling: a ring spreads from it and the arrow dips,
+   one row after the other, until she has opened a picker once (home.js then marks the tool as used).
+   The ring is its own element moved by scale and opacity: Safari clips a box-shadow animated on an <svg>. */
+.pill { --disc: 30px; }
+.pill svg {
+    box-sizing: border-box;
+    flex: none;
+    width: var(--disc);
+    height: var(--disc);
+    padding: calc(var(--disc) * 0.3);
+    border-radius: 50%;
+    background: var(--ink);
+    color: #fff;
+}
+.pill::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: var(--disc);
+    height: var(--disc);
+    margin-top: calc(var(--disc) / -2);
+    box-sizing: border-box;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    animation: ring 2.6s ease-out infinite;
+}
+.pill svg path { transform-box: fill-box; transform-origin: center; animation: dip 2.6s ease-in-out infinite; }
+.field + .field .pill::after, .field + .field .pill svg path { animation-delay: 1.3s; }
+.tool.used .pill::after, .tool.used .pill svg path { animation: none; }
+@keyframes ring {
+    0% { opacity: 0.55; transform: scale(1); }
+    60%, 100% { opacity: 0; transform: scale(1.85); }
+}
+@keyframes dip {
+    0%, 45%, 100% { transform: translateY(0); }
+    22% { transform: translateY(2.5px); }
+}
+/* the native picker lies invisibly over its value: the look is ours, the control is the browser's own */
+.pill select, .pill input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.result { margin-top: 18px; padding: 0 6px; }
+.result p { margin: 0; color: var(--ink-2); }
+.result p:empty { display: none; }
+.big {
+    margin: 2px 0 4px;
+    font: 800 clamp(2.6rem, 13vw, 3.4rem)/1 var(--display);
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+}
+.big.range { font-size: clamp(2.2rem, 11vw, 2.9rem); }
+.big.long { font-size: 1.75rem; line-height: 1.15; }
+.tool-note { position: relative; z-index: 2; margin: 20px auto 0; max-width: 30ch; font-size: 0.9375rem; color: rgba(255, 255, 255, 0.86); text-wrap: balance; }
+.pop { animation: pop 0.35s cubic-bezier(0.2, 0.9, 0.3, 1); }
+@keyframes pop {
+    from { opacity: 0.2; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+}
+
+/* ---------- our own pickers: a sheet with wheels, the same on a phone and on a computer ---------- */
+/* the native pickers stay for a keyboard and a screen reader; a finger or a mouse gets the sheet */
+.tool.enhanced .pill select, .tool.enhanced .pill input { pointer-events: none; }
+.sheet {
+    width: 100%;
+    max-width: 440px;
+    max-height: none;
+    margin: auto auto 0;
+    padding: 10px 20px calc(20px + env(safe-area-inset-bottom));
+    border: 0;
+    border-radius: 28px 28px 0 0;
+    background: #fff;
+    color: var(--ink);
+    text-align: center;
+    box-shadow: 0 -18px 50px -20px rgba(20, 18, 60, 0.5);
+    overflow: hidden;
+}
+.sheet::backdrop { background: rgba(30, 33, 70, 0.5); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+.sheet[open] { animation: sheet-up 0.34s cubic-bezier(0.2, 0.85, 0.25, 1); }
+.sheet[open]::backdrop { animation: sheet-dim 0.25s ease-out; }
+@keyframes sheet-up {
+    from { transform: translateY(100%); }
+    to { transform: none; }
+}
+@keyframes sheet-pop {
+    from { opacity: 0; transform: translateY(14px) scale(0.97); }
+    to { opacity: 1; transform: none; }
+}
+@keyframes sheet-dim {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.sheet-grab { width: 40px; height: 5px; margin: 0 auto 14px; border-radius: 3px; background: rgba(58, 49, 80, 0.16); }
+.sheet h3 { margin: 0 0 6px; font: 800 1.25rem/1.2 var(--display); }
+/* the sheet opens with its title in focus, so a tap never leaves a focus ring on a wheel */
+.sheet h3:focus { outline: none; }
+/* five rows of 44 px; the middle one is the choice */
+.wheels { position: relative; display: flex; align-items: stretch; justify-content: center; gap: 6px; height: 220px; }
+.wheels::before { content: ""; position: absolute; left: 0; right: 0; top: 88px; height: 44px; border-radius: 16px; background: var(--pill); }
+.wheel {
+    position: relative;
+    flex: 0 1 220px;
+    height: 100%;
+    /* two empty rows above and below, so the first and the last value can reach the middle */
+    padding: 88px 0;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    border-radius: 16px;
+    outline: none;
+    -webkit-mask-image: linear-gradient(transparent, #000 32%, #000 68%, transparent);
+    mask-image: linear-gradient(transparent, #000 32%, #000 68%, transparent);
+}
+.wheel::-webkit-scrollbar { display: none; }
+.wheel + .colon ~ .wheel, .wheel:has(+ .colon) { flex-basis: 84px; }
+.wheel button {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: none;
+    scroll-snap-align: center;
+    font: 500 1.25rem/44px 'Nunito Sans', -apple-system, system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    color: var(--ink-2);
+    cursor: pointer;
+    transition: color 0.15s, font-size 0.15s;
+}
+/* the chosen row grows by its letters, not by a scale: a scaled box would be cut by the wheel's own edges */
+.wheel button.on { color: var(--ink); font-weight: 700; font-size: 1.375rem; }
+/* keyboard focus is shown on the chosen row: the wheel itself is faded at both ends and would cut a ring */
+.wheel:focus-visible button.on { box-shadow: inset 0 0 0 2px var(--cta); border-radius: 12px; }
+.wheels .colon, .wheels .period { position: relative; align-self: center; font: 800 1.375rem/1 var(--display); }
+.wheels .period { min-width: 2.2em; text-align: left; }
+.sheet-done {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 14px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--ink);
+    color: #fff;
+    font: 800 1.0625rem/1.3 var(--display);
+    cursor: pointer;
+}
+.sheet-done:focus-visible { outline: 3px solid var(--cta); outline-offset: 2px; }
+html:has(.sheet[open]) { overflow: hidden; }
+
+/* ---------- 4. Start: night, three small steps, the button ---------- */
+.start {
+    position: relative;
+    padding: 0 24px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--night);
+    background-image:
+        radial-gradient(1.6px 1.6px at 14% 8%, rgba(255, 255, 255, 0.8), transparent 70%),
+        radial-gradient(1.2px 1.2px at 84% 16%, rgba(255, 255, 255, 0.7), transparent 70%),
+        radial-gradient(1.8px 1.8px at 70% 4%, rgba(255, 255, 255, 0.85), transparent 70%),
+        radial-gradient(1.2px 1.2px at 30% 46%, rgba(255, 255, 255, 0.6), transparent 70%),
+        radial-gradient(1.4px 1.4px at 90% 62%, rgba(255, 255, 255, 0.7), transparent 70%),
+        /* the ground under the sleeping bears is already the footer's colour: no line where the two meet */
+        linear-gradient(180deg, rgba(30, 33, 70, 0) calc(100% - 150px), var(--night-2) calc(100% - 24px));
+}
+/* two more layers of stars that fade in and out, each at its own pace */
+.start::before, .start::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; animation: twinkle 3.8s ease-in-out infinite alternate; }
+.start::before {
+    background-image:
+        radial-gradient(1.7px 1.7px at 22% 13%, #fff, transparent 70%),
+        radial-gradient(1.3px 1.3px at 61% 7%, #fff, transparent 70%),
+        radial-gradient(1.5px 1.5px at 93% 33%, #fff, transparent 70%),
+        radial-gradient(1.3px 1.3px at 7% 55%, #fff, transparent 70%);
+}
+.start::after {
+    animation-duration: 5.6s;
+    animation-delay: -2.4s;
+    background-image:
+        radial-gradient(1.4px 1.4px at 44% 3%, #fff, transparent 70%),
+        radial-gradient(1.6px 1.6px at 78% 24%, #fff, transparent 70%),
+        radial-gradient(1.2px 1.2px at 12% 31%, #fff, transparent 70%),
+        radial-gradient(1.5px 1.5px at 96% 70%, #fff, transparent 70%);
+}
+@keyframes twinkle {
+    from { opacity: 0.12; }
+    to { opacity: 0.95; }
+}
+.start-grid, .start-bears { position: relative; z-index: 1; }
+.start-grid { display: flex; flex-direction: column; align-items: center; }
+/* on a phone the phone picture sits between the lead and the steps */
+.start-text { display: contents; }
+.start h2 { order: 1; }
+.start .lead { order: 2; color: rgba(255, 255, 255, 0.9); }
+.peek {
+    order: 3;
+    width: min(76%, 290px);
+    height: 286px;
+    margin: 28px auto 26px;
+    padding: 6px 6px 0;
+    border-radius: 38px 38px 0 0;
+    background: rgba(255, 255, 255, 0.16);
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(#000 60%, transparent);
+    mask-image: linear-gradient(#000 60%, transparent);
+}
+.peek img { display: block; width: 100%; border-radius: 32px 32px 0 0; }
+/* the phone rises into place when it comes into view (home.js marks it) */
+.peek.wait { opacity: 0; translate: 0 24px; }
+.peek.in { opacity: 1; translate: 0 0; transition: opacity 0.6s, translate 0.7s cubic-bezier(0.2, 0.8, 0.3, 1); }
+.steps { order: 4; display: grid; gap: 14px; margin: 0 auto; padding: 0; list-style: none; counter-reset: step; text-align: left; }
+.steps li { counter-increment: step; display: flex; align-items: center; gap: 14px; font-size: 1.0625rem; font-weight: 600; line-height: 1.3; }
+.steps li::before {
+    content: counter(step);
+    /* a real width, not only a flex-basis: Safari sizes the list by the digit's own width otherwise and wraps the longest step */
+    flex: none;
+    width: 2em;
+    height: 2em;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    font: 800 0.94em/1 var(--display);
+}
+.start .cta { order: 5; margin-top: 28px; }
+.start-bears {
+    display: block;
+    width: min(86%, 440px);
+    margin: calc(var(--gap) * 0.5) auto 0;
+    /* the artwork ends in a flat cut under the paws: it melts into the ground instead of showing that edge */
+    -webkit-mask-image: linear-gradient(#000 89%, transparent 99%);
+    mask-image: linear-gradient(#000 89%, transparent 99%);
+    transform-origin: 50% 100%;
+    animation: breathe 4.8s ease-in-out infinite alternate;
+}
+@keyframes breathe {
+    from { transform: scale(1); }
+    to { transform: scale(1.012, 1.032); }
+}
+
+/* ---------- footer: one quiet block, the links in rows ---------- */
+.footer { padding: 14px 20px calc(22px + env(safe-area-inset-bottom)); font-size: 0.8125rem; text-align: center; color: rgba(255, 255, 255, 0.62); background: var(--night-2); }
+.footer .container { max-width: 880px; margin: 0 auto; }
+.footer-grid { display: flex; flex-direction: column; align-items: center; }
+.footer-logo { display: block; height: 24px; width: auto; margin: 0 auto 8px; }
+/* the group names stay for a screen reader; to the eye the links speak for themselves */
+.footer-col-label { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.footer-col-list { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 18px; }
+/* rows sit 38 px apart while every link keeps a 44 px touch height */
+.footer-link { padding: 12px 0; margin: -3px 0; color: rgba(255, 255, 255, 0.86); text-decoration: none; }
+.footer-link:hover { color: #fff; }
+.footer-social { display: flex; gap: 2px; }
+.social-link { display: grid; place-items: center; width: 44px; height: 44px; color: rgba(255, 255, 255, 0.86); }
+.social-link:hover { color: #fff; }
+.social-link svg { width: 20px; height: 20px; }
+.footer-divider { display: none; }
+.footer-copyright { margin-top: 8px; font-size: 0.75rem; }
+
+/* ---------- sticky store button (phones) ---------- */
+.sticky-cta { display: none; }
+
+/* A computer screen. Until 10.11 nothing grew past 900 px: on a 1728 px screen the text was a phone's 17 px
+   and the tool's card a quarter of the width. Sizes and widths now follow the window (vw) between a floor and a cap. */
+@media (min-width: 900px) {
+    :root {
+        --gap: clamp(60px, 4.6vw, 88px);
+        --head: clamp(24px, 2vw, 36px);
+        --badge: clamp(54px, 4vw, 66px);
+    }
+    h1, h2 { font-size: clamp(3rem, 4.1vw, 4.5rem); }
+    .lead { margin-top: 16px; font-size: clamp(1.1875rem, 1.5vw, 1.5rem); }
+    .nav { padding: 18px max(40px, calc(50% - 660px)); }
+    .logo-img { height: 40px; }
+    .qr { display: block; }
+    .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+        align-items: center;
+        column-gap: clamp(24px, 4vw, 72px);
+        padding: clamp(100px, 6.6vw, 124px) max(48px, calc(50% - 660px)) calc(max(64px, 6.25vw) + clamp(16px, 1.6vw, 32px));
+        text-align: left;
+    }
+    .hero h1 { text-align: left; }
+    .bubbles { gap: 12px; width: min(100%, clamp(300px, 26vw, 420px)); margin-bottom: clamp(26px, 2.6vw, 40px); }
+    .bubbles span { padding: 11px 20px; border-radius: 26px; font-size: clamp(1rem, 1.25vw, 1.25rem); }
+    .bubbles, .hero h1, .hero .lead { margin-left: 0; }
+    .hero .cta { justify-content: flex-start; margin-top: clamp(26px, 2.6vw, 40px); }
+    /* the artwork is 1000 px wide: past 600 it would blur on a sharp screen */
+    .hero-bears { width: 100%; max-width: 600px; margin: 0; justify-self: center; }
+
+    .compare, .tool { padding-left: 40px; padding-right: 40px; }
+    .compare { padding-top: calc(var(--gap) - 32px); }
+    .cmp { --pad: clamp(18px, 1.5vw, 24px); max-width: clamp(720px, 62vw, 1040px); border-radius: 32px; }
+    .cmp th, .cmp td { padding: var(--pad) 26px var(--pad) clamp(58px, 4.4vw, 70px); font-size: clamp(1.0625rem, 1.3vw, 1.3125rem); }
+    .cmp th { padding: 18px 18px 14px; font-size: clamp(1.1875rem, 1.6vw, 1.5rem); }
+    .cmp th img { aspect-ratio: 16 / 10; }
+    .cmp td::before { left: clamp(22px, 1.7vw, 28px); top: calc(var(--pad) + 1px); width: 24px; height: 24px; }
+    .cmp td:last-child::after { left: calc(clamp(22px, 1.7vw, 28px) + 8px); top: calc(var(--pad) + 9px); width: 8px; height: 4px; }
+
+    /* the tool lies in two halves: what she sets on the left, the answer on the right */
+    .tool-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: clamp(24px, 3vw, 44px);
+        row-gap: 10px;
+        align-items: center;
+        max-width: clamp(680px, 58vw, 940px);
+        padding: clamp(18px, 1.6vw, 26px);
+        border-radius: 36px;
+    }
+    .field { grid-column: 1; min-height: clamp(64px, 5vw, 78px); padding: 0 12px 0 clamp(18px, 1.6vw, 26px); border-radius: 22px; font-size: clamp(1.0625rem, 1.3vw, 1.3125rem); }
+    .field + .field { margin-top: 0; }
+    .pill { gap: 12px; font-size: clamp(1.125rem, 1.4vw, 1.375rem); }
+    .pill { --disc: 36px; }
+    .result { grid-column: 2; grid-row: 1 / span 2; margin: 0; padding: 0 8px; }
+    .result p { font-size: clamp(1.0625rem, 1.3vw, 1.3125rem); }
+    .big { font-size: clamp(3.4rem, 4.4vw, 4.5rem); }
+    .big.range { font-size: clamp(2.6rem, 3.3vw, 3.5rem); }
+    .big.long { font-size: clamp(1.75rem, 2.1vw, 2.25rem); }
+    .tool-note { margin-top: 24px; font-size: 1rem; }
+    .sheet { margin: auto; padding-bottom: 20px; border-radius: 28px; box-shadow: 0 30px 70px -30px rgba(20, 18, 60, 0.6); }
+    .sheet[open] { animation-name: sheet-pop; }
+    .sheet-grab { display: none; }
+
+    .start { padding-left: 40px; padding-right: 40px; }
+    .start-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: clamp(48px, 7vw, 130px); max-width: clamp(860px, 66vw, 1140px); margin: 0 auto; }
+    .start-text { display: block; text-align: left; }
+    .start h2 { text-align: left; }
+    .start h2, .start .lead, .steps { margin-left: 0; }
+    .steps { gap: clamp(14px, 1.4vw, 22px); margin-top: clamp(28px, 2.8vw, 44px); }
+    .steps li { gap: clamp(14px, 1.3vw, 20px); font-size: clamp(1.0625rem, 1.4vw, 1.375rem); }
+    .start .cta { justify-content: flex-start; margin-top: clamp(28px, 2.8vw, 44px); }
+    /* the capture is 640 px wide */
+    .peek { width: clamp(300px, 22vw, 360px); height: auto; aspect-ratio: 300 / 380; margin: 0; }
+    .start-bears { width: min(60%, clamp(440px, 32vw, 500px)); }
+    .footer { padding-top: 20px; font-size: 0.875rem; }
+}
+
+@media (max-width: 768px) {
+    .sticky-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        display: block;
+        padding: 10px max(16px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+        /* no strip of its own: the pill floats over a light section and over the night one alike */
+        pointer-events: none;
+        transform: translateY(110%);
+        transition: transform 0.3s;
+    }
+    .sticky-cta.visible { transform: none; }
+    /* at the very end of the page it would lie over the footer's last line */
+    body.end-on .sticky-cta { transform: translateY(110%); }
+    .sticky-cta-btn {
+        display: block;
+        padding: 14px;
+        border-radius: 999px;
+        background: var(--cta);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font: 800 1.0625rem/1.3 var(--display);
+        pointer-events: auto;
+        box-shadow: 0 14px 28px -12px rgba(110, 45, 20, 0.6);
+    }
+}
+
+@media (max-width: 1023px) {
+    /* between a phone and a wide screen the one-line heading of the tool runs under its moon */
+    .tool .hang { display: none; }
+}
+
+@media (max-width: 899px) {
+    /* while the hero is one centred column (a phone, a tablet upright) only two toys hang,
+       from under the navbar, clear of the logo and the first thought */
+    .hide-s { display: none; }
+    .hero .hang { top: 62px; }
+    .hero .hang:nth-of-type(1) { --x: 4% !important; --l: 22px !important; }
+    .hero .hang:nth-of-type(3) { --x: 85% !important; --l: 16px !important; }
+}
+
+@media (max-width: 560px) {
+    /* every phone breaks the table's lines where a 375 px one does: the cell grows, its text measure stays,
+       so a short cell does not fall to one line on the widest phones while its neighbours keep two */
+    .cmp td { padding-right: max(4px, calc(10px + (100vw - 375px) / 2)); }
+}
+
+@media (max-width: 360px) {
+    /* the narrowest phones: the two table columns and the tool's fields still hold their text */
+    .cmp th, .cmp td { padding-left: 31px; padding-right: 8px; font-size: 0.875rem; }
+    .cmp th { padding-left: 10px; }
+    .cmp td::before { left: 8px; }
+    .cmp td:last-child::after { left: 13px; }
+    .tool-card { padding-left: 10px; padding-right: 10px; }
+    .field { padding-left: 12px; font-size: 0.9375rem; }
+    .pill { gap: 8px; font-size: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hang, .pop, .bubbles span, .start-bears, .start::before, .start::after, .sheet[open], .sheet[open]::backdrop, .pill::after, .pill svg path, .tool-card .field { animation: none !important; }
+    .sticky-cta, .lang-dropdown, .lang-chevron { transition: none; }
+    html { scroll-behavior: auto; }
+}

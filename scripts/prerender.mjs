@@ -61,6 +61,12 @@ function localizeLanding(lang) {
         (m, open, key, close) => (t[key] != null ? open + t[key] + close : m)
     );
 
+    // Translate the alt of every image that carries data-i18n-alt (alt comes first in the tag).
+    s = s.replace(
+        /(alt=")[^"]*("[^>]*data-i18n-alt="([\w.]+)")/g,
+        (m, open, rest, key) => (t[key] != null ? open + t[key] + rest : m)
+    );
+
     s = s.replace('<html lang="ru">', `<html lang="${lang}">`);
     s = s.replace(/<title>[^<]*<\/title>/, `<title>${t['meta.title']}</title>`);
     s = s.replace(
@@ -81,8 +87,11 @@ function localizeLanding(lang) {
         HREFLANG_BLOCK.trim()
     );
 
-    // Per-language screenshot + preload (kk falls back to ru capture).
-    for (const k of ['home', 'forecast', 'live', 'rhythm']) s = s.replaceAll(`screenshots/ru_${k}.webp`, `screenshots/${lang}_${k}.webp`);
+    // Apple's badge per language: no Kazakh artwork exists, so only English differs from the Russian source.
+    if (lang === 'en') s = s.replaceAll('assets/appstore-badge-ru.svg', 'assets/appstore-badge.svg');
+
+    // Per-language app capture.
+    s = s.replaceAll('screenshots/ru_home.webp', `screenshots/${lang}_home.webp`);
 
     // Static language switcher state.
     s = s.replace('<span class="lang-current">RU</span>', `<span class="lang-current">${LANG_LABEL[lang]}</span>`);
@@ -93,7 +102,8 @@ function localizeLanding(lang) {
 
     // The copy lives one directory deeper — root every relative URL.
     s = s
-        .replaceAll('href="styles.css', 'href="/styles.css')
+        .replaceAll('href="home.css', 'href="/home.css')
+        .replaceAll('src="home.js', 'src="/home.js')
         .replaceAll('src="assets/', 'src="/assets/')
         .replaceAll('href="assets/', 'href="/assets/')
         .replaceAll('href="screenshots/', 'href="/screenshots/')

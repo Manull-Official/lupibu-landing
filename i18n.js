@@ -1,6 +1,6 @@
 /* ========================================
    LUPIBU LANDING - INTERNATIONALIZATION
-   Positioning: «Ритм мамы» — tight 2026 pass (≤8-word hero)
+   Home copy (2026-11): a funnel of four screens, plain product statements
    ======================================== */
 
 const translations = {
@@ -8,63 +8,56 @@ const translations = {
         // A11y
         'a11y.skipLink': 'Skip to content',
 
-        // Hero — funnel 2026-09: soft promise, mechanism in the subline
-        'hero.eyebrow': 'Baby sleep & routine tracker for iPhone',
-        'hero.title': "Baby's sleep, without surprises",
-        'hero.subtitle': "Lupibu is a smart baby sleep tracker that learns your baby's own rhythm and shows you when to put them down",
-        'hero.proof': 'Free for 7 days',
-        'hero.micro': 'Free for 7 days, then a subscription. Cancel anytime in the App Store.',
+        // Home — a funnel of four screens (2026-11): hook → relief → try → start.
+        // Inside a block every line keeps one grammatical form: questions, noun phrases, imperatives.
+        'hero.b1': "When's the next nap?",
+        'hero.b2': 'When did I last feed?',
+        'hero.b3': "Why won't my baby sleep?",
+        'hero.title': "You're not alone",
+        'hero.subtitle': "Lupibu helps you build your baby's routine",
 
-        // Single screenshot caption
-        'shot.caption': 'The next sleep time and the window to aim for — with the timer one tap away.',
+        'cmp.title': 'Your day, back in your hands',
+        'cmp.without': 'Without Lupibu',
+        'cmp.with': 'With Lupibu',
+        'cmp.r1.was': 'Wake window math',
+        'cmp.r1.now': 'Forecasts and reminders',
+        'cmp.r2.was': 'Scattered notes and memory',
+        'cmp.r2.now': 'One tidy log',
+        'cmp.r3.was': 'Group chats and forums',
+        'cmp.r3.now': 'Personal answers from AI',
 
-        // Single review (original was written in English)
-        'review.text': '"Lupibu makes tracking my baby\'s routine so much easier. The sleep insights and reminders are especially helpful. Clean design and very intuitive to use."',
-        'review.author': '-Айгулечка-',
-        'review.source': 'App Store',
+        // The tool. {time} is formatted in home.js; the ages and «in 1 h 40 min» are built there too.
+        'tool.title': 'Sleep forecast',
+        'tool.age': "Baby's age",
+        'tool.wake': 'Wake-up time',
+        'tool.next': 'Next nap',
+        'tool.next.night': 'Bedtime',
+        'tool.window': '{range}',
+        'tool.until': 'window until {time}',
+        'tool.was': 'window closed at {time}',
+        'tool.stale': 'Awake for {time}',
+        'tool.stale.hint': 'That looks too long. Enter the latest wake-up time',
+        'tool.done': 'Done',
+        'tool.at.night': 'around {time}',
+        'tool.now': 'now',
+        'tool.invalid': 'Enter a daytime wake-up time',
+        'tool.note': 'For information only',
+        'tool.demo.age': '4 months',
+        'tool.demo.at': '12:15–1:00\u00a0PM',
 
-        // How it works — 3 lines
-        'how.t1': 'Say "nursed on the left for 15 minutes" — it\'s logged.',
-        'how.t2': "After about 5 logged sleeps, predictions tune to your baby's own rhythm.",
-        'how.t3': 'The next nap shows up on your Home and Lock Screen.',
+        'start.title': 'Start today',
+        'start.lead': "Get forecasts tuned to your baby's rhythm",
+        'start.s1': 'Download Lupibu',
+        'start.s2': 'Log sleep and feeds',
+        'start.s3': 'Chat with the AI assistant',
 
+        'sticky.cta': 'Download Lupibu',
 
-        // Feature accents (mirror App Store v9 frames 2 / 6 / 4)
-        'feat.live.title': 'A handy breastfeeding timer',
-        'feat.live.text': 'Live Activity lets you control the timer right from the Lock Screen',
-        'feat.rhythm.title': "Baby's sleep week on one chart",
-        'feat.rhythm.text': 'Wake-up, awake windows and naps, day by day. A PDF report for the pediatrician in one tap',
-        'feat.ai.title': "Ask AI why your baby won't sleep",
-        'feat.ai.text': "Answers come from your own baby's log, not from articles on the internet",
-        'feat.ai.name': 'Lupibu Assistant',
-        'feat.ai.status': "answers from your baby's log",
-        'feat.ai.placeholder': 'Ask, or just say it…',
-        'feat.ai.q': 'Why did Olivia wake up at 1 am?',
-        'feat.ai.a': 'She woke once, at 12:54 AM, fed for 17 minutes and slept through to 6:49 AM. One night feed at 3 months is normal. Her last two naps yesterday were short, 39 and 34 minutes against her usual 54, so she likely went to bed a little overtired. Try bedtime a little earlier tonight, around 7:45 PM.',
-
-        // Final push
-        'final.tagline': 'A rhythm for your baby. A day for you',
-        'final.alt': 'Lupibu mama bear hugging the baby bear',
-
-        // Before / After
-
-        // Testimonials
-        'testimonials.label': 'on the App Store',
-        'testimonials.source': 'App Store',
-        'testimonials.t1.text': '"I use Lupibu every day to track sleep, feedings, and my baby\'s routine. The app is easy to use, with a clean design and helpful reminders. It really helps bring more structure and calm into daily parenting."',
-        'testimonials.t1.author': 'Асиманариманова',
-        'testimonials.t2.text': '"Lupibu makes tracking my baby\'s routine so much easier. The sleep insights and reminders are especially helpful. Clean design and very intuitive to use."',
-        'testimonials.t2.author': '-Айгулечка-',
-        'testimonials.t3.text': '"Intuitive and convenient app. It really helped me clear my head. Special thanks for the AI assistant — it\'s a real lifesaver."',
-        'testimonials.t3.author': 'kavinskyyn',
-
-        // Slogan — Apple-grade: 4 words
-        'slogan.tagline': 'Less guessing. More peaceful days and nights.',
-
-        // Sticky CTA
-        'sticky.cta': 'Start free',
-        'sticky.sub': 'First 7 days',
-        'qr.hint': 'Hover to enlarge',
+        'alt.badge': 'Download on the App Store',
+        'alt.qr': 'QR code: Lupibu on the App Store',
+        'alt.bears': 'Mama bear and her cub looking at a phone',
+        'alt.home': 'Lupibu screen showing the next nap time',
+        'alt.asleep': 'Mama bear and her cub asleep',
 
         // Footer
         'footer.help.label': 'Help',
@@ -176,52 +169,56 @@ const translations = {
     // ============================================
     ru: {
         'a11y.skipLink': 'К содержимому',
-        'hero.eyebrow': 'Трекер сна и режима малыша для iPhone',
-        'hero.title': 'Сон малыша - без сюрпризов',
-        'hero.subtitle': 'Умный трекер сна Lupibu учится на ритме именно Вашего ребёнка и показывает, когда укладывать',
-        'hero.proof': '7 дней бесплатно',
-        'hero.micro': '7 дней бесплатно, дальше — по подписке. Отмена в App Store в любой момент.',
 
-        'shot.caption': 'Время следующего сна и окно укладывания — на одном экране. Сон запускается одной кнопкой.',
+        // Главная — воронка из четырёх экранов (2026-11).   держит предлог со словом.
+        'hero.b1': 'Когда укладывать?',
+        'hero.b2': 'Когда кормила?',
+        'hero.b3': 'Почему не спит?',
+        'hero.title': 'Вы не одиноки',
+        'hero.subtitle': 'Lupibu поможет выстроить режим малыша',
 
-        'review.text': '«Интуитивно понятное и удобное приложение. Очень помогло разгрузить голову. Отдельное спасибо за ИИ-ассистента — выручает очень.»',
-        'review.author': 'kavinskyyn',
-        'review.source': 'App Store',
+        'cmp.title': 'Ваш день в Ваших руках',
+        'cmp.without': 'Без Lupibu',
+        'cmp.with': 'С Lupibu',
+        'cmp.r1.was': 'Подсчёт времени бодрствования',
+        'cmp.r1.now': 'Прогнозы и напоминания',
+        'cmp.r2.was': 'Хаос в памяти и заметках',
+        'cmp.r2.now': 'Порядок в трекинге',
+        'cmp.r3.was': 'Вопросы в чатах и на форумах',
+        'cmp.r3.now': 'Персональные ответы от AI',
 
-        'how.t1': 'Скажите: «покормила левой 15 минут» — запись готова.',
-        'how.t2': 'После ~5 записанных снов прогноз настраивается под ритм именно Вашего малыша.',
-        'how.t3': 'Время следующего сна — на главном экране и на экране блокировки.',
+        'tool.title': 'Прогноз сна',
+        'tool.age': 'Возраст малыша',
+        'tool.wake': 'Время пробуждения',
+        'tool.next': 'Следующий сон',
+        'tool.next.night': 'Ночной сон',
+        'tool.window': 'в\u00a0{range}',
+        'tool.until': 'окно до\u00a0{time}',
+        'tool.was': 'окно было до\u00a0{time}',
+        'tool.stale': 'Бодрствует уже\u00a0{time}',
+        'tool.stale.hint': 'Похоже, это слишком долго. Укажите последнее пробуждение',
+        'tool.done': 'Готово',
+        'tool.at.night': 'около {time}',
+        'tool.now': 'сейчас',
+        'tool.invalid': 'Укажите дневное время',
+        'tool.note': 'В\u00a0ознакомительных целях',
+        'tool.demo.age': '4 месяца',
+        'tool.demo.at': 'в\u00a012:15–13:00',
 
+        'start.title': 'Начните уже сегодня',
+        'start.lead': 'Получайте прогнозы под\u00a0Ваш индивидуальный ритм',
+        'start.s1': 'Скачайте Lupibu',
+        'start.s2': 'Отмечайте сон и\u00a0кормления',
+        'start.s3': 'Обсуждайте с\u00a0AI\u2011ассистентом',
 
-        'feat.live.title': 'Удобный таймер кормления',
-        'feat.live.text': 'Live Activity помогает легко управлять таймером прямо с экрана блокировки',
-        'feat.rhythm.title': 'Режим сна за неделю',
-        'feat.rhythm.text': 'Подъём, окна бодрствования и сны день за днём. PDF-отчёт для педиатра в один тап',
-        'feat.ai.title': 'Спросите ИИ, почему малыш не спит',
-        'feat.ai.text': 'Ответ строится по записям именно Вашего малыша, а не по статьям из интернета',
-        'feat.ai.name': 'Помощник Lupibu',
-        'feat.ai.status': 'отвечает по записям малыша',
-        'feat.ai.placeholder': 'Спросите или скажите голосом…',
-        'feat.ai.q': 'Почему Оливия проснулась в час ночи?',
-        'feat.ai.a': 'Она проснулась один раз, в 00:54, поела 17 минут и спала до 06:49. Одно ночное кормление в 3 месяца — это норма. Два последних дневных сна вчера были короткими, 39 и 34 минуты вместо обычных 54, поэтому, скорее всего, она легла немного переутомлённой. Сегодня лучше уложить чуть раньше, около 19:45.',
+        'sticky.cta': 'Скачать Lupibu',
 
-        'final.tagline': 'У малыша ритм. У Вас свой день',
-        'final.alt': 'Мама-медведица Lupibu обнимает медвежонка',
+        'alt.badge': 'Загрузите в App Store',
+        'alt.qr': 'QR-код: Lupibu в App Store',
+        'alt.bears': 'Мама-медведица с малышом смотрят в телефон',
+        'alt.home': 'Экран Lupibu со временем следующего сна',
+        'alt.asleep': 'Мама-медведица и малыш спят',
 
-        'testimonials.label': 'в App Store',
-        'testimonials.source': 'App Store',
-        'testimonials.t1.text': '«Пользуюсь Lupibu каждый день — записываю сон, кормления и распорядок малыша. Простое приложение, аккуратный дизайн, удобные напоминания. С ним повседневная жизнь с ребёнком стала спокойнее и понятнее.»',
-        'testimonials.t1.author': 'Асиманариманова',
-        'testimonials.t2.text': '«С Lupibu вести режим малыша намного проще. Особенно нравятся разборы сна и напоминания. Аккуратно сделано, всё интуитивно понятно.»',
-        'testimonials.t2.author': '-Айгулечка-',
-        'testimonials.t3.text': '«Интуитивно понятное и удобное приложение. Очень помогло разгрузить голову. Отдельное спасибо за ИИ-ассистента — выручает очень.»',
-        'testimonials.t3.author': 'kavinskyyn',
-
-        'slogan.tagline': 'Меньше догадок. Спокойнее дни и ночи.',
-
-        'sticky.cta': 'Попробовать бесплатно',
-        'sticky.sub': 'Первые 7 дней',
-        'qr.hint': 'Наведите для увеличения',
         'footer.help.label': 'Помощь',
         'footer.help.link': 'Справочный центр',
         'footer.legal.label': 'Юридическое',
@@ -329,52 +326,56 @@ const translations = {
     // ============================================
     kk: {
         'a11y.skipLink': 'Мазмұнға өту',
-        'hero.eyebrow': 'iPhone-ға арналған сәби ұйқысы мен режим трекері',
-        'hero.title': 'Сәби ұйқысы - тосын сыйсыз',
-        'hero.subtitle': 'Lupibu ақылды ұйқы трекері дәл Сіздің сәбиіңіздің ырғағын үйреніп, қашан ұйықтату керегін көрсетеді',
-        'hero.proof': '7 күн тегін',
-        'hero.micro': '7 күн тегін, кейін — жазылым. App Store-да кез келген сәтте бас тартуға болады.',
 
-        'shot.caption': 'Келесі ұйқы уақыты мен ұйықтату терезесі — бір экранда. Ұйқы бір түймемен басталады.',
+        // Басты бет — төрт экраннан тұратын воронка (2026-11)
+        'hero.b1': 'Қашан ұйықтату керек?',
+        'hero.b2': 'Қашан тамақтандырдым?',
+        'hero.b3': 'Неге ұйықтамайды?',
+        'hero.title': 'Сіз жалғыз емессіз',
+        'hero.subtitle': 'Lupibu сәбидің режимін қалыптастыруға көмектеседі',
 
-        'review.text': '«Интуитивті әрі ыңғайлы қосымша. Басымды босатуға көп көмектесті. AI-көмекшіге бөлек рахмет — шынымен құтқарады.»',
-        'review.author': 'kavinskyyn',
-        'review.source': 'App Store',
+        'cmp.title': 'Күніңіз өз қолыңызда',
+        'cmp.without': 'Lupibu-сыз',
+        'cmp.with': 'Lupibu-мен',
+        'cmp.r1.was': 'Сергек уақытты есептеу',
+        'cmp.r1.now': 'Болжамдар мен ескертулер',
+        'cmp.r2.was': 'Жад пен жазбадағы ретсіздік',
+        'cmp.r2.now': 'Трекингтегі тәртіп',
+        'cmp.r3.was': 'Чаттар мен форумдардағы сұрақтар',
+        'cmp.r3.now': 'AI-дан жеке жауаптар',
 
-        'how.t1': '«Сол жақтан 15 минут еміздіп, серуенге шықтық» деп айтыңыз — жазба дайын.',
-        'how.t2': 'Шамамен 5 жазылған ұйқыдан кейін болжам дәл Сіздің сәбиіңіздің ырғағына бейімделеді.',
-        'how.t3': 'Келесі ұйқы уақыты — басты экранда және құлып экранында.',
+        'tool.title': 'Ұйқы болжамы',
+        'tool.age': 'Сәбидің жасы',
+        'tool.wake': 'Ояну уақыты',
+        'tool.next': 'Келесі ұйқы',
+        'tool.next.night': 'Түнгі ұйқы',
+        'tool.window': '{range}',
+        'tool.until': 'терезе {time} дейін',
+        'tool.was': 'терезе {time} дейін болды',
+        'tool.stale': '{time} бойы ояу',
+        'tool.stale.hint': 'Бұл тым ұзақ сияқты. Соңғы ояну уақытын көрсетіңіз',
+        'tool.done': 'Дайын',
+        'tool.at.night': 'шамамен {time}',
+        'tool.now': 'қазір',
+        'tool.invalid': 'Күндізгі уақытты көрсетіңіз',
+        'tool.note': 'Танысу мақсатында',
+        'tool.demo.age': '4 ай',
+        'tool.demo.at': '12:15–13:00',
 
+        'start.title': 'Бүгін-ақ бастаңыз',
+        'start.lead': 'Жеке ырғағыңызға сай болжамдар алыңыз',
+        'start.s1': 'Lupibu-ді жүктеп алыңыз',
+        'start.s2': 'Ұйқы мен тамақтануды жазыңыз',
+        'start.s3': 'AI-ассистентпен талқылаңыз',
 
-        'feat.live.title': 'Ыңғайлы емізу таймері',
-        'feat.live.text': 'Live Activity таймерді құлып экранынан оңай басқаруға көмектеседі',
-        'feat.rhythm.title': 'Бір аптадағы ұйқы режимі',
-        'feat.rhythm.text': 'Ояну, сергек терезелер мен ұйқылар күн сайын. Педиатрға PDF-есеп бір түртумен',
-        'feat.ai.title': 'AI-дан сұраңыз: сәби неге ұйықтамайды',
-        'feat.ai.text': 'Жауап интернеттегі мақалалардан емес, дәл Сіздің сәбиіңіздің жазбаларынан құрылады',
-        'feat.ai.name': 'Lupibu көмекшісі',
-        'feat.ai.status': 'сәби жазбалары бойынша жауап береді',
-        'feat.ai.placeholder': 'Сұраңыз немесе дауыспен айтыңыз…',
-        'feat.ai.q': 'Оливия неге түнгі бірде оянды?',
-        'feat.ai.a': 'Ол бір рет, 00:54-те оянды, 17 минут емді де 06:49-ға дейін ұйықтады. 3 айда бір түнгі тамақтандыру — қалыпты жағдай. Кеше соңғы екі күндізгі ұйқы қысқа болды: әдеттегі 54-тің орнына 39 және 34 минут, сондықтан ол сәл шаршап жатқан болуы мүмкін. Бүгін сәл ертерек, шамамен 19:45-те жатқызған жөн.',
+        'sticky.cta': 'Lupibu-ді жүктеу',
 
-        'final.tagline': 'Сәбиде ырғақ. Сізде өз күніңіз',
-        'final.alt': 'Lupibu ана аюы қонжығын құшақтап отыр',
+        'alt.badge': 'App Store-дан жүктеу',
+        'alt.qr': 'QR-код: App Store-дағы Lupibu',
+        'alt.bears': 'Аю-ана мен қонжық телефонға қарап отыр',
+        'alt.home': 'Келесі ұйқы уақыты көрсетілген Lupibu экраны',
+        'alt.asleep': 'Аю-ана мен қонжық ұйықтап жатыр',
 
-        'testimonials.label': 'App Store-да',
-        'testimonials.source': 'App Store',
-        'testimonials.t1.text': '«Lupibu-ді күн сайын пайдаланамын — сәбидің ұйқысын, тамағын, күн тәртібін жазып отырамын. Қосымша қарапайым, дизайны таза, ескертулері ыңғайлы. Сәбимен өткен күндер реттелген әрі тыныш бола түсті.»',
-        'testimonials.t1.author': 'Асиманариманова',
-        'testimonials.t2.text': '«Lupibu арқылы сәбидің күн тәртібін жүргізу әлдеқайда жеңілдеді. Әсіресе ұйқы туралы талдаулар мен ескертулер пайдалы. Дизайны таза, бәрі ыңғайлы.»',
-        'testimonials.t2.author': '-Айгулечка-',
-        'testimonials.t3.text': '«Интуитивті әрі ыңғайлы қосымша. Басымды босатуға көп көмектесті. AI-көмекшіге бөлек рахмет — шынымен құтқарады.»',
-        'testimonials.t3.author': 'kavinskyyn',
-
-        'slogan.tagline': 'Болжам аз. Тыныш күн мен түн көп.',
-
-        'sticky.cta': 'Тегін бастау',
-        'sticky.sub': 'Алғашқы 7 күн',
-        'qr.hint': 'Үлкейту үшін меңзеңіз',
         'footer.help.label': 'Көмек',
         'footer.help.link': 'Анықтама орталығы',
         'footer.legal.label': 'Заңдық',
@@ -538,15 +539,25 @@ function applyTranslations(lang) {
         if (dict[key]) el.innerHTML = dict[key];
     });
 
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt');
+        if (dict[key]) el.alt = dict[key];
+    });
+
     // Update legal links with current language
     document.querySelectorAll('.legal-link').forEach(el => {
         const doc = el.dataset.doc;
-        if (doc) el.href = 'legal.html?doc=' + doc + '&lang=' + lang;
+        if (doc) el.href = '/legal.html?doc=' + doc + '&lang=' + lang;
     });
 
     // Update help center links with current language
     document.querySelectorAll('.help-link').forEach(el => {
-        el.href = 'help.html?lang=' + lang;
+        el.href = '/help.html?lang=' + lang;
+    });
+
+    // The store badge is Apple's own artwork per language. Apple publishes no Kazakh one, so Kazakh takes the Russian.
+    document.querySelectorAll('[data-badge]').forEach(img => {
+        img.src = '/assets/appstore-badge' + (lang === 'en' ? '' : '-ru') + '.svg';
     });
 
     // Update screenshots to match language
