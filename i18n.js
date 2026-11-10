@@ -70,8 +70,8 @@ const translations = {
         'footer.connect.label': 'Connect',
         'footer.copyright': '© 2026 Lupibu. All rights reserved.',
         // Meta — utility-anchored for SEO
-        'meta.title': "Lupibu — smart baby sleep tracker: know when the next nap is coming",
-        'meta.description': "Lupibu learns from your baby's own sleep log and shows when to put them down next. Log in one phrase, by voice or a tap. Free for 7 days on iPhone.",
+        'meta.title': 'Lupibu: baby sleep forecast and routine',
+        'meta.description': "Lupibu helps you build your baby's routine: a sleep forecast, sleep and feeding tracking, and answers from an AI assistant.",
 
         // Pay (ЮKassa landing for RU users)
         'pay.meta.title': 'Lupibu Pro — pay with card',
@@ -228,8 +228,8 @@ const translations = {
         'footer.legal.dataConsent': 'Согласие на обработку данных',
         'footer.connect.label': 'Связь',
         'footer.copyright': '© 2026 Lupibu. Все права защищены.',
-        'meta.title': 'Lupibu — умный трекер сна малыша: знает, когда следующий сон',
-        'meta.description': 'Lupibu учится на снах Вашего ребёнка и подсказывает, когда укладывать. Записи одной фразой, голосом или текстом. 7 дней бесплатно. Для iPhone.',
+        'meta.title': 'Lupibu: прогноз сна и режим малыша',
+        'meta.description': 'Lupibu поможет выстроить режим малыша: прогноз сна, трекинг сна и кормлений, ответы AI-ассистента.',
 
         // Pay (ЮKassa landing for RU users)
         'pay.meta.title': 'Оплата Lupibu Pro',
@@ -385,8 +385,8 @@ const translations = {
         'footer.legal.dataConsent': 'Деректерді өңдеуге келісім',
         'footer.connect.label': 'Байланыс',
         'footer.copyright': '© 2026 Lupibu. Барлық құқықтары қорғалған.',
-        'meta.title': 'Lupibu — сәбидің келесі ұйқысы қашан екенін біледі',
-        'meta.description': 'Lupibu сәбиіңіздің ұйқыларынан үйреніп, қашан ұйықтату керегін көрсетеді. Жазбалар бір сөйлеммен — дауыспен немесе мәтінмен. 7 күн тегін. iPhone-ға.',
+        'meta.title': 'Lupibu: ұйқы болжамы және сәби режимі',
+        'meta.description': 'Lupibu сәбидің режимін қалыптастыруға көмектеседі: ұйқы болжамы, ұйқы мен тамақтануды бақылау, AI-ассистенттің жауаптары.',
 
         // Pay (ЮKassa landing for RU users)
         'pay.meta.title': 'Lupibu Pro төлеуі',
