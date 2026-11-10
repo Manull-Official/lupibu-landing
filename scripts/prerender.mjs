@@ -79,6 +79,9 @@ function inLanguage(s, lang) {
     s = s.replace(` class="lang-option" data-lang="${lang}"`, ` class="lang-option active" data-lang="${lang}"`);
 
     s = s.replace("window.LUPIBU_DEFAULT_LANG = 'ru';", `window.LUPIBU_DEFAULT_LANG = '${lang}';`);
+
+    // Links to the calculator (top bar, footer) lead to the copy in the same language.
+    s = s.replaceAll('<a href="/tools/" class="', `<a href="/${lang}/tools/" class="`);
     return s;
 }
 
@@ -154,6 +157,7 @@ function localizeTools(lang) {
     s = s.replace(/(property="og:url" content=")[^"]*(")/, `$1${SITE}/${lang}/tools/$2`);
     s = s.replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${SITE}/${lang}/tools/">`);
     s = s.replace('<a href="/" class="logo">', `<a href="/${lang}/" class="logo">`);
+    s = s.replace('<a href="/" class="back-link home-link">', `<a href="/${lang}/" class="back-link home-link">`);
 
     write(`${lang}/tools/index.html`, s);
 }

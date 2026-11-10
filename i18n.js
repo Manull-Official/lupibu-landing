@@ -25,6 +25,14 @@ const translations = {
         'cmp.r2.now': 'One tidy log',
         'cmp.r3.was': 'Group chats and forums',
         'cmp.r3.now': 'Personal answers from AI',
+        'cmp.r4.was': "Watching the timers all day",
+        'cmp.r4.now': "A countdown on the lock screen",
+        'cmp.r5.was': "A day with no routine",
+        'cmp.r5.now': "Detailed sleep statistics",
+        'cta.note': "iPhone app. 7 days free",
+        'footer.tools.link': "Nap time by age",
+        'nav.tools': "Nap time",
+        'nav.home': "Home",
 
         // The tool. {time} is formatted in home.js; the ages and «in 1 h 40 min» are built there too.
         'tool.title': 'Nap time by age',
@@ -124,6 +132,14 @@ const translations = {
         'cmp.r2.now': 'Порядок в трекинге',
         'cmp.r3.was': 'Вопросы в чатах и на форумах',
         'cmp.r3.now': 'Персональные ответы от AI',
+        'cmp.r4.was': "Слежка за\u00a0таймерами",
+        'cmp.r4.now': "Отсчёт на\u00a0экране блокировки",
+        'cmp.r5.was': "Отсутствие режима",
+        'cmp.r5.now': "Расширенная статистика",
+        'cta.note': "Приложение для\u00a0iPhone. 7\u00a0дней бесплатно",
+        'footer.tools.link': "Расчёт сна",
+        'nav.tools': "Расчёт сна",
+        'nav.home': "На главную",
 
         'tool.title': 'Расчёт сна по\u00a0возрасту',
         'tool.age': 'Возраст малыша',
@@ -219,6 +235,14 @@ const translations = {
         'cmp.r2.now': 'Трекингтегі тәртіп',
         'cmp.r3.was': 'Чаттар мен форумдардағы сұрақтар',
         'cmp.r3.now': 'AI-дан жеке жауаптар',
+        'cmp.r4.was': "Таймерлерді үнемі бақылау",
+        'cmp.r4.now': "Құлып экранындағы кері санақ",
+        'cmp.r5.was': "Режимнің болмауы",
+        'cmp.r5.now': "Кеңейтілген статистика",
+        'cta.note': "iPhone қолданбасы. 7\u00a0күн тегін",
+        'footer.tools.link': "Ұйқы есебі",
+        'nav.tools': "Ұйқы есебі",
+        'nav.home': "Басты бет",
 
         'tool.title': 'Жасқа сай ұйқы есебі',
         'tool.age': 'Сәбидің жасы',
@@ -363,6 +387,16 @@ function applyTranslations(lang) {
     });
 
     // Update help center links with current language
+    // The way back from the calculator leads to the home page in the same language.
+    document.querySelectorAll('.home-link').forEach(el => {
+        el.href = lang === 'ru' ? '/' : '/' + lang + '/';
+    });
+
+    // The calculator page has a prerendered copy per language.
+    document.querySelectorAll('.tools-link').forEach(el => {
+        el.href = (lang === 'ru' ? '' : '/' + lang) + '/tools/';
+    });
+
     document.querySelectorAll('.help-link').forEach(el => {
         el.href = '/help.html?lang=' + lang;
     });
