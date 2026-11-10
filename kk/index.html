@@ -17,14 +17,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lupibu.com/kk/">
     <meta property="og:site_name" content="Lupibu">
-    <meta property="og:image" content="https://lupibu.com/assets/og-card-kk.png?v=20261110">
+    <meta property="og:image" content="https://lupibu.com/assets/og-card-kk.png?v=20261110c">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Lupibu: ұйқы болжамы және сәби режимі">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Сіз жалғыз емессіз">
     <meta name="twitter:description" content="Lupibu сәбидің режимін қалыптастыруға көмектеседі">
-    <meta name="twitter:image" content="https://lupibu.com/assets/og-card-kk.png?v=20261110">
+    <meta name="twitter:image" content="https://lupibu.com/assets/og-card-kk.png?v=20261110c">
 
     <link rel="canonical" href="https://lupibu.com/kk/">
     <link rel="alternate" hreflang="ru" href="https://lupibu.com/">
@@ -40,7 +40,7 @@
 
     <link rel="preload" as="image" type="image/webp" href="/assets/home/bears-phone.webp">
 
-    <link rel="stylesheet" href="/home.css?v=20261110e">
+    <link rel="stylesheet" href="/home.css?v=20261110n">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -110,15 +110,9 @@
         </a>
         <div class="lang-switcher">
             <button class="lang-toggle" aria-label="Change language">
-                <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M2 12h20" />
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
+                <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M8 12c0 6 4 10 4 10s4-4 4-10s-4-10-4-10s-4 4-4 10Z"/><path d="M21 15H3m18-6H3"/></svg>
                 <span class="lang-current">KZ</span>
-                <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="6 9 12 15 18 9" />
-                </svg>
+                <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="2"><path d="M18 9s-4.419 6-6 6s-6-6-6-6"/></svg>
             </button>
             <div class="lang-dropdown">
                 <button class="lang-option" data-lang="en">
@@ -137,21 +131,18 @@
         </div>
     </header>
 
-    <!-- The page is a funnel, one thought a screen: hook → relief → try → proof → start.
+    <!-- The page is a funnel, one thought a screen: hook → relief → proof → start.
          Copy lives in i18n.js; the Russian here is what crawlers and no-JS readers get. -->
     <main id="main">
-        <!-- 1. Hook: her own questions, then the answer -->
+        <!-- 1. Hook: her own questions float over her head; beside her, the answer.
+             On a phone the picture comes first, on a wide screen it stands to the right of the text. -->
         <section class="hero">
-            <div class="hang" style="--x:47%;--l:64px;--d:-1s"><i></i><img src="/assets/home/star.webp" alt="" width="40" height="38"></div>
-            <div class="hang hide-s" style="--x:55%;--l:132px;--d:-3s"><i></i><img src="/assets/home/star.webp" alt="" width="28" height="27"></div>
-            <div class="hang" style="--x:80%;--l:84px;--d:-2s"><i></i><img src="/assets/home/moon.webp" alt="" width="42" height="48"></div>
-            <div class="hang hide-s" style="--x:66%;--l:56px;--d:-4s"><i></i><img src="/assets/home/cloud.webp" alt="" width="74" height="45"></div>
+            <!-- felt toys on threads, from the top of the page: they frame the scene and leave the air over her head to her questions -->
+            <div class="hang hang-cloud"><i></i><img src="/assets/home/cloud.webp" alt="" width="74" height="45"></div>
+            <div class="hang hang-moon"><i></i><img src="/assets/home/moon.webp" alt="" width="42" height="48"></div>
+            <div class="hang hang-star"><i></i><img src="/assets/home/star.webp" alt="" width="40" height="38"></div>
+            <div class="hang hang-star-s"><i></i><img src="/assets/home/star.webp" alt="" width="28" height="27"></div>
             <div class="hero-text">
-                <p class="bubbles">
-                    <span data-i18n="hero.b1">Қашан ұйықтату керек?</span>
-                    <span data-i18n="hero.b2">Қашан тамақтандырдым?</span>
-                    <span data-i18n="hero.b3">Неге ұйықтамайды?</span>
-                </p>
                 <h1 data-i18n="hero.title">Сіз жалғыз емессіз</h1>
                 <p class="lead" data-i18n="hero.subtitle">Lupibu сәбидің режимін қалыптастыруға көмектеседі</p>
                 <div class="cta" id="heroCta">
@@ -161,7 +152,14 @@
                     <img src="/assets/qr-code.svg" alt="QR-код: App Store-дағы Lupibu" data-i18n-alt="alt.qr" class="qr" width="64" height="64">
                 </div>
             </div>
-            <img class="hero-bears" src="/assets/home/bears-phone.webp" alt="Аю-ана мен қонжық телефонға қарап отыр" data-i18n-alt="alt.bears" width="1000" height="640" fetchpriority="high">
+            <div class="hero-scene">
+                <p class="bubbles">
+                    <span data-i18n="hero.b1">Қашан ұйықтату керек?</span>
+                    <span data-i18n="hero.b2">Қашан тамақтандырдым?</span>
+                    <span data-i18n="hero.b3">Неге ұйықтамайды?</span>
+                </p>
+                <img class="hero-bears" src="/assets/home/bears-phone.webp" alt="Аю-ана мен қонжық телефонға қарап отыр" data-i18n-alt="alt.bears" width="1000" height="640" fetchpriority="high">
+            </div>
             <svg class="edge" viewBox="0 0 1440 90" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M0 90 L0 56 A45 32 0 0 1 90 51 A51 37 0 0 1 192 52 A39 28 0 0 1 269 55 A71 51 0 0 1 411 59 A65 47 0 0 1 541 52 A56 41 0 0 1 654 53 A43 31 0 0 1 739 51 A44 32 0 0 1 827 61 A67 49 0 0 1 962 59 A66 48 0 0 1 1095 52 A48 34 0 0 1 1191 57 A64 46 0 0 1 1318 60 A69 50 0 0 1 1440 51 L1440 90 Z" fill="#FFF8F2"/></svg>
         </section>
 
@@ -192,54 +190,22 @@
             </table>
         </section>
 
-        <!-- 3. Try: the app's own first forecast. Computed in the page (home.js), nothing is sent anywhere. -->
-        <section class="tool" id="tool" aria-labelledby="tool-title">
-            <div class="hang hide-s" style="--x:84%;--l:46px;--d:-2.5s"><i></i><img src="/assets/home/moon.webp" alt="" width="50" height="58"></div>
-            <h2 id="tool-title" data-screen="tool" data-i18n="tool.title">Ұйқы болжамы</h2>
-            <div class="tool-card">
-                <label class="field">
-                    <span data-i18n="tool.age">Сәбидің жасы</span>
-                    <span class="pill"><span id="ageText" aria-hidden="true" data-i18n="tool.demo.age">4 ай</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><select id="age"></select></span>
-                </label>
-                <label class="field">
-                    <span data-i18n="tool.wake">Ояну уақыты</span>
-                    <span class="pill"><span id="wakeT" aria-hidden="true">10:30</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><input type="time" id="wakeI" value="10:30"></span>
-                </label>
-                <div class="result">
-                    <div aria-live="polite" aria-atomic="true">
-                        <p id="nextLabel" data-i18n="tool.next">Келесі ұйқы</p>
-                        <div class="big range" id="nextBig" data-i18n="tool.demo.at">12:15–13:00</div>
-                    </div>
-                    <p id="nextIn"></p>
-                </div>
-            </div>
-            <p class="tool-note" data-i18n="tool.note">Танысу мақсатында</p>
-            <!-- Our own picker for a finger or a mouse: a sheet with wheels that home.js fills and opens.
-                 A keyboard and a screen reader keep the native controls above. -->
-            <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
-                <div class="sheet-grab" aria-hidden="true"></div>
-                <h3 id="sheet-title" tabindex="-1" autofocus></h3>
-                <div class="wheels" id="wheels"></div>
-                <button type="button" class="sheet-done" id="sheetDone" data-i18n="tool.done">Дайын</button>
-            </dialog>
-        </section>
-
-        <!-- 4. Proof: what parents wrote in the App Store, word for word, the writer's own small letters included.
+        <!-- 3. Proof: what parents wrote in the App Store, word for word, the writer's own small letters included.
              Shown in the language they were written in (Russian on the Kazakh page too); the texts live in i18n.js. -->
         <section class="voices" aria-labelledby="voices-title">
             <h2 id="voices-title" data-screen="reviews" data-i18n="rev.title">Пікірлер</h2>
             <div class="quotes" id="quotes" lang="ru">
-                <blockquote data-i18n="rev.q1">интуитивно понятное и удобное приложение, очень помогло разгрузить голову
-отдельное спасибо за ии ассистента, выручает очень</blockquote>
-                <blockquote data-i18n="rev.q2">Легкое в использовании, самые нужные функции всегда на виду, есть напоминания о сне и кормлении, что очень удобно.</blockquote>
-                <blockquote data-i18n="rev.q3">Приложение и обратная связь с разработчиком 10 из 5</blockquote>
+                <blockquote data-i18n="rev.q1">интуитивно понятное и удобное приложение, очень помогло разгрузить голову
+отдельное спасибо за ии ассистента, выручает очень</blockquote>
+                <blockquote data-i18n="rev.q2">Легкое в использовании, самые нужные функции всегда на виду, есть напоминания о сне и кормлении, что очень удобно.</blockquote>
+                <blockquote data-i18n="rev.q3">Приложение и обратная связь с разработчиком 10 из 5</blockquote>
                 <img class="pin pin-a" src="/assets/home/star.webp" alt="" width="46" height="44" loading="lazy">
                 <img class="pin pin-b" src="/assets/home/star.webp" alt="" width="30" height="29" loading="lazy">
             </div>
             <p class="voices-src" data-i18n="rev.src">App Store-дағы пікірлерден</p>
         </section>
 
-        <!-- 5. Start: three steps and the button -->
+        <!-- 4. Start: three steps, the button, and the app's own Home screen with its forecast -->
         <section class="start" aria-labelledby="start-title">
             <div class="start-grid">
                 <div class="start-text">
@@ -277,13 +243,13 @@
                     <a href="mailto:contact@lupibu.com" class="footer-link">contact@lupibu.com</a>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/lupibu.app" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.6"><path d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z"/><path d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Z"/><path stroke-width="2.2" d="M17.508 6.5h-.01"/></svg>
                         </a>
                         <a href="https://www.threads.net/@lupibu.app" target="_blank" rel="noopener" class="social-link" aria-label="Threads">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.59 12c.025 3.086.718 5.496 2.057 7.164 1.432 1.781 3.632 2.695 6.54 2.717 2.227-.033 4.093-.6 5.246-1.46a5.12 5.12 0 001.733-2.14c.39-.944.466-2.22-.14-3.263-.39-.672-1.072-1.2-2.028-1.573a8.66 8.66 0 01-.396 2.254c-.678 1.86-2.023 3.03-3.856 3.363a5.87 5.87 0 01-1.042.093c-1.282 0-2.47-.437-3.346-1.236-.98-.894-1.533-2.177-1.46-3.6.128-2.48 1.946-4.254 4.728-4.618a9.11 9.11 0 013.205.166c-.063-.658-.184-1.27-.373-1.821-.38-1.108-1.026-1.837-1.96-2.164a4.86 4.86 0 00-1.59-.222c-1.78.052-3.024.82-3.763 1.62l-1.415-1.37C7.4 4.14 9.182 3.12 11.558 3.058c.756-.014 1.478.07 2.15.273 1.372.42 2.383 1.4 2.943 2.868.32.84.527 1.786.612 2.833.67.224 1.263.506 1.774.847 1.31.872 2.146 2.142 2.42 3.672.315 1.762-.018 3.4-.962 4.742-.885 1.26-2.25 2.17-4.053 2.702-1.39.41-2.95.62-4.643.65-.436.004-.868-.007-1.285-.035a10.94 10.94 0 01-.328-.02zm.698-7.607c-1.824.232-2.86 1.175-2.925 2.44-.04.742.24 1.39.782 1.884.544.496 1.312.748 2.167.748.244 0 .497-.021.748-.066 1.187-.215 2.08-.97 2.523-2.156.26-.697.38-1.506.384-2.396a7.06 7.06 0 00-3.679-.454z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.6"><path d="M19.25 8.505c-1.577-5.867-7-5.5-7-5.5s-7.5-.5-7.5 8.995s7.5 8.996 7.5 8.996s4.458.296 6.5-3.918c.667-1.858.5-5.573-6-5.573c0 0-3 0-3 2.5c0 .976 1 2 2.5 2s3.171-1.027 3.5-3c1-6-4.5-6.5-6-4"/></svg>
                         </a>
                         <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" class="social-link" aria-label="Telegram">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.6"><path d="m11.985 15.408l3.242 3.686c1.2 1.365 1.801 2.048 2.43 1.881c.628-.166.844-1.064 1.275-2.861l2.39-9.968c.665-2.768.997-4.151.259-4.834s-2.017-.175-4.575.84L5.14 8.865c-2.046.813-3.069 1.219-3.134 1.917a1 1 0 0 0 0 .214c.063.699 1.084 1.108 3.128 1.927c.925.371 1.388.557 1.72.912q.056.06.108.124c.306.38.436.88.697 1.876l.489 1.867c.253.97.38 1.456.713 1.522s.622-.336 1.201-1.141zm0 0l-.317-.33c-.362-.378-.543-.566-.543-.8s.18-.423.543-.8l3.573-3.724"/></svg>
                         </a>
                     </div>
                 </div>
@@ -309,10 +275,10 @@
     </div>
 
     <script>window.LUPIBU_DEFAULT_LANG = 'kk';</script>
-    <script src="/i18n.js?v=20261110e"></script>
-    <script src="/assets/analytics.js?v=20261110e" defer></script>
+    <script src="/i18n.js?v=20261110n"></script>
+    <script src="/assets/analytics.js?v=20261110n" defer></script>
     <script src="/main.js?v=20260925a"></script>
-    <script src="/home.js?v=20261110e"></script>
+    <script src="/home.js?v=20261110n"></script>
 </body>
 
 </html>

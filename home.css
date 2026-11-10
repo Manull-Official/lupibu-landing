@@ -2,21 +2,61 @@
    LUPIBU HOME: a funnel, one thought a screen
    (hook → relief → try → proof → start), drawn as one day: a morning sky at the top, a night one at the bottom.
    The plush world comes from the App Store header. Other pages keep styles.css.
+
+   One system, set in :root and nowhere else:
+   - text has five sizes (fine, small, body, lead, display) and the forecast's own numerals;
+   - text on a light ground has two tones (--ink, --ink-2), on the night ground two (--on-night, --on-night-2) and white;
+   - weights: 500 running text, 600 labels, 700 values and names, 800 headings;
+   - corners have three sizes and the pill; shadows have a warm and a cool one;
+   - nothing that carries text is tilted: slanted letters read as a mistake.
+   Until 10.11.2026 the sheet held 23 font sizes, 12 radii, 9 shadows and 6 tones of white.
    ======================================== */
 :root {
+    /* colour */
     --ink: #3A3150;
-    --ink-2: #5A5175;
-    /* the name in running text on a light ground: the app's orangeDark (3.6:1 on cream; the bright orange gives 2.5:1) */
+    --ink-2: #4A4163;
+    /* the name in running text on a light ground: the app's orangeDark (the bright orange gives 2.5:1 there) */
     --brand: #D95D39;
+    --cta: #FA7C50;
     --cream: #FFF8F2;
+    --sand: #F6F0EA;
     --lilac: #F0EAFB;
     --pill: #F2EDFB;
     --line: rgba(58, 49, 80, 0.08);
     --night: #262A52;
     --night-2: #1E2146;
-    --cta: #FA7C50;
+    --on-night: rgba(255, 255, 255, 0.88);
+    --on-night-2: rgba(255, 255, 255, 0.66);
+    /* the app's own tints for its subjects (domain.ts: sleep, feed, wellness) */
+    --sleep-bg: #E5DAF5;
+    --feed-bg: #FFEDD5;
+    --ask-bg: #D9EBEC;
+
+    /* type */
     --display: 'Nunito', 'Nunito Sans', -apple-system, system-ui, sans-serif;
-    /* the rhythm: one gap between screens, one between a heading and what it heads (they were 44/70/94 and 24/32) */
+    --text: 'Nunito Sans', -apple-system, system-ui, sans-serif;
+    --fs-fine: 0.8125rem;
+    --fs-small: 0.9375rem;
+    /* the table's cells and the reviews: small on a phone (at 16 px two of the six Russian cells take a third line), body size on a wide screen */
+    --fs-dense: 0.9375rem;
+    --fs-body: 1.0625rem;
+    --fs-lead: 1.125rem;
+    --fs-display: clamp(2rem, 7.6vw, 3rem);
+    --fs-answer: clamp(2.6rem, 13vw, 3.4rem);
+    --fs-answer-range: clamp(2.2rem, 11vw, 2.9rem);
+    --fs-answer-long: 1.75rem;
+
+    /* shape */
+    --r-s: 14px;
+    --r-m: 20px;
+    --r-l: 28px;
+    --r-pill: 999px;
+    --shadow-warm: 0 20px 40px -26px rgba(110, 60, 30, 0.45);
+    --shadow-cool: 0 20px 40px -24px rgba(38, 30, 90, 0.5);
+    --shadow-sheet: 0 -18px 50px -20px rgba(20, 18, 60, 0.5);
+    --shadow-cta: 0 14px 28px -12px rgba(110, 45, 20, 0.6);
+
+    /* rhythm: one gap between screens, one between a heading and what it heads */
     --gap: 60px;
     --head: 22px;
     --badge: 54px;
@@ -28,8 +68,8 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
     margin: 0;
-    font-family: 'Nunito Sans', -apple-system, system-ui, sans-serif;
-    font-size: 17px;
+    font-family: var(--text);
+    font-size: var(--fs-body);
     font-weight: 500;
     line-height: 1.5;
     color: var(--ink);
@@ -45,7 +85,7 @@ img { max-width: 100%; height: auto; }
     top: 8px;
     z-index: 100;
     padding: 10px 16px;
-    border-radius: 10px;
+    border-radius: var(--r-s);
     background: #fff;
     color: var(--ink);
     font-weight: 700;
@@ -76,14 +116,14 @@ img { max-width: 100%; height: auto; }
     min-height: 44px;
     padding: 0 14px;
     border: 0;
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     background: rgba(255, 255, 255, 0.6);
-    font: 700 13px/1 'Nunito Sans', sans-serif;
+    font: 700 var(--fs-fine)/1 var(--text);
     color: var(--ink);
     cursor: pointer;
 }
-.lang-icon { width: 15px; height: 15px; }
-.lang-chevron { width: 12px; height: 12px; transition: transform 0.2s; }
+.lang-icon { width: 16px; height: 16px; }
+.lang-chevron { width: 14px; height: 14px; transition: transform 0.2s; }
 .lang-switcher.open .lang-chevron { transform: rotate(180deg); }
 .lang-dropdown {
     position: absolute;
@@ -91,9 +131,9 @@ img { max-width: 100%; height: auto; }
     top: calc(100% + 8px);
     min-width: 168px;
     padding: 6px;
-    border-radius: 18px;
+    border-radius: var(--r-m);
     background: #fff;
-    box-shadow: 0 18px 40px -18px rgba(58, 49, 80, 0.45);
+    box-shadow: var(--shadow-cool);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4px);
@@ -108,37 +148,42 @@ img { max-width: 100%; height: auto; }
     min-height: 44px;
     padding: 0 12px;
     border: 0;
-    border-radius: 12px;
+    border-radius: var(--r-s);
     background: none;
     font: inherit;
-    font-size: 0.9375rem;
+    font-size: var(--fs-small);
     color: var(--ink);
     text-align: left;
     cursor: pointer;
 }
 .lang-option:hover, .lang-option.active { background: var(--pill); }
-.lang-option-code { width: 24px; font-weight: 800; }
+.lang-option-code { width: 24px; font-weight: 700; }
 .lang-option-name { color: var(--ink-2); }
 .lang-toggle:focus-visible, .lang-option:focus-visible, .badge:focus-visible, .sticky-cta-btn:focus-visible, .footer a:focus-visible {
     outline: 3px solid var(--cta);
     outline-offset: 2px;
 }
 
-/* ---------- felt toys on threads, as in the store header ---------- */
+/* ---------- felt toys, as in the store header ----------
+   On a wide screen four of them hang on threads from the top of the page, as one group between the text and the scene.
+   On a phone the top of the page belongs to the logo and the language button, so a thread would have to start in
+   mid-air under them: there a small star and the moon float beside her questions with no thread, like the two stars
+   in the reviews. Each takes its place from its class: --x and --y, or --x and its thread --l. */
 .hang {
     position: absolute;
-    top: 0;
+    top: var(--y);
     left: var(--x);
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform-origin: 50% 0;
-    animation: sway 7s ease-in-out var(--d, 0s) infinite alternate;
+    animation: bob 5.2s ease-in-out var(--d, 0s) infinite alternate;
     pointer-events: none;
 }
-.hang i { display: block; width: 1.5px; height: var(--l); background: rgba(120, 86, 60, 0.32); }
-.hang img { display: block; margin-top: -2px; filter: drop-shadow(0 6px 8px rgba(120, 70, 40, 0.16)); }
+.hang i { display: none; }
+.hang img { display: block; filter: drop-shadow(0 6px 8px rgba(120, 70, 40, 0.16)); }
+.hang-cloud, .hang-star { display: none; }
+.hang-star-s { --x: 12px; --y: 130px; --d: -3s; rotate: -12deg; }
+.hang-star-s img { width: 32px; height: auto; }
+.hang-moon { --x: calc(100% - 50px); --y: 76px; --d: -2s; rotate: 10deg; }
+.hang-moon img { width: 34px; height: auto; }
 @keyframes sway {
     from { transform: rotate(-2deg); }
     to { transform: rotate(2deg); }
@@ -148,49 +193,57 @@ img { max-width: 100%; height: auto; }
 h1, h2 {
     margin: 0 auto;
     text-align: center;
-    font: 800 clamp(2rem, 7.6vw, 3rem)/1.08 var(--display);
+    font: 800 var(--fs-display)/1.08 var(--display);
     letter-spacing: -0.017em;
     text-wrap: balance;
     overflow-wrap: break-word;
 }
-.lead { margin: 12px auto 0; max-width: 30ch; font-size: 1.125rem; line-height: 1.45; color: var(--ink-2); text-wrap: balance; }
+.lead { margin: 12px auto 0; max-width: 30ch; font-size: var(--fs-lead); line-height: 1.45; color: var(--ink-2); text-wrap: balance; }
 /* the name is orange wherever the page writes it (home.js wraps it) */
 .brand { color: var(--brand); font-weight: 700; }
 .cmp th .brand { font-weight: inherit; }
 .start .brand { color: var(--cta); }
 .cta { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 26px; }
-.badge { display: inline-block; border-radius: 12px; }
+.badge { display: inline-block; border-radius: var(--r-s); }
 .badge img { display: block; height: var(--badge); width: auto; }
-.qr { display: none; width: calc(var(--badge) + 10px); height: calc(var(--badge) + 10px); padding: 5px; border-radius: 12px; background: #fff; }
+.qr { display: none; width: calc(var(--badge) + 10px); height: calc(var(--badge) + 10px); padding: 5px; border-radius: var(--r-s); background: #fff; }
 
-/* ---------- 1. Hook: her own questions, then the answer ---------- */
+/* ---------- 1. Hook: her own questions float over her head; beside her, the answer ----------
+   Until 10.11 the questions stood over the headline and the felt toys hung over the bears:
+   «лучше чтобы вопросы летали над мамой, а у нас над ней какие-то звёзды и луна». The toys stay
+   («они были милыми, добавляли уюта»), moved aside. */
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 132px 20px 56px;
+    display: flex;
+    flex-direction: column;
+    /* under the store badge: the cloud edge's own height and a breath above it */
+    padding: 78px 20px calc(max(64px, 6.25vw) + 24px);
     text-align: center;
     background: linear-gradient(180deg, #FBF2E8 0%, #FCE8D9 55%, #FCDCC6 100%);
 }
-.hero-text { position: relative; z-index: 2; }
-.bubbles { display: flex; flex-direction: column; gap: 10px; width: min(100%, 290px); margin: 0 auto 26px; }
+/* on a phone the picture with her thoughts comes first and the answer under it; in the markup the text leads */
+.hero-scene { position: relative; z-index: 2; order: 1; }
+.hero-text { position: relative; z-index: 2; order: 2; margin-top: 16px; }
+.bubbles { display: flex; flex-direction: column; gap: 8px; width: min(100%, 300px); margin: 0 auto 6px; }
 .bubbles span {
     display: flex;
     align-items: center;
     gap: 0.55em;
     padding: 6px 17px 6px 7px;
-    border-radius: 22px;
+    border-radius: var(--r-pill);
     background: #fff;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     font-weight: 700;
     line-height: 1.3;
     color: var(--ink-2);
-    box-shadow: 0 12px 26px -16px rgba(110, 60, 30, 0.5);
+    box-shadow: var(--shadow-warm);
     /* each thought pops in, then keeps drifting a few pixels, every one at its own pace */
     animation: bubble 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.25) both, bob 5.6s ease-in-out infinite alternate;
 }
 /* Each thought carries the app's own glyph for its subject (Hugeicons: moon-02, baby-bottle, bubble-chat-question)
-   on the app's own tint for it (domain.ts: sleep, feed, wellness). Drawn here, not in the markup:
-   i18n.js replaces a bubble's whole text when the language changes. */
+   on the app's own tint for it. Drawn here, not in the markup: i18n.js replaces a bubble's whole text
+   when the language changes. The three stand left, right and middle over her head; none is tilted. */
 .bubbles span::before {
     content: "";
     flex: none;
@@ -200,19 +253,19 @@ h1, h2 {
     background: var(--tint) var(--glyph) center / 1.1em no-repeat;
 }
 .bubbles span:nth-child(1) {
-    --tint: #E5DAF5;
+    --tint: var(--sleep-bg);
     --glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237D5BA6' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.5 14.078A8.557 8.557 0 0 1 9.922 2.5C5.668 3.497 2.5 7.315 2.5 11.873a9.627 9.627 0 0 0 9.627 9.627c4.558 0 8.376-3.168 9.373-7.422'/%3E%3C/svg%3E");
-    align-self: flex-start; rotate: -2deg; animation-delay: 0.2s, 1.4s;
+    align-self: flex-start; animation-delay: 0.2s, 1.4s;
 }
 .bubbles span:nth-child(2) {
-    --tint: #FFEDD5;
+    --tint: var(--feed-bg);
     --glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D95D39' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 10.5s1 2.5 1 5.75c0 1.171-.13 2.245-.296 3.14c-.209 1.124-.313 1.686-.869 2.148S15.617 22 14.292 22H9.708c-1.325 0-1.987 0-2.543-.462s-.66-1.024-.869-2.149A17.3 17.3 0 0 1 6 16.25C6 13 7 10.5 7 10.5'/%3E%3Cpath d='M7 10.51h10c.148-.815-.079-2.388-2.04-3.01c-.465-.148-1.01-.424-1.256-.888a1.64 1.64 0 0 1 .007-1.587a2.067 2.067 0 0 0-1.229-2.938A1.7 1.7 0 0 0 12 2a1.7 1.7 0 0 0-.515.087a2.067 2.067 0 0 0-1.23 2.938c.327.618.225 1.175.008 1.587c-.238.45-.756.85-1.24 1.003C7.672 8.045 6.74 9.068 7 10.51M15 14h2.5M15 18h2.5'/%3E%3C/svg%3E");
-    align-self: flex-end; rotate: 1.5deg; animation-delay: 0.55s, 2.2s; animation-duration: 0.55s, 6.6s;
+    align-self: flex-end; animation-delay: 0.55s, 2.2s; animation-duration: 0.55s, 6.6s;
 }
 .bubbles span:nth-child(3) {
-    --tint: #D9EBEC;
+    --tint: var(--ask-bg);
     --glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233A8A8C' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.5 12a9.5 9.5 0 0 1-9.5 9.5c-1.628 0-3.16-.41-4.5-1.131c-1.868-1.007-3.125-.071-4.234.097a.53.53 0 0 1-.456-.156a.64.64 0 0 1-.117-.703c.436-1.025.835-2.969.29-4.607a9.5 9.5 0 0 1-.483-3a9.5 9.5 0 1 1 19 0'/%3E%3Cpath d='M9.5 9.5a2.5 2.5 0 1 1 3.912 2.064C12.728 12.032 12 12.672 12 13.5'/%3E%3Cpath stroke-width='2.4' d='M12 16.5h.009'/%3E%3C/svg%3E");
-    align-self: center; rotate: -1deg; animation-delay: 0.9s, 3s; animation-duration: 0.55s, 4.9s;
+    align-self: center; animation-delay: 0.9s, 3s; animation-duration: 0.55s, 4.9s;
 }
 @keyframes bubble {
     from { opacity: 0; translate: 0 10px; scale: 0.92; }
@@ -220,24 +273,30 @@ h1, h2 {
 }
 @keyframes bob {
     from { transform: translateY(0); }
-    to { transform: translateY(-5px); }
+    to { transform: translateY(-4px); }
 }
-.hero-bears { position: relative; z-index: 2; display: block; width: min(100%, 640px); margin: 18px auto 0; }
+/* On a phone the whole first screen must fit what is on show: three thoughts, her, the headline, the line under it
+   and the store badge. Everything but the picture has a fixed height (about 425 px), so the picture takes what is left
+   of the visible screen (svh: Safari's bars count), between 150 px and its full size. */
+.hero-bears { display: block; width: auto; max-width: min(100%, 640px); max-height: clamp(150px, calc(100vh - 425px), 410px); max-height: clamp(150px, calc(100svh - 425px), 410px); margin: 0 auto; }
 .edge { position: absolute; left: 0; bottom: -1px; z-index: 3; display: block; width: 100%; height: max(64px, 6.25vw); }
 
 /* ---------- 2. Relief: one table, her day without and with ---------- */
-.compare { padding: calc(var(--gap) - 16px) 16px 0; background: var(--cream); }
+/* The table keeps half a gap of its own ground under it and stands above the next section. Until 10.11 it ended
+   exactly on the section's edge: the next section's sky painted over its shadow and the table looked cut off. */
+.compare { position: relative; z-index: 1; padding: calc(var(--gap) - 16px) 16px calc(var(--gap) / 2); background: var(--cream); }
 .cmp {
+    --mark: 18px;
     width: 100%;
     max-width: 720px;
     margin: var(--head) auto 0;
     border-collapse: separate;
     border-spacing: 0;
     table-layout: fixed;
-    border-radius: 28px;
+    border-radius: var(--r-l);
     overflow: hidden;
     background: #fff;
-    box-shadow: 0 24px 48px -30px rgba(110, 60, 30, 0.45);
+    box-shadow: var(--shadow-warm);
 }
 .cmp th, .cmp td {
     position: relative;
@@ -245,44 +304,36 @@ h1, h2 {
     padding: 14px 10px 14px 36px;
     text-align: left;
     vertical-align: top;
-    /* 15 px: at 16 two of the six Russian cells take a third line (measured 10.11) */
-    font-size: 0.9375rem;
+    font-size: var(--fs-dense);
     line-height: 1.35;
     text-wrap: balance;
     overflow-wrap: anywhere;
 }
-.cmp th { padding: 12px 12px 10px; vertical-align: bottom; font: 800 1rem/1.3 var(--display); }
-.cmp th img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 10px; border-radius: 18px; }
-/* the «without» side is quieter by its ground, its hollow circles and its weight, never by faint letters */
-.cmp th:first-child, .cmp td:first-child { background: #F6F0EA; }
-.cmp td:last-child { font-weight: 700; }
+.cmp th { padding: 12px 12px 10px; vertical-align: bottom; font: 800 var(--fs-lead)/1.3 var(--display); }
+/* the picture's corner follows the card's: its radius less the 12 px between them */
+.cmp th img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 10px; border-radius: calc(var(--r-l) - 12px); }
+/* the «without» side is quieter by its ground and its hollow circles, never by faint letters;
+   the «with» side is one step heavier, not two */
+.cmp th:first-child, .cmp td:first-child { background: var(--sand); }
+.cmp td:last-child { font-weight: 600; }
 .cmp tbody tr + tr td { border-top: 1px solid var(--line); }
 .cmp tbody tr:last-child td { padding-bottom: 20px; }
-.cmp td::before { content: ""; position: absolute; left: 11px; top: 15px; width: 18px; height: 18px; box-sizing: border-box; border-radius: 50%; }
+/* the mark sits on the first line of the cell: half a line down, half its own height up */
+.cmp td::before { content: ""; position: absolute; left: 11px; top: calc(14px + (1.35em - var(--mark)) / 2); width: var(--mark); height: var(--mark); box-sizing: border-box; border-radius: 50%; }
 .cmp td:first-child::before { border: 2px solid #D9CFC6; }
-.cmp td:last-child::before { background: var(--ink); }
-.cmp td:last-child::after {
-    content: "";
-    position: absolute;
-    left: 16px;
-    top: 20px;
-    width: 7px;
-    height: 3.5px;
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    transform: rotate(-45deg);
-}
+/* the check is the app's own glyph (Hugeicons tick-02), drawn, not built out of two borders */
+.cmp td:last-child::before { background: var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 14l3.5 3.5L19 6.5'/%3E%3C/svg%3E") center / 66% no-repeat; }
 /* the three checks tick in one after another when the table comes into view (home.js marks it) */
-.cmp.wait td:last-child::before, .cmp.wait td:last-child::after { opacity: 0; scale: 0.3; }
-.cmp.in td:last-child::before, .cmp.in td:last-child::after { opacity: 1; scale: 1; transition: opacity 0.25s, scale 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.5); }
-.cmp.in tr:nth-child(2) td:last-child::before, .cmp.in tr:nth-child(2) td:last-child::after { transition-delay: 0.22s; }
-.cmp.in tr:nth-child(3) td:last-child::before, .cmp.in tr:nth-child(3) td:last-child::after { transition-delay: 0.44s; }
+.cmp.wait td:last-child::before { opacity: 0; scale: 0.3; }
+.cmp.in td:last-child::before { opacity: 1; scale: 1; transition: opacity 0.25s, scale 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.5); }
+.cmp.in tr:nth-child(2) td:last-child::before { transition-delay: 0.22s; }
+.cmp.in tr:nth-child(3) td:last-child::before { transition-delay: 0.44s; }
 
 /* ---------- 3. Try: the app's own first forecast, evening turning into night ---------- */
 .tool {
     position: relative;
     overflow: hidden;
-    padding: var(--gap) 16px var(--gap);
+    padding: calc(var(--gap) / 2) 16px var(--gap);
     text-align: center;
     background: linear-gradient(180deg, var(--cream) 0%, var(--lilac) 16%, #E4DBF8 34%, #ABA1DC 58%, #565392 82%, var(--night) 98%);
 }
@@ -292,10 +343,10 @@ h1, h2 {
     max-width: 440px;
     margin: var(--head) auto 0;
     padding: 14px 14px 22px;
-    border-radius: 30px;
+    border-radius: var(--r-l);
     background: #fff;
     text-align: left;
-    box-shadow: 0 22px 44px -26px rgba(38, 30, 90, 0.5);
+    box-shadow: var(--shadow-cool);
 }
 /* Each row is one big button: a tinted tile with the value and a round arrow, pressed as a whole.
    As white rows with hairlines between them they read as a table of facts, not as something to tap. */
@@ -306,8 +357,9 @@ h1, h2 {
     gap: 12px;
     min-height: 58px;
     padding: 0 10px 0 16px;
-    border-radius: 18px;
+    border-radius: var(--r-m);
     background: var(--pill);
+    font-weight: 600;
     color: var(--ink-2);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -326,13 +378,14 @@ h1, h2 {
     70% { scale: 1.02; }
     100% { scale: 1; }
 }
+/* the value is the label's size, a step heavier and in the first ink */
 .pill {
+    --disc: 30px;
     position: relative;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     min-height: 44px;
-    font-size: 1.0625rem;
     font-weight: 700;
     color: var(--ink);
     font-variant-numeric: tabular-nums;
@@ -341,7 +394,6 @@ h1, h2 {
 /* The arrow is a small dark round button, and it keeps signalling: a ring spreads from it and the arrow dips,
    one row after the other, until she has opened a picker once (home.js then marks the tool as used).
    The ring is its own element moved by scale and opacity: Safari clips a box-shadow animated on an <svg>. */
-.pill { --disc: 30px; }
 .pill svg {
     box-sizing: border-box;
     flex: none;
@@ -390,18 +442,27 @@ h1, h2 {
     cursor: pointer;
 }
 .result { margin-top: 18px; padding: 0 6px; }
-.result p { margin: 0; color: var(--ink-2); }
+.result p { margin: 0; font-weight: 600; color: var(--ink-2); }
 .result p:empty { display: none; }
 .big {
     margin: 2px 0 4px;
-    font: 800 clamp(2.6rem, 13vw, 3.4rem)/1 var(--display);
+    font: 800 var(--fs-answer)/1 var(--display);
     letter-spacing: -0.02em;
     font-variant-numeric: tabular-nums;
 }
-.big.range { font-size: clamp(2.2rem, 11vw, 2.9rem); }
-.big.long { font-size: 1.75rem; line-height: 1.15; }
-.tool-note { position: relative; z-index: 2; margin: 20px auto 0; max-width: 30ch; font-size: 0.9375rem; color: rgba(255, 255, 255, 0.86); text-wrap: balance; }
+.big.range { font-size: var(--fs-answer-range); }
+.big.long { font-size: var(--fs-answer-long); line-height: 1.15; }
+.tool-note { position: relative; z-index: 2; margin: 20px auto 0; max-width: 30ch; font-size: var(--fs-small); color: var(--on-night); text-wrap: balance; }
 .pop { animation: pop 0.35s cubic-bezier(0.2, 0.9, 0.3, 1); }
+
+/* ---------- /tools/: the calculator on a page of its own ----------
+   It fills the screen above the footer and stays light from top to bottom: the card may stand at any height
+   of a tall window, so the small print under it is dark ink, not the white of the night. */
+.page-tools { display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; }
+.page-tools main { flex: 1; display: flex; }
+.page-tools .tool { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-top: 92px; background: linear-gradient(180deg, #FBF2E8 0%, var(--lilac) 55%, #E4DBF8 100%); }
+.page-tools .tool-card { width: 100%; }
+.page-tools .tool-note { color: var(--ink-2); }
 @keyframes pop {
     from { opacity: 0.2; transform: translateY(6px); }
     to { opacity: 1; transform: none; }
@@ -417,11 +478,11 @@ h1, h2 {
     margin: auto auto 0;
     padding: 10px 20px calc(20px + env(safe-area-inset-bottom));
     border: 0;
-    border-radius: 28px 28px 0 0;
+    border-radius: var(--r-l) var(--r-l) 0 0;
     background: #fff;
     color: var(--ink);
     text-align: center;
-    box-shadow: 0 -18px 50px -20px rgba(20, 18, 60, 0.5);
+    box-shadow: var(--shadow-sheet);
     overflow: hidden;
 }
 .sheet::backdrop { background: rgba(30, 33, 70, 0.5); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
@@ -443,9 +504,9 @@ h1, h2 {
 .sheet h3 { margin: 0 0 6px; font: 800 1.25rem/1.2 var(--display); }
 /* the sheet opens with its title in focus, so a tap never leaves a focus ring on a wheel */
 .sheet h3:focus { outline: none; }
-/* five rows of 44 px; the middle one is the choice */
+/* five rows of 44 px; the middle one is the choice. The wheel has its own two sizes: a row and the chosen row. */
 .wheels { position: relative; display: flex; align-items: stretch; justify-content: center; gap: 6px; height: 220px; }
-.wheels::before { content: ""; position: absolute; left: 0; right: 0; top: 88px; height: 44px; border-radius: 16px; background: var(--pill); }
+.wheels::before { content: ""; position: absolute; left: 0; right: 0; top: 88px; height: 44px; border-radius: var(--r-s); background: var(--pill); }
 .wheel {
     position: relative;
     flex: 0 1 220px;
@@ -456,7 +517,7 @@ h1, h2 {
     scroll-snap-type: y mandatory;
     overscroll-behavior: contain;
     scrollbar-width: none;
-    border-radius: 16px;
+    border-radius: var(--r-s);
     outline: none;
     -webkit-mask-image: linear-gradient(transparent, #000 32%, #000 68%, transparent);
     mask-image: linear-gradient(transparent, #000 32%, #000 68%, transparent);
@@ -475,7 +536,7 @@ h1, h2 {
     border: 0;
     background: none;
     scroll-snap-align: center;
-    font: 500 1.25rem/44px 'Nunito Sans', -apple-system, system-ui, sans-serif;
+    font: 500 1.25rem/44px var(--text);
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
     color: var(--ink-2);
@@ -485,7 +546,7 @@ h1, h2 {
 /* the chosen row grows by its letters, not by a scale: a scaled box would be cut by the wheel's own edges */
 .wheel button.on { color: var(--ink); font-weight: 700; font-size: 1.375rem; }
 /* keyboard focus is shown on the chosen row: the wheel itself is faded at both ends and would cut a ring */
-.wheel:focus-visible button.on { box-shadow: inset 0 0 0 2px var(--cta); border-radius: 12px; }
+.wheel:focus-visible button.on { box-shadow: inset 0 0 0 2px var(--cta); border-radius: var(--r-s); }
 .wheels .colon, .wheels .period { position: relative; align-self: center; font: 800 1.375rem/1 var(--display); }
 .wheels .period { min-width: 2.2em; text-align: left; }
 .sheet-done {
@@ -494,42 +555,47 @@ h1, h2 {
     margin-top: 14px;
     padding: 14px;
     border: 0;
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     background: var(--ink);
     color: #fff;
-    font: 800 1.0625rem/1.3 var(--display);
+    font: 800 var(--fs-body)/1.3 var(--display);
     cursor: pointer;
 }
 .sheet-done:focus-visible { outline: 3px solid var(--cta); outline-offset: 2px; }
 html:has(.sheet[open]) { overflow: hidden; }
 
 /* ---------- 4. Proof: what parents wrote in the App Store, as messages arriving at night ---------- */
+/* The day of the table turns into the night of the reviews in a band of dusk above the heading. */
 .voices {
+    --dusk: 132px;
     position: relative;
-    padding: 0 20px var(--gap);
+    padding: calc(var(--dusk) + var(--head)) 20px var(--gap);
     text-align: center;
     color: #fff;
     background-color: var(--night);
+    background-repeat: no-repeat;
+    background-size: 100% var(--dusk), auto, auto, auto, auto;
     background-image:
+        linear-gradient(180deg, var(--cream) 0%, var(--lilac) 20%, #ABA1DC 52%, #565392 80%, var(--night) 100%),
         radial-gradient(1.5px 1.5px at 8% 10%, rgba(255, 255, 255, 0.75), transparent 70%),
         radial-gradient(1.2px 1.2px at 93% 26%, rgba(255, 255, 255, 0.65), transparent 70%),
         radial-gradient(1.6px 1.6px at 5% 74%, rgba(255, 255, 255, 0.7), transparent 70%),
         radial-gradient(1.3px 1.3px at 95% 90%, rgba(255, 255, 255, 0.6), transparent 70%);
 }
 .quotes { position: relative; display: flex; flex-direction: column; gap: 12px; width: min(100%, 350px); margin: var(--head) auto 0; }
-/* two felt stars from the same toy box as the hero's, pinned to the messages like stickers */
+/* two felt stars from the same toy box as the hero's, pinned to the messages like stickers (a toy may sit askew; text may not) */
 .pin { position: absolute; z-index: 2; height: auto; pointer-events: none; filter: drop-shadow(0 6px 8px rgba(8, 8, 40, 0.45)); animation: bob 5.2s ease-in-out infinite alternate; }
 .pin-a { top: -20px; right: 3%; width: 46px; rotate: 14deg; }
-.pin-b { right: 4%; bottom: 20px; width: 30px; rotate: -12deg; animation-duration: 6.4s; animation-delay: -2s; }
+.pin-b { right: 4%; bottom: 14px; width: 30px; rotate: -12deg; animation-duration: 6.4s; animation-delay: -2s; }
 /* a review is quoted word for word: pre-line keeps the writer's own line break */
 .quotes blockquote {
     max-width: 90%;
     margin: 0;
     padding: 12px 16px 13px;
-    border-radius: 22px;
+    border-radius: var(--r-m);
     background: #fff;
     color: var(--ink);
-    font-size: 0.9375rem;
+    font-size: var(--fs-dense);
     font-weight: 600;
     line-height: 1.4;
     text-align: left;
@@ -537,13 +603,13 @@ html:has(.sheet[open]) { overflow: hidden; }
     /* no lone last word («…10 / из 5») */
     text-wrap: pretty;
     overflow-wrap: break-word;
-    box-shadow: 0 16px 30px -18px rgba(8, 8, 40, 0.9);
+    box-shadow: var(--shadow-cool);
 }
-/* messenger bubbles: the corner on the speaker's side is tighter, and each has its own ground,
+/* messenger bubbles: left, right, left; the corner on the speaker's side is tighter; each has its own ground,
    the same three tints as the thoughts at the top of the page */
-.quotes blockquote:nth-child(1) { align-self: flex-start; border-bottom-left-radius: 7px; rotate: -1deg; }
-.quotes blockquote:nth-child(2) { align-self: flex-end; max-width: 86%; border-bottom-right-radius: 7px; rotate: 0.8deg; background: #FFEDD5; }
-.quotes blockquote:nth-child(3) { align-self: flex-start; max-width: 76%; margin-left: 9%; border-bottom-left-radius: 7px; rotate: -0.6deg; background: #E5DAF5; }
+.quotes blockquote:nth-child(1) { align-self: flex-start; border-bottom-left-radius: 6px; }
+.quotes blockquote:nth-child(2) { align-self: flex-end; border-bottom-right-radius: 6px; background: var(--feed-bg); }
+.quotes blockquote:nth-child(3) { align-self: flex-start; max-width: 80%; border-bottom-left-radius: 6px; background: var(--sleep-bg); }
 /* they arrive one after another when the block comes into view (home.js marks it) */
 .quotes.wait blockquote { opacity: 0; translate: 0 14px; scale: 0.95; }
 .quotes.in blockquote { opacity: 1; translate: 0 0; scale: 1; transition: opacity 0.35s, translate 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.25), scale 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.25); }
@@ -553,7 +619,7 @@ html:has(.sheet[open]) { overflow: hidden; }
 .quotes.wait .pin { opacity: 0; scale: 0.4; }
 .quotes.in .pin { opacity: 1; scale: 1; transition: opacity 0.3s 0.8s, scale 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.5) 0.8s; }
 .quotes.in .pin-b { transition-delay: 1s; }
-.voices-src { margin: 16px 0 0; font-size: 0.875rem; color: rgba(255, 255, 255, 0.78); }
+.voices-src { margin: 16px 0 0; font-size: var(--fs-small); color: var(--on-night); }
 .voices > * { position: relative; z-index: 1; }
 
 /* ---------- 5. Start: night, three small steps, the button ---------- */
@@ -599,7 +665,8 @@ html:has(.sheet[open]) { overflow: hidden; }
 /* on a phone the phone picture sits between the lead and the steps */
 .start-text { display: contents; }
 .start h2 { order: 1; }
-.start .lead { order: 2; color: rgba(255, 255, 255, 0.9); }
+.start .lead { order: 2; color: var(--on-night); }
+/* the frame is a phone's: its corners are the device's, not the page's */
 .peek {
     order: 3;
     width: min(76%, 290px);
@@ -617,7 +684,7 @@ html:has(.sheet[open]) { overflow: hidden; }
 .peek.wait { opacity: 0; translate: 0 24px; }
 .peek.in { opacity: 1; translate: 0 0; transition: opacity 0.6s, translate 0.7s cubic-bezier(0.2, 0.8, 0.3, 1); }
 .steps { order: 4; display: grid; gap: 14px; margin: 0 auto; padding: 0; list-style: none; counter-reset: step; text-align: left; }
-.steps li { counter-increment: step; display: flex; align-items: center; gap: 14px; font-size: 1.0625rem; font-weight: 600; line-height: 1.3; }
+.steps li { counter-increment: step; display: flex; align-items: center; gap: 14px; font-size: var(--fs-body); font-weight: 600; line-height: 1.3; }
 .steps li::before {
     content: counter(step);
     /* a real width, not only a flex-basis: Safari sizes the list by the digit's own width otherwise and wraps the longest step */
@@ -647,30 +714,31 @@ html:has(.sheet[open]) { overflow: hidden; }
 }
 
 /* ---------- footer: two groups, each in its own order ----------
-   On top who this is and how to reach us (bright); under a hairline the documents and the copyright (quiet).
+   On top who this is and how to reach us; under a hairline the documents and the copyright.
    A phone stacks both in the middle, one thing a row. A wide screen lays each group out as one row from edge to edge,
-   the way the navbar does. Until 10.11 all the links wrapped as one centred paragraph: one, two, one, two in a row. */
-.footer { padding: 18px 20px calc(20px + env(safe-area-inset-bottom)); font-size: 0.8125rem; text-align: center; color: rgba(255, 255, 255, 0.62); background: var(--night-2); }
+   the way the navbar does. Two tones only: what can be pressed is --on-night or white, the copyright is --on-night-2.
+   The same rules are repeated in styles.css for the other pages: change both together. */
+.footer { padding: 18px 20px calc(20px + env(safe-area-inset-bottom)); font-size: var(--fs-fine); text-align: center; color: var(--on-night-2); background: var(--night-2); }
 .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .footer-logo { display: block; height: 26px; width: auto; }
 /* in words, what Lupibu is: nowhere else does the page say «для iPhone» in plain text */
-.footer-tag { color: rgba(255, 255, 255, 0.72); }
+.footer-tag { color: var(--on-night); }
 /* the group names stay for a screen reader; to the eye the links speak for themselves */
 .footer-col-label { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.footer-link { text-decoration: none; }
+.footer-link { color: var(--on-night); text-decoration: none; }
 .footer-link:hover { color: #fff; }
 .footer-reach { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 22px; margin-top: 4px; }
-.footer-reach .footer-link { padding: 10px 0; font-size: 0.9375rem; font-weight: 600; color: #fff; }
-/* on a phone the three icons take a row of their own */
+.footer-reach .footer-link { padding: 10px 0; font-size: var(--fs-small); font-weight: 700; color: #fff; }
+/* on a phone the three icons take a row of their own; they are the app's icon set, one line weight for all three */
 .footer-social { display: flex; justify-content: center; gap: 6px; flex-basis: 100%; margin-top: -4px; }
-.social-link { display: grid; place-items: center; width: 44px; height: 44px; color: rgba(255, 255, 255, 0.86); }
+.social-link { display: grid; place-items: center; width: 44px; height: 44px; color: var(--on-night); }
 .social-link:hover { color: #fff; }
-.social-link svg { width: 20px; height: 20px; }
+.social-link svg { width: 22px; height: 22px; }
 .footer-base { margin-top: 6px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
 /* the documents, one a row: on a phone two of the four Russian names do not fit side by side */
 .footer-legal { display: grid; justify-content: center; justify-items: center; }
-.footer-legal .footer-link { padding: 5px 0; color: rgba(255, 255, 255, 0.76); }
-.footer-copyright { margin-top: 8px; font-size: 0.75rem; }
+.footer-legal .footer-link { padding: 5px 0; }
+.footer-copyright { margin-top: 8px; }
 @media (min-width: 600px) and (max-width: 899px) {
     /* a tablet upright has room for the documents two by two */
     .footer-legal { grid-template-columns: auto auto; column-gap: 36px; justify-items: start; }
@@ -679,17 +747,27 @@ html:has(.sheet[open]) { overflow: hidden; }
 /* ---------- sticky store button (phones) ---------- */
 .sticky-cta { display: none; }
 
-/* A computer screen. Until 10.11 nothing grew past 900 px: on a 1728 px screen the text was a phone's 17 px
-   and the tool's card a quarter of the width. Sizes and widths now follow the window (vw) between a floor and a cap. */
+/* A computer screen: the same system one step up. Sizes follow the window (vw) between a floor and a cap;
+   at 1728 px running text is 19 px and a heading 59 (10.11: at 21–24 and 71 it was «слишком крупный»). */
 @media (min-width: 900px) {
     :root {
+        --fs-fine: 0.875rem;
+        --fs-small: 1rem;
+        --fs-dense: clamp(1rem, 1.1vw, 1.1875rem);
+        --fs-body: clamp(1rem, 1.1vw, 1.1875rem);
+        --fs-lead: clamp(1.125rem, 1.25vw, 1.3125rem);
+        --fs-display: clamp(2.75rem, 3.4vw, 3.75rem);
+        --fs-answer: clamp(3rem, 3.7vw, 4rem);
+        --fs-answer-range: clamp(2.25rem, 2.8vw, 3rem);
+        --fs-answer-long: clamp(1.5rem, 1.8vw, 2rem);
         --gap: clamp(60px, 4.6vw, 88px);
         --head: clamp(24px, 2vw, 36px);
         --badge: clamp(54px, 4vw, 66px);
     }
-    h1, h2 { font-size: clamp(3rem, 4.1vw, 4.5rem); }
-    .lead { margin-top: 16px; font-size: clamp(1.1875rem, 1.5vw, 1.5rem); }
-    .nav { padding: 18px max(40px, calc(50% - 660px)); }
+    /* a lead is one line where the column allows it */
+    .lead { margin-top: 14px; max-width: none; }
+    /* one left edge for everything set flush left on a wide screen: the logo, the hero, the last screen, the footer */
+    .nav { padding: 18px max(48px, calc(50% - 660px)); }
     .logo-img { height: 40px; }
     .qr { display: block; }
     .hero {
@@ -700,22 +778,42 @@ html:has(.sheet[open]) { overflow: hidden; }
         padding: clamp(100px, 6.6vw, 124px) max(48px, calc(50% - 660px)) calc(max(64px, 6.25vw) + clamp(16px, 1.6vw, 32px));
         text-align: left;
     }
+    /* the four toys hang on threads from the top of the page, one group in the empty air between the headline and the scene */
+    .hang { top: 0; display: flex; flex-direction: column; align-items: center; rotate: none; transform-origin: 50% 0; animation: sway 7s ease-in-out var(--d, 0s) infinite alternate; }
+    .hang i { display: block; width: 1.5px; height: var(--l); background: rgba(120, 86, 60, 0.32); }
+    .hang img { margin-top: -2px; }
+    .hang-cloud, .hang-star { display: flex; }
+    .hang-cloud { --x: 33%; --l: 52px; --d: -4s; }
+    /* the moon's thread follows the window: on a narrow one a two-line headline rises towards it */
+    .hang-moon { --x: 39.5%; --l: clamp(64px, 6.7vw, 116px); --d: -2s; }
+    .hang-moon img { width: 42px; }
+    .hang-star { --x: 44.5%; --l: 70px; --d: -1s; }
+    .hang-star-s { --x: 48.3%; --l: 176px; --d: -3s; }
+    .hang-star-s img { width: 28px; }
     .hero h1 { text-align: left; }
-    .bubbles { gap: 12px; width: min(100%, clamp(300px, 26vw, 420px)); margin-bottom: clamp(26px, 2.6vw, 40px); }
-    .bubbles span { padding: 8px 21px 8px 9px; border-radius: 26px; font-size: clamp(1rem, 1.25vw, 1.25rem); }
-    .bubbles, .hero h1, .hero .lead { margin-left: 0; }
+    .hero h1, .hero .lead { margin-left: 0; }
+    .hero-text { order: 0; margin-top: 0; }
     .hero .cta { justify-content: flex-start; margin-top: clamp(26px, 2.6vw, 40px); }
     /* the artwork is 1000 px wide: past 600 it would blur on a sharp screen */
-    .hero-bears { width: 100%; max-width: 600px; margin: 0; justify-self: center; }
+    .hero-scene { order: 0; justify-self: center; width: 100%; max-width: 600px; padding-top: 8.2em; }
+    .hero-bears { width: 100%; max-width: none; max-height: none; }
+    /* her three thoughts hang in the air over her head, one under another: left, right, and the last one just above her.
+       Each keeps its own row, so no two can meet at any width or in any language. */
+    .bubbles { position: absolute; left: 0; right: 0; top: 0; display: block; width: auto; margin: 0; }
+    .bubbles span { position: absolute; width: max-content; padding: 8px 21px 8px 9px; }
+    .bubbles span:nth-child(1) { left: 0; top: 0; }
+    .bubbles span:nth-child(2) { right: 0; top: 2.9em; }
+    .bubbles span:nth-child(3) { left: 16%; top: 5.8em; }
 
     .compare, .tool { padding-left: 40px; padding-right: 40px; }
+    .voices { --dusk: clamp(150px, 11vw, 200px); }
+    .page-tools .tool { padding-top: clamp(104px, 7vw, 128px); }
     .compare { padding-top: calc(var(--gap) - 32px); }
-    .cmp { --pad: clamp(18px, 1.5vw, 24px); max-width: clamp(720px, 62vw, 1040px); border-radius: 32px; }
-    .cmp th, .cmp td { padding: var(--pad) 26px var(--pad) clamp(58px, 4.4vw, 70px); font-size: clamp(1.0625rem, 1.3vw, 1.3125rem); }
-    .cmp th { padding: 18px 18px 14px; font-size: clamp(1.1875rem, 1.6vw, 1.5rem); }
+    .cmp { --pad: clamp(16px, 1.3vw, 22px); --mark: 24px; max-width: clamp(720px, 56vw, 960px); }
+    .cmp th, .cmp td { padding: var(--pad) 26px var(--pad) clamp(58px, 4.4vw, 70px); }
+    .cmp th { padding: 18px 18px 14px; }
     .cmp th img { aspect-ratio: 16 / 10; }
-    .cmp td::before { left: clamp(22px, 1.7vw, 28px); top: calc(var(--pad) + 1px); width: 24px; height: 24px; }
-    .cmp td:last-child::after { left: calc(clamp(22px, 1.7vw, 28px) + 8px); top: calc(var(--pad) + 9px); width: 8px; height: 4px; }
+    .cmp td::before { left: clamp(22px, 1.7vw, 28px); top: calc(var(--pad) + (1.35em - var(--mark)) / 2); }
 
     /* the tool lies in two halves: what she sets on the left, the answer on the right */
     .tool-card {
@@ -724,58 +822,50 @@ html:has(.sheet[open]) { overflow: hidden; }
         column-gap: clamp(24px, 3vw, 44px);
         row-gap: 10px;
         align-items: center;
-        max-width: clamp(680px, 58vw, 940px);
+        max-width: clamp(680px, 52vw, 880px);
         padding: clamp(18px, 1.6vw, 26px);
-        border-radius: 36px;
     }
-    .field { grid-column: 1; min-height: clamp(64px, 5vw, 78px); padding: 0 12px 0 clamp(18px, 1.6vw, 26px); border-radius: 22px; font-size: clamp(1.0625rem, 1.3vw, 1.3125rem); }
+    .field { grid-column: 1; min-height: clamp(60px, 4.4vw, 70px); padding: 0 12px 0 clamp(18px, 1.6vw, 26px); }
     .field + .field { margin-top: 0; }
-    .pill { gap: 12px; font-size: clamp(1.125rem, 1.4vw, 1.375rem); }
-    .pill { --disc: 36px; }
+    .pill { --disc: 36px; gap: 12px; }
     .result { grid-column: 2; grid-row: 1 / span 2; margin: 0; padding: 0 8px; }
-    .result p { font-size: clamp(1.0625rem, 1.3vw, 1.3125rem); }
-    .big { font-size: clamp(3.4rem, 4.4vw, 4.5rem); }
-    .big.range { font-size: clamp(2.6rem, 3.3vw, 3.5rem); }
-    .big.long { font-size: clamp(1.75rem, 2.1vw, 2.25rem); }
-    .tool-note { margin-top: 24px; font-size: 1rem; }
-    .sheet { margin: auto; padding-bottom: 20px; border-radius: 28px; box-shadow: 0 30px 70px -30px rgba(20, 18, 60, 0.6); }
+    .tool-note { margin-top: 24px; }
+    .sheet { margin: auto; padding-bottom: 20px; border-radius: var(--r-l); box-shadow: var(--shadow-cool); }
     .sheet[open] { animation-name: sheet-pop; }
     .sheet-grab { display: none; }
 
-    /* on a wide screen the three messages hang in one row, each at its own height */
+    /* on a wide screen the three messages stand in one row: equal columns, one top line */
     .voices { padding-left: 40px; padding-right: 40px; }
     .quotes { flex-direction: row; align-items: flex-start; justify-content: center; gap: clamp(18px, 2vw, 30px); width: auto; max-width: clamp(900px, 70vw, 1180px); }
-    .quotes blockquote { flex: 1 1 0; max-width: 23em; padding: clamp(14px, 1.3vw, 20px) clamp(18px, 1.6vw, 26px); border-radius: 26px; font-size: clamp(1rem, 1.25vw, 1.25rem); }
-    .quotes blockquote:nth-child(2) { align-self: flex-start; max-width: 23em; margin-top: clamp(20px, 2.4vw, 38px); }
-    /* the short one keeps its own width: stretched to a third of the row it would be a wide strip with one line */
-    .quotes blockquote:nth-child(3) { flex: 0 0 17.5em; max-width: none; margin: clamp(6px, 0.8vw, 12px) 0 0; }
-    .pin-a { top: clamp(-46px, -2.7vw, -34px); right: auto; left: clamp(-40px, -2.3vw, -30px); width: clamp(54px, 4vw, 68px); rotate: -14deg; }
-    .pin-b { right: clamp(-22px, -1.2vw, -14px); bottom: auto; top: 58%; width: clamp(34px, 2.6vw, 44px); rotate: 12deg; }
-    .voices-src { margin-top: clamp(18px, 1.8vw, 28px); font-size: 1rem; }
+    .quotes blockquote:nth-child(n) { flex: 1 1 0; align-self: flex-start; max-width: none; padding: clamp(14px, 1.3vw, 20px) clamp(18px, 1.6vw, 26px); }
+    .pin-a { top: clamp(-40px, -2.4vw, -30px); right: auto; left: clamp(-34px, -2vw, -26px); width: clamp(50px, 3.6vw, 62px); rotate: -14deg; }
+    .pin-b { right: clamp(-20px, -1.1vw, -14px); bottom: clamp(-22px, -1.2vw, -16px); width: clamp(32px, 2.4vw, 40px); rotate: 12deg; }
+    .voices-src { margin-top: clamp(18px, 1.8vw, 28px); }
 
-    .start { padding-left: 40px; padding-right: 40px; }
-    .start-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: clamp(48px, 7vw, 130px); max-width: clamp(860px, 66vw, 1140px); margin: 0 auto; }
+    /* the same two columns as the hero: the text on its left edge, the phone where the bears sit */
+    .start { padding-left: max(48px, calc(50% - 660px)); padding-right: max(48px, calc(50% - 660px)); }
+    .start-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; column-gap: clamp(24px, 4vw, 72px); }
     .start-text { display: block; text-align: left; }
     .start h2 { text-align: left; }
     .start h2, .start .lead, .steps { margin-left: 0; }
     .steps { gap: clamp(14px, 1.4vw, 22px); margin-top: clamp(28px, 2.8vw, 44px); }
-    .steps li { gap: clamp(14px, 1.3vw, 20px); font-size: clamp(1.0625rem, 1.4vw, 1.375rem); }
+    .steps li { gap: clamp(14px, 1.3vw, 20px); }
     .start .cta { justify-content: flex-start; margin-top: clamp(28px, 2.8vw, 44px); }
     /* the capture is 640 px wide */
-    .peek { width: clamp(300px, 22vw, 360px); height: auto; aspect-ratio: 300 / 380; margin: 0; }
+    .peek { width: clamp(300px, 22vw, 360px); height: auto; aspect-ratio: 300 / 380; margin: 0; justify-self: center; }
     .start-bears { width: min(60%, clamp(440px, 32vw, 500px)); }
     /* each group is one row: the name on the left and the ways to reach us on the right, as in the navbar;
        below, the documents on the left and the copyright on the right */
-    .footer { padding: 20px max(48px, calc(50% - 660px)) 18px; font-size: 0.875rem; text-align: left; }
+    .footer { padding: 20px max(48px, calc(50% - 660px)) 18px; text-align: left; }
     .footer-top, .footer-base { display: flex; align-items: center; justify-content: space-between; column-gap: 32px; }
     .footer-brand { flex-direction: row; align-items: center; gap: 14px; }
     .footer-logo { height: 28px; }
     .footer-reach { flex-wrap: nowrap; column-gap: 28px; margin: 0; }
-    .footer-social { flex-basis: auto; margin: 0 -12px 0 -6px; }
+    .footer-social { flex-basis: auto; margin: 0 -11px 0 -6px; }
     .footer-base { flex-wrap: wrap; margin-top: 8px; padding-top: 4px; }
     .footer-legal { display: flex; flex-wrap: wrap; column-gap: 26px; }
     .footer-legal .footer-link { padding: 10px 0; }
-    .footer-copyright { margin: 0; font-size: 0.8125rem; white-space: nowrap; }
+    .footer-copyright { margin: 0; white-space: nowrap; }
 }
 
 @media (max-width: 768px) {
@@ -798,29 +888,15 @@ html:has(.sheet[open]) { overflow: hidden; }
     .sticky-cta-btn {
         display: block;
         padding: 14px;
-        border-radius: 999px;
+        border-radius: var(--r-pill);
         background: var(--cta);
         color: #fff;
         text-align: center;
         text-decoration: none;
-        font: 800 1.0625rem/1.3 var(--display);
+        font: 800 var(--fs-body)/1.3 var(--display);
         pointer-events: auto;
-        box-shadow: 0 14px 28px -12px rgba(110, 45, 20, 0.6);
+        box-shadow: var(--shadow-cta);
     }
-}
-
-@media (max-width: 1023px) {
-    /* between a phone and a wide screen the one-line heading of the tool runs under its moon */
-    .tool .hang { display: none; }
-}
-
-@media (max-width: 899px) {
-    /* while the hero is one centred column (a phone, a tablet upright) only two toys hang,
-       from under the navbar, clear of the logo and the first thought */
-    .hide-s { display: none; }
-    .hero .hang { top: 62px; }
-    .hero .hang:nth-of-type(1) { --x: 4% !important; --l: 22px !important; }
-    .hero .hang:nth-of-type(3) { --x: 85% !important; --l: 16px !important; }
 }
 
 @media (max-width: 560px) {
@@ -829,15 +905,20 @@ html:has(.sheet[open]) { overflow: hidden; }
     .cmp td { padding-right: max(4px, calc(10px + (100vw - 375px) / 2)); }
 }
 
+@media (max-width: 359px) {
+    /* below 360 px a question fills the whole width in Kazakh: no room for a toy beside it */
+    .hang { display: none; }
+}
+
 @media (max-width: 360px) {
-    /* the narrowest phones: the two table columns and the tool's fields still hold their text */
-    .cmp th, .cmp td { padding-left: 31px; padding-right: 8px; font-size: 0.875rem; }
-    .cmp th { padding-left: 10px; }
+    /* the narrowest phones: the two table columns and the tool's fields still hold their text one size down */
+    :root { --fs-dense: 0.875rem; }
+    .cmp th, .cmp td { padding-left: 31px; padding-right: 8px; }
+    .cmp th { padding-left: 10px; font-size: var(--fs-body); }
     .cmp td::before { left: 8px; }
-    .cmp td:last-child::after { left: 13px; }
     .tool-card { padding-left: 10px; padding-right: 10px; }
-    .field { padding-left: 12px; font-size: 0.9375rem; }
-    .pill { gap: 8px; font-size: 1rem; }
+    .field { padding-left: 12px; font-size: var(--fs-small); }
+    .pill { gap: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

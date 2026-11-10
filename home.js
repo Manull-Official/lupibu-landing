@@ -1,14 +1,15 @@
 /* ========================================
-   LUPIBU HOME — the «sleep forecast» tool
-   The baby's age and wake-up time in, the next sleep out: the same window the app shows on its Home card.
-   Computed here in the page: nothing is sent anywhere, no network and no AI call.
+   LUPIBU HOME — what the pages do, and the sleep calculator of /tools/
+   The calculator: a baby's age and wake-up time in, the next sleep out, from the age table the app starts from.
+   Computed here in the page: nothing is sent anywhere, no network and no AI call. The home page has no
+   calculator; there only the page behaviour at the end of this file runs.
    Copy comes from i18n.js (tool.*); grammar that depends on a number lives in FMT below.
    ======================================== */
 (function () {
     'use strict';
 
     var $ = function (id) { return document.getElementById(id); };
-    if (!$('tool')) return;
+    var hasTool = !!$('tool');
 
     // Lupibu's age table: backend/data/lupibu_data.xlsx «Sleep Norms» in the app repository, the columns
     // max_age_months, wake_min, wake_max, nap_min, nap_max. A baby takes the first row with age < max_age,
@@ -323,10 +324,15 @@
     function voices() { var q = $('quotes'); if (q) q.lang = t('rev.lang') || lang(); }
 
     function start() {
-        fillAges();
-        render(false);
         brand();
         voices();
+        if (hasTool) tool();
+        page();
+    }
+
+    function tool() {
+        fillAges();
+        render(false);
         $('age').addEventListener('change', function () { state.age = +this.value; $('tool').classList.add('used'); render(true); });
         var wake = $('wakeI');
         wake.addEventListener('change', function () { var p = wake.value.split(':'); if (p.length === 2) { state.wake = +p[0] * 60 + +p[1]; $('tool').classList.add('used'); render(true); } });
@@ -337,7 +343,12 @@
         setInterval(function () { render(false); }, 60000);
 
         // i18n.js rewrites every data-i18n text when the language changes; the tool then says its own again.
-        new MutationObserver(function () { fillAges(); render(false); brand(); voices(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        new MutationObserver(function () { fillAges(); render(false); }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    }
+
+    function page() {
+        // i18n.js rewrites every data-i18n text when the language changes: the name is coloured again.
+        new MutationObserver(function () { brand(); voices(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
         if (!('IntersectionObserver' in window)) return;
 

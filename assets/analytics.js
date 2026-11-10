@@ -4,7 +4,7 @@
  * memory persistence (no cookies → no consent banner), no autocapture,
  * no session recording. Five events only:
  *   landing_viewed      { lang, path, referrer_domain }
- *   landing_screen_seen { screen: compare|tool|reviews|start, lang } once a visit per screen,
+ *   landing_screen_seen { screen: compare|reviews|start on the home page, tool on /tools/; lang } once a visit per screen,
  *                       when its heading comes into view: it shows where on the page a visit ends
  *   store_cta_clicked   { position: hero|sticky|final, lang }
  *   lang_switched       { to, lang }

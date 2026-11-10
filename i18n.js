@@ -27,7 +27,7 @@ const translations = {
         'cmp.r3.now': 'Personal answers from AI',
 
         // The tool. {time} is formatted in home.js; the ages and «in 1 h 40 min» are built there too.
-        'tool.title': 'Sleep forecast',
+        'tool.title': 'Nap time by age',
         'tool.age': "Baby's age",
         'tool.wake': 'Wake-up time',
         'tool.next': 'Next nap',
@@ -42,6 +42,8 @@ const translations = {
         'tool.now': 'now',
         'tool.invalid': 'Enter a daytime wake-up time',
         'tool.note': 'For information only',
+        'tools.meta.title': 'When to put your baby down: nap time by age | Lupibu',
+        'tools.meta.description': "Enter your baby's age and wake-up time to see when the next sleep is due. An estimate by age, for information only.",
         'tool.demo.age': '4 months',
         'tool.demo.at': '12:15–1:00\u00a0PM',
 
@@ -69,7 +71,6 @@ const translations = {
         'alt.asleep': 'Mama bear and her cub asleep',
 
         // Footer
-        'footer.help.label': 'Help',
         'footer.help.link': 'Help Center',
         'footer.legal.label': 'Legal',
         'footer.legal.privacy': 'Privacy Policy',
@@ -86,21 +87,6 @@ const translations = {
 
         // Service description (YooKassa requires this)
 
-        // Referral / 404 page
-        'referral.badge': 'Special invite',
-        'referral.titlePrefix': 'A gift from',
-        'referral.titleFallback': 'You’ve got an invite',
-        'referral.copyCode': 'Copy code',
-        'referral.copied': 'Copied',
-        'referral.benefit_trial': 'Free for 7 days',
-        'referral.benefit_yearly': 'Discount on the yearly plan',
-        'referral.step1Title': 'Find Lupibu in the App Store and install it',
-        'referral.step1Or': 'or',
-        'referral.step1AltTitle': 'Install via direct link',
-        'referral.step2Title': 'Enter the code',
-        'referral.step2Hint': 'On the sign-in screen, tap «I have a code».',
-        'referral.step2Note': 'If you installed via the direct link, the code applies automatically — nothing to enter.',
-        'referral.disclaimer': '*new users only.',
         'notfound.title': 'Page not found',
         'notfound.text': 'The page you’re looking for doesn’t exist. Let’s get you home.',
         'notfound.home': 'Back to Lupibu',
@@ -127,7 +113,7 @@ const translations = {
         'hero.b2': 'Когда кормила?',
         'hero.b3': 'Почему не спит?',
         'hero.title': 'Вы не одиноки',
-        'hero.subtitle': 'Lupibu поможет выстроить режим малыша',
+        'hero.subtitle': 'Lupibu поможет наладить режим малыша',
 
         'cmp.title': 'Ваш день в Ваших руках',
         'cmp.without': 'Без Lupibu',
@@ -139,7 +125,7 @@ const translations = {
         'cmp.r3.was': 'Вопросы в чатах и на форумах',
         'cmp.r3.now': 'Персональные ответы от AI',
 
-        'tool.title': 'Прогноз сна',
+        'tool.title': 'Расчёт сна по\u00a0возрасту',
         'tool.age': 'Возраст малыша',
         'tool.wake': 'Время пробуждения',
         'tool.next': 'Следующий сон',
@@ -154,6 +140,8 @@ const translations = {
         'tool.now': 'сейчас',
         'tool.invalid': 'Укажите дневное время',
         'tool.note': 'В\u00a0ознакомительных целях',
+        'tools.meta.title': 'Когда укладывать малыша: расчёт сна по возрасту | Lupibu',
+        'tools.meta.description': 'Укажите возраст малыша и время пробуждения: страница покажет время следующего сна. Расчёт по возрасту, в ознакомительных целях.',
         'tool.demo.age': '4 месяца',
         'tool.demo.at': 'в\u00a012:15–13:00',
 
@@ -165,10 +153,11 @@ const translations = {
 
         // Отзывы: дословно из App Store, с авторскими строчными буквами и переносом строки.
         // Первый: отзыв целиком, второй: его первое предложение, третий: заголовок отзыва.
+        // Слова не тронуты; неразрывные пробелы после коротких предлогов стоят, чтобы предлог не повисал в конце строки.
         'rev.title': 'Отзывы',
-        'rev.q1': 'интуитивно понятное и удобное приложение, очень помогло разгрузить голову\nотдельное спасибо за ии ассистента, выручает очень',
-        'rev.q2': 'Легкое в использовании, самые нужные функции всегда на виду, есть напоминания о сне и кормлении, что очень удобно.',
-        'rev.q3': 'Приложение и обратная связь с разработчиком 10 из 5',
+        'rev.q1': 'интуитивно понятное и\u00a0удобное приложение, очень помогло разгрузить голову\nотдельное спасибо за\u00a0ии ассистента, выручает очень',
+        'rev.q2': 'Легкое в\u00a0использовании, самые нужные функции всегда на\u00a0виду, есть напоминания о\u00a0сне и\u00a0кормлении, что очень удобно.',
+        'rev.q3': 'Приложение и\u00a0обратная связь с\u00a0разработчиком 10\u00a0из\u00a05',
         'rev.src': 'Из отзывов в App Store',
         'rev.lang': 'ru',
 
@@ -180,7 +169,6 @@ const translations = {
         'alt.home': 'Экран Lupibu со временем следующего сна',
         'alt.asleep': 'Мама-медведица и малыш спят',
 
-        'footer.help.label': 'Помощь',
         'footer.help.link': 'Справочный центр',
         'footer.legal.label': 'Юридическое',
         'footer.legal.privacy': 'Политика конфиденциальности',
@@ -192,23 +180,8 @@ const translations = {
         'footer.tag': 'Приложение для iPhone',
         'footer.copyright': '© 2026 Lupibu. Все права защищены.',
         'meta.title': 'Lupibu: прогноз сна и режим малыша',
-        'meta.description': 'Lupibu поможет выстроить режим малыша: прогноз сна, трекинг сна и кормлений, ответы AI-ассистента.',
+        'meta.description': 'Lupibu поможет наладить режим малыша: прогноз сна, трекинг сна и кормлений, ответы AI-ассистента.',
 
-        // Referral / 404 page
-        'referral.badge': 'Личное приглашение',
-        'referral.titlePrefix': 'Подарок от',
-        'referral.titleFallback': 'У Вас приглашение в Lupibu',
-        'referral.copyCode': 'Скопировать код',
-        'referral.copied': 'Скопировано',
-        'referral.benefit_trial': '7 дней бесплатно',
-        'referral.benefit_yearly': 'Скидка на годовую подписку',
-        'referral.step1Title': 'Найдите Lupibu в App Store и установите',
-        'referral.step1Or': 'или',
-        'referral.step1AltTitle': 'Установите по прямой ссылке',
-        'referral.step2Title': 'Введите код',
-        'referral.step2Hint': 'На экране входа нажмите «У меня есть код».',
-        'referral.step2Note': 'Если устанавливали по прямой ссылке — промокод применится сам, вводить ничего не нужно.',
-        'referral.disclaimer': '*только для новых пользователей.',
         'notfound.title': 'Страница не найдена',
         'notfound.text': 'Такой страницы не существует. Вернёмся на главную.',
         'notfound.home': 'На главную Lupibu',
@@ -247,7 +220,7 @@ const translations = {
         'cmp.r3.was': 'Чаттар мен форумдардағы сұрақтар',
         'cmp.r3.now': 'AI-дан жеке жауаптар',
 
-        'tool.title': 'Ұйқы болжамы',
+        'tool.title': 'Жасқа сай ұйқы есебі',
         'tool.age': 'Сәбидің жасы',
         'tool.wake': 'Ояну уақыты',
         'tool.next': 'Келесі ұйқы',
@@ -262,6 +235,8 @@ const translations = {
         'tool.now': 'қазір',
         'tool.invalid': 'Күндізгі уақытты көрсетіңіз',
         'tool.note': 'Танысу мақсатында',
+        'tools.meta.title': 'Сәбиді қашан ұйықтату керек: жасқа сай ұйқы есебі | Lupibu',
+        'tools.meta.description': 'Сәбидің жасы мен оянған уақытын көрсетіңіз: бет келесі ұйқы уақытын көрсетеді. Жасқа сай есеп, танысу мақсатында.',
         'tool.demo.age': '4 ай',
         'tool.demo.at': '12:15–13:00',
 
@@ -273,9 +248,9 @@ const translations = {
 
         // Пікірлер: App Store-да орыс тілінде жазылған, сондықтан аударылмай, сол қалпында көрсетіледі.
         'rev.title': 'Пікірлер',
-        'rev.q1': 'интуитивно понятное и удобное приложение, очень помогло разгрузить голову\nотдельное спасибо за ии ассистента, выручает очень',
-        'rev.q2': 'Легкое в использовании, самые нужные функции всегда на виду, есть напоминания о сне и кормлении, что очень удобно.',
-        'rev.q3': 'Приложение и обратная связь с разработчиком 10 из 5',
+        'rev.q1': 'интуитивно понятное и\u00a0удобное приложение, очень помогло разгрузить голову\nотдельное спасибо за\u00a0ии ассистента, выручает очень',
+        'rev.q2': 'Легкое в\u00a0использовании, самые нужные функции всегда на\u00a0виду, есть напоминания о\u00a0сне и\u00a0кормлении, что очень удобно.',
+        'rev.q3': 'Приложение и\u00a0обратная связь с\u00a0разработчиком 10\u00a0из\u00a05',
         'rev.src': 'App Store-дағы пікірлерден',
         'rev.lang': 'ru',
 
@@ -287,7 +262,6 @@ const translations = {
         'alt.home': 'Келесі ұйқы уақыты көрсетілген Lupibu экраны',
         'alt.asleep': 'Аю-ана мен қонжық ұйықтап жатыр',
 
-        'footer.help.label': 'Көмек',
         'footer.help.link': 'Анықтама орталығы',
         'footer.legal.label': 'Заңдық',
         'footer.legal.privacy': 'Құпиялылық саясаты',
@@ -301,21 +275,6 @@ const translations = {
         'meta.title': 'Lupibu: ұйқы болжамы және сәби режимі',
         'meta.description': 'Lupibu сәбидің режимін қалыптастыруға көмектеседі: ұйқы болжамы, ұйқы мен тамақтандыруды бақылау, AI-көмекшінің жауаптары.',
 
-        // Referral / 404 page
-        'referral.badge': 'Жеке шақыру',
-        'referral.titlePrefix': 'Сыйлық —',
-        'referral.titleFallback': 'Сізге Lupibu-ға шақыру келді',
-        'referral.copyCode': 'Кодты көшіру',
-        'referral.copied': 'Көшірілді',
-        'referral.benefit_trial': '7 күн тегін',
-        'referral.benefit_yearly': 'Жылдық жазылымға жеңілдік',
-        'referral.step1Title': 'App Store-дан Lupibu-ны тауып орнатыңыз',
-        'referral.step1Or': 'немесе',
-        'referral.step1AltTitle': 'Тікелей сілтеме арқылы орнатыңыз',
-        'referral.step2Title': 'Кодты енгізіңіз',
-        'referral.step2Hint': 'Кіру бетінде «Менде код бар» дегенді басыңыз.',
-        'referral.step2Note': 'Егер тікелей сілтеме арқылы орнатсаңыз — промокод өзі қолданылады, ештеңе енгізудің қажеті жоқ.',
-        'referral.disclaimer': '*тек жаңа пайдаланушылар үшін.',
         'notfound.title': 'Бет табылмады',
         'notfound.text': 'Мұндай бет жоқ. Басты бетке оралайық.',
         'notfound.home': 'Lupibu басты бетіне',
@@ -368,10 +327,10 @@ function detectLanguage() {
 function updateCanonical(lang) {
     const canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) return;
-    // Landing locales are path-based prerendered pages (/, /en/, /kk/) with
+    // Landing locales are path-based prerendered pages (/, /en/, /kk/, and /tools/ under each) with
     // static self-canonicals — leave those alone.
     const path = window.location.pathname;
-    if (path === '/' || path === '/index.html' || /^\/(en|kk)\//.test(path)) return;
+    if (path === '/' || path === '/index.html' || /^\/(en|kk|tools)\//.test(path)) return;
     const base = window.location.origin + path;
     canonical.href = lang === DEFAULT_LANG ? base : base + '?lang=' + lang;
 }
@@ -421,12 +380,15 @@ function applyTranslations(lang) {
 
     // Update meta
     document.documentElement.lang = lang;
+    // A page other than the home one names itself in <html data-page>: its title and description are «<page>.meta.*».
+    const page = document.documentElement.dataset.page;
+    const metaKey = (page ? page + '.' : '') + 'meta.';
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && dict['meta.description']) {
-        metaDesc.setAttribute('content', dict['meta.description']);
+    if (metaDesc && dict[metaKey + 'description']) {
+        metaDesc.setAttribute('content', dict[metaKey + 'description']);
     }
-    if (dict['meta.title']) {
-        document.title = dict['meta.title'];
+    if (dict[metaKey + 'title']) {
+        document.title = dict[metaKey + 'title'];
     }
     updateCanonical(lang);
 }

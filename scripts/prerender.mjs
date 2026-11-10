@@ -7,6 +7,7 @@
  * whose canonical points at the root. So:
  *   - /en/index.html, /kk/index.html — full static copies of the landing,
  *     translated at build time from i18n.js, each self-canonical;
+ *   - /en/tools/index.html, /kk/tools/index.html — the same for the calculator page /tools/;
  *   - /help/{en,ru,kk}/<slug>.html + index.html — every Help Center article
  *     rendered to plain HTML from help-content.js;
  *   - sitemap.xml — regenerated to list exactly those pages.
@@ -51,9 +52,9 @@ const HREFLANG_BLOCK = `    <link rel="alternate" hreflang="ru" href="${SITE}/">
     <link rel="alternate" hreflang="kk" href="${SITE}/kk/">
     <link rel="alternate" hreflang="x-default" href="${SITE}/en/">`;
 
-function localizeLanding(lang) {
+/* What every translated copy of a Russian page needs: its texts, its language, the state of the switcher. */
+function inLanguage(s, lang) {
     const t = translations[lang];
-    let s = read('index.html');
 
     // Translate every data-i18n element's text content.
     s = s.replace(
@@ -67,7 +68,24 @@ function localizeLanding(lang) {
         (m, open, rest, key) => (t[key] != null ? open + t[key] + rest : m)
     );
 
-    s = s.replace('<html lang="ru">', `<html lang="${lang}">`);
+    s = s.replace('<html lang="ru"', `<html lang="${lang}"`);
+
+    // The share card carries the hero line, so each language has its own picture.
+    s = s.replaceAll('assets/og-card.png', `assets/og-card-${lang}.png`);
+
+    // Static language switcher state.
+    s = s.replace('<span class="lang-current">RU</span>', `<span class="lang-current">${LANG_LABEL[lang]}</span>`);
+    s = s.replace(' class="lang-option active" data-lang="ru"', ' class="lang-option" data-lang="ru"');
+    s = s.replace(` class="lang-option" data-lang="${lang}"`, ` class="lang-option active" data-lang="${lang}"`);
+
+    s = s.replace("window.LUPIBU_DEFAULT_LANG = 'ru';", `window.LUPIBU_DEFAULT_LANG = '${lang}';`);
+    return s;
+}
+
+function localizeLanding(lang) {
+    const t = translations[lang];
+    let s = inLanguage(read('index.html'), lang);
+
     s = s.replace(/<title>[^<]*<\/title>/, `<title>${t['meta.title']}</title>`);
     s = s.replace(
         /(<meta name="description"\s*\n?\s*content=")[^"]*(")/,
@@ -78,8 +96,7 @@ function localizeLanding(lang) {
     s = s.replace(/(name="twitter:title" content=")[^"]*(")/, `$1${t['hero.title']}$2`);
     s = s.replace(/(name="twitter:description" content=")[^"]*(")/, `$1${t['hero.subtitle']}$2`);
     s = s.replace(/(property="og:url" content=")[^"]*(")/, `$1${SITE}/${lang}/$2`);
-    // The share card carries the hero line, so each language has its own picture; its alt is the page title.
-    s = s.replaceAll('assets/og-card.png', `assets/og-card-${lang}.png`);
+    // The alt of the share card is the page title.
     s = s.replace(/(property="og:image:alt" content=")[^"]*(")/, `$1${t['meta.title']}$2`);
     s = s.replace(
         /<link rel="canonical"[^>]*>/,
@@ -106,13 +123,6 @@ function localizeLanding(lang) {
     // Per-language app capture.
     s = s.replaceAll('screenshots/ru_home.webp', `screenshots/${lang}_home.webp`);
 
-    // Static language switcher state.
-    s = s.replace('<span class="lang-current">RU</span>', `<span class="lang-current">${LANG_LABEL[lang]}</span>`);
-    s = s.replace(' class="lang-option active" data-lang="ru"', ' class="lang-option" data-lang="ru"');
-    s = s.replace(` class="lang-option" data-lang="${lang}"`, ` class="lang-option active" data-lang="${lang}"`);
-
-    s = s.replace("window.LUPIBU_DEFAULT_LANG = 'ru';", `window.LUPIBU_DEFAULT_LANG = '${lang}';`);
-
     // The copy lives one directory deeper — root every relative URL.
     s = s
         .replaceAll('href="home.css', 'href="/home.css')
@@ -127,6 +137,25 @@ function localizeLanding(lang) {
         .replaceAll('src="main.js', 'src="/main.js');
 
     write(`${lang}/index.html`, s);
+}
+
+/* The calculator page /tools/: every address in it is already rooted, so only the words and its own address change. */
+function localizeTools(lang) {
+    const t = translations[lang];
+    let s = inLanguage(read('tools/index.html'), lang);
+    const title = t['tools.meta.title'], desc = t['tools.meta.description'];
+
+    s = s.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
+    s = s.replace(/(<meta name="description"\s*\n?\s*content=")[^"]*(")/, `$1${desc}$2`);
+    s = s.replace(/(property="og:title" content=")[^"]*(")/, `$1${title}$2`);
+    s = s.replace(/(property="og:description" content=")[^"]*(")/, `$1${desc}$2`);
+    s = s.replace(/(name="twitter:title" content=")[^"]*(")/, `$1${title}$2`);
+    s = s.replace(/(name="twitter:description" content=")[^"]*(")/, `$1${desc}$2`);
+    s = s.replace(/(property="og:url" content=")[^"]*(")/, `$1${SITE}/${lang}/tools/$2`);
+    s = s.replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${SITE}/${lang}/tools/">`);
+    s = s.replace('<a href="/" class="logo">', `<a href="/${lang}/" class="logo">`);
+
+    write(`${lang}/tools/index.html`, s);
 }
 
 /* ============================================================
@@ -287,6 +316,8 @@ function sitemap(urls) {
 /* ---- run ---- */
 localizeLanding('en');
 localizeLanding('kk');
+localizeTools('en');
+localizeTools('kk');
 
 const bySlug = {};
 for (const key of Object.keys(help.helpArticles)) {
@@ -299,10 +330,12 @@ for (const key of Object.keys(help.helpArticles)) {
 for (const lang of LANGS) renderHelpIndex(lang, bySlug[lang]);
 
 const landingAlt = (l) => (l === 'ru' ? '/' : `/${l}/`);
+const toolsAlt = (l) => `${landingAlt(l)}tools/`;
 sitemap([
     { loc: '/', alternates: landingAlt },
     { loc: '/en/', alternates: landingAlt },
     { loc: '/kk/', alternates: landingAlt },
+    ...LANGS.map((l) => ({ loc: toolsAlt(l), alternates: toolsAlt })),
     ...LANGS.map((l) => ({ loc: `/help/${l}/`, alternates: (x) => `/help/${x}/` })),
     ...LANGS.flatMap((l) =>
         (bySlug[l] || []).map((a) => ({
@@ -313,14 +346,14 @@ sitemap([
     { loc: '/legal.html' },
 ]);
 
-/* The footer is written once, in index.html; 404.html and r/index.html carry copies with English text.
-   A copy that has drifted is reported here: until 10.11.2026 those two pages showed a broken footer. */
+/* The footer is written once, in index.html; 404.html and tools/index.html carry a copy.
+   A copy that has drifted is reported here: until 10.11.2026 that page showed a broken footer. */
 const footerOf = (file) => {
     const m = read(file).match(/<footer class="footer">[\s\S]*?<\/footer>/);
     return m ? m[0].replace(/(data-i18n="[\w.]+"[^>]*>)[^<]*(<)/g, '$1$2').replace(/\s+/g, ' ') : '';
 };
-for (const file of ['404.html', 'r/index.html']) {
+for (const file of ['404.html', 'tools/index.html']) {
     if (footerOf(file) !== footerOf('index.html')) console.warn(`WARNING: the footer of ${file} differs from the one in index.html`);
 }
 
-console.log('done:', 2 + LANGS.length + Object.keys(help.helpArticles).length, 'pages + sitemap');
+console.log('done:', 4 + LANGS.length + Object.keys(help.helpArticles).length, 'pages + sitemap');

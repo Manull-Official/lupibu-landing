@@ -26,6 +26,30 @@
     <lastmod>2026-11-10</lastmod>
   </url>
   <url>
+    <loc>https://lupibu.com/tools/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/en/tools/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/kk/tools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/en/tools/"/>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/en/tools/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/en/tools/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/kk/tools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/en/tools/"/>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://lupibu.com/kk/tools/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/en/tools/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://lupibu.com/kk/tools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lupibu.com/en/tools/"/>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
     <loc>https://lupibu.com/help/ru/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://lupibu.com/help/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://lupibu.com/help/en/"/>

@@ -239,8 +239,8 @@ ul, ol { list-style: none; }
     transition: var(--transition-fast);
 }
 .lang-toggle:hover { background: var(--white); }
-.lang-icon { width: 15px; height: 15px; }
-.lang-chevron { width: 12px; height: 12px; transition: transform 0.2s; }
+.lang-icon { width: 16px; height: 16px; }
+.lang-chevron { width: 14px; height: 14px; transition: transform 0.2s; }
 .lang-switcher.open .lang-chevron { transform: rotate(180deg); }
 .lang-dropdown {
     position: absolute;
@@ -311,56 +311,27 @@ ul, ol { list-style: none; }
 .btn-primary:active { transform: translateY(0); }
 
 /* ========================================
-   APP STORE BADGE
-   ======================================== */
-.appstore-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 64px;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-    box-shadow: var(--shadow-sm);
-}
-
-.appstore-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.appstore-badge:active {
-    transform: translateY(0);
-}
-
-.appstore-img {
-    height: 64px;
-    width: auto;
-    display: block;
-}
-
-/* ========================================
    FOOTER — the same footer as on the home page, the same markup on every page.
    These rules mirror the footer block of home.css: change both together.
    ======================================== */
-.footer { padding: 18px 20px calc(20px + env(safe-area-inset-bottom)); font-size: 0.8125rem; line-height: 1.5; text-align: center; color: rgba(255, 255, 255, 0.62); background: var(--night); }
+.footer { padding: 18px 20px calc(20px + env(safe-area-inset-bottom)); font-size: 0.8125rem; line-height: 1.5; text-align: center; color: rgba(255, 255, 255, 0.66); background: var(--night); }
 .footer .container { max-width: none; padding: 0; }
 .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .footer-logo { display: block; height: 26px; width: auto; }
-.footer-tag { color: rgba(255, 255, 255, 0.72); }
+.footer-tag { color: rgba(255, 255, 255, 0.88); }
 .footer-col-label { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.footer-link { text-decoration: none; }
+.footer-link { color: rgba(255, 255, 255, 0.88); text-decoration: none; }
 .footer-link:hover { color: #fff; }
 .footer-reach { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 22px; margin-top: 4px; }
-.footer-reach .footer-link { padding: 10px 0; font-size: 0.9375rem; font-weight: 600; color: #fff; }
+.footer-reach .footer-link { padding: 10px 0; font-size: 0.9375rem; font-weight: 700; color: #fff; }
 .footer-social { display: flex; justify-content: center; gap: 6px; flex-basis: 100%; margin-top: -4px; }
-.social-link { display: grid; place-items: center; width: 44px; height: 44px; color: rgba(255, 255, 255, 0.86); }
+.social-link { display: grid; place-items: center; width: 44px; height: 44px; color: rgba(255, 255, 255, 0.88); }
 .social-link:hover { color: #fff; }
-.social-link svg { width: 20px; height: 20px; }
+.social-link svg { width: 22px; height: 22px; }
 .footer-base { margin-top: 6px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
 .footer-legal { display: grid; justify-content: center; justify-items: center; }
-.footer-legal .footer-link { padding: 5px 0; color: rgba(255, 255, 255, 0.76); }
-.footer-copyright { margin-top: 8px; font-size: 0.75rem; }
+.footer-legal .footer-link { padding: 5px 0; }
+.footer-copyright { margin-top: 8px; }
 @media (min-width: 600px) and (max-width: 899px) {
     .footer-legal { grid-template-columns: auto auto; column-gap: 36px; justify-items: start; }
 }
@@ -370,11 +341,11 @@ ul, ol { list-style: none; }
     .footer-brand { flex-direction: row; align-items: center; gap: 14px; }
     .footer-logo { height: 28px; }
     .footer-reach { flex-wrap: nowrap; column-gap: 28px; margin: 0; }
-    .footer-social { flex-basis: auto; margin: 0 -12px 0 -6px; }
+    .footer-social { flex-basis: auto; margin: 0 -11px 0 -6px; }
     .footer-base { flex-wrap: wrap; margin-top: 8px; padding-top: 4px; }
     .footer-legal { display: flex; flex-wrap: wrap; column-gap: 26px; }
     .footer-legal .footer-link { padding: 10px 0; }
-    .footer-copyright { margin: 0; font-size: 0.8125rem; white-space: nowrap; }
+    .footer-copyright { margin: 0; white-space: nowrap; }
 }
 
 /* ========================================

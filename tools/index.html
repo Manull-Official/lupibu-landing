@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru" data-page="tools">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description"
+        content="Укажите возраст малыша и время пробуждения: страница покажет время следующего сна. Расчёт по возрасту, в ознакомительных целях.">
+    <meta name="theme-color" content="#FA7C50">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:title" content="Когда укладывать малыша: расчёт сна по возрасту | Lupibu">
+    <meta property="og:description" content="Укажите возраст малыша и время пробуждения: страница покажет время следующего сна. Расчёт по возрасту, в ознакомительных целях.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lupibu.com/tools/">
+    <meta property="og:site_name" content="Lupibu">
+    <meta property="og:image" content="https://lupibu.com/assets/og-card.png?v=20261110c">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Когда укладывать малыша: расчёт сна по возрасту | Lupibu">
+    <meta name="twitter:description" content="Укажите возраст малыша и время пробуждения: страница покажет время следующего сна. Расчёт по возрасту, в ознакомительных целях.">
+    <meta name="twitter:image" content="https://lupibu.com/assets/og-card.png?v=20261110c">
+
+    <link rel="canonical" href="https://lupibu.com/tools/">
+    <link rel="alternate" hreflang="ru" href="https://lupibu.com/tools/">
+    <link rel="alternate" hreflang="en" href="https://lupibu.com/en/tools/">
+    <link rel="alternate" hreflang="kk" href="https://lupibu.com/kk/tools/">
+    <link rel="alternate" hreflang="x-default" href="https://lupibu.com/en/tools/">
+
+    <title>Когда укладывать малыша: расчёт сна по возрасту | Lupibu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/home.css?v=20261110n">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+</head>
+
+<!-- The calculator on an address of its own: a baby's age and wake-up time in, the next sleep out.
+     It stands apart from the home page on purpose, so that nobody takes it for the way the app works.
+     Computed in the page (home.js), nothing is sent anywhere. English and Kazakh copies: scripts/prerender.mjs. -->
+<body class="page-tools">
+    <a href="#main" class="skip-link" data-i18n="a11y.skipLink">К содержимому</a>
+
+    <header class="nav">
+        <a href="/" class="logo">
+            <img src="/assets/logo-inline-primary.svg" alt="Lupibu" class="logo-img">
+        </a>
+        <div class="lang-switcher">
+            <button class="lang-toggle" aria-label="Change language">
+                <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M8 12c0 6 4 10 4 10s4-4 4-10s-4-10-4-10s-4 4-4 10Z"/><path d="M21 15H3m18-6H3"/></svg>
+                <span class="lang-current">RU</span>
+                <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="2"><path d="M18 9s-4.419 6-6 6s-6-6-6-6"/></svg>
+            </button>
+            <div class="lang-dropdown">
+                <button class="lang-option" data-lang="en">
+                    <span class="lang-option-code">EN</span>
+                    <span class="lang-option-name">English</span>
+                </button>
+                <button class="lang-option active" data-lang="ru">
+                    <span class="lang-option-code">RU</span>
+                    <span class="lang-option-name">Русский</span>
+                </button>
+                <button class="lang-option" data-lang="kk">
+                    <span class="lang-option-code">KZ</span>
+                    <span class="lang-option-name">Қазақша</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="tool" id="tool" aria-labelledby="tool-title">
+            <h1 id="tool-title" data-screen="tool" data-i18n="tool.title">Расчёт сна по&nbsp;возрасту</h1>
+            <div class="tool-card">
+                <label class="field">
+                    <span data-i18n="tool.age">Возраст малыша</span>
+                    <span class="pill"><span id="ageText" aria-hidden="true" data-i18n="tool.demo.age">4 месяца</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9s-4.419 6-6 6s-6-6-6-6" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg><select id="age"></select></span>
+                </label>
+                <label class="field">
+                    <span data-i18n="tool.wake">Время пробуждения</span>
+                    <span class="pill"><span id="wakeT" aria-hidden="true">10:30</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9s-4.419 6-6 6s-6-6-6-6" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg><input type="time" id="wakeI" value="10:30"></span>
+                </label>
+                <div class="result">
+                    <div aria-live="polite" aria-atomic="true">
+                        <p id="nextLabel" data-i18n="tool.next">Следующий сон</p>
+                        <div class="big range" id="nextBig" data-i18n="tool.demo.at">в&nbsp;12:15–13:00</div>
+                    </div>
+                    <p id="nextIn"></p>
+                </div>
+            </div>
+            <p class="tool-note" data-i18n="tool.note">В&nbsp;ознакомительных целях</p>
+            <!-- Our own picker for a finger or a mouse: a sheet with wheels that home.js fills and opens.
+                 A keyboard and a screen reader keep the native controls above. -->
+            <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+                <div class="sheet-grab" aria-hidden="true"></div>
+                <h3 id="sheet-title" tabindex="-1" autofocus></h3>
+                <div class="wheels" id="wheels"></div>
+                <button type="button" class="sheet-done" id="sheetDone" data-i18n="tool.done">Готово</button>
+            </dialog>
+        </section>
+    </main>
+
+    <!-- Footer: who we are and how to reach us on top, the documents below. One row each on a wide screen. -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/assets/logo-inline-primary.svg" alt="Lupibu" class="footer-logo">
+                    <span class="footer-tag" data-i18n="footer.tag">Приложение для iPhone</span>
+                </div>
+                <div class="footer-reach">
+                    <p class="footer-col-label" data-i18n="footer.connect.label">Связь</p>
+                    <a href="/help.html" class="footer-link help-link"><span data-i18n="footer.help.link">Справочный центр</span></a>
+                    <a href="mailto:contact@lupibu.com" class="footer-link">contact@lupibu.com</a>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/lupibu.app" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.6"><path d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z"/><path d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Z"/><path stroke-width="2.2" d="M17.508 6.5h-.01"/></svg>
+                        </a>
+                        <a href="https://www.threads.net/@lupibu.app" target="_blank" rel="noopener" class="social-link" aria-label="Threads">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.6"><path d="M19.25 8.505c-1.577-5.867-7-5.5-7-5.5s-7.5-.5-7.5 8.995s7.5 8.996 7.5 8.996s4.458.296 6.5-3.918c.667-1.858.5-5.573-6-5.573c0 0-3 0-3 2.5c0 .976 1 2 2.5 2s3.171-1.027 3.5-3c1-6-4.5-6.5-6-4"/></svg>
+                        </a>
+                        <a href="https://t.me/lupibu_app" target="_blank" rel="noopener" class="social-link" aria-label="Telegram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke-width="1.6"><path d="m11.985 15.408l3.242 3.686c1.2 1.365 1.801 2.048 2.43 1.881c.628-.166.844-1.064 1.275-2.861l2.39-9.968c.665-2.768.997-4.151.259-4.834s-2.017-.175-4.575.84L5.14 8.865c-2.046.813-3.069 1.219-3.134 1.917a1 1 0 0 0 0 .214c.063.699 1.084 1.108 3.128 1.927c.925.371 1.388.557 1.72.912q.056.06.108.124c.306.38.436.88.697 1.876l.489 1.867c.253.97.38 1.456.713 1.522s.622-.336 1.201-1.141zm0 0l-.317-.33c-.362-.378-.543-.566-.543-.8s.18-.423.543-.8l3.573-3.724"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-base">
+                <p class="footer-col-label" data-i18n="footer.legal.label">Юридическое</p>
+                <div class="footer-legal">
+                    <a href="/legal.html?doc=privacy" class="footer-link legal-link" data-doc="privacy" data-i18n="footer.legal.privacy">Политика конфиденциальности</a>
+                    <a href="/legal.html?doc=terms" class="footer-link legal-link" data-doc="terms" data-i18n="footer.legal.terms">Условия использования</a>
+                    <a href="/legal.html?doc=disclaimer" class="footer-link legal-link" data-doc="disclaimer" data-i18n="footer.legal.disclaimer">Медицинская оговорка</a>
+                    <a href="/legal.html?doc=data_consent" class="footer-link legal-link" data-doc="data_consent" data-i18n="footer.legal.dataConsent">Согласие на обработку данных</a>
+                </div>
+                <div class="footer-copyright">
+                    <span data-i18n="footer.copyright">© 2026 Lupibu. Все права защищены.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>window.LUPIBU_DEFAULT_LANG = 'ru';</script>
+    <script src="/i18n.js?v=20261110n"></script>
+    <script src="/assets/analytics.js?v=20261110n" defer></script>
+    <script src="/main.js?v=20260925a"></script>
+    <script src="/home.js?v=20261110n"></script>
+</body>
+
+</html>
