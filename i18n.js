@@ -13,8 +13,8 @@ const translations = {
         'hero.b1': "When's the next nap?",
         'hero.b2': 'When did I last feed?',
         'hero.b3': "Why won't my baby sleep?",
-        'hero.title': "You're not alone",
-        'hero.subtitle': "Lupibu helps you build your baby's routine",
+        'hero.title': "Help with your baby's routine",
+        'hero.subtitle': "Lupibu is with you day and night",
 
         'cmp.title': 'Your day, back in your hands',
         'cmp.without': 'Without Lupibu',
@@ -120,8 +120,8 @@ const translations = {
         'hero.b1': 'Когда укладывать?',
         'hero.b2': 'Когда кормила?',
         'hero.b3': 'Почему не спит?',
-        'hero.title': 'Вы не одиноки',
-        'hero.subtitle': 'Lupibu поможет наладить режим малыша',
+        'hero.title': 'Ваш помощник по\u00a0режиму малыша',
+        'hero.subtitle': 'Lupibu рядом днём и\u00a0ночью',
 
         'cmp.title': 'Ваш день в Ваших руках',
         'cmp.without': 'Без Lupibu',
@@ -223,8 +223,8 @@ const translations = {
         'hero.b1': 'Қашан ұйықтату керек?',
         'hero.b2': 'Қашан тамақтандырдым?',
         'hero.b3': 'Неге ұйықтамайды?',
-        'hero.title': 'Сіз жалғыз емессіз',
-        'hero.subtitle': 'Lupibu сәбидің режимін қалыптастыруға көмектеседі',
+        'hero.title': 'Сәби режимі бойынша көмекшіңіз',
+        'hero.subtitle': 'Lupibu күндіз де, түнде де қасыңызда',
 
         'cmp.title': 'Күніңіз өз қолыңызда',
         'cmp.without': 'Lupibu-сыз',

@@ -924,6 +924,11 @@ html:has(.sheet[open]) { overflow: hidden; }
     .cmp td { padding-right: max(4px, calc(10px + (100vw - 375px) / 2)); }
 }
 
+@media (min-width: 900px) and (max-width: 999px) {
+    /* the narrowest two-column window: the headline takes three lines and rises to where the moon and the star hang */
+    .hang-moon, .hang-star { display: none; }
+}
+
 @media (min-width: 1200px) {
     /* On a wide screen the middle of the last block is empty between the steps and the phone: the sleeping bears
        move up into it, a little to the left of centre so they stay clear of the phone. Narrower, the QR code is in the way. */

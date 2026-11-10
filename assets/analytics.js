@@ -17,10 +17,10 @@
  * Apple counts a download for a campaign only when the link carries the developer's provider token (pt) and a
  * campaign name (ct); the numbers then show in App Store Connect → Analytics → Acquisition → Campaigns
  * (a campaign appears there after 5 downloads).
- * PT is the number from «Generate Campaign Link» on that page. While it is empty the store links stay as they are.
+ * PT is the number from «Generate Campaign Link» on that page (given by the owner on 10.11.2026). With it empty the store links stay as they are.
  * ct is the utm_source of the visit (an ad puts it into its address), or «site» for a visit without one.
  */
-var LUPIBU_PT = '';
+var LUPIBU_PT = '128285381';
 (function () {
     if (!LUPIBU_PT) return;
     var ct = 'site';
