@@ -188,7 +188,7 @@
             b.textContent = text;
             b.setAttribute('role', 'option');
             b.setAttribute('aria-selected', 'false');
-            b.addEventListener('click', function () { go(i, true); });
+            b.addEventListener('click', function () { if (!el.dragged) go(i, true); });
             el.appendChild(b);
         });
         el.addEventListener('scroll', function () {
@@ -201,6 +201,42 @@
             e.preventDefault();
             go(current + step, true);
         });
+        // A mouse turns the wheel like a drum: press, drag, let go, and it rolls on a little and settles on a row.
+        // (A finger already scrolls it natively; a mouse wheel and a click on a row work as well.)
+        var drag = null;
+        el.addEventListener('pointerdown', function (e) {
+            if (e.pointerType !== 'mouse' || e.button !== 0) return;
+            drag = { y: e.clientY, top: el.scrollTop, moved: 0, lastY: e.clientY, lastT: e.timeStamp, speed: 0, held: false };
+        });
+        el.addEventListener('pointermove', function (e) {
+            if (!drag) return;
+            var dt = e.timeStamp - drag.lastT;
+            if (dt > 0) drag.speed = (drag.lastY - e.clientY) / dt;
+            drag.lastY = e.clientY;
+            drag.lastT = e.timeStamp;
+            drag.moved = Math.max(drag.moved, Math.abs(e.clientY - drag.y));
+            if (!drag.held) {
+                // The wheel takes the pointer only once it really moves: a capture taken on the press
+                // would send the click to the wheel instead of the row, and a click on a row would stop working.
+                if (drag.moved < 4) return;
+                drag.held = true;
+                el.setPointerCapture(e.pointerId);
+                el.classList.add('dragging');    // no snapping while the hand holds it
+            }
+            el.scrollTop = drag.top - (e.clientY - drag.y);
+        });
+        var drop = function (e) {
+            if (!drag) return;
+            var d = drag, coast = e.timeStamp - d.lastT < 80 ? d.speed * 160 : 0;
+            drag = null;
+            el.classList.remove('dragging');
+            if (!d.held) return;                 // a plain click: the row's own handler takes it
+            el.dragged = true;                   // swallow the click that ends a drag
+            setTimeout(function () { el.dragged = false; }, 0);
+            go(Math.round((el.scrollTop + coast) / ROW), true);
+        };
+        el.addEventListener('pointerup', drop);
+        el.addEventListener('pointercancel', drop);
         // once the sheet is on screen and the wheel has a size
         el.place = function () { el.scrollTop = clamp(index) * ROW; mark(clamp(index)); };
         return el;
@@ -283,10 +319,14 @@
         return true;
     }
 
+    // The reviews stay in the language they were written in, whatever the page's own: a screen reader is told which.
+    function voices() { var q = $('quotes'); if (q) q.lang = t('rev.lang') || lang(); }
+
     function start() {
         fillAges();
         render(false);
         brand();
+        voices();
         $('age').addEventListener('change', function () { state.age = +this.value; $('tool').classList.add('used'); render(true); });
         var wake = $('wakeI');
         wake.addEventListener('change', function () { var p = wake.value.split(':'); if (p.length === 2) { state.wake = +p[0] * 60 + +p[1]; $('tool').classList.add('used'); render(true); } });
@@ -297,7 +337,7 @@
         setInterval(function () { render(false); }, 60000);
 
         // i18n.js rewrites every data-i18n text when the language changes; the tool then says its own again.
-        new MutationObserver(function () { fillAges(); render(false); brand(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        new MutationObserver(function () { fillAges(); render(false); brand(); voices(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
         if (!('IntersectionObserver' in window)) return;
 
@@ -310,7 +350,7 @@
         }).observe(last);
 
         // A little life as she scrolls: the checks of the table tick in one by one, the tool's two rows nod
-        // (they are the things to press), the phone rises into place.
+        // (they are the things to press), the reviews arrive like messages, the phone rises into place.
         // Marked from here, so without scripts, or with reduced motion, everything is simply in its place.
         if (still) return;
         var arrive = new IntersectionObserver(function (entries) {
@@ -320,7 +360,7 @@
                 arrive.unobserve(entry.target);
             });
         }, { threshold: 0.35 });
-        document.querySelectorAll('.cmp, .tool-card, .peek').forEach(function (el) { el.classList.add('wait'); arrive.observe(el); });
+        document.querySelectorAll('.cmp, .tool-card, .quotes, .peek').forEach(function (el) { el.classList.add('wait'); arrive.observe(el); });
     }
 
     // After main.js has applied the language (both wait for DOMContentLoaded, this file loads last).

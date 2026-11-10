@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# OpenAI reviews an ad's landing page with OAI-AdsBot and asks that OAI-SearchBot be allowed too
+# (help.openai.com, «Advertiser Guidance for Allowing OpenAI Web Crawlers»). The rule above already
+# lets them in; they are named so that a later rule for everyone cannot shut them out by accident.
+User-agent: OAI-AdsBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 Sitemap: https://lupibu.com/sitemap.xml

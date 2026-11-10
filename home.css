@@ -1,6 +1,6 @@
 /* ========================================
-   LUPIBU HOME: a funnel of four screens, one thought each
-   (hook → relief → try → start), drawn as one day: a morning sky at the top, a night one at the bottom.
+   LUPIBU HOME: a funnel, one thought a screen
+   (hook → relief → try → proof → start), drawn as one day: a morning sky at the top, a night one at the bottom.
    The plush world comes from the App Store header. Other pages keep styles.css.
    ======================================== */
 :root {
@@ -174,7 +174,10 @@ h1, h2 {
 .hero-text { position: relative; z-index: 2; }
 .bubbles { display: flex; flex-direction: column; gap: 10px; width: min(100%, 290px); margin: 0 auto 26px; }
 .bubbles span {
-    padding: 9px 17px;
+    display: flex;
+    align-items: center;
+    gap: 0.55em;
+    padding: 6px 17px 6px 7px;
     border-radius: 22px;
     background: #fff;
     font-size: 1rem;
@@ -185,9 +188,32 @@ h1, h2 {
     /* each thought pops in, then keeps drifting a few pixels, every one at its own pace */
     animation: bubble 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.25) both, bob 5.6s ease-in-out infinite alternate;
 }
-.bubbles span:nth-child(1) { align-self: flex-start; rotate: -2deg; animation-delay: 0.2s, 1.4s; }
-.bubbles span:nth-child(2) { align-self: flex-end; rotate: 1.5deg; animation-delay: 0.55s, 2.2s; animation-duration: 0.55s, 6.6s; }
-.bubbles span:nth-child(3) { align-self: center; rotate: -1deg; animation-delay: 0.9s, 3s; animation-duration: 0.55s, 4.9s; }
+/* Each thought carries the app's own glyph for its subject (Hugeicons: moon-02, baby-bottle, bubble-chat-question)
+   on the app's own tint for it (domain.ts: sleep, feed, wellness). Drawn here, not in the markup:
+   i18n.js replaces a bubble's whole text when the language changes. */
+.bubbles span::before {
+    content: "";
+    flex: none;
+    width: 1.75em;
+    height: 1.75em;
+    border-radius: 50%;
+    background: var(--tint) var(--glyph) center / 1.1em no-repeat;
+}
+.bubbles span:nth-child(1) {
+    --tint: #E5DAF5;
+    --glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237D5BA6' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.5 14.078A8.557 8.557 0 0 1 9.922 2.5C5.668 3.497 2.5 7.315 2.5 11.873a9.627 9.627 0 0 0 9.627 9.627c4.558 0 8.376-3.168 9.373-7.422'/%3E%3C/svg%3E");
+    align-self: flex-start; rotate: -2deg; animation-delay: 0.2s, 1.4s;
+}
+.bubbles span:nth-child(2) {
+    --tint: #FFEDD5;
+    --glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D95D39' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 10.5s1 2.5 1 5.75c0 1.171-.13 2.245-.296 3.14c-.209 1.124-.313 1.686-.869 2.148S15.617 22 14.292 22H9.708c-1.325 0-1.987 0-2.543-.462s-.66-1.024-.869-2.149A17.3 17.3 0 0 1 6 16.25C6 13 7 10.5 7 10.5'/%3E%3Cpath d='M7 10.51h10c.148-.815-.079-2.388-2.04-3.01c-.465-.148-1.01-.424-1.256-.888a1.64 1.64 0 0 1 .007-1.587a2.067 2.067 0 0 0-1.229-2.938A1.7 1.7 0 0 0 12 2a1.7 1.7 0 0 0-.515.087a2.067 2.067 0 0 0-1.23 2.938c.327.618.225 1.175.008 1.587c-.238.45-.756.85-1.24 1.003C7.672 8.045 6.74 9.068 7 10.51M15 14h2.5M15 18h2.5'/%3E%3C/svg%3E");
+    align-self: flex-end; rotate: 1.5deg; animation-delay: 0.55s, 2.2s; animation-duration: 0.55s, 6.6s;
+}
+.bubbles span:nth-child(3) {
+    --tint: #D9EBEC;
+    --glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233A8A8C' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.5 12a9.5 9.5 0 0 1-9.5 9.5c-1.628 0-3.16-.41-4.5-1.131c-1.868-1.007-3.125-.071-4.234.097a.53.53 0 0 1-.456-.156a.64.64 0 0 1-.117-.703c.436-1.025.835-2.969.29-4.607a9.5 9.5 0 0 1-.483-3a9.5 9.5 0 1 1 19 0'/%3E%3Cpath d='M9.5 9.5a2.5 2.5 0 1 1 3.912 2.064C12.728 12.032 12 12.672 12 13.5'/%3E%3Cpath stroke-width='2.4' d='M12 16.5h.009'/%3E%3C/svg%3E");
+    align-self: center; rotate: -1deg; animation-delay: 0.9s, 3s; animation-duration: 0.55s, 4.9s;
+}
 @keyframes bubble {
     from { opacity: 0; translate: 0 10px; scale: 0.92; }
     to { opacity: 1; translate: 0 0; scale: 1; }
@@ -436,6 +462,10 @@ h1, h2 {
     mask-image: linear-gradient(transparent, #000 32%, #000 68%, transparent);
 }
 .wheel::-webkit-scrollbar { display: none; }
+/* held by a mouse it moves freely; it snaps to a row again when let go */
+.wheel { cursor: grab; user-select: none; -webkit-user-select: none; }
+.wheel.dragging { cursor: grabbing; scroll-snap-type: none; }
+.wheel.dragging button { cursor: grabbing; }
 .wheel + .colon ~ .wheel, .wheel:has(+ .colon) { flex-basis: 84px; }
 .wheel button {
     display: block;
@@ -473,7 +503,60 @@ h1, h2 {
 .sheet-done:focus-visible { outline: 3px solid var(--cta); outline-offset: 2px; }
 html:has(.sheet[open]) { overflow: hidden; }
 
-/* ---------- 4. Start: night, three small steps, the button ---------- */
+/* ---------- 4. Proof: what parents wrote in the App Store, as messages arriving at night ---------- */
+.voices {
+    position: relative;
+    padding: 0 20px var(--gap);
+    text-align: center;
+    color: #fff;
+    background-color: var(--night);
+    background-image:
+        radial-gradient(1.5px 1.5px at 8% 10%, rgba(255, 255, 255, 0.75), transparent 70%),
+        radial-gradient(1.2px 1.2px at 93% 26%, rgba(255, 255, 255, 0.65), transparent 70%),
+        radial-gradient(1.6px 1.6px at 5% 74%, rgba(255, 255, 255, 0.7), transparent 70%),
+        radial-gradient(1.3px 1.3px at 95% 90%, rgba(255, 255, 255, 0.6), transparent 70%);
+}
+.quotes { position: relative; display: flex; flex-direction: column; gap: 12px; width: min(100%, 350px); margin: var(--head) auto 0; }
+/* two felt stars from the same toy box as the hero's, pinned to the messages like stickers */
+.pin { position: absolute; z-index: 2; height: auto; pointer-events: none; filter: drop-shadow(0 6px 8px rgba(8, 8, 40, 0.45)); animation: bob 5.2s ease-in-out infinite alternate; }
+.pin-a { top: -20px; right: 3%; width: 46px; rotate: 14deg; }
+.pin-b { right: 4%; bottom: 20px; width: 30px; rotate: -12deg; animation-duration: 6.4s; animation-delay: -2s; }
+/* a review is quoted word for word: pre-line keeps the writer's own line break */
+.quotes blockquote {
+    max-width: 90%;
+    margin: 0;
+    padding: 12px 16px 13px;
+    border-radius: 22px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+    white-space: pre-line;
+    /* no lone last word («…10 / из 5») */
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+    box-shadow: 0 16px 30px -18px rgba(8, 8, 40, 0.9);
+}
+/* messenger bubbles: the corner on the speaker's side is tighter, and each has its own ground,
+   the same three tints as the thoughts at the top of the page */
+.quotes blockquote:nth-child(1) { align-self: flex-start; border-bottom-left-radius: 7px; rotate: -1deg; }
+.quotes blockquote:nth-child(2) { align-self: flex-end; max-width: 86%; border-bottom-right-radius: 7px; rotate: 0.8deg; background: #FFEDD5; }
+.quotes blockquote:nth-child(3) { align-self: flex-start; max-width: 76%; margin-left: 9%; border-bottom-left-radius: 7px; rotate: -0.6deg; background: #E5DAF5; }
+/* they arrive one after another when the block comes into view (home.js marks it) */
+.quotes.wait blockquote { opacity: 0; translate: 0 14px; scale: 0.95; }
+.quotes.in blockquote { opacity: 1; translate: 0 0; scale: 1; transition: opacity 0.35s, translate 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.25), scale 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.25); }
+.quotes.in blockquote:nth-child(2) { transition-delay: 0.25s; }
+.quotes.in blockquote:nth-child(3) { transition-delay: 0.5s; }
+/* the stars land last */
+.quotes.wait .pin { opacity: 0; scale: 0.4; }
+.quotes.in .pin { opacity: 1; scale: 1; transition: opacity 0.3s 0.8s, scale 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.5) 0.8s; }
+.quotes.in .pin-b { transition-delay: 1s; }
+.voices-src { margin: 16px 0 0; font-size: 0.875rem; color: rgba(255, 255, 255, 0.78); }
+.voices > * { position: relative; z-index: 1; }
+
+/* ---------- 5. Start: night, three small steps, the button ---------- */
 .start {
     position: relative;
     padding: 0 24px;
@@ -489,16 +572,16 @@ html:has(.sheet[open]) { overflow: hidden; }
         /* the ground under the sleeping bears is already the footer's colour: no line where the two meet */
         linear-gradient(180deg, rgba(30, 33, 70, 0) calc(100% - 150px), var(--night-2) calc(100% - 24px));
 }
-/* two more layers of stars that fade in and out, each at its own pace */
-.start::before, .start::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; animation: twinkle 3.8s ease-in-out infinite alternate; }
-.start::before {
+/* two more layers of stars that fade in and out, each at its own pace; the reviews above lie under the same sky */
+.start::before, .start::after, .voices::before, .voices::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; animation: twinkle 3.8s ease-in-out infinite alternate; }
+.start::before, .voices::before {
     background-image:
         radial-gradient(1.7px 1.7px at 22% 13%, #fff, transparent 70%),
         radial-gradient(1.3px 1.3px at 61% 7%, #fff, transparent 70%),
         radial-gradient(1.5px 1.5px at 93% 33%, #fff, transparent 70%),
         radial-gradient(1.3px 1.3px at 7% 55%, #fff, transparent 70%);
 }
-.start::after {
+.start::after, .voices::after {
     animation-duration: 5.6s;
     animation-delay: -2.4s;
     background-image:
@@ -563,23 +646,35 @@ html:has(.sheet[open]) { overflow: hidden; }
     to { transform: scale(1.012, 1.032); }
 }
 
-/* ---------- footer: one quiet block, the links in rows ---------- */
-.footer { padding: 14px 20px calc(22px + env(safe-area-inset-bottom)); font-size: 0.8125rem; text-align: center; color: rgba(255, 255, 255, 0.62); background: var(--night-2); }
-.footer .container { max-width: 880px; margin: 0 auto; }
-.footer-grid { display: flex; flex-direction: column; align-items: center; }
-.footer-logo { display: block; height: 24px; width: auto; margin: 0 auto 8px; }
+/* ---------- footer: two groups, each in its own order ----------
+   On top who this is and how to reach us (bright); under a hairline the documents and the copyright (quiet).
+   A phone stacks both in the middle, one thing a row. A wide screen lays each group out as one row from edge to edge,
+   the way the navbar does. Until 10.11 all the links wrapped as one centred paragraph: one, two, one, two in a row. */
+.footer { padding: 18px 20px calc(20px + env(safe-area-inset-bottom)); font-size: 0.8125rem; text-align: center; color: rgba(255, 255, 255, 0.62); background: var(--night-2); }
+.footer-brand { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.footer-logo { display: block; height: 26px; width: auto; }
+/* in words, what Lupibu is: nowhere else does the page say «для iPhone» in plain text */
+.footer-tag { color: rgba(255, 255, 255, 0.72); }
 /* the group names stay for a screen reader; to the eye the links speak for themselves */
 .footer-col-label { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.footer-col-list { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 18px; }
-/* rows sit 38 px apart while every link keeps a 44 px touch height */
-.footer-link { padding: 12px 0; margin: -3px 0; color: rgba(255, 255, 255, 0.86); text-decoration: none; }
+.footer-link { text-decoration: none; }
 .footer-link:hover { color: #fff; }
-.footer-social { display: flex; gap: 2px; }
+.footer-reach { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 22px; margin-top: 4px; }
+.footer-reach .footer-link { padding: 10px 0; font-size: 0.9375rem; font-weight: 600; color: #fff; }
+/* on a phone the three icons take a row of their own */
+.footer-social { display: flex; justify-content: center; gap: 6px; flex-basis: 100%; margin-top: -4px; }
 .social-link { display: grid; place-items: center; width: 44px; height: 44px; color: rgba(255, 255, 255, 0.86); }
 .social-link:hover { color: #fff; }
 .social-link svg { width: 20px; height: 20px; }
-.footer-divider { display: none; }
+.footer-base { margin-top: 6px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+/* the documents, one a row: on a phone two of the four Russian names do not fit side by side */
+.footer-legal { display: grid; justify-content: center; justify-items: center; }
+.footer-legal .footer-link { padding: 5px 0; color: rgba(255, 255, 255, 0.76); }
 .footer-copyright { margin-top: 8px; font-size: 0.75rem; }
+@media (min-width: 600px) and (max-width: 899px) {
+    /* a tablet upright has room for the documents two by two */
+    .footer-legal { grid-template-columns: auto auto; column-gap: 36px; justify-items: start; }
+}
 
 /* ---------- sticky store button (phones) ---------- */
 .sticky-cta { display: none; }
@@ -607,7 +702,7 @@ html:has(.sheet[open]) { overflow: hidden; }
     }
     .hero h1 { text-align: left; }
     .bubbles { gap: 12px; width: min(100%, clamp(300px, 26vw, 420px)); margin-bottom: clamp(26px, 2.6vw, 40px); }
-    .bubbles span { padding: 11px 20px; border-radius: 26px; font-size: clamp(1rem, 1.25vw, 1.25rem); }
+    .bubbles span { padding: 8px 21px 8px 9px; border-radius: 26px; font-size: clamp(1rem, 1.25vw, 1.25rem); }
     .bubbles, .hero h1, .hero .lead { margin-left: 0; }
     .hero .cta { justify-content: flex-start; margin-top: clamp(26px, 2.6vw, 40px); }
     /* the artwork is 1000 px wide: past 600 it would blur on a sharp screen */
@@ -647,6 +742,17 @@ html:has(.sheet[open]) { overflow: hidden; }
     .sheet[open] { animation-name: sheet-pop; }
     .sheet-grab { display: none; }
 
+    /* on a wide screen the three messages hang in one row, each at its own height */
+    .voices { padding-left: 40px; padding-right: 40px; }
+    .quotes { flex-direction: row; align-items: flex-start; justify-content: center; gap: clamp(18px, 2vw, 30px); width: auto; max-width: clamp(900px, 70vw, 1180px); }
+    .quotes blockquote { flex: 1 1 0; max-width: 23em; padding: clamp(14px, 1.3vw, 20px) clamp(18px, 1.6vw, 26px); border-radius: 26px; font-size: clamp(1rem, 1.25vw, 1.25rem); }
+    .quotes blockquote:nth-child(2) { align-self: flex-start; max-width: 23em; margin-top: clamp(20px, 2.4vw, 38px); }
+    /* the short one keeps its own width: stretched to a third of the row it would be a wide strip with one line */
+    .quotes blockquote:nth-child(3) { flex: 0 0 17.5em; max-width: none; margin: clamp(6px, 0.8vw, 12px) 0 0; }
+    .pin-a { top: clamp(-46px, -2.7vw, -34px); right: auto; left: clamp(-40px, -2.3vw, -30px); width: clamp(54px, 4vw, 68px); rotate: -14deg; }
+    .pin-b { right: clamp(-22px, -1.2vw, -14px); bottom: auto; top: 58%; width: clamp(34px, 2.6vw, 44px); rotate: 12deg; }
+    .voices-src { margin-top: clamp(18px, 1.8vw, 28px); font-size: 1rem; }
+
     .start { padding-left: 40px; padding-right: 40px; }
     .start-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: clamp(48px, 7vw, 130px); max-width: clamp(860px, 66vw, 1140px); margin: 0 auto; }
     .start-text { display: block; text-align: left; }
@@ -658,7 +764,18 @@ html:has(.sheet[open]) { overflow: hidden; }
     /* the capture is 640 px wide */
     .peek { width: clamp(300px, 22vw, 360px); height: auto; aspect-ratio: 300 / 380; margin: 0; }
     .start-bears { width: min(60%, clamp(440px, 32vw, 500px)); }
-    .footer { padding-top: 20px; font-size: 0.875rem; }
+    /* each group is one row: the name on the left and the ways to reach us on the right, as in the navbar;
+       below, the documents on the left and the copyright on the right */
+    .footer { padding: 20px max(48px, calc(50% - 660px)) 18px; font-size: 0.875rem; text-align: left; }
+    .footer-top, .footer-base { display: flex; align-items: center; justify-content: space-between; column-gap: 32px; }
+    .footer-brand { flex-direction: row; align-items: center; gap: 14px; }
+    .footer-logo { height: 28px; }
+    .footer-reach { flex-wrap: nowrap; column-gap: 28px; margin: 0; }
+    .footer-social { flex-basis: auto; margin: 0 -12px 0 -6px; }
+    .footer-base { flex-wrap: wrap; margin-top: 8px; padding-top: 4px; }
+    .footer-legal { display: flex; flex-wrap: wrap; column-gap: 26px; }
+    .footer-legal .footer-link { padding: 10px 0; }
+    .footer-copyright { margin: 0; font-size: 0.8125rem; white-space: nowrap; }
 }
 
 @media (max-width: 768px) {
@@ -724,7 +841,7 @@ html:has(.sheet[open]) { overflow: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hang, .pop, .bubbles span, .start-bears, .start::before, .start::after, .sheet[open], .sheet[open]::backdrop, .pill::after, .pill svg path, .tool-card .field { animation: none !important; }
+    .hang, .pin, .pop, .bubbles span, .start-bears, .start::before, .start::after, .voices::before, .voices::after, .sheet[open], .sheet[open]::backdrop, .pill::after, .pill svg path, .tool-card .field { animation: none !important; }
     .sticky-cta, .lang-dropdown, .lang-chevron { transition: none; }
     html { scroll-behavior: auto; }
 }

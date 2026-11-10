@@ -78,6 +78,9 @@ function localizeLanding(lang) {
     s = s.replace(/(name="twitter:title" content=")[^"]*(")/, `$1${t['hero.title']}$2`);
     s = s.replace(/(name="twitter:description" content=")[^"]*(")/, `$1${t['hero.subtitle']}$2`);
     s = s.replace(/(property="og:url" content=")[^"]*(")/, `$1${SITE}/${lang}/$2`);
+    // The share card carries the hero line, so each language has its own picture; its alt is the page title.
+    s = s.replaceAll('assets/og-card.png', `assets/og-card-${lang}.png`);
+    s = s.replace(/(property="og:image:alt" content=")[^"]*(")/, `$1${t['meta.title']}$2`);
     s = s.replace(
         /<link rel="canonical"[^>]*>/,
         `<link rel="canonical" href="${SITE}/${lang}/">`
@@ -89,6 +92,16 @@ function localizeLanding(lang) {
 
     // Apple's badge per language: no Kazakh artwork exists, so only English differs from the Russian source.
     if (lang === 'en') s = s.replaceAll('assets/appstore-badge-ru.svg', 'assets/appstore-badge.svg');
+
+    // The app's structured data speaks the page's language: the same description as the meta tag, this page's own address.
+    s = s.replace(
+        /("applicationSubCategory": "Parenting",\s*"description": ")[^"]*(")/,
+        (m, open, close) => open + t['meta.description'].replace(/"/g, '\\"') + close
+    );
+    s = s.replace(/("url": "https:\/\/lupibu\.com\/)(",\s*"installUrl")/, `$1${lang}/$2`);
+
+    // The reviews stay in the language they were written in (Russian on the Kazakh page): a screen reader is told which.
+    if (t['rev.lang'] && t['rev.lang'] !== lang) s = s.replace('<div class="quotes" id="quotes">', `<div class="quotes" id="quotes" lang="${t['rev.lang']}">`);
 
     // Per-language app capture.
     s = s.replaceAll('screenshots/ru_home.webp', `screenshots/${lang}_home.webp`);
@@ -150,17 +163,20 @@ function mdToHtml(body) {
 }
 
 const HELP_CSS = `
-    body { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+    body { max-width: 720px; margin: 0 auto; padding: 20px 20px 64px; }
+    .brand { display: inline-block; margin-bottom: 18px; }
+    .brand img { display: block; height: 30px; width: auto; }
     .crumbs { font-size: .875rem; margin-bottom: 24px; }
-    .crumbs a { color: #D95D39; text-decoration: none; }
-    article h1 { letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 8px; }
-    .meta { color: #78716C; font-size: .875rem; margin-bottom: 24px; }
-    .tldr { background: #FFF4EA; border-radius: 12px; padding: 14px 18px; margin-bottom: 24px; }
-    article h2 { margin-top: 28px; letter-spacing: -0.01em; }
-    article p, article li { line-height: 1.6; color: #44403C; }
-    .related { margin-top: 40px; border-top: 1px solid #E7E5E4; padding-top: 20px; }
+    .crumbs a { color: #D95D39; text-decoration: none; font-weight: 600; }
+    h1, h2 { font-family: 'Nunito', 'Nunito Sans', -apple-system, system-ui, sans-serif; font-weight: 800; }
+    h1 { letter-spacing: -0.017em; line-height: 1.12; margin: 0 0 8px; }
+    h2 { margin-top: 28px; letter-spacing: -0.012em; }
+    .meta { color: #6B6387; font-size: .875rem; margin-bottom: 24px; }
+    .tldr { background: #fff; border-radius: 18px; padding: 14px 18px; margin-bottom: 24px; box-shadow: 0 16px 34px -26px rgba(110, 60, 30, 0.45); }
+    article p, article li { line-height: 1.6; color: #4A4163; }
+    .related { margin-top: 40px; border-top: 1px solid rgba(58, 49, 80, 0.1); padding-top: 20px; }
     .related a { display: block; color: #D95D39; text-decoration: none; margin: 6px 0; }
-    .appcta { display: inline-block; margin-top: 32px; color: #D95D39; font-weight: 600; text-decoration: none; }`;
+    .appcta { display: inline-block; margin-top: 32px; padding: 12px 24px; border-radius: 999px; background: #FA7C50; color: #fff; font: 800 1rem/1.3 'Nunito', 'Nunito Sans', sans-serif; text-decoration: none; }`;
 
 function helpShell(lang, { title, desc, canonicalPath, alternates, bodyHtml }) {
     const alt = LANGS.map(
@@ -176,14 +192,21 @@ function helpShell(lang, { title, desc, canonicalPath, alternates, bodyHtml }) {
     <link rel="canonical" href="${SITE}${canonicalPath}">
 ${alt}
     <link rel="alternate" hreflang="x-default" href="${SITE}${alternates('en')}">
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <meta name="theme-color" content="#FA7C50">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap" rel="stylesheet">
     <style>
-    body { font-family: -apple-system, 'Inter', sans-serif; background: #FDF8F1; color: #1C1917; }
+    /* the look of the home page: cream ground, plum ink, Nunito headings */
+    body { font-family: 'Nunito Sans', -apple-system, system-ui, sans-serif; font-weight: 500; background: #FFF8F2; color: #3A3150; }
 ${HELP_CSS}
     </style>
 </head>
 <body>
+<a class="brand" href="/${lang === 'ru' ? '' : lang + '/'}"><img src="/assets/logo-inline-primary.svg" alt="Lupibu" width="118" height="30"></a>
 ${bodyHtml}
 </body>
 </html>
@@ -205,7 +228,7 @@ function renderArticle(lang, art) {
         <p class="tldr"><strong>${u.tldr}:</strong> ${inline(art.tldr)}</p>
 ${mdToHtml(art.body)}
         ${related ? `<div class="related"><strong>${u.related}</strong>\n${related}</div>` : ''}
-        <a class="appcta" href="${APP_URL}">${u.cta} →</a>
+        <a class="appcta" href="${APP_URL}">${u.cta}</a>
     </article>`;
     write(
         `help/${lang}/${art.slug}.html`,
@@ -233,7 +256,7 @@ function renderHelpIndex(lang, articles) {
     write(
         `help/${lang}/index.html`,
         helpShell(lang, {
-            title: `${u.help} — Lupibu`,
+            title: `Lupibu: ${u.help}`,
             desc: help.helpArticles[`first-steps_${lang}`]?.tldr || u.help,
             canonicalPath: `/help/${lang}/`,
             alternates: (l) => `/help/${l}/`,
@@ -287,8 +310,17 @@ sitemap([
             alternates: (x) => `/help/${x}/${a.slug}.html`,
         }))
     ),
-    { loc: '/pay.html' },
     { loc: '/legal.html' },
 ]);
+
+/* The footer is written once, in index.html; 404.html and r/index.html carry copies with English text.
+   A copy that has drifted is reported here: until 10.11.2026 those two pages showed a broken footer. */
+const footerOf = (file) => {
+    const m = read(file).match(/<footer class="footer">[\s\S]*?<\/footer>/);
+    return m ? m[0].replace(/(data-i18n="[\w.]+"[^>]*>)[^<]*(<)/g, '$1$2').replace(/\s+/g, ' ') : '';
+};
+for (const file of ['404.html', 'r/index.html']) {
+    if (footerOf(file) !== footerOf('index.html')) console.warn(`WARNING: the footer of ${file} differs from the one in index.html`);
+}
 
 console.log('done:', 2 + LANGS.length + Object.keys(help.helpArticles).length, 'pages + sitemap');
